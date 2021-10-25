@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en" class="rv-html loading">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <style>
+        body,
+        html {
+            background: #121212
+        }
+
+        .loading .rv-header {
+            transform: translateX(-100%);
+            height: 50px;
+            overflow: hidden
+        }
+
+        .loading img,
+        .loading svg {
+            width: 0;
+            height: 0
+        }
+
+        .rv-sec-container {
+            position: relative;
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 0
+        }
+
+        .rv-hero-banner .lozad {
+            display: block;
+            min-height: 500px
+        }
+
+        .lozad {
+            display: block;
+            min-height: 1rem
+        }
+
+        img.lozad {
+            transition: opacity 1s linear
+        }
+
+        img.lozad:not([data-loaded]) {
+            position: relative;
+            max-width: 100%;
+            height: auto;
+            opacity: 0
+        }
+
+        img.lozad[data-loaded=true] {
+            transition: opacity 1s linear
+        }
+
+        .rv-casestudyfigures .rv-box .lozad {
+            display: block;
+            min-height: 260px
+        }
+
+        /* @media (max-width: 767px) {
+            max-height: 260px
+        } */
+
+        .rv-hero-banner .rv-banner-pictures .video-js {
+            height: 100vh;
+            width: 100%;
+            padding: 0;
+            z-index: 0;
+            min-height: 450px;
+            max-height: 1200px
+        }
+
+        .rv-roundbtn {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: transparent;
+            border: 0;
+            padding: 0;
+            cursor: pointer
+        }
+
+        .rv-forms .rv-input,
+        .rv-forms .rv-textarea {
+            font-family: Gilroy-Regular, sans-serif, Helvetica, Verdana, Arial;
+            font-weight: 500;
+            text-transform: none;
+            font-size: 18px;
+            font-size: 1.125rem;
+            line-height: 1.66667;
+            line-height: 30px;
+            padding: 10px 0;
+            position: relative;
+            background: 0 0;
+            color: #fff;
+            height: 45px;
+            width: 100%;
+            outline: 0;
+            border: none;
+            caret-color: #e44a21
+        }
+    </style>
+    <script>window.onload = function () { document.querySelector('html').classList.remove('loading') }</script>
+
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/icons/favicon.ico">
+
+    <link rel="manifest" href="./assets/manifest.json">
+    <link rel="prefetch" href="./assets/img/sprite/svg-sprite.svg" as="image" crossorigin="anonymous">
+    <link rel="preload" name="Gilroy-Bold" href="./assets/fonts/Gilroy-Bold.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload" name="Gilroy-Regular" href="./assets/fonts/Gilroy-Regular.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <!-- Order is important -->
+    <link rel="prefetch" name="Gilroy-Thin" href="./assets/fonts/Gilroy-Thin.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="prefetch" name="Gilroy-SemiBold" href="./assets/fonts/Gilroy-SemiBold.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="prefetch" name="Gilroy-SemiBoldItalic" href="./assets/fonts/Gilroy-SemiBoldItalic.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+
+    <link rel="preload" href="./assets/css/vendors~main.css" as="style"
+        onload="this.rel='stylesheet'; this.onload = null;">
+    <link rel="preload" href="./assets/css/main.css" as="style" onload="this.rel='stylesheet'; this.onload = null;">
+    <link rel="preload" href="./assets/css/dark.css" as="style" onload="this.rel='stylesheet'; this.onload = null;">
+    <link rel="preload" href="./assets/css/light.css" as="style" onload="this.rel='stylesheet'; this.onload = null;">
+
+    <script>
+        window.rv = {};
+        window.rv.resourcePath = './assets/';
+    </script>
+
+    <script>
+        /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+        /* This file is meant as a standalone workflow for
+        - testing support for link[rel=preload]
+        - enabling async CSS loading in browsers that do not support rel=preload
+        - applying rel preload css once loaded, whether supported or not.
+        */
+        !function (t) { "use strict"; t.loadCSS || (t.loadCSS = function () { }); var e = loadCSS.relpreload = {}; if (e.support = function () { var e; try { e = t.document.createElement("link").relList.supports("preload") } catch (t) { e = !1 } return function () { return e } }(), e.bindMediaToggle = function (t) { var e = t.media || "all"; function a() { t.addEventListener ? t.removeEventListener("load", a) : t.attachEvent && t.detachEvent("onload", a), t.setAttribute("onload", null), t.media = e } t.addEventListener ? t.addEventListener("load", a) : t.attachEvent && t.attachEvent("onload", a), setTimeout(function () { t.rel = "stylesheet", t.media = "only x" }), setTimeout(a, 3e3) }, e.poly = function () { if (!e.support()) for (var a = t.document.getElementsByTagName("link"), n = 0; n < a.length; n++) { var o = a[n]; "preload" !== o.rel || "style" !== o.getAttribute("as") || o.getAttribute("data-loadcss") || (o.setAttribute("data-loadcss", !0), e.bindMediaToggle(o)) } }, !e.support()) { e.poly(); var a = t.setInterval(e.poly, 500); t.addEventListener ? t.addEventListener("load", function () { e.poly(), t.clearInterval(a) }) : t.attachEvent && t.attachEvent("onload", function () { e.poly(), t.clearInterval(a) }) } "undefined" != typeof exports ? exports.loadCSS = loadCSS : t.loadCSS = loadCSS }("undefined" != typeof global ? global : this);
+    </script>
+    <noscript>
+        <link rel="stylesheet" href="./assets/css/vendors~main.css" type="text/css">
+        <link rel="stylesheet" href="./assets/css/main.css">
+    </noscript>
+
+
+    <link href="./assets/css/base.css?v=1.12" rel="stylesheet" />
+
+    <title>Careers | Revonic</title>
+    <meta property="og:title" content="Careers | Revonic" />
+    <meta name="keywords" content="Agency, Digital Agency, Experience Design, Revonic, Sitecore, UI, UX, Website" />
+    <meta name="description" content="Read up on what it&#39;s like to work at Revonic and view current vacancies." />
+    <meta name="og:description"
+        content="Read up on what it&#39;s like to work at Revonic and view current vacancies." />
+    <meta name="og:image" content="https://www.revonic.com/./-/media/revonic/media/ogimage/rsz_web_and_mobile.jpg" />
+    <meta property="og:image:url"
+        content="https://www.revonic.com/./-/media/revonic/media/ogimage/rsz_web_and_mobile.jpg">
+    <meta property="og:url" content="https://www.revonic.com/en/Careers" />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.revonic.com/en/careers" /><!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5K9P7WQ');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156926072-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-156926072-1');
+    </script>
+
+    <script>
+        // register service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(function (registration) { console.log('Service Worker Registered'); });
+            navigator.serviceWorker.ready.then(function (registration) { console.log('Service Worker Ready'); });
+        }
+    </script>
+
+</head>
+
+<body class="rv-body ">
+    <header class="rv-header rv-component rv-theme-dark" data-comp-name="header">
+        <div class="rv-wrapper">
+            <div class="rv-container container">
+
+
+                <a class="rv-logo rv-column" href="/"><span class="sr-only">Revonic</span><img
+                        src="./assets/img/svg/light.svg" class="rv-revonic-logo light-variant"
+                        alt="rv-revonic-logo" /></a>
+
+                <div class="rv-navigation">
+                    <a class="rv-nav-trigger rv-link" href="javascript:;">
+                        <span class="rv-label d-lg-inline-block">Navigation</span>
+                        <div class="rv-nav-icon">
+                            <div class="rv-icon-content">
+                                <span class="sr-only">Show / Hide Navigation</span>
+                                <span class="rv-animated-icon rv-nav-iconbar-top d-block"></span>
+                                <span class="rv-animated-icon rv-nav-iconbar-bottom d-block"></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="rv-caption d-none d-lg-block">
+                    <div class="rv-secondary-link">
+
+
+                        <a href="/en/contact" id="test" class="rv-link">Contact Us</a>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+            <nav class="rv-nav-menu is-hidden">
+                <div class="rv-container container rv-fullWidth">
+                    <div class="w-100">
+
+                        <ul class="rv-list-main-nav">
+                            <li class="rv-list-item  row has-sub-menu">
+
+                                <a class="rv-h1 rv-link rv-nav-link col-lg-8" href="/en/work" target="_self" id="">
+                                    Work </a>
+                                <div class="rv-sub-menu col-lg-4 d-lg-block">
+                                    <h6 class="rv-h6 rv-default">Case Studies</h6>
+
+
+                                    <ul class="rv-list-primary">
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/emirates-airline" target="_self"
+                                                id="gtm-NavigationEmirates">
+                                                Emirates Airline </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/meraas" target="_self"
+                                                id="gtm-NavigationMeraas">
+                                                Meraas </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/ubyemaar" target="_self" id="">
+                                                U by Emaar </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/the-red-sea" target="_self" id="">
+                                                The Red Sea Project </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/mercedes-benz" target="_self" id="">
+                                                Mercedes-Benz </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/abu-dhabi-airport" target="_self"
+                                                id="">
+                                                Abu Dhabi Airport </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/noor-bank" target="_self" id="">
+                                                Noor Bank </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/emirates-nbd" target="_self" id="">
+                                                Emirates NBD </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="rv-list-item  row has-sub-menu">
+
+                                <a class="rv-h1 rv-link rv-nav-link col-lg-8" href="/en/services" target="_self" id="">
+                                    Services </a>
+                                <div class="rv-sub-menu col-lg-4 d-lg-block">
+                                    <h6 class="rv-h6 rv-default">Our Services</h6>
+
+
+                                    <ul class="rv-list-primary">
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/digital-strategy" target="_self"
+                                                id="">
+                                                Digital Strategy </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/ux-and-ui-design" target="_self"
+                                                id="">
+                                                UX &amp; UI Design </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/user-research" target="_self"
+                                                id="">
+                                                User Research </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/user-testing" target="_self"
+                                                id="">
+                                                User Testing </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/data-analytics-and-insights"
+                                                target="_self" id="">
+                                                Data Analytics &amp; Insights </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/content-services" target="_self"
+                                                id="">
+                                                Content Services </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/web-and-mobile" target="_self"
+                                                id="">
+                                                Web &amp; Mobile Build </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="rv-list-item  ">
+
+                                <a class="rv-h1 rv-link rv-nav-link " href="/en/news-and-events" target="_self" id="">
+                                    News &amp; Events </a>
+                            </li>
+                            <li class="rv-list-item  ">
+
+                                <a class="rv-h1 rv-link rv-nav-link " href="/en/careers" target="_self" id="">
+                                    Careers </a>
+                            </li>
+                            <li class="rv-list-item  ">
+
+                                <a class="rv-h1 rv-link rv-nav-link " href="/en/contact" target="_self" id="">
+                                    Contact </a>
+                            </li>
+                        </ul>
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5K9P7WQ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <section class="rv-sec-container headerpd rv-bg-light">
+        <h1 class="sr-only">CAREERS</h1>
+        <h2 class="sr-only">We empower personal growth by providing our team with opportunities in which they can
+            enhance their expertise and influence the work we do.</h2>
+        <div class="rv-content-page-header rv-theme-light rv-component">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-4 rv-m-mb-section ">
+
+                        <h2 class="rv-sub-heading">CAREERS</h2>
+                    </div>
+                    <div class="col-12 offset-md-1 col-md-7">
+                        <p class="rv-paragraph">
+                            We empower personal growth by providing our team with opportunities in which they can
+                            enhance their expertise and influence the work we do.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="rv-hockey-image rv-component" data-comp-name="animatesvg">
+                <svg class="rv-hockey-svg js-svg" viewBox="0 0 803 303" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(-1110.000000, -79.000000)" stroke="#E44A21">
+                            <g transform="translate(0.000000, 79.000000)">
+                                <g transform="translate(405.000000, -49.000000)">
+                                    <polyline points="705.333202 351.373997 1192.8631 351.373997 1557.35352 0">
+                                    </polyline>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+
+        </div>
+        <section class="rv-sec-content rv-bg-light">
+            <div class="container rv-container">
+                <div class="row">
+                    <div class="col-12 col-md-8 richtext">
+                        <h2>We value our team</h2>
+                        <p>We are a team of ambitious, creative, analytical and technical professionals from all over
+                            the world. We have over twenty nationalities all under one roof, working towards the same
+                            goal: to produce innovative digital experiences. Every one of our team members provides
+                            invaluable insights from countries around the globe and we believe our diversity is what
+                            sets us apart.</p>
+                        <p>Here are a few reasons why you'll love working at Revonic:</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </section>
+    <section class="rv-sec-container rv-bg-light">
+        <div class="rv-editorialicons rv-component rv-theme-light">
+            <div class="container rv-container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="richtext feature-richtext">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="rv-jobcard-wrap">
+                                    <div class="rv-jobcardbox no-pd ">
+                                        <span class="rv-component" data-comp-name="changesvg">
+
+                                            <svg width="63px" height="54px" viewBox="0 0 63 54" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                class="rv-toSvg icon-strategy js-change-svg">
+                                                <!-- Generator: sketchtool 56.3 (101010) - https://sketch.com -->
+                                                <title>27A32674-E792-465D-BB85-B152680BC7A9</title>
+                                                <desc>Created with sketchtool.</desc>
+                                                <g id="T11---Careers" stroke="none" stroke-width="1" fill="none"
+                                                    fill-rule="evenodd">
+                                                    <g id="T11---Careers---Desktop"
+                                                        transform="translate(-168.000000, -821.000000)" fill="#E44A21"
+                                                        fill-rule="nonzero">
+                                                        <g id="c4" transform="translate(0.000000, 712.000000)">
+                                                            <g id="strategy"
+                                                                transform="translate(164.000000, 101.000000)">
+                                                                <g id="np_medicine_1345828_000000"
+                                                                    transform="translate(4.000000, 8.000000)">
+                                                                    <path
+                                                                        d="M4.5556704,29.3342349 C5.19321702,29.3456391 5.87567202,29.5053016 6.57503777,29.8445737 L20.8003399,36.7925586 C21.0615361,35.1931244 22.5303839,33.9643175 24.2436754,34.0156273 L24.2464838,34.0156273 L31.9871764,34.2551118 C34.0065438,34.2551118 35.5344066,33.7618811 37.3346964,33.2316169 C39.1349863,32.7013235 41.1908785,32.1510463 44.0836802,32.1510463 C46.6676019,32.1510463 50.5068876,33.09192 53.2652373,34.1324938 L53.2652373,31.3841003 L53.2652373,31.3869519 C53.2652373,30.9849548 53.5882239,30.6570832 53.9842316,30.6570832 L61.7810057,30.6570832 C62.1770134,30.6570832 62.5,30.9849548 62.5,31.3869519 L62.5,53.1034647 C62.5,53.5054617 62.1770134,53.8333333 61.7810057,53.8333333 L53.9842316,53.8333333 C53.5882239,53.8333333 53.2652373,53.5054617 53.2652373,53.1034647 L53.2652373,50.6344649 C43.2669027,48.6672498 37.4473628,51.7093425 28.9258425,51.70073 C27.4654213,51.70073 25.603298,50.8910137 23.325524,49.6907447 C21.044946,48.4904756 18.4105509,46.86535 15.7451672,45.114833 C10.4088635,41.6194189 4.93796398,37.62784 2.06486278,35.655005 C1.24758197,35.0933492 0.786994224,34.2494239 0.688635804,33.3940908 C0.590334905,32.5387577 0.826258502,31.6777316 1.3093292,30.9650148 C1.97215566,29.9842173 3.15455615,29.3057314 4.55882391,29.3341963 L4.5556704,29.3342349 Z M4.37873309,30.7540485 C3.5081029,30.7626018 2.88459105,31.2130702 2.49137307,31.7918488 C2.19366629,32.2337623 2.05885486,32.7583409 2.1150227,33.2258947 C2.16838574,33.6934632 2.37903021,34.1096927 2.86773782,34.4461622 C5.78304399,36.4504546 11.2289225,40.4191155 16.5228774,43.8892032 C19.1685607,45.6226413 21.7749151,47.230615 23.9853192,48.3938797 C26.1957234,49.5571444 28.0745993,50.2413233 28.9256009,50.2413233 C37.0286666,50.2498766 43.0667807,47.2163826 53.2649957,49.1493668 L53.2649957,47.0224564 C53.2621866,46.8257349 53.3380168,46.6375675 53.4728282,46.4978633 C53.6076396,46.361013 53.7930036,46.2811799 53.98399,46.2811799 C54.1777805,46.2811799 54.3631445,46.361013 54.4979559,46.4978633 C54.6327673,46.6375675 54.7057884,46.8257349 54.7029843,47.0224564 L54.7029843,52.3738536 L56.8599672,52.3738536 L56.8599672,32.1170782 L54.7029843,32.1170782 L54.7029843,37.4741684 C54.7057927,37.6708899 54.6327695,37.8590573 54.4979559,37.9959077 C54.3631445,38.1356119 54.1777805,38.2154376 53.98399,38.2154376 C53.7930036,38.2154376 53.6076396,38.1356046 53.4728282,37.9959077 C53.3380168,37.8590573 53.2621844,37.6708899 53.2649957,37.4741684 L53.2649957,35.69796 C50.6670536,34.6544667 46.4485703,33.6138199 44.0834386,33.6138199 C41.3675814,33.6138199 39.5110663,34.1127509 37.733281,34.6373148 C35.9554238,35.1590541 34.236596,35.7178854 31.9813266,35.7178854 L31.9813266,35.7150345 L31.9588581,35.7150345 L24.2016286,35.47555 L24.1988203,35.47555 C23.0753917,35.4441883 22.1934733,36.3337296 22.1934733,37.3087612 C22.1934733,38.2837927 23.0641035,39.0906626 24.2521696,39.1419723 L39.0138415,39.7834612 L39.0166499,39.7806103 C39.2076291,39.7863121 39.390189,39.8718439 39.5221891,40.0143946 C39.6541893,40.1569452 39.7244063,40.3479665 39.7159797,40.5418415 C39.7075538,40.738563 39.6232941,40.9210302 39.4800561,41.0521803 C39.336818,41.1833304 39.1458388,41.2517556 38.9548523,41.2403477 L24.1931805,40.5988588 C22.7889127,40.5361361 21.5193845,39.7179073 21.0026433,38.5090258 L21.0026433,38.506175 C20.9773663,38.4976216 20.9520886,38.489069 20.926811,38.4748132 L5.94872184,31.1615291 C5.35611236,30.8707202 4.83370549,30.7509779 4.37592182,30.753782 L4.37873309,30.7540485 Z M61.0613672,32.1168593 L58.3005729,32.1168593 L58.3005729,52.3736347 L61.0613672,52.3736347 L61.0613672,32.1168593 Z"
+                                                                        id="Shape"></path>
+                                                                    <path
+                                                                        d="M35.0791975,0.166666667 C38.6030742,0.166666667 41.5,3.1804736 41.5,6.86341656 L41.5,22.6279451 C41.5,26.3108881 38.6057607,29.3333333 35.0791975,29.3333333 C31.5525636,29.3333333 28.6666667,26.3108143 28.6666667,22.6279451 L28.6666667,6.86341656 C28.6666667,3.18335304 31.5553208,0.166666667 35.0791975,0.166666667 L35.0791975,0.166666667 Z M35.0791975,1.64329917 C32.3258595,1.64329917 30.0806289,3.98804392 30.0806289,6.86341656 L30.0806289,14.0100964 L40.0858257,14.0100964 L40.0858257,6.86341656 C40.0858257,3.98804392 37.8350806,1.64329917 35.0789854,1.64329917 L35.0791975,1.64329917 Z M40.0860378,15.4867289 L30.080841,15.4867289 L30.080841,22.6276498 C30.080841,25.5030225 32.3260716,27.8564055 35.0794096,27.8564055 C37.8327475,27.8564055 40.0862499,25.5030225 40.0862499,22.6276498 L40.0860378,15.4867289 Z"
+                                                                        id="Shape"></path>
+                                                                    <path
+                                                                        d="M37.4417322,4.83333333 C37.4804691,4.8362294 37.5192048,4.84487847 37.5579439,4.85641031 C37.5761731,4.86217661 37.5944023,4.86794216 37.6126315,4.87659123 C37.6855482,4.91118678 37.753909,4.96019621 37.8108716,5.0293873 C37.8404944,5.06110007 37.8655591,5.09857839 37.8883441,5.1389417 C37.8997372,5.15912188 37.9111303,5.1793028 37.9202449,5.19948372 C37.9612608,5.28597442 37.9863249,5.38110756 37.9954424,5.4791338 C37.9977215,5.50508028 38,5.53391027 38,5.56273878 L38,9.93908437 C38,9.96214807 37.9977215,9.98809454 37.9954424,10.0111582 C37.9908854,10.0601684 37.9840493,10.1091771 37.9703777,10.1553045 C37.9589841,10.2043154 37.943034,10.2475593 37.9248048,10.2908009 C37.8860674,10.3772916 37.8336589,10.4522468 37.7721347,10.5127881 C37.7584625,10.5272027 37.7425125,10.5416173 37.7242833,10.556032 C37.6582032,10.6079257 37.5852865,10.6425227 37.507814,10.6569366 C37.4690772,10.6655856 37.4303415,10.6684684 37.3916023,10.6655856 C37.3710946,10.6655856 37.3528654,10.6627021 37.3346363,10.6598193 C37.3141286,10.6540538 37.2958994,10.651171 37.2753929,10.6454047 C37.2389345,10.6338729 37.2024762,10.6165747 37.1660178,10.593511 C37.131838,10.5733309 37.097657,10.5473836 37.0657544,10.5185559 C37.0361322,10.4897266 37.0065111,10.4551303 36.9814452,10.4176513 C36.9677737,10.4003539 36.95638,10.3801729 36.9449869,10.359992 C36.9335938,10.3426946 36.9222007,10.3196309 36.9130861,10.29945 C36.8925784,10.2562054 36.8766278,10.2129593 36.8652341,10.1668319 C36.8583986,10.1408847 36.853841,10.117821 36.849284,10.0947573 C36.8378909,10.0428644 36.8333333,9.99097437 36.8333333,9.93907551 L36.8333333,5.56272992 C36.8333333,5.48777476 36.8447264,5.41281959 36.8629556,5.34362112 C36.8675132,5.32055742 36.8743493,5.29749373 36.8834633,5.27443003 C36.8994139,5.23118615 36.9176431,5.18793932 36.9404299,5.14757601 C36.951823,5.12739509 36.9632161,5.10721491 36.9768882,5.08991677 C37.0520858,4.97748402 37.1546242,4.89675739 37.2685551,4.85927981 C37.2867842,4.85063074 37.3072919,4.84774796 37.3255211,4.8419824 C37.3460288,4.83909963 37.3642579,4.83621611 37.3847644,4.83621611 C37.4029936,4.83333333 37.4235013,4.83333333 37.4417305,4.83333333 L37.4417322,4.83333333 Z"
+                                                                        id="Path"></path>
+                                                                    <path
+                                                                        d="M18.7499259,9.5 C20.9942323,9.5 23.2357215,10.3544851 24.9414329,12.0606374 C28.3528557,15.472942 28.3528557,21.0289119 24.9414329,24.4407715 C21.5300101,27.8530762 15.9695451,27.8530762 12.5585671,24.4407715 C9.1471443,21.0284669 9.1471443,15.4724971 12.5585671,12.0606374 C14.2642785,10.3544851 16.5085849,9.5 18.7500741,9.5 L18.7499259,9.5 Z M18.7499259,10.9744187 C17.1195362,10.9744187 15.4920378,11.5189889 14.1570043,12.6110139 L24.391421,22.8421436 C26.7283969,19.9831075 26.5633711,15.7800909 23.8933189,13.1093338 C22.4713985,11.6870458 20.6093352,10.9744187 18.7501631,10.9744187 L18.7499259,10.9744187 Z M13.1086531,13.6596361 C10.7716772,16.5186722 10.936703,20.7216888 13.6067552,23.392446 C16.273931,26.0603111 20.4845353,26.2282716 23.3429808,23.8906768 L13.1086531,13.6596361 Z"
+                                                                        id="Shape"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <h2 class="rv-title rv-textdot">Full Medical Insurance</h2>
+                                        <p class="rv-description">We provide full medical insurance cover to all
+                                            employees which include dental, optometry and private hospital care.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="rv-jobcard-wrap">
+                                    <div class="rv-jobcardbox no-pd ">
+                                        <span class="rv-component" data-comp-name="changesvg">
+
+                                            <svg width="63px" height="60px" viewBox="0 0 63 60" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                class="rv-toSvg icon-strategy js-change-svg">
+                                                <!-- Generator: sketchtool 56.3 (101010) - https://sketch.com -->
+                                                <title>07C0AD32-4891-4AAE-B61A-DE3B0CE6B606</title>
+                                                <desc>Created with sketchtool.</desc>
+                                                <g id="T11---Careers" stroke="none" stroke-width="1" fill="none"
+                                                    fill-rule="evenodd">
+                                                    <g id="T11---Careers---Desktop"
+                                                        transform="translate(-549.000000, -818.000000)" fill="#E44A21"
+                                                        fill-rule="nonzero">
+                                                        <g id="c4" transform="translate(0.000000, 712.000000)">
+                                                            <g id="strategy"
+                                                                transform="translate(545.000000, 101.000000)">
+                                                                <g id="np_after-hours_2718204_000000"
+                                                                    transform="translate(4.000000, 5.000000)">
+                                                                    <path
+                                                                        d="M20.3205705,29.3326382 C20.6319389,28.3652371 20.5353097,27.3165593 20.05215,26.4199649 L18.5328962,23.5072916 C17.5880439,21.6852432 15.3493967,20.9039531 13.4355039,21.7218882 L11.9725976,18.9166667 L0.666666667,24.5271098 L8.70581372,39.9166667 L20.008996,34.2852835 L18.5407299,31.4748269 C19.3836069,31.0003011 20.0170359,30.2373535 20.3203506,29.3329067 L20.3205705,29.3326382 Z M9.25583458,38.2516012 L2.3704381,25.0775231 L11.4135337,20.5681748 L15.0425912,27.5079052 L17.4208016,32.0591334 L18.3066264,33.7501055 L9.25583458,38.2516012 Z M19.1180312,28.9500805 C18.9274528,29.5425818 18.5274951,30.048558 17.9906678,30.3788999 L16.0123876,26.5879547 L14.0341073,22.8022445 L14.0314226,22.8022445 C14.6219587,22.5610453 15.2795897,22.53483 15.8888991,22.7288337 C16.5706977,22.9543011 17.1343863,23.4366996 17.4484208,24.0711413 L18.9731032,26.9838146 C19.2844716,27.594672 19.335473,28.3024977 19.1180539,28.950094 L19.1180312,28.9500805 Z"
+                                                                        id="Shape"></path>
+                                                                    <path
+                                                                        d="M52.6242998,37.5830863 C52.3916329,37.5830863 52.1801176,37.4509258 52.0743599,37.2389192 C51.99504,37.0847319 51.9791814,36.9085179 52.0267686,36.7405648 C52.0743599,36.5753606 52.1854085,36.4376952 52.3308228,36.3578491 C55.3422597,34.683816 57.6927534,31.9579968 58.9644852,28.6594115 C59.0913944,28.3262542 59.4536169,28.1638131 59.7735229,28.2959736 C60.0934423,28.4281341 60.249429,28.8053449 60.1225198,29.138488 C58.7449965,32.7288837 56.1909742,35.696962 52.9154308,37.5142923 C52.8255385,37.5610997 52.725067,37.5858775 52.6245956,37.5831265 L52.6242998,37.5830863 Z"
+                                                                        id="Path"></path>
+                                                                    <path
+                                                                        d="M61.970225,24.089274 C61.5583107,23.7208125 60.9864869,23.5766295 60.4445291,23.7074632 L52.9381496,25.4643301 L50.3853562,18.2606496 L48.5127851,17.3635218 L48.8244316,14.979178 C50.2552919,14.119439 51.1278911,12.5895028 51.1278911,10.9394027 L51.1278911,8.62183949 C51.1306016,7.83687824 50.9327738,7.06524574 50.5533825,6.37365414 C50.8487676,6.1867508 51.0411723,5.87168633 51.0655646,5.52724391 L51.2877798,2.34187608 C51.3175896,1.89598473 51.076401,1.47947133 50.67533,1.27653246 C50.2715464,1.07627985 49.786497,1.13234949 49.4423274,1.41804285 L48.9355635,1.84257401 C48.5263618,2.15229331 47.9572367,2.15229331 47.5480627,1.84257401 L45.7432016,0.475522024 L45.7459121,0.475522024 C45.4613634,0.264592738 45.0955211,0.19783959 44.7540571,0.291291264 C44.4153127,0.387408689 44.1388948,0.635726846 44.011536,0.958795407 L43.1524649,3.16692613 L43.1497544,3.16692613 C42.9492189,3.72762933 42.3367483,4.02933087 41.7622536,3.85045212 C41.2988491,3.71695266 40.8002299,3.88783279 40.5210647,4.28032845 C40.2446468,4.67015016 40.2527776,5.19078507 40.5427444,5.57260269 L41.5562444,6.93965468 L41.5535346,6.93965468 C41.6104437,7.00907358 41.6727764,7.07048839 41.7405212,7.12655802 C41.5725018,7.61250399 41.485783,8.1224554 41.485783,8.63509989 L41.485783,10.9740575 C41.485783,12.2983891 42.0494552,13.5613401 43.0386045,14.4584679 L42.4478344,15.8255199 L39.8869241,16.1272351 L29.4806679,16.9736454 L21.2396067,21.7583273 L21.2423165,21.7609972 C20.5783766,22.1588298 20.2071021,22.8984528 20.2938209,23.6593539 C20.3805398,24.420255 20.9062708,25.0637948 21.6433736,25.3067883 C22.1474249,25.4723314 22.6948218,25.4349494 23.1690695,25.2053257 L30.1065737,21.7876957 L34.2690762,21.6862331 C33.783992,24.1800093 32.1878249,32.2726837 32.1255261,32.8946923 L31.9737682,34.0294822 L33.027922,33.5435362 L33.1173534,33.5088261 L33.1173534,35.559404 L31.168886,41.3773722 L19.6810728,46.5224774 L19.9791704,47.171294 L17.9873436,48.0764191 C17.1228612,45.5078651 16.9141811,42.7710954 17.3775995,40.106506 C17.4480567,39.764743 17.223129,39.430991 16.8762538,39.3615994 C16.5293786,39.2895079 16.1933397,39.5111207 16.1202046,39.8528837 C15.5511142,42.5869877 15.8275252,45.5880769 16.960267,49.1208126 L19.0415182,57.098928 L21.3530946,55.990864 L21.5807349,54.3033751 L21.3801994,51.1527304 L21.7758522,51.064617 L21.9845185,51.5238645 L35.4911453,46.3013158 L39.6536478,40.7636616 L43.9191028,43.8182025 L43.9191028,56.1961747 L44.6128532,56.1961747 L44.6128532,58.4870805 L33.5128466,58.4870805 L33.5128466,58.4844106 C33.1849385,58.5191207 32.9356254,58.7914642 32.9356254,59.1172053 C32.9356254,59.4429465 33.1849455,59.7152906 33.5128466,59.75 L53.769665,59.75 L54.7561087,57.357659 L52.3279822,56.3590959 L48.9351264,56.3590959 L48.9351264,56.1962253 L49.4473085,56.1962253 L50.211544,41.9036968 L47.2847497,37.4741066 L47.9378533,27.0851951 L48.1194216,26.4016691 L51.8456245,30.502825 L61.411749,26.9276423 L61.4090392,26.9276423 C61.961875,26.7193788 62.362946,26.2414506 62.4713098,25.6673571 C62.5797083,25.0959704 62.3764603,24.5085755 61.9374481,24.1187606 L61.970225,24.089274 Z M20.2910876,54.2553266 L20.1718527,55.1497887 L19.8656243,55.2939717 L18.296569,49.305122 L20.5024872,48.3198876 L21.1962376,49.884547 L20.0688932,50.1675678 L20.2910876,54.2553266 Z M42.7810469,10.9607902 L42.7810469,8.62183265 C42.783799,8.12521001 42.8921996,7.63393253 43.1008658,7.18000292 C44.0791927,6.56055749 45.2065371,6.21342882 46.3690547,6.17603994 C47.2470652,6.12530933 48.1278507,6.18938989 48.9922637,6.3602707 C49.5450996,6.98772706 49.8486292,7.79143743 49.8459416,8.6217848 L49.8459416,10.9607424 C49.8459416,12.8804935 48.2633402,14.439753 46.3120978,14.439753 C44.3636303,14.439753 42.7810469,12.8804935 42.7810469,10.9607424 L42.7810469,10.9607902 Z M46.3121394,15.7054176 L46.3121394,15.7027477 C46.6996614,15.7027477 47.0844917,15.6573575 47.4584232,15.5665757 L47.2307898,17.3234425 L45.2118373,18.3086769 L43.6563102,16.3061508 L44.1413943,15.184758 C44.8161776,15.5211827 45.5587264,15.7000751 46.31207,15.7027409 L46.3121394,15.7054176 Z M25.0146954,21.02407 L25.3534398,22.7248878 L24.6596894,23.0533015 L24.3344939,21.4139327 L25.0146954,21.02407 Z M22.5865689,24.078611 L22.5865689,24.0759411 C22.4131313,24.1507052 22.2153015,24.1507052 22.0391582,24.0759411 C21.7627403,24.0065222 21.5594923,23.7768985 21.5242636,23.4965435 C21.4917441,23.2161885 21.6353747,22.9438512 21.8874003,22.8130175 L23.1773599,22.0600453 L23.4890064,23.5979787 L22.5865689,24.078611 Z M22.6488983,49.9083747 L21.9551478,48.4718765 L21.3454037,47.1528764 L22.1502929,46.7897532 L23.4402524,49.5933034 L22.6488983,49.9083747 Z M34.6785305,45.2545196 L24.662162,49.1554025 L23.3451462,46.2984689 L32.201564,42.3201426 L34.0687238,36.7344365 L36.2475164,38.3418162 L38.6133441,40.0373024 L34.6785305,45.2545196 Z M52.0653033,57.6167707 L53.0924008,58.0413019 L52.9108325,58.4845275 L45.9108908,58.4845275 L45.9108908,56.1962875 L47.658795,56.1962875 L47.3742463,57.6167229 L52.0653033,57.6167707 Z M45.190098,54.9360502 L45.190098,54.0709797 L48.3119749,54.0709797 L48.2713252,54.9387159 L45.190098,54.9360502 Z M48.9515434,42.2429725 L48.382453,52.8027655 L45.190091,52.8027655 L45.190091,43.1746184 L37.0114674,37.3112641 L34.3827777,35.370187 L34.3827777,33.1140044 C35.8895342,32.7108334 38.2336475,32.4304784 39.3419832,34.2407286 C40.8351422,36.6330696 43.431295,38.1389457 46.2794873,38.2671068 L48.9515434,42.2429725 Z M56.8374043,27.2826391 L52.2575416,28.9994513 L48.5123993,24.93835 L49.3877042,21.603495 L48.1465154,21.2830922 L46.6967158,26.8260779 L46.0625863,36.9880588 C43.740118,36.7984897 41.6480442,35.5302346 40.4312754,33.5704289 C38.74567,30.8363249 35.3256886,31.4504046 33.5642563,32.0057695 C33.9951377,29.7095323 35.0357703,24.3694171 35.5614944,21.670173 L39.4177754,21.5740555 L39.4177754,20.3084388 L29.7808884,20.5647611 L26.556059,22.1427492 L26.201053,20.3458277 L29.8838965,18.199146 L40.0410963,17.3660645 L42.6345435,17.0643493 L44.2794951,19.1683106 L45.2578219,18.3966781 L45.770004,19.4219671 L47.8512552,18.4180041 L49.385068,19.149582 L52.1600697,26.9404113 L57.0705045,25.7842954 L56.8374043,27.2826391 Z M58.6340791,26.5991131 L58.1977726,26.7619837 L58.3576612,25.5124298 L58.2953319,25.5124298 L58.7749979,25.4029563 L58.5988477,26.5991267 L58.6340791,26.5991131 Z M60.9999068,25.7179797 L59.9728093,26.0997905 L60.1056001,25.0878303 L60.7587037,24.938309 L60.7559939,24.938309 C60.8887846,24.9035988 61.0296992,24.938309 61.1326795,25.0264223 C61.2329473,25.119874 61.2817249,25.2533734 61.2627577,25.3895455 C61.2437878,25.5390668 61.1435159,25.6645553 60.9998888,25.7179592 L60.9999068,25.7179797 Z"
+                                                                        id="Shape"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <h2 class="rv-title rv-textdot">Hybrid Working Model</h2>
+                                        <p class="rv-description">We help our team to have a healthy work-life balance
+                                            by adopting a hybrid working model. You either work from home or office.
+                                            It’s up to you!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="rv-jobcard-wrap">
+                                    <div class="rv-jobcardbox no-pd ">
+                                        <span class="rv-component" data-comp-name="changesvg">
+
+                                            <svg height="100px" width="100px" fill="#e44a21"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
+                                                viewBox="0 0 100 100" enable-background="new 0 0 100 100"
+                                                xml:space="preserve" class="rv-toSvg icon-strategy js-change-svg">
+                                                <g>
+                                                    <path
+                                                        d="M77.171,73.766c-0.85,0-1.683,0.222-2.416,0.637c-0.95-2.774-3.595-4.709-6.591-4.709c-0.86,0-1.695,0.155-2.491,0.464   c-1.516-3.462-4.965-5.745-8.775-5.745c-5.284,0-9.583,4.299-9.583,9.584c0,5.286,4.299,9.586,9.583,9.586h20.273   c2.706,0,4.908-2.201,4.908-4.908S79.877,73.766,77.171,73.766z M77.171,82.383H56.898c-4.623,0-8.383-3.763-8.383-8.387   c0-4.623,3.761-8.385,8.383-8.385c3.521,0,6.689,2.23,7.884,5.549l0.228,0.634l0.604-0.3c0.804-0.398,1.662-0.602,2.551-0.602   c2.728,0,5.103,1.937,5.647,4.604l0.202,0.988l0.772-0.649c0.667-0.562,1.515-0.871,2.385-0.871c2.044,0,3.708,1.664,3.708,3.709   S79.216,82.383,77.171,82.383z">
+                                                    </path>
+                                                    <path
+                                                        d="M90.065,22.857c-0.543,0-1.077,0.125-1.561,0.36c-0.736-1.874-2.571-3.163-4.64-3.163c-0.556,0-1.097,0.091-1.616,0.271   c-1.108-2.36-3.501-3.907-6.138-3.907c-3.741,0-6.784,3.044-6.784,6.785c0,3.74,3.043,6.783,6.784,6.783h13.954   c1.966,0,3.565-1.599,3.565-3.564S92.031,22.857,90.065,22.857z M90.065,28.787H76.111c-3.079,0-5.583-2.505-5.583-5.584   c0-3.08,2.505-5.586,5.583-5.586c2.344,0,4.454,1.486,5.25,3.697l0.228,0.634l0.604-0.3c0.527-0.262,1.089-0.395,1.672-0.395   c1.789,0,3.348,1.27,3.705,3.019l0.202,0.987l0.771-0.647c0.426-0.358,0.967-0.556,1.521-0.556c1.304,0,2.365,1.062,2.365,2.365   S91.37,28.787,90.065,28.787z">
+                                                    </path>
+                                                    <path
+                                                        d="M27.107,58.68c-0.588,0-1.164,0.156-1.67,0.445c-0.648-1.913-2.468-3.248-4.53-3.248c-0.591,0-1.168,0.109-1.721,0.324   c-1.039-2.385-3.412-3.959-6.033-3.959c-3.63,0-6.583,2.954-6.583,6.584c0,3.631,2.953,6.586,6.583,6.586h13.954   c1.855,0,3.365-1.511,3.365-3.367C30.472,60.189,28.963,58.68,27.107,58.68z M27.107,64.611H13.153   c-3.189,0-5.784-2.595-5.784-5.785c0-3.189,2.595-5.783,5.784-5.783c2.428,0,4.613,1.538,5.438,3.827l0.152,0.421l0.401-0.198   c0.56-0.275,1.152-0.415,1.763-0.415c1.884,0,3.524,1.337,3.901,3.18l0.135,0.66l0.515-0.435c0.461-0.389,1.047-0.603,1.649-0.603   c1.414,0,2.565,1.15,2.565,2.564C29.672,63.46,28.521,64.611,27.107,64.611z">
+                                                    </path>
+                                                    <path
+                                                        d="M67.756,41.473h0.05c0.332,0,0.575-0.269,0.575-0.6s-0.293-0.6-0.625-0.6s-0.6,0.269-0.6,0.6S67.424,41.473,67.756,41.473z   ">
+                                                    </path>
+                                                    <path
+                                                        d="M46.923,40.273c-0.332,0-0.6,0.269-0.6,0.6s0.269,0.6,0.6,0.6h0.099c0.332,0,0.55-0.269,0.55-0.6   S47.254,40.273,46.923,40.273z">
+                                                    </path>
+                                                    <path
+                                                        d="M44.84,40.273c-0.332,0-0.6,0.269-0.6,0.6s0.269,0.6,0.6,0.6h0.099c0.332,0,0.55-0.269,0.55-0.6   S45.171,40.273,44.84,40.273z">
+                                                    </path>
+                                                    <path
+                                                        d="M63.589,41.473h0.099c0.332,0,0.55-0.269,0.55-0.6s-0.318-0.6-0.649-0.6s-0.6,0.269-0.6,0.6S63.257,41.473,63.589,41.473z">
+                                                    </path>
+                                                    <path
+                                                        d="M65.672,41.473h0.099c0.332,0,0.55-0.269,0.55-0.6s-0.318-0.6-0.649-0.6s-0.6,0.269-0.6,0.6S65.341,41.473,65.672,41.473z">
+                                                    </path>
+                                                    <path
+                                                        d="M57.339,40.273c-0.332,0-0.6,0.269-0.6,0.6s0.269,0.6,0.6,0.6h0.099c0.332,0,0.55-0.269,0.55-0.6   S57.671,40.273,57.339,40.273z">
+                                                    </path>
+                                                    <path
+                                                        d="M55.256,40.273c-0.332,0-0.6,0.269-0.6,0.6s0.269,0.6,0.6,0.6h0.099c0.332,0,0.55-0.269,0.55-0.6   S55.587,40.273,55.256,40.273z">
+                                                    </path>
+                                                    <path
+                                                        d="M59.422,40.273c-0.332,0-0.6,0.269-0.6,0.6s0.269,0.6,0.6,0.6h0.099c0.332,0,0.55-0.269,0.55-0.6   S59.754,40.273,59.422,40.273z">
+                                                    </path>
+                                                    <path
+                                                        d="M61.506,40.273c-0.332,0-0.6,0.269-0.6,0.6s0.269,0.6,0.6,0.6h0.099c0.332,0,0.55-0.269,0.55-0.6   S61.837,40.273,61.506,40.273z">
+                                                    </path>
+                                                    <path
+                                                        d="M51.089,40.273c-0.332,0-0.6,0.269-0.6,0.6s0.269,0.6,0.6,0.6h0.099c0.332,0,0.55-0.269,0.55-0.6   S51.421,40.273,51.089,40.273z">
+                                                    </path>
+                                                    <path
+                                                        d="M53.173,40.273c-0.332,0-0.6,0.269-0.6,0.6s0.269,0.6,0.6,0.6h0.099c0.332,0,0.55-0.269,0.55-0.6   S53.504,40.273,53.173,40.273z">
+                                                    </path>
+                                                    <path
+                                                        d="M49.006,40.273c-0.332,0-0.6,0.269-0.6,0.6s0.269,0.6,0.6,0.6h0.099c0.332,0,0.55-0.269,0.55-0.6   S49.338,40.273,49.006,40.273z">
+                                                    </path>
+                                                    <path
+                                                        d="M42.806,40.273c-0.332,0-0.6,0.269-0.6,0.6s0.269,0.6,0.6,0.6h0.05c0.332,0,0.575-0.269,0.575-0.6   S43.137,40.273,42.806,40.273z">
+                                                    </path>
+                                                    <path
+                                                        d="M72.295,46.4c4.029,0,8.107-1.109,8.107-3.23c0-1.598-1.474-2.515-2.182-2.955c-0.116-0.072-0.21-0.127-0.259-0.168   c-0.024-0.022-0.052-0.055-0.087-0.093c-0.477-0.528-1.746-1.929-5.934-1.929H61.3l-16.646-11.52H39.22l10.052,11.52h-9.756   l-6.327-5.896h-3.982l4.12,10.968c0.058,0.135,1.493,3.304,7.672,3.304h6.374l-9.512,10.9h5.433l15.753-10.9H72.295z M41.86,27.705   h2.418l14.914,10.32h-8.327L41.86,27.705z M42.918,56.102H40.5l11.262-12.906l-0.904-0.789l-2.439,2.795h-7.42   c-5.326,0-6.524-2.479-6.56-2.553l-3.5-9.32h1.777l6.327,5.896h32.896c2.994,0,4.211,0.747,4.763,1.248h-2.449v0.801h3.396   c0.576,0.359,1.552,0.998,1.552,1.896c0,0.828-2.69,2.031-6.907,2.031H60.779l2.756-1.907l-0.683-0.986L42.918,56.102z">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <h2 class="rv-title rv-textdot">Annual Flight</h2>
+                                        <p class="rv-description">For every full year of service completed, we issue you
+                                            with a return economy flight to your home country.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="rv-jobcard-wrap">
+                                    <div class="rv-jobcardbox no-pd ">
+                                        <span class="rv-component" data-comp-name="changesvg">
+
+                                            <svg width="56px" height="55px" viewBox="0 0 56 55" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                class="rv-toSvg icon-strategy js-change-svg">
+                                                <!-- Generator: sketchtool 56.3 (101010) - https://sketch.com -->
+                                                <title>152CD101-77F9-4BD5-B8AA-2FB98AF5B999</title>
+                                                <desc>Created with sketchtool.</desc>
+                                                <g id="T11---Careers" stroke="none" stroke-width="1" fill="none"
+                                                    fill-rule="evenodd">
+                                                    <g id="T11---Careers---Desktop"
+                                                        transform="translate(-552.000000, -1170.000000)" fill="#E44A21"
+                                                        fill-rule="nonzero">
+                                                        <g id="c4" transform="translate(0.000000, 712.000000)">
+                                                            <g id="strategy"
+                                                                transform="translate(545.000000, 450.000000)">
+                                                                <g id="np_party_1162272_000000"
+                                                                    transform="translate(7.000000, 8.000000)">
+                                                                    <path
+                                                                        d="M7.7104601,9.77693963 L10.0104467,9.78249691 L11.3088457,11.6887727 C11.4420167,11.8832916 11.6611912,12 11.8942439,12 C11.9275374,12 11.9608294,11.9972214 11.9941257,11.9916634 C12.2632446,11.9527603 12.4851962,11.7665767 12.5684227,11.5081478 L13.2842077,9.31291082 L15.4898738,8.65988846 C15.7478916,8.58485957 15.942101,8.36533587 15.9892684,8.09856965 C16.0364329,7.83180343 15.9254571,7.56225573 15.7090554,7.40108625 L13.850202,6.03944032 L13.9140126,3.73024079 C13.9223359,3.46069309 13.7752946,3.20782005 13.5366949,3.08277427 C13.2980951,2.95494702 13.0067881,2.97717753 12.7875994,3.13557122 L10.925976,4.4888229 L8.75916038,3.7135647 C8.50391251,3.62186114 8.22092957,3.68577691 8.02675567,3.87195981 C7.83254626,4.06091566 7.76319083,4.34435654 7.84364739,4.59998261 L8.5511154,6.79799398 L7.14724499,8.62921959 C6.98355481,8.84318744 6.95303558,9.13496566 7.07233545,9.3767341 C7.19441237,9.62405129 7.43855201,9.77688343 7.71044803,9.77688343 L7.7104601,9.77693963 Z M10.0187566,6.72022558 L9.63866183,5.53919817 L10.8011199,5.95602217 C11.0202945,6.03383254 11.2672183,6.00048321 11.4558807,5.86154425 L12.4546273,5.13629582 L12.4213345,6.3756561 C12.4157861,6.60907299 12.5239863,6.83137817 12.7126487,6.97032425 L13.7113953,7.70389578 L12.5239365,8.05402822 C12.2992079,8.12071978 12.1216466,8.29300808 12.0495141,8.51531326 L11.6666494,9.69349516 L10.9702754,8.67089132 C10.8371045,8.4763725 10.6206999,8.36244554 10.3848773,8.35966406 L9.1474883,8.35688542 L9.90212368,7.37041951 C10.0463887,7.18701952 10.090779,6.94525818 10.0186465,6.72017863 L10.0187566,6.72022558 Z"
+                                                                        id="Shape"></path>
+                                                                    <path
+                                                                        d="M43.4345322,5.28103173 L45.5910253,6.18811672 L46.0444206,8.43102529 C46.0982615,8.69489688 46.2994536,8.90379875 46.5686616,8.97526221 C46.6310038,8.99175384 46.6961781,9 46.7585218,9 C46.9625497,9 47.1637411,8.9147941 47.3025962,8.760869 L48.8554569,7.0484479 L51.1875772,7.32331062 C51.4567779,7.35354609 51.7288151,7.23260212 51.8818378,7.00996486 C52.0320241,6.78732057 52.0405262,6.49871541 51.8988405,6.2678172 L50.7030376,4.29975729 L51.6920197,2.2272746 C51.808205,1.9853923 51.7713675,1.69953141 51.5985042,1.49061547 C51.4256409,1.28169953 51.1479454,1.18826084 50.8759082,1.24598187 L48.5833965,1.7434889 L46.8633236,0.187772332 C46.6621321,0.00636236908 46.3674252,-0.0486143983 46.1123559,0.0448454026 C45.8544864,0.141049468 45.6731283,0.369189332 45.6476294,0.635805192 L45.4237681,2.9117153 L43.3721726,4.02215734 C43.1313072,4.15409314 42.9867866,4.4042223 43.0009543,4.6708452 C43.0122899,4.93746809 43.1823124,5.17384779 43.4345163,5.28105002 L43.4345322,5.28103173 Z M46.4637931,3.95892948 C46.6706574,3.84623168 46.8095052,3.64283242 46.832175,3.41194829 L46.9511894,2.19152457 L47.8749551,3.02437369 C48.0506476,3.18379436 48.291513,3.24701799 48.5267127,3.19479252 L49.7565383,2.92816963 L49.2238025,4.0441002 C49.1217849,4.25300206 49.1359599,4.49762862 49.2578064,4.69828362 L49.9010619,5.75651427 L48.6485302,5.60808474 C48.4133305,5.58059846 48.1753016,5.66855566 48.0166132,5.84172017 L47.1835266,6.75978222 L46.9398248,5.55589445 C46.8944853,5.32775459 46.7357969,5.13809776 46.5176013,5.044645 L45.3557487,4.55538484 L46.4637931,3.95892948 Z"
+                                                                        id="Shape"></path>
+                                                                    <path
+                                                                        d="M47.5,38 C46.121839,38 45,39.1226661 45,40.4987349 C45,41.8773339 46.121839,43 47.5,43 C48.878161,43 50,41.8773339 50,40.4987349 C50,39.120136 48.878161,38 47.5,38 Z M47.5,41.7024302 C46.8375913,41.7024302 46.2994776,41.1626487 46.2994776,40.4986701 C46.2994776,39.8346914 46.8375393,39.29744 47.5,39.29744 C48.1624607,39.29744 48.7005224,39.8372215 48.7005224,40.4986701 C48.7005224,41.1626033 48.1624542,41.7024302 47.5,41.7024302 Z"
+                                                                        id="Shape"></path>
+                                                                    <path
+                                                                        d="M28.5,6 C29.878161,6 31,4.87733389 31,3.50126507 C31,2.12266611 29.878161,1 28.5,1 C27.121839,1 26,2.12266611 26,3.50126507 C26.0025379,4.87986402 27.121839,6 28.5,6 Z M28.5,2.29756977 C29.1624087,2.29756977 29.7005224,2.83735127 29.7005224,3.50132994 C29.7005224,4.1652632 29.1624607,4.70255998 28.5,4.70255998 C27.8375393,4.70255998 27.2994776,4.16277848 27.2994776,3.50132994 C27.3020155,2.83739669 27.8400798,2.29756977 28.5,2.29756977 Z"
+                                                                        id="Shape"></path>
+                                                                    <path
+                                                                        d="M42.5,17 C43.878161,17 45,15.8773339 45,14.5012651 C45,13.1226661 43.878161,12 42.5,12 C41.121839,12 40,13.1226661 40,14.5012651 C40,15.879864 41.121839,17 42.5,17 Z M42.5,13.2975698 C43.1624087,13.2975698 43.7005224,13.8373513 43.7005224,14.5013299 C43.7005224,15.1653086 43.1624607,15.70256 42.5,15.70256 C41.8375913,15.70256 41.2994776,15.1627785 41.2994776,14.5013299 C41.2994776,13.8373967 41.8375393,13.2975698 42.5,13.2975698 L42.5,13.2975698 Z"
+                                                                        id="Shape"></path>
+                                                                    <path
+                                                                        d="M44.5,28 C45.878161,28 47,26.8773339 47,25.4987349 C47,24.120136 45.878161,23 44.5,23 C43.121839,23 42,24.1226661 42,25.4987349 C42,26.879864 43.121839,28 44.5,28 Z M44.5,24.2975698 C45.1624087,24.2975698 45.7005224,24.8373513 45.7005224,25.4987998 C45.7005224,26.1627331 45.1624607,26.70256 44.5,26.70256 C43.8375913,26.70256 43.2994776,26.1627785 43.2994776,25.4987998 C43.2994776,24.8373967 43.8375393,24.2975698 44.5,24.2975698 Z"
+                                                                        id="Shape"></path>
+                                                                    <path
+                                                                        d="M0.684016143,54.9991632 C0.774946446,54.9991632 0.865876748,54.9804842 0.951459821,54.9457932 L39.5816047,38.6496109 C39.8838224,38.5215231 40.0523116,38.1959683 39.9854472,37.8757557 C35.457555,17.1228014 17.2340433,15.0228448 17.0519225,15.0044002 C16.7470345,14.9697099 16.4688895,15.1431585 16.3512368,15.4180178 L0.0527964818,54.049978 C-0.0541823585,54.3061536 0.004656346,54.602354 0.19988982,54.7971909 C0.330941467,54.930614 0.507454842,55 0.683968217,55 L0.684016143,54.9991632 Z M17.4076331,16.4286851 C20.3014364,16.8849987 34.401008,19.9910969 38.5226887,37.6113313 L1.96776223,53.0324179 L17.4076331,16.4286851 Z"
+                                                                        id="Shape"></path>
+                                                                    <path
+                                                                        d="M32.6357717,18.9996204 C32.8327492,18.9996204 33.0247478,18.9042953 33.1519065,18.7215765 C33.3538756,18.4302934 38.0713975,11.4396687 36.7748528,0.59340861 C36.7299709,0.222683441 36.4158008,-0.0421144401 36.0617276,0.00554809391 C35.7126461,0.0532119837 35.4633077,0.392156255 35.5081876,0.762888202 C36.7399433,11.0478543 32.1694828,17.8532046 32.1221199,17.9196379 C31.9151655,18.2215097 31.9775033,18.6451849 32.2617512,18.8676011 C32.3739541,18.9576318 32.503615,19 32.6357653,19 L32.6357717,18.9996204 Z"
+                                                                        id="Path"></path>
+                                                                    <path
+                                                                        d="M36.2660089,21.7930472 C35.9620243,22.0259732 35.9095173,22.4521243 36.1554697,22.7432496 C36.2936419,22.9100008 36.5009038,23 36.7081657,23 C36.8629205,23 37.0176754,22.9523557 37.1475563,22.8517744 C37.2276964,22.7908959 45.1834906,16.8671871 55.0297915,20.631067 C55.3918083,20.7687017 55.8036013,20.6019511 55.9500436,20.2525649 C56.093741,19.905822 55.9168819,19.511403 55.5548686,19.3711393 C44.9268345,15.3134508 36.6142869,21.5283553 36.2655137,21.7930269 L36.2660089,21.7930472 Z"
+                                                                        id="Path"></path>
+                                                                    <path
+                                                                        d="M22.5490719,13.1455936 C22.4746306,13.5223009 22.6811469,13.8962689 23.0101417,13.9836217 C23.0557679,13.9945401 23.1013966,14 23.1494217,14 C23.4279816,14 23.6825352,13.7816179 23.7473739,13.4595027 C23.8074089,13.1701482 25.1401735,6.31823459 21.0217751,2.17491545 C20.7696252,1.92104718 20.3805807,1.94561778 20.1548409,2.23497086 C19.9291073,2.52432535 19.953126,2.96656824 20.2076721,3.22045048 C23.7713729,6.80464167 22.5610339,13.0829337 22.5490461,13.1458277 L22.5490719,13.1455936 Z"
+                                                                        id="Path"></path>
+                                                                    <path
+                                                                        d="M54.8727234,34.8127962 C51.0399262,28.9178254 42.8315435,31.5853644 42.4849952,31.702656 C42.1223983,31.8228442 41.9182649,32.2449588 42.0310719,32.6406884 C42.1411972,33.036418 42.5279699,33.2592044 42.8905668,33.1390162 C42.965776,33.1126342 50.4891893,30.6620103 53.7525196,35.6834103 C53.8868139,35.8886068 54.099006,36 54.3138798,36 C54.4508626,36 54.5905271,35.9560295 54.7113996,35.8622293 C55.0202814,35.6189262 55.0928022,35.14991 54.8725515,34.8128337 L54.8727234,34.8127962 Z"
+                                                                        id="Path"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <h2 class="rv-title rv-textdot">Office Parties</h2>
+                                        <p class="rv-description">We're a tight-knit family that celebrates successes,
+                                            milestones, birthdays and personal achievements, together. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="rv-jobcard-wrap">
+                                    <div class="rv-jobcardbox no-pd ">
+                                        <span class="rv-component" data-comp-name="changesvg">
+
+                                            <svg width="57px" height="50px" viewBox="0 0 57 50" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                class="rv-toSvg icon-strategy js-change-svg">
+                                                <!-- Generator: sketchtool 56.3 (101010) - https://sketch.com -->
+                                                <title>2F2F3E6F-7716-48CD-AF8B-4DB8C040FA28</title>
+                                                <desc>Created with sketchtool.</desc>
+                                                <g id="T11---Careers" stroke="none" stroke-width="1" fill="none"
+                                                    fill-rule="evenodd">
+                                                    <g id="T11---Careers---Desktop"
+                                                        transform="translate(-933.000000, -1172.000000)" fill="#E44A21"
+                                                        fill-rule="nonzero">
+                                                        <g id="c4" transform="translate(0.000000, 712.000000)">
+                                                            <g id="strategy"
+                                                                transform="translate(926.000000, 449.000000)">
+                                                                <g id="np_handshake_620437_000000"
+                                                                    transform="translate(7.000000, 11.000000)">
+                                                                    <path
+                                                                        d="M55.5991707,16.5316991 L40.6408802,1.41484166 C38.7713978,-0.471613887 35.7347605,-0.469092579 33.8703326,1.41484166 L28.4993856,6.83927412 L23.1309339,1.41484166 C21.2664421,-0.471613887 18.2273095,-0.471613887 16.3603864,1.41484166 L1.40209581,16.5316991 C0.497330051,17.4458995 0,18.6605881 0,19.9510453 C0,21.2440237 0.497355643,22.4587123 1.40958167,23.3804766 L9.21727318,30.9689671 C9.16478832,32.4361744 9.74212177,33.8528909 10.8468241,34.8933506 C11.7390494,35.7343038 12.8562345,36.2064995 13.9534574,36.2317772 C14.0384315,37.4767862 14.5932747,39.0248046 15.5055264,39.8708004 C16.312784,40.6789119 17.4674624,41.1461297 18.6421031,41.1663002 C18.7095847,42.3759462 19.2894064,43.7093302 20.1541835,44.5123991 C20.9764768,45.2750624 22.3885538,46.0553749 23.750661,46.1690277 C24.2230254,48.1337731 25.1202541,49.2474154 26.6123722,49.7525175 C26.8797967,49.8434268 27.4446467,50 28.1469102,50 C29.0091921,50 30.0763435,49.7651434 31.0610865,48.8812504 C31.1560609,48.7852855 31.3310126,48.6211419 31.5559468,48.4064816 C33.4254292,46.6387215 35.1924129,44.8482696 35.8622377,43.4719587 C37.0894074,43.9719793 38.7789092,43.9846053 39.8285936,43.16134 C41.1581981,42.2016914 41.5681291,40.7395268 41.4181559,39.4086641 C42.6803237,39.5627095 44.1323892,39.0626889 44.9471327,38.2571375 C45.7993694,37.4086204 46.301754,35.9514983 46.0493461,34.6585199 C47.1640359,34.716603 48.691088,34.4968976 49.8707833,33.2367608 C51.1978925,31.8225656 50.8555263,29.8275645 50.4906064,29.1103494 C50.4756104,29.0749942 50.4556161,29.0446919 50.4331227,29.0143845 C50.4131284,28.9840803 50.3881358,28.956302 50.3631394,28.9310456 L50.2331797,28.7972029 L55.6041267,23.3702492 C57.4661233,21.4863149 57.4661233,18.4154911 55.5991285,16.5316862 L55.5991707,16.5316991 Z M11.7192151,33.9513512 C10.8794548,33.1608888 10.4470662,32.087652 10.4945406,30.981509 L16.0754757,25.5191923 C16.3578975,25.2111014 16.985232,24.885329 17.700036,24.885329 L17.7200303,24.885329 C18.4373296,24.8929052 19.0821375,25.2111014 19.6369872,25.8374137 C20.9416388,27.3046209 20.3093073,28.885481 20.1443431,29.2340034 L14.3134954,34.9236257 C13.4287559,35.0120137 12.4740204,34.6635172 11.7192279,33.9513706 L11.7192151,33.9513512 Z M16.3854032,38.9363649 C15.6606181,38.264598 15.1982221,36.7670703 15.2282295,35.8276568 L21.0165934,30.1809614 C21.4714652,30.0168113 23.37592,29.4283833 24.553056,30.6026922 C25.7327513,31.7794965 25.4353002,33.1356369 25.3178297,33.5194576 L19.0396217,39.8580904 C18.0599333,39.9489998 17.0652092,39.6131292 16.3854032,38.9363261 L16.3854032,38.9363649 Z M19.9243611,40.7899788 L26.2675746,34.3882486 C26.5699907,34.2240985 27.9071067,33.6458204 29.4991643,35.3605037 C30.5788561,36.5221802 30.1814655,38.0954764 30.0465088,38.5197026 L23.9957559,44.8886558 C23.0660372,44.8533006 21.826391,44.3154009 21.0166382,43.565357 C20.3368322,42.928966 19.8694456,41.7117431 19.9244699,40.7899788 L19.9243611,40.7899788 Z M30.6790515,47.4643335 C30.4366183,47.694141 30.249171,47.870917 30.1791942,47.9441513 C28.9370527,49.0578583 27.4425033,48.6714517 27.0151053,48.5275044 C25.9128919,48.1562774 25.3231082,47.3532214 24.9632109,45.7319557 L30.9964969,39.3832376 C32.0212284,38.7342271 33.4432865,39.532234 33.9656334,40.1737 C34.6304677,40.9944181 34.8128796,42.1990214 34.8503729,42.5172234 C34.7254102,43.3000572 33.3283113,44.9592072 30.6790835,47.4643529 L30.6790515,47.4643335 Z M48.9387997,32.3474761 C47.7941025,33.5697286 46.1346081,33.4258201 45.3523034,33.2717617 L35.1676903,22.8897913 C34.9177649,22.6347319 34.5153965,22.6347319 34.2629246,22.8847403 C34.0104974,23.1372784 34.0104974,23.543836 34.2579263,23.7989407 L44.5276351,34.2662477 C45.11747,35.1425638 44.7575727,36.6248989 44.0452704,37.3345502 C43.3404476,38.0365728 41.7009155,38.4355859 40.8636505,37.8850745 C40.8511542,37.8749725 40.8361582,37.8724473 40.8236619,37.8673969 L30.4240702,27.0943005 C30.17664,26.8392411 29.7717764,26.8341921 29.5193044,27.081674 C29.2668773,27.3316843 29.2618803,27.7407697 29.5068082,27.9958744 L39.9786992,38.8394381 C40.3435935,39.9127395 40.2111321,41.2915717 39.0639523,42.122375 C38.3441578,42.6855253 36.9270902,42.5971437 36.0923205,42.1476288 C35.9998477,41.549122 35.7249246,40.3015788 34.9551731,39.3495588 C34.2503502,38.4808066 32.8332827,37.6979728 31.4761661,37.8646377 C31.5761375,36.9150743 31.4661689,35.5842763 30.428977,34.468048 C29.0943819,33.0336177 27.7222295,32.7634499 26.7100384,32.9023157 C26.7600242,32.020957 26.5650814,30.7886192 25.4529252,29.6774336 C24.2707347,28.4955866 22.7187296,28.4854367 21.6515142,28.6723368 C21.8339646,27.6142279 21.7015,26.2151605 20.5918487,24.9676303 C19.5896387,23.8387955 18.4824348,23.5913194 17.7326328,23.5862768 C16.7729067,23.5685992 15.7307082,23.9878048 15.1633821,24.6065014 L9.86236713,29.793543 L2.30676368,22.4571833 C1.64442472,21.7879377 1.27953687,20.899015 1.27953687,19.9495163 C1.27953687,19.0025389 1.64443112,18.1110303 2.30676368,17.4418493 L17.2650542,2.32499181 C18.6346473,0.943638294 20.8590364,0.943638294 22.2261342,2.32499181 L27.594586,7.74942427 C27.594586,7.74942427 18.8367656,16.5429707 18.1719954,17.3077674 C17.8395911,17.6916204 17.6896307,18.1613271 17.7446166,18.6714718 C17.8295907,19.4821046 18.4144414,20.3129725 19.431623,21.0781572 C22.3307636,23.2524944 26.1349898,22.967134 28.8990008,20.3634634 C30.2011572,19.1361682 33.4877071,15.8809657 34.6973459,14.6814049 L49.3779557,29.7627055 C49.5079218,30.1137297 49.8053345,31.4243767 48.9380812,32.3461411 L48.9387997,32.3474761 Z M49.3336886,27.8750636 L35.1630133,13.3161264 C35.0430475,13.1949096 34.8830932,13.1241967 34.7131449,13.1216753 C34.5656862,13.1039977 34.3807405,13.1873328 34.2582731,13.3060282 C34.2132863,13.3514848 29.6195971,17.9198278 28.0300348,19.4173555 C25.7332183,21.5816074 22.5865965,21.8316048 20.1999497,20.0411141 C19.5076673,19.5208907 19.0677928,18.9577275 19.0228137,18.5360226 C19.0078176,18.3870262 19.0428079,18.2733863 19.1377824,18.1622742 C19.787581,17.4148034 34.7755591,2.32587427 34.7755591,2.32587427 C36.1426569,0.944520752 38.3695413,0.944520752 39.7391343,2.32587427 L54.6948656,17.4427317 C56.0644587,18.8240852 56.0644587,21.074191 54.6948656,22.4555445 L49.3336886,27.8750636 Z"
+                                                                        id="Shape"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <h2 class="rv-title rv-textdot">Company Culture</h2>
+                                        <p class="rv-description">We believe in transparency; everyone is approachable
+                                            and we're all on the same level. We take pride and ownership in our work.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+    <section class="rv-sec-container rv-bg-light">
+        ﻿
+        <div class="rv-editorialgrid rv-component rv-theme-light" data-comp-name="editorialgrid">
+            <div class="container">
+                <div class="rv-background-wrap rv-cornercut">
+                    <div class="rv-grid-box">
+                        <div class="rv-align-text js-viewportitem">
+                            <h2 class="rv-h2-heading js-animateText rv-component" data-comp-name="animatetext"
+                                data-animtime="50" data-animtxt="We work with some of the most forward-thinking brands">
+                            </h2>
+                        </div>
+
+                    </div>
+                    <div class="rv-grid-box">
+                        <picture class="lozad" data-class="rv-bgimage objectfit"
+                            data-iesrc="./-/media/revonic/media/image-galleries/office-images/careers_mosaic_upated.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=6595D1639FEB74CAD8D4BD009BB36AB2"
+                            data-alt="CEO’s office space in the Dubai office">
+                            <source media="(max-width: 600px) and (orientation: portrait)"
+                                srcset="./-/media/revonic/media/image-galleries/office-images/careers_mosaic_upated.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=6595D1639FEB74CAD8D4BD009BB36AB2, ./-/media/revonic/media/image-galleries/office-images/careers_mosaic_upated.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=6595D1639FEB74CAD8D4BD009BB36AB2 2x" />
+                            <source media="(max-width: 1200px)"
+                                srcset="./-/media/revonic/media/image-galleries/office-images/careers_mosaic_upated.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=6595D1639FEB74CAD8D4BD009BB36AB2, ./-/media/revonic/media/image-galleries/office-images/careers_mosaic_upated.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=6595D1639FEB74CAD8D4BD009BB36AB2 2x" />
+                            <source media="(min-width: 320px)"
+                                srcset="./-/media/revonic/media/image-galleries/office-images/careers_mosaic_upated.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=6595D1639FEB74CAD8D4BD009BB36AB2, ./-/media/revonic/media/image-galleries/office-images/careers_mosaic_upated.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=6595D1639FEB74CAD8D4BD009BB36AB2 2x" />
+                        </picture>
+
+                    </div>
+                    <div class="rv-grid-box">
+                        <div class="rv-align-text flex-column">
+                            <div class="d-flex">
+                                <h2 class="rv-h2-text">70</h2>
+                                <span class="sign">+</span>
+                            </div>
+                            <span class="rv-text">Teammates</span>
+                        </div>
+
+                    </div>
+                    <div class="rv-grid-wide">
+                        <picture class="lozad" data-class="rv-bgimage objectfit"
+                            data-iesrc="./-/media/revonic/media/image-galleries/office-images/careers_mosaic_2.jpg?cx=0.44&amp;cy=0.42&amp;cw=0&amp;ch=0&amp;hash=9DD95F982A5109841613D24587A0A7E1"
+                            data-alt="">
+                            <source media="(max-width: 600px) and (orientation: portrait)"
+                                srcset="./-/media/revonic/media/image-galleries/office-images/careers_mosaic_2.jpg?cx=0.44&amp;cy=0.42&amp;cw=0&amp;ch=0&amp;hash=9DD95F982A5109841613D24587A0A7E1, ./-/media/revonic/media/image-galleries/office-images/careers_mosaic_2.jpg?cx=0.44&amp;cy=0.42&amp;cw=0&amp;ch=0&amp;hash=9DD95F982A5109841613D24587A0A7E1 2x" />
+                            <source media="(max-width: 1200px)"
+                                srcset="./-/media/revonic/media/image-galleries/office-images/careers_mosaic_2.jpg?cx=0.44&amp;cy=0.42&amp;cw=0&amp;ch=0&amp;hash=9DD95F982A5109841613D24587A0A7E1, ./-/media/revonic/media/image-galleries/office-images/careers_mosaic_2.jpg?cx=0.44&amp;cy=0.42&amp;cw=0&amp;ch=0&amp;hash=9DD95F982A5109841613D24587A0A7E1 2x" />
+                            <source media="(min-width: 320px)"
+                                srcset="./-/media/revonic/media/image-galleries/office-images/careers_mosaic_2.jpg?cx=0.44&amp;cy=0.42&amp;cw=0&amp;ch=0&amp;hash=9DD95F982A5109841613D24587A0A7E1, ./-/media/revonic/media/image-galleries/office-images/careers_mosaic_2.jpg?cx=0.44&amp;cy=0.42&amp;cw=0&amp;ch=0&amp;hash=9DD95F982A5109841613D24587A0A7E1 2x" />
+                        </picture>
+
+                    </div>
+
+                    <div class="rv-grid-wide">
+                        <picture class="lozad" data-class="rv-bgimage objectfit"
+                            data-iesrc="./-/media/revonic/careers/ux-lab.jpg?cx=0&amp;cy=0&amp;cw=800&amp;ch=350&amp;hash=C8B61F3C22329578A18EEE21F857D46F"
+                            data-alt="casestudy-banner">
+                            <source media="(max-width: 600px) and (orientation: portrait)"
+                                srcset="./-/media/revonic/careers/ux-lab.jpg?cx=0&amp;cy=0&amp;cw=800&amp;ch=350&amp;hash=C8B61F3C22329578A18EEE21F857D46F, ./-/media/revonic/careers/ux-lab.jpg?cx=0&amp;cy=0&amp;cw=1600&amp;ch=700&amp;hash=DD9A1601A3BCB65431BEFB37469FEB55 2x">
+                            <source media="(max-width: 1200px) and (orientation: landscape)"
+                                srcset="./-/media/revonic/careers/ux-lab.jpg?cx=0&amp;cy=0&amp;cw=800&amp;ch=350&amp;hash=C8B61F3C22329578A18EEE21F857D46F, ./-/media/revonic/careers/ux-lab.jpg?cx=0&amp;cy=0&amp;cw=1600&amp;ch=700&amp;hash=DD9A1601A3BCB65431BEFB37469FEB55 2x">
+                            <source media="(min-width: 320px)"
+                                srcset="./-/media/revonic/careers/ux-lab.jpg?cx=0&amp;cy=0&amp;cw=800&amp;ch=350&amp;hash=C8B61F3C22329578A18EEE21F857D46F, ./-/media/revonic/careers/ux-lab.jpg?cx=0&amp;cy=0&amp;cw=1600&amp;ch=700&amp;hash=DD9A1601A3BCB65431BEFB37469FEB55 2x">
+                        </picture>
+                        <button class="rv-roundbtn rv-component js-videoPopup" data-comp-name="lightbox"
+                            data-video-type="cloudflare"
+                            data-video-poster="./-/media/revonic/careers/ux-lab.jpg?cx=0&amp;cy=0&amp;cw=800&amp;ch=350&amp;hash=C8B61F3C22329578A18EEE21F857D46F"
+                            data-video-url="494c03d9b6a6d3fefbdd9d4ed4e2bb62" id="">
+                            <div class="rv-roundbox">
+                                <svg viewBox="0 0 14 25" class="rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-chevron-right"></use>
+                                </svg>
+                            </div>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <section class="rv-sec-container rv-bg-light">
+
+        <div class="container rv-container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 col-lg-6 richtext">
+                    <p><span style="font-size: 18px;"><strong>AWARD WINNING OFFICE</strong></span></p>
+                    <p>Have a look at our award winning office, recognised for its interior that reflects our modern and
+                        vibrant culture. The space was intentionally designed to cultivate an innovative and
+                        collaborative environment.</p>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-3 text-center"><img alt=""
+                        src="./-/media/revonic/careers/property_awards.svg" alt="Property Awards" class="rv-img w-75" />
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-3 text-center"><img alt=""
+                        src="./-/media/revonic/careers/property_awards_stars.svg?h=210.541&amp;w=512.604&amp;hash=CCD88B9D2682B43ED90FF3DFC0905E05"
+                        alt="Award Stats" class="rv-img w-100" /></div>
+            </div>
+        </div>
+
+        <div class="rv-image-gallery rv-component rv-theme-light" data-comp-name="imagegallery">
+            <div class="container ">
+                <div class="rv-slider-container ">
+                    <div class="js-slider rv-img-slider">
+                        <div class="rv-img-slide-wrap">
+                            <div class="rv-img-slide">
+                                <picture class="lozad" data-class="rv-bgimage objectfit"
+                                    data-iesrc="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office2.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=1C4DEDE0CCF934611611CC1E2269F7E8"
+                                    data-alt="">
+                                    <source media="(max-width: 600px) and (orientation: portrait)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office2.jpg?cx=0&amp;cy=0&amp;cw=345&amp;ch=195&amp;hash=3383BCB9FB202C52E47AC4610098EBAF, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office2.jpg?cx=0&amp;cy=0&amp;cw=690&amp;ch=390&amp;hash=7C00A9197AF71C1A4385E3A7DFEFE75F 2x">
+                                    <source media="(max-width: 1200px) and (orientation: landscape)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office2.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=1C4DEDE0CCF934611611CC1E2269F7E8, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office2.jpg?cx=0&amp;cy=0&amp;cw=2232&amp;ch=1256&amp;hash=72A074752DFAB33BA749812A284D6CCB 2x">
+                                    <source media="(min-width: 320px)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office2.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=1C4DEDE0CCF934611611CC1E2269F7E8, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office2.jpg?cx=0&amp;cy=0&amp;cw=2232&amp;ch=1256&amp;hash=72A074752DFAB33BA749812A284D6CCB 2x">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="rv-img-slide-wrap">
+                            <div class="rv-img-slide">
+                                <picture class="lozad" data-class="rv-bgimage objectfit"
+                                    data-iesrc="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office1.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=43EB99DAAFA466536691B394034A5F1D"
+                                    data-alt="">
+                                    <source media="(max-width: 600px) and (orientation: portrait)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office1.jpg?cx=0&amp;cy=0&amp;cw=345&amp;ch=195&amp;hash=019BB2AB88FB659EBCA5262E74B57EEA, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office1.jpg?cx=0&amp;cy=0&amp;cw=690&amp;ch=390&amp;hash=8F2357B7AE374D779FE0F15A4A8AED3D 2x">
+                                    <source media="(max-width: 1200px) and (orientation: landscape)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office1.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=43EB99DAAFA466536691B394034A5F1D, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office1.jpg?cx=0&amp;cy=0&amp;cw=2232&amp;ch=1256&amp;hash=A6CB8E054EDC10F267BE02EBD6F6FD20 2x">
+                                    <source media="(min-width: 320px)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office1.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=43EB99DAAFA466536691B394034A5F1D, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office1.jpg?cx=0&amp;cy=0&amp;cw=2232&amp;ch=1256&amp;hash=A6CB8E054EDC10F267BE02EBD6F6FD20 2x">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="rv-img-slide-wrap">
+                            <div class="rv-img-slide">
+                                <picture class="lozad" data-class="rv-bgimage objectfit"
+                                    data-iesrc="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office3.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=EAAB0AD52E8D6FAB69AE0C11C17CAFC0"
+                                    data-alt="">
+                                    <source media="(max-width: 600px) and (orientation: portrait)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office3.jpg?cx=0&amp;cy=0&amp;cw=345&amp;ch=195&amp;hash=D5972D97E9A3203582E5AF75A1B9FB35, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office3.jpg?cx=0&amp;cy=0&amp;cw=690&amp;ch=390&amp;hash=7B58009A5196A667F8000988AC73D8CD 2x">
+                                    <source media="(max-width: 1200px) and (orientation: landscape)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office3.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=EAAB0AD52E8D6FAB69AE0C11C17CAFC0, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office3.jpg?cx=0&amp;cy=0&amp;cw=2232&amp;ch=1256&amp;hash=CDC4666650FD2C11C5EED85D138B3F57 2x">
+                                    <source media="(min-width: 320px)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office3.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=EAAB0AD52E8D6FAB69AE0C11C17CAFC0, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office3.jpg?cx=0&amp;cy=0&amp;cw=2232&amp;ch=1256&amp;hash=CDC4666650FD2C11C5EED85D138B3F57 2x">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="rv-img-slide-wrap">
+                            <div class="rv-img-slide">
+                                <picture class="lozad" data-class="rv-bgimage objectfit"
+                                    data-iesrc="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office4.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=1CFF9AA350098DFC6DEA8E0BEBD821A5"
+                                    data-alt="">
+                                    <source media="(max-width: 600px) and (orientation: portrait)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office4.jpg?cx=0&amp;cy=0&amp;cw=345&amp;ch=195&amp;hash=448842924DD8B67FC8BF0A2EDF8F09A1, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office4.jpg?cx=0&amp;cy=0&amp;cw=690&amp;ch=390&amp;hash=84B055DAA35FA16055BA59C8C43A02CE 2x">
+                                    <source media="(max-width: 1200px) and (orientation: landscape)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office4.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=1CFF9AA350098DFC6DEA8E0BEBD821A5, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office4.jpg?cx=0&amp;cy=0&amp;cw=2232&amp;ch=1256&amp;hash=CE9E4CC9B53F5D1412624A912F7346E1 2x">
+                                    <source media="(min-width: 320px)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office4.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=1CFF9AA350098DFC6DEA8E0BEBD821A5, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office4.jpg?cx=0&amp;cy=0&amp;cw=2232&amp;ch=1256&amp;hash=CE9E4CC9B53F5D1412624A912F7346E1 2x">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="rv-img-slide-wrap">
+                            <div class="rv-img-slide">
+                                <picture class="lozad" data-class="rv-bgimage objectfit"
+                                    data-iesrc="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office5.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=4BEBA31D0D5BD93D6748D05DCD53A897"
+                                    data-alt="">
+                                    <source media="(max-width: 600px) and (orientation: portrait)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office5.jpg?cx=0&amp;cy=0&amp;cw=345&amp;ch=195&amp;hash=E891A985ACE65D2C17F7CB09C825A23D, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office5.jpg?cx=0&amp;cy=0&amp;cw=690&amp;ch=390&amp;hash=90099534B90369F0471928EB2FB33DF6 2x">
+                                    <source media="(max-width: 1200px) and (orientation: landscape)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office5.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=4BEBA31D0D5BD93D6748D05DCD53A897, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office5.jpg?cx=0&amp;cy=0&amp;cw=2232&amp;ch=1256&amp;hash=529CD7BA48ED352E6261A4405CDDEB2B 2x">
+                                    <source media="(min-width: 320px)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office5.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=4BEBA31D0D5BD93D6748D05DCD53A897, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office5.jpg?cx=0&amp;cy=0&amp;cw=2232&amp;ch=1256&amp;hash=529CD7BA48ED352E6261A4405CDDEB2B 2x">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="rv-img-slide-wrap">
+                            <div class="rv-img-slide">
+                                <picture class="lozad" data-class="rv-bgimage objectfit"
+                                    data-iesrc="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office6.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=604C9F7F56B6BA30EF4454C8FA0A6437"
+                                    data-alt="">
+                                    <source media="(max-width: 600px) and (orientation: portrait)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office6.jpg?cx=0&amp;cy=0&amp;cw=345&amp;ch=195&amp;hash=CF8881F3F5A5D87AED71AD9CBCB17F55, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office6.jpg?cx=0&amp;cy=0&amp;cw=690&amp;ch=390&amp;hash=F7AE22B16C8A161938082A99B7075257 2x">
+                                    <source media="(max-width: 1200px) and (orientation: landscape)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office6.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=604C9F7F56B6BA30EF4454C8FA0A6437, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office6.jpg?cx=0&amp;cy=0&amp;cw=2232&amp;ch=1256&amp;hash=FF746139D7C5EA67029AEF0BAE722024 2x">
+                                    <source media="(min-width: 320px)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office6.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=604C9F7F56B6BA30EF4454C8FA0A6437, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office6.jpg?cx=0&amp;cy=0&amp;cw=2232&amp;ch=1256&amp;hash=FF746139D7C5EA67029AEF0BAE722024 2x">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="rv-img-slide-wrap">
+                            <div class="rv-img-slide">
+                                <picture class="lozad" data-class="rv-bgimage objectfit"
+                                    data-iesrc="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office7.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=7D21E2C872E7F28AA91B6C15550FA61F"
+                                    data-alt="">
+                                    <source media="(max-width: 600px) and (orientation: portrait)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office7.jpg?cx=0&amp;cy=0&amp;cw=345&amp;ch=195&amp;hash=33B8FFDF29881A09340D99454F92FFF9, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office7.jpg?cx=0&amp;cy=0&amp;cw=690&amp;ch=390&amp;hash=4663364C7689CDD9DED6335C9DF42D99 2x">
+                                    <source media="(max-width: 1200px) and (orientation: landscape)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office7.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=7D21E2C872E7F28AA91B6C15550FA61F, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office7.jpg?cx=0&amp;cy=0&amp;cw=2232&amp;ch=1256&amp;hash=0253D3E420510D130BECE37478E73D43 2x">
+                                    <source media="(min-width: 320px)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office7.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=7D21E2C872E7F28AA91B6C15550FA61F, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office7.jpg?cx=0&amp;cy=0&amp;cw=2232&amp;ch=1256&amp;hash=0253D3E420510D130BECE37478E73D43 2x">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="rv-img-slide-wrap">
+                            <div class="rv-img-slide">
+                                <picture class="lozad" data-class="rv-bgimage objectfit"
+                                    data-iesrc="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office8.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=43913BB16CA97AB009002E6BA68F1AAA"
+                                    data-alt="">
+                                    <source media="(max-width: 600px) and (orientation: portrait)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office8.jpg?cx=0&amp;cy=0&amp;cw=345&amp;ch=195&amp;hash=2C75D36EB5712879DAFCD86B90002228, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office8.jpg?cx=0&amp;cy=0&amp;cw=690&amp;ch=390&amp;hash=9542E603CB796D88B0345A52EADBF017 2x">
+                                    <source media="(max-width: 1200px) and (orientation: landscape)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office8.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=43913BB16CA97AB009002E6BA68F1AAA, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office8.jpg?cx=0&amp;cy=0&amp;cw=2232&amp;ch=1256&amp;hash=2528F86DF9C484EB59B5928434959C56 2x">
+                                    <source media="(min-width: 320px)"
+                                        srcset="./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office8.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=43913BB16CA97AB009002E6BA68F1AAA, ./-/media/revonic/media/image-galleries/office-images/revonic-dubai-office8.jpg?cx=0&amp;cy=0&amp;cw=2232&amp;ch=1256&amp;hash=2528F86DF9C484EB59B5928434959C56 2x">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="js-slider-text rv-text-slider">
+                        <div class="rv-img-slide-wrap">
+                            <div class="rv-img-caption">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rv-img-slide-wrap">
+                            <div class="rv-img-caption">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rv-img-slide-wrap">
+                            <div class="rv-img-caption">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rv-img-slide-wrap">
+                            <div class="rv-img-caption">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rv-img-slide-wrap">
+                            <div class="rv-img-caption">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rv-img-slide-wrap">
+                            <div class="rv-img-caption">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rv-img-slide-wrap">
+                            <div class="rv-img-caption">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rv-img-slide-wrap">
+                            <div class="rv-img-caption">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="js-sliderArrow rv-sliderArrow">
+                        <button class="js-bannerPrev slick-prev slick-arrow" aria-label="Previous" type="button">
+                            <svg viewBox="0 0 14 25" class="rv-toSvg sss">
+                                <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-chevron-left"></use>
+                            </svg>
+                        </button>
+                        <button class="js-bannerNext slick-next slick-arrow" aria-label="Next" type="button">
+                            <svg viewBox="0 0 14 25" class="rv-toSvg">
+                                <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-chevron-right"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+    <section class="rv-sec-container rv-bg-dark">
+
+        <p style="text-align: center;">&nbsp;</p>
+        <h1 style="text-align: center;">Our core values</h1>
+        <p>&nbsp;</p>
+        <p style="text-align: center;">We partner with our clients to help them build digital capability that drives
+            their business performance.</p>
+        <p style="text-align: center;">We do this by delivering exceptional analysis, strategy, UX, design, content
+            services and technology. But most importantly, we:&nbsp;</p>
+        <p>&nbsp;</p>
+        <p style="text-align: center;"><img alt="REVONIC core values" class="rv-img-100"
+                src="./-/media/revonic/media/image-galleries/careers/ethos_dark_bkg.svg" /></p>
+        <div class="rv-component rv-highlight-text-banner rv-theme-dark">
+            <div class="rv-container container">
+                <div class="row">
+                    <div class="rv-text-wrapper col-8 col-lg-12">
+                        <h2 class="rv-h3 rv-title text-center">
+                            Ultimately, it’s about <span class="rv-highlight">
+                                RAISING THE BAR, together.
+                            </span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="rv-sec-container rv-bg-grey">
+        <div class="rv-jobcards rv-component rv-theme-light" data-comp-name="jobcards">
+            <div class="container rv-container">
+                <div class="rv-jobcards-sec">
+                    <div class="rv-cornerline">
+                        <h3 class="rv-heading">Jobs 2021</h3>
+                        <div class="rv-line-image rv-component" data-comp-name="animatesvg">
+                            <svg class="rv-line-svg js-svg" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 206 138" width="206"
+                                height="138" version="1.1">
+                                <g>
+                                    <line style="fill:none;stroke-miterlimit:10;" x1="0.8" y1="1" x2="205.2" y2="138" />
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-12 rv-job-content">
+                            <p class="rv-description rv-job-title">We're currently growing our team in the following
+                                roles:</p>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="rv-jobcardbox rv-cornercut ">
+                                <a href="https://revonic.typeform.com/to/AnF4x8cE" class="rv-card-anchor" _blank></a>
+                                <h4 class="rv-title rv-textdot">Senior Digital Project Manager (Dubai)</h4>
+                                <p class="rv-description">We need a rockstar Arabic Speaker Senior PM to work on the
+                                    biggest brands in the MENA region.</p>
+                                <a href="https://revonic.typeform.com/to/AnF4x8cE" class="btn-withline" _blank>APPLY</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="rv-jobcardbox rv-cornercut ">
+                                <a href="https://careers.dubai.valtech.com/jobs/1341739-sitecore-architect"
+                                    class="rv-card-anchor" _blank></a>
+                                <h4 class="rv-title rv-textdot">Sitecore Architect (Dubai)</h4>
+                                <p class="rv-description">We are looking for a full time Sitecore Architect to join our
+                                    talented Tech team in Dubai and work on exciting projects in the region and the
+                                    world.</p>
+                                <a href="https://careers.dubai.valtech.com/jobs/1341739-sitecore-architect"
+                                    class="btn-withline" _blank>APPLY</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="rv-jobcardbox rv-cornercut ">
+                                <a href="https://careers.dubai.valtech.com/jobs/1387757-front-end-lead"
+                                    class="rv-card-anchor" _blank></a>
+                                <h4 class="rv-title rv-textdot">Frontend Team Lead (Dubai)</h4>
+                                <p class="rv-description">We need a rockstar Frontend Lead to join our team in Dubai and
+                                    work with the biggest brands in the region and the world.</p>
+                                <a href="https://careers.dubai.valtech.com/jobs/1387757-front-end-lead"
+                                    class="btn-withline" _blank>APPLY</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="rv-jobcardbox rv-cornercut ">
+                                <a href="https://careers.dubai.valtech.com/jobs/1366051-mobile-lead-flutter"
+                                    class="rv-card-anchor" _blank></a>
+                                <h4 class="rv-title rv-textdot">Mobile Team Lead (Dubai)</h4>
+                                <p class="rv-description">We are looking for a full time Mobile Lead (Flutter) to join
+                                    our talented Tech team.</p>
+                                <a href="https://careers.dubai.valtech.com/jobs/1366051-mobile-lead-flutter"
+                                    class="btn-withline" _blank>Apply</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="rv-jobcardbox rv-cornercut ">
+                                <a href="https://careers.dubai.valtech.com/jobs/1366611-react-developer"
+                                    class="rv-card-anchor" _blank></a>
+                                <h4 class="rv-title rv-textdot">React Developer (Dubai)</h4>
+                                <p class="rv-description">Join our Dubai team as a React Developer and work on very
+                                    exciting projects.</p>
+                                <a href="https://careers.dubai.valtech.com/jobs/1366611-react-developer"
+                                    class="btn-withline" _blank>APPLY</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="rv-jobcardbox rv-cornercut ">
+                                <a href="https://revonic.typeform.com/to/iQ8MaSfE" class="rv-card-anchor"></a>
+                                <h4 class="rv-title rv-textdot">Mid &amp; Senior UX Designer (Dubai)</h4>
+                                <p class="rv-description">Take strategic direction, combining business, user and market
+                                    insights and translate it into concrete ideas that deliver business results and
+                                    excellent experiences.</p>
+                                <a href="https://revonic.typeform.com/to/iQ8MaSfE" class="btn-withline">APPLY</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="rv-jobcardbox rv-cornercut ">
+                                <a href="https://revonic.typeform.com/to/AXqIhfzs" class="rv-card-anchor" _blank></a>
+                                <h4 class="rv-title rv-textdot">Mid &amp; Senior Visual Designer (Dubai)</h4>
+                                <p class="rv-description">Plan, direct and craft intuitive, appealing and clear
+                                    interfaces using design, interaction and motion principles. Work within a team to
+                                    connect brand identity with interaction flows to build delightful and functional
+                                    user experience.</p>
+                                <a href="https://revonic.typeform.com/to/AXqIhfzs" class="btn-withline" _blank>Apply</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="rv-sec-container rv-bg-light">
+        <div class="rv-editorial-info-text-bar rv-component rv-theme-light">
+            <div class="rv-container container">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-6">
+                        <h2 class="rv-h3 rv-title">
+                            Don&#39;t see your position listed?
+                        </h2>
+                    </div>
+                    <div class="col-12">
+                        <p class="rv-regular">We&#39;re always on the lookout for talented people to join our team! If
+                            you don&#39;t see your position listed but feel you can contribute to our team, then please
+                            submit your CV and we&#39;ll be in touch.</p>
+                    </div>
+                    <div class="col-12">
+                        <a href="https://revonic.typeform.com/to/cAFykq" target="_blank"
+                            class="rv-h6 rv-primary-link float-left">UPLOAD CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <div id="downloadformpop" class="rv-bg-dark contact-popup-gallery" style="display:none;">
+        <div class="cwarp">
+            <h3 class="rv-h2 rv-form-title m-0">Please fill in some details for us </h3>
+            <div class="rv-contact rv-component">
+                <div class="rv-contact-section">
+                    <div class="rv-form-container rv-component" data-comp-name="inputfields">
+
+                        <form class="rv-contact-form js-validate-download rv-component" data-comp-name="downloads"
+                            data-action="/api/downloads/download" id="downloadForm" name="download-form" method="post"
+                            autocomplete="off" data-link="" data-contact-email="" data-is-known-contact="False"
+                            data-download-key="">
+                            <input name="__RequestVerificationToken" type="hidden"
+                                value="O-gJvu8mrarzrkHPBqMARHNxtxnhbR929CwDEujAdb05bVGsLKlCm7a9TdMGiqoFbWLjwBI268C61794i6uJA_MNTIWALeGQb242_9hnW4Q1" />
+                            <input type="hidden" value="FMI8jmP3opG0MRk+DjobAvk7rAktVrh++IJhlTu3nCEYQfYfWwH0EQ=="
+                                id="hdnGoalId" name="GoalId" />
+                            <input type="hidden" value="05RGubXoNYbPFhgXQ7o6vQ==" id="hdnGoalText" name="GoalText" />
+                            <input type="hidden" id="hdnDownloadPath" name="DownloadPath" />
+
+                            <div class="form-group rv-forms">
+                                <input type="text" id="firstName" name="FirstName"
+                                    class="form-control-plaintext rv-input js-input-focus" data-rule-fullname="true"
+                                    data-msg="Please enter your first name" autocomplete="off" required>
+                                <label for="firstname" class="rv-label">First name</label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+                            <div class="form-group rv-forms">
+                                <input type="text" id="lastName" name="LastName"
+                                    class="form-control-plaintext rv-input js-input-focus" data-rule-fullname="true"
+                                    data-msg="Please enter your last name" autocomplete="off" required>
+                                <label for="lastName" class="rv-label">Last name</label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+
+                            <div class="form-group rv-forms rv-email">
+                                <input id="email" name="Email" class="form-control-plaintext rv-input js-input-focus"
+                                    type="email" data-rule-validEmail="true"
+                                    data-msg-validEmail="Please enter a valid email address"
+                                    data-msg="Please enter your email" autocomplete="off" required>
+                                <label for="email" class="rv-label">Email</label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+
+                            <div class="form-group rv-forms">
+                                <input type="text" id="company-name" name="CompanyName"
+                                    class="form-control-plaintext rv-input js-input-focus" data-rule-fullname="true"
+                                    data-msg="Please enter company name" autocomplete="off" required>
+                                <label for="company-name" class="rv-label">Company name<span
+                                        class="text -danger"></label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+
+                            <div class="form-group rv-forms">
+                                <input id="job-title" name="JobTitle" data-rule-required="true"
+                                    class="form-control-plaintext rv-input js-input-focus" data-rule-jobtitle="true"
+                                    data-msg="Please enter job title" autocomplete="off" required>
+                                <label for="job-title" class="rv-label">Job Title<span class="text -danger"></label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+                            <div class="rv-message-btn rv-boldbutton rv-component">
+                                <button class="btn-bold rv-component" type="submit">
+                                    <span class="rv-text-fill" data-btn-label="Send message">Download</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="rv-sec-container rv-bg-dark">
+
+    </section>
+    <footer class="rv-footer rv-component rv-theme-dark" data-comp-name="footer">
+        <div class="container rv-container">
+            <div class="row rv-fullWidth rv-footer-content">
+                <div class="rv-contact-message col-lg-5 col-md-12">
+
+                    <h3 class="rv-h6 rv-default-label rv-skewed-line">SAY HI</h3>
+                    <h2 class="rv-h1 rv-title">GET IN TOUCH</h2>
+                    <h4 class="rv-h6 rv-primary-link float-left"><a id="gtm-letstalkfooter" href="/en/contact">CONTACT
+                            US.</a>
+                        <p />
+                    </h4>
+                </div>
+                <address class="rv-address-block rv-quick-contacts col-lg-2 col-md-4">
+
+                    <h6 class='rv-h6 rv-default-label'>Contact</h6>
+                    <ul class="rv-list-secondary">
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="/en/contact" target="_self" id="GTM001">
+                                Email us </a>
+                        </li>
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="tel:+971 4 225 0572" target="_self" id="">
+                                +971 4 225 0572 </a>
+                        </li>
+                    </ul>
+
+
+
+
+
+
+
+
+                </address>
+                <address class="rv-address-block rv-address col-lg-3 col-md-4">
+
+                    <h6 class='rv-h6 rv-default-label'>Visit</h6>
+                    <ul class="rv-list-secondary rv-regular">
+                        <li class="rv-list-item">Level 46, Tower B</li>
+                        <li class="rv-list-item">Business Central Towers</li>
+                        <li class="rv-list-item">Media City, Dubai</li>
+                    </ul>
+                    <ul class="rv-list-secondary">
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link "
+                                href="https://www.google.com/maps/place/REVONIC/@25.1004538,55.1673033,17z/data=!3m1!4b1!4m5!3m4!1s0x3e5f6bc02f741831:0x3fd4128e657a3681!8m2!3d25.100449!4d55.169492"
+                                target="_blank" id="">
+                                Get directions </a>
+                        </li>
+                    </ul>
+
+
+
+
+
+
+
+
+                </address>
+                <address class="rv-address-block rv-social-links col-lg-2 col-md-4">
+
+                    <h6 class='rv-h6 rv-default-label'>Follow</h6>
+                    <ul class="rv-list-secondary">
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="https://www.facebook.com/indivirtualdubai/"
+                                target="_blank" id="">
+                                Facebook </a>
+                        </li>
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="https://www.instagram.com/wearerevonic/"
+                                target="_blank" id="">
+                                Instagram </a>
+                        </li>
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="https://www.linkedin.com/company/revonic/"
+                                target="_blank" id="">
+                                LinkedIn </a>
+                        </li>
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="https://twitter.com/wearerevonic" target="_blank"
+                                id="">
+                                Twitter </a>
+                        </li>
+                    </ul>
+
+
+
+
+
+
+
+
+                </address>
+            </div>
+            <div class="rv-fullWidth rv-footer-links row">
+                <div class="rv-links col-md-6">
+
+
+                </div>
+
+                <span class="rv-copyrights col-md-6 ">&copy; 2021 Valtech_ Revonic</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/vendors~main.js?v=1.12" defer></script>
+    <script src="./assets/js/main.js?v=1.12" defer></script>
+</body>
+
+</html>

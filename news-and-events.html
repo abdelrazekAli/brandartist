@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en" class="rv-html loading">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <style>
+        body,
+        html {
+            background: #121212
+        }
+
+        .loading .rv-header {
+            transform: translateX(-100%);
+            height: 50px;
+            overflow: hidden
+        }
+
+        .loading img,
+        .loading svg {
+            width: 0;
+            height: 0
+        }
+
+        .rv-sec-container {
+            position: relative;
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 0
+        }
+
+        .rv-hero-banner .lozad {
+            display: block;
+            min-height: 500px
+        }
+
+        .lozad {
+            display: block;
+            min-height: 1rem
+        }
+
+        img.lozad {
+            transition: opacity 1s linear
+        }
+
+        img.lozad:not([data-loaded]) {
+            position: relative;
+            max-width: 100%;
+            height: auto;
+            opacity: 0
+        }
+
+        img.lozad[data-loaded=true] {
+            transition: opacity 1s linear
+        }
+
+        .rv-casestudyfigures .rv-box .lozad {
+            display: block;
+            min-height: 260px
+        }
+
+        /* @media (max-width: 767px) {
+            max-height: 260px
+        } */
+
+        .rv-hero-banner .rv-banner-pictures .video-js {
+            height: 100vh;
+            width: 100%;
+            padding: 0;
+            z-index: 0;
+            min-height: 450px;
+            max-height: 1200px
+        }
+
+        .rv-roundbtn {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: transparent;
+            border: 0;
+            padding: 0;
+            cursor: pointer
+        }
+
+        .rv-forms .rv-input,
+        .rv-forms .rv-textarea {
+            font-family: Gilroy-Regular, sans-serif, Helvetica, Verdana, Arial;
+            font-weight: 500;
+            text-transform: none;
+            font-size: 18px;
+            font-size: 1.125rem;
+            line-height: 1.66667;
+            line-height: 30px;
+            padding: 10px 0;
+            position: relative;
+            background: 0 0;
+            color: #fff;
+            height: 45px;
+            width: 100%;
+            outline: 0;
+            border: none;
+            caret-color: #e44a21
+        }
+    </style>
+    <script>window.onload = function () { document.querySelector('html').classList.remove('loading') }</script>
+
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/icons/favicon.ico">
+
+    <link rel="manifest" href="./assets/manifest.json">
+    <link rel="prefetch" href="./assets/img/sprite/svg-sprite.svg" as="image" crossorigin="anonymous">
+    <link rel="preload" name="Gilroy-Bold" href="./assets/fonts/Gilroy-Bold.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload" name="Gilroy-Regular" href="./assets/fonts/Gilroy-Regular.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <!-- Order is important -->
+    <link rel="prefetch" name="Gilroy-Thin" href="./assets/fonts/Gilroy-Thin.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="prefetch" name="Gilroy-SemiBold" href="./assets/fonts/Gilroy-SemiBold.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="prefetch" name="Gilroy-SemiBoldItalic" href="./assets/fonts/Gilroy-SemiBoldItalic.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+
+    <link rel="preload" href="./assets/css/vendors~main.css" as="style"
+        onload="this.rel='stylesheet'; this.onload = null;">
+    <link rel="preload" href="./assets/css/main.css" as="style" onload="this.rel='stylesheet'; this.onload = null;">
+    <link rel="preload" href="./assets/css/dark.css" as="style" onload="this.rel='stylesheet'; this.onload = null;">
+    <link rel="preload" href="./assets/css/light.css" as="style" onload="this.rel='stylesheet'; this.onload = null;">
+
+    <script>
+        window.rv = {};
+        window.rv.resourcePath = './assets/';
+    </script>
+
+    <script>
+        /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+        /* This file is meant as a standalone workflow for
+        - testing support for link[rel=preload]
+        - enabling async CSS loading in browsers that do not support rel=preload
+        - applying rel preload css once loaded, whether supported or not.
+        */
+        !function (t) { "use strict"; t.loadCSS || (t.loadCSS = function () { }); var e = loadCSS.relpreload = {}; if (e.support = function () { var e; try { e = t.document.createElement("link").relList.supports("preload") } catch (t) { e = !1 } return function () { return e } }(), e.bindMediaToggle = function (t) { var e = t.media || "all"; function a() { t.addEventListener ? t.removeEventListener("load", a) : t.attachEvent && t.detachEvent("onload", a), t.setAttribute("onload", null), t.media = e } t.addEventListener ? t.addEventListener("load", a) : t.attachEvent && t.attachEvent("onload", a), setTimeout(function () { t.rel = "stylesheet", t.media = "only x" }), setTimeout(a, 3e3) }, e.poly = function () { if (!e.support()) for (var a = t.document.getElementsByTagName("link"), n = 0; n < a.length; n++) { var o = a[n]; "preload" !== o.rel || "style" !== o.getAttribute("as") || o.getAttribute("data-loadcss") || (o.setAttribute("data-loadcss", !0), e.bindMediaToggle(o)) } }, !e.support()) { e.poly(); var a = t.setInterval(e.poly, 500); t.addEventListener ? t.addEventListener("load", function () { e.poly(), t.clearInterval(a) }) : t.attachEvent && t.attachEvent("onload", function () { e.poly(), t.clearInterval(a) }) } "undefined" != typeof exports ? exports.loadCSS = loadCSS : t.loadCSS = loadCSS }("undefined" != typeof global ? global : this);
+    </script>
+    <noscript>
+        <link rel="stylesheet" href="./assets/css/vendors~main.css" type="text/css">
+        <link rel="stylesheet" href="./assets/css/main.css">
+    </noscript>
+
+
+    <link href="./assets/css/base.css?v=1.12" rel="stylesheet" />
+
+    <title>News &amp; Events | Revonic</title>
+    <meta property="og:title" content="News &amp; Events | Revonic" />
+    <meta name="keywords" content="Agency, Digital Agency, Experience Design, Revonic, Sitecore, UI, UX, Website" />
+    <meta name="description" content="Read our thoughts on technology, design and industry trends." />
+    <meta name="og:description" content="Read our thoughts on technology, design and industry trends." />
+    <meta name="og:image" content="https://www.revonic.com/./-/media/revonic/media/ogimage/rsz_web_and_mobile.jpg" />
+    <meta property="og:image:url"
+        content="https://www.revonic.com/./-/media/revonic/media/ogimage/rsz_web_and_mobile.jpg">
+    <meta property="og:url" content="https://www.revonic.com/en/News and Events" />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.revonic.com/en/news-and-events" /><!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5K9P7WQ');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156926072-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-156926072-1');
+    </script>
+
+    <script>
+        // register service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(function (registration) { console.log('Service Worker Registered'); });
+            navigator.serviceWorker.ready.then(function (registration) { console.log('Service Worker Ready'); });
+        }
+    </script>
+
+</head>
+
+<body class="rv-body ">
+    <header class="rv-header rv-component rv-theme-dark" data-comp-name="header">
+        <div class="rv-wrapper">
+            <div class="rv-container container">
+
+
+                <a class="rv-logo rv-column" href="/"><span class="sr-only">Revonic</span><img
+                        src="./assets/img/svg/light.svg" class="rv-revonic-logo light-variant"
+                        alt="rv-revonic-logo" /></a>
+
+                <div class="rv-navigation">
+                    <a class="rv-nav-trigger rv-link" href="javascript:;">
+                        <span class="rv-label d-lg-inline-block">Navigation</span>
+                        <div class="rv-nav-icon">
+                            <div class="rv-icon-content">
+                                <span class="sr-only">Show / Hide Navigation</span>
+                                <span class="rv-animated-icon rv-nav-iconbar-top d-block"></span>
+                                <span class="rv-animated-icon rv-nav-iconbar-bottom d-block"></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="rv-caption d-none d-lg-block">
+                    <div class="rv-secondary-link">
+
+
+                        <a href="/en/contact" id="test" class="rv-link">Contact Us</a>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+            <nav class="rv-nav-menu is-hidden">
+                <div class="rv-container container rv-fullWidth">
+                    <div class="w-100">
+
+                        <ul class="rv-list-main-nav">
+                            <li class="rv-list-item  row has-sub-menu">
+
+                                <a class="rv-h1 rv-link rv-nav-link col-lg-8" href="/en/work" target="_self" id="">
+                                    Work </a>
+                                <div class="rv-sub-menu col-lg-4 d-lg-block">
+                                    <h6 class="rv-h6 rv-default">Case Studies</h6>
+
+
+                                    <ul class="rv-list-primary">
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/emirates-airline" target="_self"
+                                                id="gtm-NavigationEmirates">
+                                                Emirates Airline </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/meraas" target="_self"
+                                                id="gtm-NavigationMeraas">
+                                                Meraas </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/ubyemaar" target="_self" id="">
+                                                U by Emaar </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/the-red-sea" target="_self" id="">
+                                                The Red Sea Project </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/mercedes-benz" target="_self" id="">
+                                                Mercedes-Benz </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/abu-dhabi-airport" target="_self"
+                                                id="">
+                                                Abu Dhabi Airport </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/noor-bank" target="_self" id="">
+                                                Noor Bank </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/emirates-nbd" target="_self" id="">
+                                                Emirates NBD </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="rv-list-item  row has-sub-menu">
+
+                                <a class="rv-h1 rv-link rv-nav-link col-lg-8" href="/en/services" target="_self" id="">
+                                    Services </a>
+                                <div class="rv-sub-menu col-lg-4 d-lg-block">
+                                    <h6 class="rv-h6 rv-default">Our Services</h6>
+
+
+                                    <ul class="rv-list-primary">
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/digital-strategy" target="_self"
+                                                id="">
+                                                Digital Strategy </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/ux-and-ui-design" target="_self"
+                                                id="">
+                                                UX &amp; UI Design </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/user-research" target="_self"
+                                                id="">
+                                                User Research </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/user-testing" target="_self"
+                                                id="">
+                                                User Testing </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/data-analytics-and-insights"
+                                                target="_self" id="">
+                                                Data Analytics &amp; Insights </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/content-services" target="_self"
+                                                id="">
+                                                Content Services </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/web-and-mobile" target="_self"
+                                                id="">
+                                                Web &amp; Mobile Build </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="rv-list-item  ">
+
+                                <a class="rv-h1 rv-link rv-nav-link " href="/en/news-and-events" target="_self" id="">
+                                    News &amp; Events </a>
+                            </li>
+                            <li class="rv-list-item  ">
+
+                                <a class="rv-h1 rv-link rv-nav-link " href="/en/careers" target="_self" id="">
+                                    Careers </a>
+                            </li>
+                            <li class="rv-list-item  ">
+
+                                <a class="rv-h1 rv-link rv-nav-link " href="/en/contact" target="_self" id="">
+                                    Contact </a>
+                            </li>
+                        </ul>
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5K9P7WQ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <section class="rv-sec-container headerpd rv-bg-light">
+        <h1 class="sr-only">NEWS &amp; EVENTS</h1>
+        <h2 class="sr-only">Check out our favourite industry trends, learn about interesting topics in our blog posts
+            and let&#39;s celebrate our successes, together, in our news updates.</h2>
+        <div class="rv-content-page-header rv-theme-light rv-component">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-4 rv-m-mb-section ">
+                        <h1 class="rv-main-heading">NEWS</h1>
+
+                        <h2 class="rv-sub-heading">&amp; EVENTS</h2>
+                    </div>
+                    <div class="col-12 offset-md-1 col-md-7">
+                        <p class="rv-paragraph">
+                            Check out our favourite industry trends, learn about interesting topics in our blog posts
+                            and let&#39;s celebrate our successes, together, in our news updates.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="rv-hockey-image rv-component" data-comp-name="animatesvg">
+                <svg class="rv-hockey-svg js-svg" viewBox="0 0 803 303" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(-1110.000000, -79.000000)" stroke="#E44A21">
+                            <g transform="translate(0.000000, 79.000000)">
+                                <g transform="translate(405.000000, -49.000000)">
+                                    <polyline points="705.333202 351.373997 1192.8631 351.373997 1557.35352 0">
+                                    </polyline>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+
+        </div>
+        <section class="rv-sec-container ">
+            <div class="rv-contentcard rv-component rv-featured rv-theme-light py-40">
+                <div class="container rv-content">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="rv-card">
+                                <a href="/en/news-and-events/2021/06/revonics-deep-analytics-tools-to-empower-uae"
+                                    target="" class="rv-card-anchor"
+                                    title="Revonic’s deep analytics tools to empower UAE eCommerce sector"></a>
+                                <div class="rv-box rv-cornercut">
+                                    <div class="rv-linear-overlay"></div>
+                                    <a href="/en/news-and-events/2021/06/revonics-deep-analytics-tools-to-empower-uae"
+                                        target=""
+                                        title="Revonic’s deep analytics tools to empower UAE eCommerce sector">
+                                        <picture class="lozad" data-class="rv-bgimage objectfit"
+                                            data-iesrc="./-/media/revonic/blogs/2021/rupixen-com-q59hmzk38eq-unsplash.jpg?cx=0.41&amp;cy=0.25&amp;cw=1110&amp;ch=522&amp;hash=BE6CE8DAFEF35DCE61235AF1D8F5E208"
+                                            data-alt="Revonic’s deep analytics tools to empower UAE eCommerce sector">
+                                            <source media="(max-width: 600px) and (orientation: portrait)"
+                                                srcset="./-/media/revonic/blogs/2021/rupixen-com-q59hmzk38eq-unsplash.jpg?cx=0.41&amp;cy=0.25&amp;cw=600&amp;ch=350&amp;hash=0115445DE6BFE5AAC48A0DAE4F428A5C, ./-/media/revonic/blogs/2021/rupixen-com-q59hmzk38eq-unsplash.jpg?cx=0.41&amp;cy=0.25&amp;cw=1200&amp;ch=700&amp;hash=FF107A287C59AC0A7F6130C7E941655E 2x">
+                                            <source media="(max-width: 1200px) and (orientation: landscape)"
+                                                srcset="./-/media/revonic/blogs/2021/rupixen-com-q59hmzk38eq-unsplash.jpg?cx=0.41&amp;cy=0.25&amp;cw=1200&amp;ch=350&amp;hash=69DB8645CC46CD50562CA0AFAB9713A4, ./-/media/revonic/blogs/2021/rupixen-com-q59hmzk38eq-unsplash.jpg?cx=0.41&amp;cy=0.25&amp;cw=2400&amp;ch=700&amp;hash=785DA7F97BA7A3801AB89027B229118B 2x">
+                                            <source media="(min-width: 320px)"
+                                                srcset="./-/media/revonic/blogs/2021/rupixen-com-q59hmzk38eq-unsplash.jpg?cx=0.41&amp;cy=0.25&amp;cw=1110&amp;ch=522&amp;hash=BE6CE8DAFEF35DCE61235AF1D8F5E208, ./-/media/revonic/blogs/2021/rupixen-com-q59hmzk38eq-unsplash.jpg?cx=0.41&amp;cy=0.25&amp;cw=2220&amp;ch=1044&amp;hash=860509B967CBF5651F4C1D53578D1DF6 2x">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="rv-description-box">
+                                    <div class="rv-title mb-30 mt-3">
+                                        <span class="rv-feature-news">FEATURED BLOG</span>
+
+                                        <a href="/en/news-and-events/2021/06/revonics-deep-analytics-tools-to-empower-uae"
+                                            target="">
+                                            <h1 class="rv-h1-heading">
+                                                Revonic’s deep analytics tools to empower UAE eCommerce sector
+                                            </h1>
+                                        </a>
+                                    </div>
+
+                                    <a href="/en/news-and-events/2021/06/revonics-deep-analytics-tools-to-empower-uae"
+                                        target="" class="btn-withline mb-10 rv-anchor-none">
+                                        READ MORE </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="rv-sec-container rv-theme-light">
+            <div class="rv-contentcard rv-component rv-theme-light pb-5">
+                <div class="container rv-content">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4">
+                            <div class="rv-card rv-img-cover mt-0 mb-5">
+                                <a href="/en/news-and-events/2020/10/putting-users-first-during-digital-transformation"
+                                    class="rv-card-anchor"></a>
+                                <div class="rv-box">
+                                    <a
+                                        href="/en/news-and-events/2020/10/putting-users-first-during-digital-transformation">
+                                        <picture class="lozad" data-class="rv-bgimage objectfit"
+                                            data-iesrc="./-/media/revonic/banners/blog-images/digital-transformation-banner.jpg?cx=0.39&amp;cy=0.28&amp;cw=0&amp;ch=264&amp;hash=F4F6F5E789F9AA09CF7DD78C368C9986"
+                                            data-alt="Putting users first during digital transformation">
+                                            <source media="(max-width: 600px) and (orientation: portrait)"
+                                                srcset="./-/media/revonic/banners/blog-images/digital-transformation-banner.jpg?cx=0.39&amp;cy=0.28&amp;cw=0&amp;ch=264&amp;hash=F4F6F5E789F9AA09CF7DD78C368C9986, ./-/media/revonic/banners/blog-images/digital-transformation-banner.jpg?cx=0.39&amp;cy=0.28&amp;cw=0&amp;ch=528&amp;hash=DC308745DEDF01CCF1E1F9F4282FA45C 2x">
+                                            <source media="(max-width: 1200px) and (orientation: landscape)"
+                                                srcset="./-/media/revonic/banners/blog-images/digital-transformation-banner.jpg?cx=0.39&amp;cy=0.28&amp;cw=0&amp;ch=264&amp;hash=F4F6F5E789F9AA09CF7DD78C368C9986, ./-/media/revonic/banners/blog-images/digital-transformation-banner.jpg?cx=0.39&amp;cy=0.28&amp;cw=0&amp;ch=528&amp;hash=DC308745DEDF01CCF1E1F9F4282FA45C 2x">
+                                            <source media="(min-width: 320px)"
+                                                srcset="./-/media/revonic/banners/blog-images/digital-transformation-banner.jpg?cx=0.39&amp;cy=0.28&amp;cw=0&amp;ch=264&amp;hash=F4F6F5E789F9AA09CF7DD78C368C9986, ./-/media/revonic/banners/blog-images/digital-transformation-banner.jpg?cx=0.39&amp;cy=0.28&amp;cw=0&amp;ch=528&amp;hash=DC308745DEDF01CCF1E1F9F4282FA45C 2x">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="rv-description-box rv-content-down mt-3">
+                                    <div class="rv-title mb-30">
+                                        <span class="rv-feature-news">Blog</span>
+                                        <a
+                                            href="/en/news-and-events/2020/10/putting-users-first-during-digital-transformation">
+                                            <h2 class="rv-h1-heading"> Putting users first during digital transformation
+                                            </h2>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="rv-card rv-img-cover mt-0 mb-5">
+                                <a href="/en/news-and-events/2020/06/the-age-of-bigger-and-bolder-ecommerce"
+                                    class="rv-card-anchor"></a>
+                                <div class="rv-box">
+                                    <a href="/en/news-and-events/2020/06/the-age-of-bigger-and-bolder-ecommerce">
+                                        <picture class="lozad" data-class="rv-bgimage objectfit"
+                                            data-iesrc="./-/media/revonic/blogs/2020/06/the-age-of-bigger-and-bolder-ecommerce/the-age-of-bigger-and-bolder-ecommerce.jpg?cx=0.67&amp;cy=0.59&amp;cw=0&amp;ch=264&amp;hash=91D5CC634C81AB99B4FE994EC1CCF706"
+                                            data-alt="The age of bigger and bolder eCommerce">
+                                            <source media="(max-width: 600px) and (orientation: portrait)"
+                                                srcset="./-/media/revonic/blogs/2020/06/the-age-of-bigger-and-bolder-ecommerce/the-age-of-bigger-and-bolder-ecommerce.jpg?cx=0.67&amp;cy=0.59&amp;cw=0&amp;ch=264&amp;hash=91D5CC634C81AB99B4FE994EC1CCF706, ./-/media/revonic/blogs/2020/06/the-age-of-bigger-and-bolder-ecommerce/the-age-of-bigger-and-bolder-ecommerce.jpg?cx=0.67&amp;cy=0.59&amp;cw=0&amp;ch=528&amp;hash=AA066E5A153CF582DE161F4DC4642C1B 2x">
+                                            <source media="(max-width: 1200px) and (orientation: landscape)"
+                                                srcset="./-/media/revonic/blogs/2020/06/the-age-of-bigger-and-bolder-ecommerce/the-age-of-bigger-and-bolder-ecommerce.jpg?cx=0.67&amp;cy=0.59&amp;cw=0&amp;ch=264&amp;hash=91D5CC634C81AB99B4FE994EC1CCF706, ./-/media/revonic/blogs/2020/06/the-age-of-bigger-and-bolder-ecommerce/the-age-of-bigger-and-bolder-ecommerce.jpg?cx=0.67&amp;cy=0.59&amp;cw=0&amp;ch=528&amp;hash=AA066E5A153CF582DE161F4DC4642C1B 2x">
+                                            <source media="(min-width: 320px)"
+                                                srcset="./-/media/revonic/blogs/2020/06/the-age-of-bigger-and-bolder-ecommerce/the-age-of-bigger-and-bolder-ecommerce.jpg?cx=0.67&amp;cy=0.59&amp;cw=0&amp;ch=264&amp;hash=91D5CC634C81AB99B4FE994EC1CCF706, ./-/media/revonic/blogs/2020/06/the-age-of-bigger-and-bolder-ecommerce/the-age-of-bigger-and-bolder-ecommerce.jpg?cx=0.67&amp;cy=0.59&amp;cw=0&amp;ch=528&amp;hash=AA066E5A153CF582DE161F4DC4642C1B 2x">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="rv-description-box rv-content-down mt-3">
+                                    <div class="rv-title mb-30">
+                                        <span class="rv-feature-news">Blog</span>
+                                        <a href="/en/news-and-events/2020/06/the-age-of-bigger-and-bolder-ecommerce">
+                                            <h2 class="rv-h1-heading"> The age of bigger and bolder eCommerce
+                                            </h2>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="rv-card rv-img-cover mt-0 mb-5">
+                                <a href="/en/news-and-events/2020/06/driving-sales-through-strategic-content"
+                                    class="rv-card-anchor"></a>
+                                <div class="rv-box">
+                                    <a href="/en/news-and-events/2020/06/driving-sales-through-strategic-content">
+                                        <picture class="lozad" data-class="rv-bgimage objectfit"
+                                            data-iesrc="./-/media/revonic/blogs/2020/06/how-to-drive-ecommerce-conversion/driving-sales-through-strategic-content.jpg?cx=0.58&amp;cy=0.56&amp;cw=0&amp;ch=264&amp;hash=D20AE10C5B3AF1266678D2F8CD2F12A8"
+                                            data-alt="Driving sales through strategic content">
+                                            <source media="(max-width: 600px) and (orientation: portrait)"
+                                                srcset="./-/media/revonic/blogs/2020/06/how-to-drive-ecommerce-conversion/driving-sales-through-strategic-content.jpg?cx=0.58&amp;cy=0.56&amp;cw=0&amp;ch=264&amp;hash=D20AE10C5B3AF1266678D2F8CD2F12A8, ./-/media/revonic/blogs/2020/06/how-to-drive-ecommerce-conversion/driving-sales-through-strategic-content.jpg?cx=0.58&amp;cy=0.56&amp;cw=0&amp;ch=528&amp;hash=F2D14EF1511C113BC3B9327BADDD8355 2x">
+                                            <source media="(max-width: 1200px) and (orientation: landscape)"
+                                                srcset="./-/media/revonic/blogs/2020/06/how-to-drive-ecommerce-conversion/driving-sales-through-strategic-content.jpg?cx=0.58&amp;cy=0.56&amp;cw=0&amp;ch=264&amp;hash=D20AE10C5B3AF1266678D2F8CD2F12A8, ./-/media/revonic/blogs/2020/06/how-to-drive-ecommerce-conversion/driving-sales-through-strategic-content.jpg?cx=0.58&amp;cy=0.56&amp;cw=0&amp;ch=528&amp;hash=F2D14EF1511C113BC3B9327BADDD8355 2x">
+                                            <source media="(min-width: 320px)"
+                                                srcset="./-/media/revonic/blogs/2020/06/how-to-drive-ecommerce-conversion/driving-sales-through-strategic-content.jpg?cx=0.58&amp;cy=0.56&amp;cw=0&amp;ch=264&amp;hash=D20AE10C5B3AF1266678D2F8CD2F12A8, ./-/media/revonic/blogs/2020/06/how-to-drive-ecommerce-conversion/driving-sales-through-strategic-content.jpg?cx=0.58&amp;cy=0.56&amp;cw=0&amp;ch=528&amp;hash=F2D14EF1511C113BC3B9327BADDD8355 2x">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="rv-description-box rv-content-down mt-3">
+                                    <div class="rv-title mb-30">
+                                        <span class="rv-feature-news">Blog</span>
+                                        <a href="/en/news-and-events/2020/06/driving-sales-through-strategic-content">
+                                            <h2 class="rv-h1-heading"> Driving sales through strategic content
+                                            </h2>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="rv-card rv-img-cover mt-0 mb-5">
+                                <a href="/en/news-and-events/2020/06/data-touchpoints-and-the-purchase-journey"
+                                    class="rv-card-anchor"></a>
+                                <div class="rv-box">
+                                    <a href="/en/news-and-events/2020/06/data-touchpoints-and-the-purchase-journey">
+                                        <picture class="lozad" data-class="rv-bgimage objectfit"
+                                            data-iesrc="./-/media/revonic/blogs/2020/06/the-importance-of-personalised-data-touchpoints/data-touchpoints--the-purchase-journey.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=A40B5DB128CF49703EA223DB8F33E533"
+                                            data-alt="Data touchpoints and the purchase journey">
+                                            <source media="(max-width: 600px) and (orientation: portrait)"
+                                                srcset="./-/media/revonic/blogs/2020/06/the-importance-of-personalised-data-touchpoints/data-touchpoints--the-purchase-journey.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=A40B5DB128CF49703EA223DB8F33E533, ./-/media/revonic/blogs/2020/06/the-importance-of-personalised-data-touchpoints/data-touchpoints--the-purchase-journey.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=528&amp;hash=3FC3CADD9D2AC8C950B4681AACF8C43C 2x">
+                                            <source media="(max-width: 1200px) and (orientation: landscape)"
+                                                srcset="./-/media/revonic/blogs/2020/06/the-importance-of-personalised-data-touchpoints/data-touchpoints--the-purchase-journey.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=A40B5DB128CF49703EA223DB8F33E533, ./-/media/revonic/blogs/2020/06/the-importance-of-personalised-data-touchpoints/data-touchpoints--the-purchase-journey.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=528&amp;hash=3FC3CADD9D2AC8C950B4681AACF8C43C 2x">
+                                            <source media="(min-width: 320px)"
+                                                srcset="./-/media/revonic/blogs/2020/06/the-importance-of-personalised-data-touchpoints/data-touchpoints--the-purchase-journey.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=A40B5DB128CF49703EA223DB8F33E533, ./-/media/revonic/blogs/2020/06/the-importance-of-personalised-data-touchpoints/data-touchpoints--the-purchase-journey.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=528&amp;hash=3FC3CADD9D2AC8C950B4681AACF8C43C 2x">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="rv-description-box rv-content-down mt-3">
+                                    <div class="rv-title mb-30">
+                                        <span class="rv-feature-news">Blog</span>
+                                        <a href="/en/news-and-events/2020/06/data-touchpoints-and-the-purchase-journey">
+                                            <h2 class="rv-h1-heading"> Data touchpoints and the purchase journey
+                                            </h2>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="rv-card rv-img-cover mt-0 mb-5">
+                                <a href="/en/news-and-events/2020/06/the-power-of-ux-in-ecommerce-sales"
+                                    class="rv-card-anchor"></a>
+                                <div class="rv-box">
+                                    <a href="/en/news-and-events/2020/06/the-power-of-ux-in-ecommerce-sales">
+                                        <picture class="lozad" data-class="rv-bgimage objectfit"
+                                            data-iesrc="./-/media/revonic/blogs/2020/06/how-enhanced-ux-can-boost-e-commerce/the-power-of-ux-in-ecommerce-sales.jpg?cx=0.52&amp;cy=0.5&amp;cw=0&amp;ch=264&amp;hash=D2E541835BC24D911DF5E87F91A0F917"
+                                            data-alt="The power of UX in eCommerce sales">
+                                            <source media="(max-width: 600px) and (orientation: portrait)"
+                                                srcset="./-/media/revonic/blogs/2020/06/how-enhanced-ux-can-boost-e-commerce/the-power-of-ux-in-ecommerce-sales.jpg?cx=0.52&amp;cy=0.5&amp;cw=0&amp;ch=264&amp;hash=D2E541835BC24D911DF5E87F91A0F917, ./-/media/revonic/blogs/2020/06/how-enhanced-ux-can-boost-e-commerce/the-power-of-ux-in-ecommerce-sales.jpg?cx=0.52&amp;cy=0.5&amp;cw=0&amp;ch=528&amp;hash=59F1B5512407033117743353D9498E00 2x">
+                                            <source media="(max-width: 1200px) and (orientation: landscape)"
+                                                srcset="./-/media/revonic/blogs/2020/06/how-enhanced-ux-can-boost-e-commerce/the-power-of-ux-in-ecommerce-sales.jpg?cx=0.52&amp;cy=0.5&amp;cw=0&amp;ch=264&amp;hash=D2E541835BC24D911DF5E87F91A0F917, ./-/media/revonic/blogs/2020/06/how-enhanced-ux-can-boost-e-commerce/the-power-of-ux-in-ecommerce-sales.jpg?cx=0.52&amp;cy=0.5&amp;cw=0&amp;ch=528&amp;hash=59F1B5512407033117743353D9498E00 2x">
+                                            <source media="(min-width: 320px)"
+                                                srcset="./-/media/revonic/blogs/2020/06/how-enhanced-ux-can-boost-e-commerce/the-power-of-ux-in-ecommerce-sales.jpg?cx=0.52&amp;cy=0.5&amp;cw=0&amp;ch=264&amp;hash=D2E541835BC24D911DF5E87F91A0F917, ./-/media/revonic/blogs/2020/06/how-enhanced-ux-can-boost-e-commerce/the-power-of-ux-in-ecommerce-sales.jpg?cx=0.52&amp;cy=0.5&amp;cw=0&amp;ch=528&amp;hash=59F1B5512407033117743353D9498E00 2x">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="rv-description-box rv-content-down mt-3">
+                                    <div class="rv-title mb-30">
+                                        <span class="rv-feature-news">Blog</span>
+                                        <a href="/en/news-and-events/2020/06/the-power-of-ux-in-ecommerce-sales">
+                                            <h2 class="rv-h1-heading"> The power of UX in eCommerce sales
+                                            </h2>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="rv-card rv-img-cover mt-0 mb-5">
+                                <a href="/en/news-and-events/2020/05/expo-2020-not-one-but-two-awards"
+                                    class="rv-card-anchor"></a>
+                                <div class="rv-box">
+                                    <a href="/en/news-and-events/2020/05/expo-2020-not-one-but-two-awards">
+                                        <picture class="lozad" data-class="rv-bgimage objectfit"
+                                            data-iesrc="./-/media/revonic/banners/blog-images/expo2020-1-1.jpg?cx=0.56&amp;cy=0.45&amp;cw=0&amp;ch=264&amp;hash=7B2584DE5C2A2577396B5DBBAF2037FB"
+                                            data-alt="Expo 2020: Not one but two awards">
+                                            <source media="(max-width: 600px) and (orientation: portrait)"
+                                                srcset="./-/media/revonic/banners/blog-images/expo2020-1-1.jpg?cx=0.56&amp;cy=0.45&amp;cw=0&amp;ch=264&amp;hash=7B2584DE5C2A2577396B5DBBAF2037FB, ./-/media/revonic/banners/blog-images/expo2020-1-1.jpg?cx=0.56&amp;cy=0.45&amp;cw=0&amp;ch=528&amp;hash=6A1C36A5C1146CBD558824A3A6468928 2x">
+                                            <source media="(max-width: 1200px) and (orientation: landscape)"
+                                                srcset="./-/media/revonic/banners/blog-images/expo2020-1-1.jpg?cx=0.56&amp;cy=0.45&amp;cw=0&amp;ch=264&amp;hash=7B2584DE5C2A2577396B5DBBAF2037FB, ./-/media/revonic/banners/blog-images/expo2020-1-1.jpg?cx=0.56&amp;cy=0.45&amp;cw=0&amp;ch=528&amp;hash=6A1C36A5C1146CBD558824A3A6468928 2x">
+                                            <source media="(min-width: 320px)"
+                                                srcset="./-/media/revonic/banners/blog-images/expo2020-1-1.jpg?cx=0.56&amp;cy=0.45&amp;cw=0&amp;ch=264&amp;hash=7B2584DE5C2A2577396B5DBBAF2037FB, ./-/media/revonic/banners/blog-images/expo2020-1-1.jpg?cx=0.56&amp;cy=0.45&amp;cw=0&amp;ch=528&amp;hash=6A1C36A5C1146CBD558824A3A6468928 2x">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="rv-description-box rv-content-down mt-3">
+                                    <div class="rv-title mb-30">
+                                        <span class="rv-feature-news">News</span>
+                                        <a href="/en/news-and-events/2020/05/expo-2020-not-one-but-two-awards">
+                                            <h2 class="rv-h1-heading"> Expo 2020: Not one but two awards
+                                            </h2>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="rv-card rv-img-cover mt-0 mb-5">
+                                <a href="/en/news-and-events/2019/12/the-red-sea-development"
+                                    class="rv-card-anchor"></a>
+                                <div class="rv-box">
+                                    <a href="/en/news-and-events/2019/12/the-red-sea-development">
+                                        <picture class="lozad" data-class="rv-bgimage objectfit"
+                                            data-iesrc="./-/media/revonic/news-blogs-overview/oldblogimages/rsp-press-6.jpg?cx=0.69&amp;cy=0.59&amp;cw=0&amp;ch=264&amp;hash=1AB83E7C5531B7A80008D7D76B9BF8AB"
+                                            data-alt="Revonic wins contract to develop website for The Red Sea Development Company">
+                                            <source media="(max-width: 600px) and (orientation: portrait)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/rsp-press-6.jpg?cx=0.69&amp;cy=0.59&amp;cw=0&amp;ch=264&amp;hash=1AB83E7C5531B7A80008D7D76B9BF8AB, ./-/media/revonic/news-blogs-overview/oldblogimages/rsp-press-6.jpg?cx=0.69&amp;cy=0.59&amp;cw=0&amp;ch=528&amp;hash=E7F32617270EBCA2E1105C0B71075B39 2x">
+                                            <source media="(max-width: 1200px) and (orientation: landscape)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/rsp-press-6.jpg?cx=0.69&amp;cy=0.59&amp;cw=0&amp;ch=264&amp;hash=1AB83E7C5531B7A80008D7D76B9BF8AB, ./-/media/revonic/news-blogs-overview/oldblogimages/rsp-press-6.jpg?cx=0.69&amp;cy=0.59&amp;cw=0&amp;ch=528&amp;hash=E7F32617270EBCA2E1105C0B71075B39 2x">
+                                            <source media="(min-width: 320px)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/rsp-press-6.jpg?cx=0.69&amp;cy=0.59&amp;cw=0&amp;ch=264&amp;hash=1AB83E7C5531B7A80008D7D76B9BF8AB, ./-/media/revonic/news-blogs-overview/oldblogimages/rsp-press-6.jpg?cx=0.69&amp;cy=0.59&amp;cw=0&amp;ch=528&amp;hash=E7F32617270EBCA2E1105C0B71075B39 2x">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="rv-description-box rv-content-down mt-3">
+                                    <div class="rv-title mb-30">
+                                        <span class="rv-feature-news">News</span>
+                                        <a href="/en/news-and-events/2019/12/the-red-sea-development">
+                                            <h2 class="rv-h1-heading"> Revonic wins contract to develop website for The
+                                                Red Sea Development...
+                                            </h2>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="rv-card rv-img-cover mt-0 mb-5">
+                                <a href="/en/news-and-events/2019/12/platinum-sitecore-partner"
+                                    class="rv-card-anchor"></a>
+                                <div class="rv-box">
+                                    <a href="/en/news-and-events/2019/12/platinum-sitecore-partner">
+                                        <picture class="lozad" data-class="rv-bgimage objectfit"
+                                            data-iesrc="./-/media/revonic/news-blogs-overview/oldblogimages/sitecore-platinum.jpg?cx=0.68&amp;cy=0.56&amp;cw=0&amp;ch=264&amp;hash=0DF12DBEF5710AFEB9268C8B014C5854"
+                                            data-alt="Sitecore awards Revonic its highest partner tier; Platinum Implementation Partner | Revonic">
+                                            <source media="(max-width: 600px) and (orientation: portrait)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/sitecore-platinum.jpg?cx=0.68&amp;cy=0.56&amp;cw=0&amp;ch=264&amp;hash=0DF12DBEF5710AFEB9268C8B014C5854, ./-/media/revonic/news-blogs-overview/oldblogimages/sitecore-platinum.jpg?cx=0.68&amp;cy=0.56&amp;cw=0&amp;ch=528&amp;hash=A8F33E1CCC0CA68735EA81046123B5E7 2x">
+                                            <source media="(max-width: 1200px) and (orientation: landscape)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/sitecore-platinum.jpg?cx=0.68&amp;cy=0.56&amp;cw=0&amp;ch=264&amp;hash=0DF12DBEF5710AFEB9268C8B014C5854, ./-/media/revonic/news-blogs-overview/oldblogimages/sitecore-platinum.jpg?cx=0.68&amp;cy=0.56&amp;cw=0&amp;ch=528&amp;hash=A8F33E1CCC0CA68735EA81046123B5E7 2x">
+                                            <source media="(min-width: 320px)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/sitecore-platinum.jpg?cx=0.68&amp;cy=0.56&amp;cw=0&amp;ch=264&amp;hash=0DF12DBEF5710AFEB9268C8B014C5854, ./-/media/revonic/news-blogs-overview/oldblogimages/sitecore-platinum.jpg?cx=0.68&amp;cy=0.56&amp;cw=0&amp;ch=528&amp;hash=A8F33E1CCC0CA68735EA81046123B5E7 2x">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="rv-description-box rv-content-down mt-3">
+                                    <div class="rv-title mb-30">
+                                        <span class="rv-feature-news">News</span>
+                                        <a href="/en/news-and-events/2019/12/platinum-sitecore-partner">
+                                            <h2 class="rv-h1-heading"> Sitecore awards Revonic its highest partner tier;
+                                                Platinum Implementation...
+                                            </h2>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="rv-card rv-img-cover mt-0 mb-5">
+                                <a href="/en/news-and-events/2019/12/indivirtual-raise-the-bar"
+                                    class="rv-card-anchor"></a>
+                                <div class="rv-box">
+                                    <a href="/en/news-and-events/2019/12/indivirtual-raise-the-bar">
+                                        <picture class="lozad" data-class="rv-bgimage objectfit"
+                                            data-iesrc="./-/media/revonic/news-blogs-overview/oldblogimages/indivirtual-set-to-raise-the-bar.jpg?cx=0.57&amp;cy=0.67&amp;cw=0&amp;ch=264&amp;hash=F54C152EEDD9E317A6FE6C9CDE931927"
+                                            data-alt=" Revonic set to raise the bar to help clients achieve their digital ambitions">
+                                            <source media="(max-width: 600px) and (orientation: portrait)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/indivirtual-set-to-raise-the-bar.jpg?cx=0.57&amp;cy=0.67&amp;cw=0&amp;ch=264&amp;hash=F54C152EEDD9E317A6FE6C9CDE931927, ./-/media/revonic/news-blogs-overview/oldblogimages/indivirtual-set-to-raise-the-bar.jpg?cx=0.57&amp;cy=0.67&amp;cw=0&amp;ch=528&amp;hash=35D3D10D4105308A1A4A2741A0E57737 2x">
+                                            <source media="(max-width: 1200px) and (orientation: landscape)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/indivirtual-set-to-raise-the-bar.jpg?cx=0.57&amp;cy=0.67&amp;cw=0&amp;ch=264&amp;hash=F54C152EEDD9E317A6FE6C9CDE931927, ./-/media/revonic/news-blogs-overview/oldblogimages/indivirtual-set-to-raise-the-bar.jpg?cx=0.57&amp;cy=0.67&amp;cw=0&amp;ch=528&amp;hash=35D3D10D4105308A1A4A2741A0E57737 2x">
+                                            <source media="(min-width: 320px)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/indivirtual-set-to-raise-the-bar.jpg?cx=0.57&amp;cy=0.67&amp;cw=0&amp;ch=264&amp;hash=F54C152EEDD9E317A6FE6C9CDE931927, ./-/media/revonic/news-blogs-overview/oldblogimages/indivirtual-set-to-raise-the-bar.jpg?cx=0.57&amp;cy=0.67&amp;cw=0&amp;ch=528&amp;hash=35D3D10D4105308A1A4A2741A0E57737 2x">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="rv-description-box rv-content-down mt-3">
+                                    <div class="rv-title mb-30">
+                                        <span class="rv-feature-news">News</span>
+                                        <a href="/en/news-and-events/2019/12/indivirtual-raise-the-bar">
+                                            <h2 class="rv-h1-heading"> Revonic set to raise the bar to help clients
+                                                achieve their digital...
+                                            </h2>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="rv-card rv-img-cover mt-0 mb-5">
+                                <a href="/en/news-and-events/2019/12/leading-digital-experience-design-agency-launches-new-brand"
+                                    class="rv-card-anchor"></a>
+                                <div class="rv-box">
+                                    <a
+                                        href="/en/news-and-events/2019/12/leading-digital-experience-design-agency-launches-new-brand">
+                                        <picture class="lozad" data-class="rv-bgimage objectfit"
+                                            data-iesrc="./-/media/revonic/news-blogs-overview/oldblogimages/blog-missing-images/indivirtual-leading-digital-thumb.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=5EAFDE98A5F1AF7F93C72CD4CBACB1E1"
+                                            data-alt=" Revonic, Leading Digital Experience Design Agency Launches New Brand">
+                                            <source media="(max-width: 600px) and (orientation: portrait)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/blog-missing-images/indivirtual-leading-digital-thumb.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=5EAFDE98A5F1AF7F93C72CD4CBACB1E1, ./-/media/revonic/news-blogs-overview/oldblogimages/blog-missing-images/indivirtual-leading-digital-thumb.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=528&amp;hash=A87F31BA2382875E9CE89330103F65E1 2x">
+                                            <source media="(max-width: 1200px) and (orientation: landscape)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/blog-missing-images/indivirtual-leading-digital-thumb.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=5EAFDE98A5F1AF7F93C72CD4CBACB1E1, ./-/media/revonic/news-blogs-overview/oldblogimages/blog-missing-images/indivirtual-leading-digital-thumb.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=528&amp;hash=A87F31BA2382875E9CE89330103F65E1 2x">
+                                            <source media="(min-width: 320px)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/blog-missing-images/indivirtual-leading-digital-thumb.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=5EAFDE98A5F1AF7F93C72CD4CBACB1E1, ./-/media/revonic/news-blogs-overview/oldblogimages/blog-missing-images/indivirtual-leading-digital-thumb.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=528&amp;hash=A87F31BA2382875E9CE89330103F65E1 2x">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="rv-description-box rv-content-down mt-3">
+                                    <div class="rv-title mb-30">
+                                        <span class="rv-feature-news">News</span>
+                                        <a
+                                            href="/en/news-and-events/2019/12/leading-digital-experience-design-agency-launches-new-brand">
+                                            <h2 class="rv-h1-heading"> Revonic, Leading Digital Experience Design Agency
+                                                Launches New Brand
+                                            </h2>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="rv-card rv-img-cover mt-0 mb-5">
+                                <a href="/en/news-and-events/2019/12/sitecore-gold" class="rv-card-anchor"></a>
+                                <div class="rv-box">
+                                    <a href="/en/news-and-events/2019/12/sitecore-gold">
+                                        <picture class="lozad" data-class="rv-bgimage objectfit"
+                                            data-iesrc="./-/media/revonic/news-blogs-overview/oldblogimages/sitecore.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=B1C0806E4BDE3842A81D36F476BC1823"
+                                            data-alt="Proud to be a Sitecore Gold Implementation partner">
+                                            <source media="(max-width: 600px) and (orientation: portrait)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/sitecore.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=B1C0806E4BDE3842A81D36F476BC1823, ./-/media/revonic/news-blogs-overview/oldblogimages/sitecore.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=528&amp;hash=6ED0FB011BD2BA72F34CE9894D3AD41C 2x">
+                                            <source media="(max-width: 1200px) and (orientation: landscape)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/sitecore.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=B1C0806E4BDE3842A81D36F476BC1823, ./-/media/revonic/news-blogs-overview/oldblogimages/sitecore.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=528&amp;hash=6ED0FB011BD2BA72F34CE9894D3AD41C 2x">
+                                            <source media="(min-width: 320px)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/sitecore.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=B1C0806E4BDE3842A81D36F476BC1823, ./-/media/revonic/news-blogs-overview/oldblogimages/sitecore.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=528&amp;hash=6ED0FB011BD2BA72F34CE9894D3AD41C 2x">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="rv-description-box rv-content-down mt-3">
+                                    <div class="rv-title mb-30">
+                                        <span class="rv-feature-news">News</span>
+                                        <a href="/en/news-and-events/2019/12/sitecore-gold">
+                                            <h2 class="rv-h1-heading"> Proud to be a Sitecore Gold Implementation
+                                                partner
+                                            </h2>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="rv-card rv-img-cover mt-0 mb-5">
+                                <a href="/en/news-and-events/2019/12/data-revolution" class="rv-card-anchor"></a>
+                                <div class="rv-box">
+                                    <a href="/en/news-and-events/2019/12/data-revolution">
+                                        <picture class="lozad" data-class="rv-bgimage objectfit"
+                                            data-iesrc="./-/media/revonic/news-blogs-overview/oldblogimages/data-revolution.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=93EE6B19DF2D137C5FDCD4023B2AFB08"
+                                            data-alt="Is your business ready for the data revolution?">
+                                            <source media="(max-width: 600px) and (orientation: portrait)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/data-revolution.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=93EE6B19DF2D137C5FDCD4023B2AFB08, ./-/media/revonic/news-blogs-overview/oldblogimages/data-revolution.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=528&amp;hash=8385E72F1ED8EB57086C2C2F9B0E0ADE 2x">
+                                            <source media="(max-width: 1200px) and (orientation: landscape)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/data-revolution.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=93EE6B19DF2D137C5FDCD4023B2AFB08, ./-/media/revonic/news-blogs-overview/oldblogimages/data-revolution.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=528&amp;hash=8385E72F1ED8EB57086C2C2F9B0E0ADE 2x">
+                                            <source media="(min-width: 320px)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/data-revolution.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=93EE6B19DF2D137C5FDCD4023B2AFB08, ./-/media/revonic/news-blogs-overview/oldblogimages/data-revolution.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=528&amp;hash=8385E72F1ED8EB57086C2C2F9B0E0ADE 2x">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="rv-description-box rv-content-down mt-3">
+                                    <div class="rv-title mb-30">
+                                        <span class="rv-feature-news">News</span>
+                                        <a href="/en/news-and-events/2019/12/data-revolution">
+                                            <h2 class="rv-h1-heading"> Is your business ready for the data revolution?
+                                            </h2>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="rv-card rv-img-cover mt-0 mb-5">
+                                <a href="/en/news-and-events/2019/12/experience-platforms" class="rv-card-anchor"></a>
+                                <div class="rv-box">
+                                    <a href="/en/news-and-events/2019/12/experience-platforms">
+                                        <picture class="lozad" data-class="rv-bgimage objectfit"
+                                            data-iesrc="./-/media/revonic/news-blogs-overview/oldblogimages/experience-platforms.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=20EE000775DE7516542449521A795699"
+                                            data-alt="What’s all the fuss about Experience Platforms?">
+                                            <source media="(max-width: 600px) and (orientation: portrait)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/experience-platforms.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=20EE000775DE7516542449521A795699, ./-/media/revonic/news-blogs-overview/oldblogimages/experience-platforms.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=528&amp;hash=C9E5FA5752F3AF579DD650C828D53CDC 2x">
+                                            <source media="(max-width: 1200px) and (orientation: landscape)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/experience-platforms.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=20EE000775DE7516542449521A795699, ./-/media/revonic/news-blogs-overview/oldblogimages/experience-platforms.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=528&amp;hash=C9E5FA5752F3AF579DD650C828D53CDC 2x">
+                                            <source media="(min-width: 320px)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/experience-platforms.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=20EE000775DE7516542449521A795699, ./-/media/revonic/news-blogs-overview/oldblogimages/experience-platforms.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=528&amp;hash=C9E5FA5752F3AF579DD650C828D53CDC 2x">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="rv-description-box rv-content-down mt-3">
+                                    <div class="rv-title mb-30">
+                                        <span class="rv-feature-news">News</span>
+                                        <a href="/en/news-and-events/2019/12/experience-platforms">
+                                            <h2 class="rv-h1-heading"> What’s all the fuss about Experience Platforms?
+                                            </h2>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="rv-card rv-img-cover mt-0 mb-5">
+                                <a href="/en/news-and-events/2019/12/the-power-of-the-mobile-app"
+                                    class="rv-card-anchor"></a>
+                                <div class="rv-box">
+                                    <a href="/en/news-and-events/2019/12/the-power-of-the-mobile-app">
+                                        <picture class="lozad" data-class="rv-bgimage objectfit"
+                                            data-iesrc="./-/media/revonic/news-blogs-overview/oldblogimages/power-of-the-mobile-app.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=E3DE4B0824987D8891319139D76E6215"
+                                            data-alt="The power of the mobile app">
+                                            <source media="(max-width: 600px) and (orientation: portrait)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/power-of-the-mobile-app.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=E3DE4B0824987D8891319139D76E6215, ./-/media/revonic/news-blogs-overview/oldblogimages/power-of-the-mobile-app.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=528&amp;hash=02C0F755A569AC73D0A442B094E63830 2x">
+                                            <source media="(max-width: 1200px) and (orientation: landscape)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/power-of-the-mobile-app.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=E3DE4B0824987D8891319139D76E6215, ./-/media/revonic/news-blogs-overview/oldblogimages/power-of-the-mobile-app.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=528&amp;hash=02C0F755A569AC73D0A442B094E63830 2x">
+                                            <source media="(min-width: 320px)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/power-of-the-mobile-app.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=E3DE4B0824987D8891319139D76E6215, ./-/media/revonic/news-blogs-overview/oldblogimages/power-of-the-mobile-app.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=528&amp;hash=02C0F755A569AC73D0A442B094E63830 2x">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="rv-description-box rv-content-down mt-3">
+                                    <div class="rv-title mb-30">
+                                        <span class="rv-feature-news">News</span>
+                                        <a href="/en/news-and-events/2019/12/the-power-of-the-mobile-app">
+                                            <h2 class="rv-h1-heading"> The power of the mobile app
+                                            </h2>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <div class="rv-card rv-img-cover mt-0 mb-5">
+                                <a href="/en/news-and-events/2019/12/marketing-tips" class="rv-card-anchor"></a>
+                                <div class="rv-box">
+                                    <a href="/en/news-and-events/2019/12/marketing-tips">
+                                        <picture class="lozad" data-class="rv-bgimage objectfit"
+                                            data-iesrc="./-/media/revonic/news-blogs-overview/oldblogimages/top-email-marketing-tips.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=A7D275BC0AB3F57FE3B1736365742770"
+                                            data-alt="Top Email Marketing Tips">
+                                            <source media="(max-width: 600px) and (orientation: portrait)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/top-email-marketing-tips.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=A7D275BC0AB3F57FE3B1736365742770, ./-/media/revonic/news-blogs-overview/oldblogimages/top-email-marketing-tips.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=528&amp;hash=4DDDE687C4FB5A1E4B37A992EBA3CB32 2x">
+                                            <source media="(max-width: 1200px) and (orientation: landscape)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/top-email-marketing-tips.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=A7D275BC0AB3F57FE3B1736365742770, ./-/media/revonic/news-blogs-overview/oldblogimages/top-email-marketing-tips.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=528&amp;hash=4DDDE687C4FB5A1E4B37A992EBA3CB32 2x">
+                                            <source media="(min-width: 320px)"
+                                                srcset="./-/media/revonic/news-blogs-overview/oldblogimages/top-email-marketing-tips.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=264&amp;hash=A7D275BC0AB3F57FE3B1736365742770, ./-/media/revonic/news-blogs-overview/oldblogimages/top-email-marketing-tips.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=528&amp;hash=4DDDE687C4FB5A1E4B37A992EBA3CB32 2x">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="rv-description-box rv-content-down mt-3">
+                                    <div class="rv-title mb-30">
+                                        <span class="rv-feature-news">News</span>
+                                        <a href="/en/news-and-events/2019/12/marketing-tips">
+                                            <h2 class="rv-h1-heading"> Top Email Marketing Tips
+                                            </h2>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="rv-theme-light">
+                        <div class="rv-pagination rv-component">
+                            <div class="rv-container d-inline-block">
+                                <a class="btn-prev disabled" aria-label="Previous" href="/en/news-and-events?pg=1"
+                                    disable>
+                                    <svg viewBox="0 0 14 25" class="arrow arrow-left rv-toSvg">
+                                        <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-arrow-left-thin"></use>
+                                    </svg>
+                                </a>
+                                <div class="pagination-stat">
+                                    <span class="current-page">1</span> of <span class="total-pages">5</span>
+                                </div>
+                                <a class="btn-next " aria-label="Next" href="/en/news-and-events?pg=2">
+                                    <svg viewBox="0 0 14 25" class="arrow arrow-right rv-toSvg">
+                                        <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-arrow-right-thin">
+                                        </use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </section>
+    <div id="downloadformpop" class="rv-bg-dark contact-popup-gallery" style="display:none;">
+        <div class="cwarp">
+            <h3 class="rv-h2 rv-form-title m-0">Please fill in some details for us </h3>
+            <div class="rv-contact rv-component">
+                <div class="rv-contact-section">
+                    <div class="rv-form-container rv-component" data-comp-name="inputfields">
+
+                        <form class="rv-contact-form js-validate-download rv-component" data-comp-name="downloads"
+                            data-action="/api/downloads/download" id="downloadForm" name="download-form" method="post"
+                            autocomplete="off" data-link="" data-contact-email="" data-is-known-contact="False"
+                            data-download-key="">
+                            <input name="__RequestVerificationToken" type="hidden"
+                                value="YwS0xaF5R1g5NYA54Yx2RAB6LRoSgLg0LjPVJHXF-znklzOwwuTmMCYJjXgP4gF0nyQ1A-Im6qOrN0hijzW1EDtaaBS22JJv9nkVsnFK4YM1" />
+                            <input type="hidden" value="FMI8jmP3opG0MRk+DjobAvk7rAktVrh++IJhlTu3nCEYQfYfWwH0EQ=="
+                                id="hdnGoalId" name="GoalId" />
+                            <input type="hidden" value="05RGubXoNYbPFhgXQ7o6vQ==" id="hdnGoalText" name="GoalText" />
+                            <input type="hidden" id="hdnDownloadPath" name="DownloadPath" />
+
+                            <div class="form-group rv-forms">
+                                <input type="text" id="firstName" name="FirstName"
+                                    class="form-control-plaintext rv-input js-input-focus" data-rule-fullname="true"
+                                    data-msg="Please enter your first name" autocomplete="off" required>
+                                <label for="firstname" class="rv-label">First name</label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+                            <div class="form-group rv-forms">
+                                <input type="text" id="lastName" name="LastName"
+                                    class="form-control-plaintext rv-input js-input-focus" data-rule-fullname="true"
+                                    data-msg="Please enter your last name" autocomplete="off" required>
+                                <label for="lastName" class="rv-label">Last name</label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+
+                            <div class="form-group rv-forms rv-email">
+                                <input id="email" name="Email" class="form-control-plaintext rv-input js-input-focus"
+                                    type="email" data-rule-validEmail="true"
+                                    data-msg-validEmail="Please enter a valid email address"
+                                    data-msg="Please enter your email" autocomplete="off" required>
+                                <label for="email" class="rv-label">Email</label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+
+                            <div class="form-group rv-forms">
+                                <input type="text" id="company-name" name="CompanyName"
+                                    class="form-control-plaintext rv-input js-input-focus" data-rule-fullname="true"
+                                    data-msg="Please enter company name" autocomplete="off" required>
+                                <label for="company-name" class="rv-label">Company name<span
+                                        class="text -danger"></label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+
+                            <div class="form-group rv-forms">
+                                <input id="job-title" name="JobTitle" data-rule-required="true"
+                                    class="form-control-plaintext rv-input js-input-focus" data-rule-jobtitle="true"
+                                    data-msg="Please enter job title" autocomplete="off" required>
+                                <label for="job-title" class="rv-label">Job Title<span class="text -danger"></label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+                            <div class="rv-message-btn rv-boldbutton rv-component">
+                                <button class="btn-bold rv-component" type="submit">
+                                    <span class="rv-text-fill" data-btn-label="Send message">Download</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="rv-footer rv-component rv-theme-dark" data-comp-name="footer">
+        <div class="container rv-container">
+            <div class="row rv-fullWidth rv-footer-content">
+                <div class="rv-contact-message col-lg-5 col-md-12">
+
+                    <h3 class="rv-h6 rv-default-label rv-skewed-line">SAY HI</h3>
+                    <h2 class="rv-h1 rv-title">GET IN TOUCH</h2>
+                    <h4 class="rv-h6 rv-primary-link float-left"><a id="gtm-letstalkfooter" href="/en/contact">CONTACT
+                            US.</a>
+                        <p />
+                    </h4>
+                </div>
+                <address class="rv-address-block rv-quick-contacts col-lg-2 col-md-4">
+
+                    <h6 class='rv-h6 rv-default-label'>Contact</h6>
+                    <ul class="rv-list-secondary">
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="/en/contact" target="_self" id="GTM001">
+                                Email us </a>
+                        </li>
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="tel:+971 4 225 0572" target="_self" id="">
+                                +971 4 225 0572 </a>
+                        </li>
+                    </ul>
+
+
+
+
+
+
+
+
+                </address>
+                <address class="rv-address-block rv-address col-lg-3 col-md-4">
+
+                    <h6 class='rv-h6 rv-default-label'>Visit</h6>
+                    <ul class="rv-list-secondary rv-regular">
+                        <li class="rv-list-item">Level 46, Tower B</li>
+                        <li class="rv-list-item">Business Central Towers</li>
+                        <li class="rv-list-item">Media City, Dubai</li>
+                    </ul>
+                    <ul class="rv-list-secondary">
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link "
+                                href="https://www.google.com/maps/place/REVONIC/@25.1004538,55.1673033,17z/data=!3m1!4b1!4m5!3m4!1s0x3e5f6bc02f741831:0x3fd4128e657a3681!8m2!3d25.100449!4d55.169492"
+                                target="_blank" id="">
+                                Get directions </a>
+                        </li>
+                    </ul>
+
+
+
+
+
+
+
+
+                </address>
+                <address class="rv-address-block rv-social-links col-lg-2 col-md-4">
+
+                    <h6 class='rv-h6 rv-default-label'>Follow</h6>
+                    <ul class="rv-list-secondary">
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="https://www.facebook.com/indivirtualdubai/"
+                                target="_blank" id="">
+                                Facebook </a>
+                        </li>
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="https://www.instagram.com/wearerevonic/"
+                                target="_blank" id="">
+                                Instagram </a>
+                        </li>
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="https://www.linkedin.com/company/revonic/"
+                                target="_blank" id="">
+                                LinkedIn </a>
+                        </li>
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="https://twitter.com/wearerevonic" target="_blank"
+                                id="">
+                                Twitter </a>
+                        </li>
+                    </ul>
+
+
+
+
+
+
+
+
+                </address>
+            </div>
+            <div class="rv-fullWidth rv-footer-links row">
+                <div class="rv-links col-md-6">
+
+
+                </div>
+
+                <span class="rv-copyrights col-md-6 ">&copy; 2021 Valtech_ Revonic</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/vendors~main.js?v=1.12" defer></script>
+    <script src="./assets/js/main.js?v=1.12" defer></script>
+</body>
+
+</html>
