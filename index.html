@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en" class="rv-html loading">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <style>
+        body,
+        html {
+            background: #121212
+        }
+
+        .loading .rv-header {
+            transform: translateX(-100%);
+            height: 50px;
+            overflow: hidden
+        }
+
+        .loading img,
+        .loading svg {
+            width: 0;
+            height: 0
+        }
+
+        .rv-sec-container {
+            position: relative;
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 0
+        }
+
+        .rv-hero-banner .lozad {
+            display: block;
+            min-height: 500px
+        }
+
+        .lozad {
+            display: block;
+            min-height: 1rem
+        }
+
+        img.lozad {
+            transition: opacity 1s linear
+        }
+
+        img.lozad:not([data-loaded]) {
+            position: relative;
+            max-width: 100%;
+            height: auto;
+            opacity: 0
+        }
+
+        img.lozad[data-loaded=true] {
+            transition: opacity 1s linear
+        }
+
+        .rv-casestudyfigures .rv-box .lozad {
+            display: block;
+            min-height: 260px
+        }
+
+        /* @media (max-width: 767px) {
+            max-height: 260px
+        } */
+
+        .rv-hero-banner .rv-banner-pictures .video-js {
+            height: 100vh;
+            width: 100%;
+            padding: 0;
+            z-index: 0;
+            min-height: 450px;
+            max-height: 1200px
+        }
+
+        .rv-roundbtn {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: transparent;
+            border: 0;
+            padding: 0;
+            cursor: pointer
+        }
+
+        .rv-forms .rv-input,
+        .rv-forms .rv-textarea {
+            font-family: Gilroy-Regular, sans-serif, Helvetica, Verdana, Arial;
+            font-weight: 500;
+            text-transform: none;
+            font-size: 18px;
+            font-size: 1.125rem;
+            line-height: 1.66667;
+            line-height: 30px;
+            padding: 10px 0;
+            position: relative;
+            background: 0 0;
+            color: #fff;
+            height: 45px;
+            width: 100%;
+            outline: 0;
+            border: none;
+            caret-color: #e44a21
+        }
+    </style>
+    <script>window.onload = function () { document.querySelector('html').classList.remove('loading') }</script>
+
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/icons/favicon.ico">
+
+    <link rel="manifest" href="./assets/manifest.json">
+    <link rel="prefetch" href="./assets/img/sprite/svg-sprite.svg" as="image" crossorigin="anonymous">
+    <link rel="preload" name="Gilroy-Bold" href="./assets/fonts/Gilroy-Bold.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload" name="Gilroy-Regular" href="./assets/fonts/Gilroy-Regular.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <!-- Order is important -->
+    <link rel="prefetch" name="Gilroy-Thin" href="./assets/fonts/Gilroy-Thin.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="prefetch" name="Gilroy-SemiBold" href="./assets/fonts/Gilroy-SemiBold.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="prefetch" name="Gilroy-SemiBoldItalic" href="./assets/fonts/Gilroy-SemiBoldItalic.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+
+    <link rel="preload" href="./assets/css/vendors~main.css" as="style"
+        onload="this.rel='stylesheet'; this.onload = null;">
+    <link rel="preload" href="./assets/css/main.css" as="style" onload="this.rel='stylesheet'; this.onload = null;">
+    <link rel="preload" href="./assets/css/dark.css" as="style" onload="this.rel='stylesheet'; this.onload = null;">
+    <link rel="preload" href="./assets/css/light.css" as="style" onload="this.rel='stylesheet'; this.onload = null;">
+
+    <script>
+        window.rv = {};
+        window.rv.resourcePath = './assets/';
+    </script>
+
+    <script>
+        /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+        /* This file is meant as a standalone workflow for
+        - testing support for link[rel=preload]
+        - enabling async CSS loading in browsers that do not support rel=preload
+        - applying rel preload css once loaded, whether supported or not.
+        */
+        !function (t) { "use strict"; t.loadCSS || (t.loadCSS = function () { }); var e = loadCSS.relpreload = {}; if (e.support = function () { var e; try { e = t.document.createElement("link").relList.supports("preload") } catch (t) { e = !1 } return function () { return e } }(), e.bindMediaToggle = function (t) { var e = t.media || "all"; function a() { t.addEventListener ? t.removeEventListener("load", a) : t.attachEvent && t.detachEvent("onload", a), t.setAttribute("onload", null), t.media = e } t.addEventListener ? t.addEventListener("load", a) : t.attachEvent && t.attachEvent("onload", a), setTimeout(function () { t.rel = "stylesheet", t.media = "only x" }), setTimeout(a, 3e3) }, e.poly = function () { if (!e.support()) for (var a = t.document.getElementsByTagName("link"), n = 0; n < a.length; n++) { var o = a[n]; "preload" !== o.rel || "style" !== o.getAttribute("as") || o.getAttribute("data-loadcss") || (o.setAttribute("data-loadcss", !0), e.bindMediaToggle(o)) } }, !e.support()) { e.poly(); var a = t.setInterval(e.poly, 500); t.addEventListener ? t.addEventListener("load", function () { e.poly(), t.clearInterval(a) }) : t.attachEvent && t.attachEvent("onload", function () { e.poly(), t.clearInterval(a) }) } "undefined" != typeof exports ? exports.loadCSS = loadCSS : t.loadCSS = loadCSS }("undefined" != typeof global ? global : this);
+    </script>
+    <noscript>
+        <link rel="stylesheet" href="./assets/css/vendors~main.css" type="text/css">
+        <link rel="stylesheet" href="./assets/css/main.css">
+    </noscript>
+
+
+    <link href="./assets/css/base.css?v=1.12" rel="stylesheet" />
+
+    <title>Digital Experience Design Agency | Revonic</title>
+    <meta property="og:title" content="Digital Experience Design Agency | Revonic" />
+    <meta name="keywords" content="Agency, Digital Agency, Experience Design, Sitecore, UI, UX, Website" />
+    <meta name="description"
+        content="We partner with our clients to help build their digital capabilities that drive their business performance. We do this by delivering exceptional analysis, strategy, UX, design and technology." />
+    <meta name="og:description"
+        content="We partner with our clients to help build their digital capabilities that drive their business performance. We do this by delivering exceptional analysis, strategy, UX, design and technology." />
+    <meta name="og:image" content="https://www.revonic.com/./-/media/revonic/careers/ux-lab.jpg" />
+    <meta property="og:image:url" content="https://www.revonic.com/./-/media/revonic/careers/ux-lab.jpg">
+    <meta property="og:url" content="https://www.revonic.com/en" />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.revonic.com/en" /><!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5K9P7WQ');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156926072-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-156926072-1');
+    </script>
+
+    <script>
+        // register service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(function (registration) { console.log('Service Worker Registered'); });
+            navigator.serviceWorker.ready.then(function (registration) { console.log('Service Worker Ready'); });
+        }
+    </script>
+
+</head>
+
+<body class="rv-body ">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5K9P7WQ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="rv-header rv-component rv-theme-dark" data-comp-name="header">
+        <div class="rv-wrapper">
+            <div class="rv-container container">
+
+
+                <a class="rv-logo rv-sticky-logo rv-column" href="/"><span class="sr-only">Revonic</span><img
+                        src="./assets/img/svg/light.svg" class="rv-revonic-logo light-variant"
+                        alt="rv-revonic-logo" /></a>
+
+                <div class="rv-navigation">
+                    <a class="rv-nav-trigger rv-link" href="javascript:;">
+                        <span class="rv-label d-lg-inline-block">Navigation</span>
+                        <div class="rv-nav-icon">
+                            <div class="rv-icon-content">
+                                <span class="sr-only">Show / Hide Navigation</span>
+                                <span class="rv-animated-icon rv-nav-iconbar-top d-block"></span>
+                                <span class="rv-animated-icon rv-nav-iconbar-bottom d-block"></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="rv-caption d-none d-lg-block">
+                    <div class="rv-secondary-link">
+
+
+                        <a href="/en/contact" id="test" class="rv-link">Contact Us</a>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+            <nav class="rv-nav-menu is-hidden">
+                <div class="rv-container container rv-fullWidth">
+                    <div class="w-100">
+
+                        <ul class="rv-list-main-nav">
+                            <li class="rv-list-item  row has-sub-menu">
+
+                                <a class="rv-h1 rv-link rv-nav-link col-lg-8" href="/en/work" target="_self" id="">
+                                    Work </a>
+                                <div class="rv-sub-menu col-lg-4 d-lg-block">
+                                    <h6 class="rv-h6 rv-default">Case Studies</h6>
+
+
+                                    <ul class="rv-list-primary">
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/emirates-airline" target="_self"
+                                                id="gtm-NavigationEmirates">
+                                                Emirates Airline </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/meraas" target="_self"
+                                                id="gtm-NavigationMeraas">
+                                                Meraas </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/ubyemaar" target="_self" id="">
+                                                U by Emaar </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/the-red-sea" target="_self" id="">
+                                                The Red Sea Project </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/mercedes-benz" target="_self" id="">
+                                                Mercedes-Benz </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/abu-dhabi-airport" target="_self"
+                                                id="">
+                                                Abu Dhabi Airport </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/noor-bank" target="_self" id="">
+                                                Noor Bank </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/emirates-nbd" target="_self" id="">
+                                                Emirates NBD </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="rv-list-item  row has-sub-menu">
+
+                                <a class="rv-h1 rv-link rv-nav-link col-lg-8" href="/en/services" target="_self" id="">
+                                    Services </a>
+                                <div class="rv-sub-menu col-lg-4 d-lg-block">
+                                    <h6 class="rv-h6 rv-default">Our Services</h6>
+
+
+                                    <ul class="rv-list-primary">
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/digital-strategy" target="_self"
+                                                id="">
+                                                Digital Strategy </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/ux-and-ui-design" target="_self"
+                                                id="">
+                                                UX &amp; UI Design </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/user-research" target="_self"
+                                                id="">
+                                                User Research </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/user-testing" target="_self"
+                                                id="">
+                                                User Testing </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/data-analytics-and-insights"
+                                                target="_self" id="">
+                                                Data Analytics &amp; Insights </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/content-services" target="_self"
+                                                id="">
+                                                Content Services </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/web-and-mobile" target="_self"
+                                                id="">
+                                                Web &amp; Mobile Build </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="rv-list-item  ">
+
+                                <a class="rv-h1 rv-link rv-nav-link " href="/en/news-and-events" target="_self" id="">
+                                    News &amp; Events </a>
+                            </li>
+                            <li class="rv-list-item  ">
+
+                                <a class="rv-h1 rv-link rv-nav-link " href="/en/careers" target="_self" id="">
+                                    Careers </a>
+                            </li>
+                            <li class="rv-list-item  ">
+
+                                <a class="rv-h1 rv-link rv-nav-link " href="/en/contact" target="_self" id="">
+                                    Contact </a>
+                            </li>
+                        </ul>
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="rv-sec-container headerpd1 rv-bg-dark">
+
+        <h1 class="sr-only">Experience Design Agency</h1>
+        <h2 class="sr-only">We build long-term relationships with clients and work together to improve business
+            performance through digital capability.</h2>
+        <div class="rv-hero-banner  rv-component rv-theme-dark" data-comp-name="herobanner">
+            <div class="rv-banner-pictures">
+                <div class="rv-bgoverlay"></div>
+                <picture class="lozad" data-class="objectfit"
+                    data-iesrc="./-/media/revonic/banners/home/banner-01.jpg?cx=0&amp;cy=0&amp;cw=1440&amp;ch=810&amp;hash=473C12B8DC9CFF27B2FC11B34943DFA8"
+                    data-alt="Experience">
+                    <source media="(max-width: 600px) and (orientation: portrait)"
+                        srcset="./-/media/revonic/banners/home/hp-banner-mobile.jpg?cx=0&amp;cy=0&amp;cw=750&amp;ch=1334&amp;hash=507025286FB135F39A739D14692203FF, ./-/media/revonic/banners/home/hp-banner-mobile.jpg?cx=0&amp;cy=0&amp;cw=1500&amp;ch=2668&amp;hash=E840FEC2960F9CFA0819F2E706D0466A 2x" />
+                    <source media="(min-width: 320px)"
+                        srcset="./-/media/revonic/banners/home/banner-01.jpg?cx=0&amp;cy=0&amp;cw=1440&amp;ch=810&amp;hash=473C12B8DC9CFF27B2FC11B34943DFA8, ./-/media/revonic/banners/home/banner-01.jpg?cx=0&amp;cy=0&amp;cw=2880&amp;ch=1620&amp;hash=7760CEC69E079CB54C9143A3ED250A23 2x" />
+                </picture>
+            </div>
+            <div class="container rv-container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="rv-line-label rv-line-cut"><span class="rv-line-cut-tr"></span> We are a digital
+                        </div>
+                        <h1 class="rv-hero-heading mb-2">
+                            <span class="rv-light-heading">Experience <strong class="rv-bold-heading">Design
+                                    Agency</strong></span>
+                        </h1>
+                    </div>
+                    <div class="col-lg-4">
+                        <button id="gtm-PlayShowReelCtaBannerHome" class="rv-roundbtn rv-component js-videoPopup"
+                            data-comp-name="lightbox" data-video-type="youtube"
+                            data-video-poster="./-/media/revonic/banners/home/banner-01.jpg?h=810&amp;w=1440&amp;hash=79318E49A6264C1C21A6FDF349A61781"
+                            data-video-url="SM4BppTELVQ">
+                            <div class="rv-roundbox">
+                                <svg viewBox="0 0 14 25" class="rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-chevron-right"></use>
+                                </svg>
+                            </div>
+                            <div class="rv-secondary-link secondary-link--small">
+                                <a href="javascript:;" id="gtm-PlayShowReelCtaBannerHome" class="rv-link">Play
+                                    Showreel</a>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col-lg-6 d-none d-lg-flex">
+                        <p class="rv-description">We build long-term relationships with clients and work together to
+                            improve business performance through digital capability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <section class="rv-sec-container rv-bg-dark">
+        <div class="rv-component js-titleSticky parentSticky content-3 rv-theme-dark" data-comp-name="stickytitle">
+            <div class="container rv-sticky-container">
+                <h1 class="rv-sticky-text rv-line-cut js-titleChild rv-sticky">
+                    <span class="rv-line-cut-tr"></span>
+                    <span>Our</span>
+                    Work
+                </h1>
+            </div>
+        </div>
+
+        <div class="rv-casestudyfigures rv-component rv-theme-dark">
+            <div class="container">
+                <div>
+                    <h1 class="rv-heading">We have helped our clients achieve incredible digital transformations. </h1>
+                    <div class="row">
+                        <div class="col-md-12 col-lg-6">
+                            <div class="rv-card">
+                                <a href="/en/work/emirates-airline" target="" class="rv-card-anchor"
+                                    id="gtm-EmiratesboxHome" title="Emirates"></a>
+                                <div class="rv-box rv-cornercut">
+                                    <div class="rv-bgoverlay"></div>
+                                    <picture class="lozad" data-class="rv-bgimage objectfit"
+                                        data-iesrc="./-/media/revonic/overview-pages/work-overview/emirates-540-x-400-work-overview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=400&amp;hash=8AD74D97FA72BA666A5C693829AA7D20"
+                                        data-alt="Emirates">
+                                        <source media="(max-width: 600px) and (orientation: portrait)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview/emirates-540-x-400-work-overview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=6322779FABF17ADE7A13109FE47320AD, ./-/media/revonic/overview-pages/work-overview/emirates-540-x-400-work-overview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=6322779FABF17ADE7A13109FE47320AD 2x">
+                                        <source media="(max-width: 1023px) and (orientation: landscape)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview/emirates-540-x-400-work-overview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=6322779FABF17ADE7A13109FE47320AD, ./-/media/revonic/overview-pages/work-overview/emirates-540-x-400-work-overview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=6322779FABF17ADE7A13109FE47320AD 2x">
+                                        <source media="(min-width: 320px)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview/emirates-540-x-400-work-overview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=400&amp;hash=8AD74D97FA72BA666A5C693829AA7D20, ./-/media/revonic/overview-pages/work-overview/emirates-540-x-400-work-overview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=6322779FABF17ADE7A13109FE47320AD 2x">
+                                    </picture>
+                                </div>
+                                <div class="rv-description-static text-center">
+                                    <div class="rv-title">
+                                        <img data-src="./-/media/revonic/case-studies/case-study-preview-cards/emirates-logo.svg?h=240&amp;w=500&amp;hash=B3F74A28BE31EEAF5BFE51BC7DAF5015"
+                                            class="rv-logo mb-20 lozad" alt="Emirates">
+                                        <h1 class="rv-h2-heading">200k+</h1>
+                                        <p class="rv-h2-text"> Playlists created ahead of travel
+                                        </p>
+                                    </div>
+                                    <div class="rv-secondary-link rv-read-case">
+                                        <a href="/en/work/emirates-airline" class="rv-link" target=""
+                                            id="gtm-EmiratesHome" title="Emirates">Read case study</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="rv-card">
+                                <a href="/en/work/meraas" target="" class="rv-card-anchor" id="gtm-MeraasboxHome"
+                                    title="Meraas"></a>
+                                <div class="rv-box ">
+                                    <div class="rv-bgoverlay"></div>
+                                    <picture class="lozad" data-class="rv-bgimage objectfit"
+                                        data-iesrc="./-/media/revonic/overview-pages/work-overview/meraasworkoverview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=400&amp;hash=5CDECB64C2950D7F8F16E6FA18FB3373"
+                                        data-alt="Meraas">
+                                        <source media="(max-width: 600px) and (orientation: portrait)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview/meraasworkoverview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=A927EA5E0CC3DEEEE56BFCC3A373BC4A, ./-/media/revonic/overview-pages/work-overview/meraasworkoverview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=A927EA5E0CC3DEEEE56BFCC3A373BC4A 2x">
+                                        <source media="(max-width: 1023px) and (orientation: landscape)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview/meraasworkoverview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=A927EA5E0CC3DEEEE56BFCC3A373BC4A, ./-/media/revonic/overview-pages/work-overview/meraasworkoverview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=A927EA5E0CC3DEEEE56BFCC3A373BC4A 2x">
+                                        <source media="(min-width: 320px)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview/meraasworkoverview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=400&amp;hash=5CDECB64C2950D7F8F16E6FA18FB3373, ./-/media/revonic/overview-pages/work-overview/meraasworkoverview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=A927EA5E0CC3DEEEE56BFCC3A373BC4A 2x">
+                                    </picture>
+                                </div>
+                                <div class="rv-description-static text-center">
+                                    <div class="rv-title">
+                                        <img data-src="./-/media/revonic/clients/meraas/meraas-white-logo.svg?h=45&amp;w=179&amp;hash=3A31995BC4F32498875713B53D8EC51C"
+                                            class="rv-logo mb-20 lozad" alt="Meraas">
+                                        <h1 class="rv-h2-heading">+2.5M</h1>
+                                        <p class="rv-h2-text"> Revenue in online sales
+                                        </p>
+                                    </div>
+                                    <div class="rv-secondary-link rv-read-case">
+                                        <a href="/en/work/meraas" class="rv-link" target="" id="gtm-MeraasHome"
+                                            title="Meraas">Read case study</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="rv-card">
+                                <a href="/en/work/ubyemaar" target="" class="rv-card-anchor" id=""
+                                    title="U By Emaar"></a>
+                                <div class="rv-box ">
+                                    <div class="rv-bgoverlay"></div>
+                                    <picture class="lozad" data-class="rv-bgimage objectfit"
+                                        data-iesrc="./-/media/revonic/overview-pages/work-overview/ubyemaarworkoverview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=400&amp;hash=C2FCE8BB6B0526022A4DFD8307BD50AF"
+                                        data-alt="U By Emaar">
+                                        <source media="(max-width: 600px) and (orientation: portrait)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview-mobile/ubyemaar-1-1.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=D865CDCC9FF763EA62DF4F57E614F6B0, ./-/media/revonic/overview-pages/work-overview-mobile/ubyemaar-1-1.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=D865CDCC9FF763EA62DF4F57E614F6B0 2x">
+                                        <source media="(max-width: 1023px) and (orientation: landscape)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview-mobile/ubyemaar-1-1.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=D865CDCC9FF763EA62DF4F57E614F6B0, ./-/media/revonic/overview-pages/work-overview-mobile/ubyemaar-1-1.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=D865CDCC9FF763EA62DF4F57E614F6B0 2x">
+                                        <source media="(min-width: 320px)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview/ubyemaarworkoverview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=400&amp;hash=C2FCE8BB6B0526022A4DFD8307BD50AF, ./-/media/revonic/overview-pages/work-overview/ubyemaarworkoverview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=C69951022C2C50E7223AF700871B0FB9 2x">
+                                    </picture>
+                                </div>
+                                <div class="rv-description-static text-center">
+                                    <div class="rv-title">
+                                        <img data-src="./-/media/revonic/clients/ubyemaar/u_by_emmaar_white.svg"
+                                            class="rv-logo mb-20 lozad" alt="U By Emaar">
+                                        <h1 class="rv-h2-heading">+32%</h1>
+                                        <p class="rv-h2-text"> Increase in loyalty &amp; retention
+                                        </p>
+                                    </div>
+                                    <div class="rv-secondary-link rv-read-case">
+                                        <a href="/en/work/ubyemaar" class="rv-link" target="" id=""
+                                            title="U By Emaar">Read case study</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="rv-card">
+                                <a href="/en/work/the-red-sea" target="" class="rv-card-anchor"
+                                    id="gtm-TheRedSeaboxHome" title="The Red Sea Development"></a>
+                                <div class="rv-box ">
+                                    <div class="rv-bgoverlay"></div>
+                                    <picture class="lozad" data-class="rv-bgimage objectfit"
+                                        data-iesrc="./-/media/revonic/overview-pages/work-overview/redseaworkoverview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=400&amp;hash=F5DF5F118446DBFDF385DE9625560A05"
+                                        data-alt="The Red Sea Development">
+                                        <source media="(max-width: 600px) and (orientation: portrait)"
+                                            srcset="./-/media/revonic/case-studies/the-red-sea-project/redsea.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=4BF93864D46270BAB8F27B28D90660B8, ./-/media/revonic/case-studies/the-red-sea-project/redsea.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=4BF93864D46270BAB8F27B28D90660B8 2x">
+                                        <source media="(max-width: 1023px) and (orientation: landscape)"
+                                            srcset="./-/media/revonic/case-studies/the-red-sea-project/redsea.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=4BF93864D46270BAB8F27B28D90660B8, ./-/media/revonic/case-studies/the-red-sea-project/redsea.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=4BF93864D46270BAB8F27B28D90660B8 2x">
+                                        <source media="(min-width: 320px)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview/redseaworkoverview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=400&amp;hash=F5DF5F118446DBFDF385DE9625560A05, ./-/media/revonic/overview-pages/work-overview/redseaworkoverview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=E922B11B78EF2AC59DD8DEE765E0B0B1 2x">
+                                    </picture>
+                                </div>
+                                <div class="rv-description-static text-center">
+                                    <div class="rv-title">
+                                        <img data-src="./-/media/revonic/clients/the-red-sea/redsea_white.svg"
+                                            class="rv-logo mb-20 lozad" alt="The Red Sea Development">
+                                        <h1 class="rv-h2-heading">$3.5b</h1>
+                                        <p class="rv-h2-text"> Giga project
+                                        </p>
+                                    </div>
+                                    <div class="rv-secondary-link rv-read-case">
+                                        <a href="/en/work/the-red-sea" class="rv-link" target="" id="gtm-TheRedSeaHome"
+                                            title="The Red Sea Development">Read case study</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="rv-card">
+                                <a href="/en/work/mercedes-benz" target="" class="rv-card-anchor"
+                                    id="gtm-MercedesboxHome" title="Mercedez Benz"></a>
+                                <div class="rv-box ">
+                                    <div class="rv-bgoverlay"></div>
+                                    <picture class="lozad" data-class="rv-bgimage objectfit"
+                                        data-iesrc="./-/media/revonic/overview-pages/work-overview/mbworkoverview.jpg?cx=0.32&amp;cy=0.72&amp;cw=0&amp;ch=400&amp;hash=6B0DF94E5589A8863DF29BE68261D8F5"
+                                        data-alt="Mercedez Benz">
+                                        <source media="(max-width: 600px) and (orientation: portrait)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview/mbworkoverviewbig.jpg?cx=0.2&amp;cy=0.52&amp;cw=0&amp;ch=0&amp;hash=C8D375DAFB8C1B199BF4959C67E42F90, ./-/media/revonic/overview-pages/work-overview/mbworkoverviewbig.jpg?cx=0.2&amp;cy=0.52&amp;cw=0&amp;ch=0&amp;hash=C8D375DAFB8C1B199BF4959C67E42F90 2x">
+                                        <source media="(max-width: 1023px) and (orientation: landscape)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview/mbworkoverviewbig.jpg?cx=0.2&amp;cy=0.52&amp;cw=0&amp;ch=0&amp;hash=C8D375DAFB8C1B199BF4959C67E42F90, ./-/media/revonic/overview-pages/work-overview/mbworkoverviewbig.jpg?cx=0.2&amp;cy=0.52&amp;cw=0&amp;ch=0&amp;hash=C8D375DAFB8C1B199BF4959C67E42F90 2x">
+                                        <source media="(min-width: 320px)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview/mbworkoverview.jpg?cx=0.32&amp;cy=0.72&amp;cw=0&amp;ch=400&amp;hash=6B0DF94E5589A8863DF29BE68261D8F5, ./-/media/revonic/overview-pages/work-overview/mbworkoverview.jpg?cx=0.32&amp;cy=0.72&amp;cw=0&amp;ch=0&amp;hash=66584CF40DEBC97F41823CD4B6CEF026 2x">
+                                    </picture>
+                                </div>
+                                <div class="rv-description-static text-center">
+                                    <div class="rv-title">
+                                        <img data-src="./-/media/revonic/case-studies/case-study-preview-cards/mercedes-benz-logo.svg"
+                                            class="rv-logo mb-20 lozad" alt="Mercedez Benz">
+                                        <h1 class="rv-h2-heading">312%</h1>
+                                        <p class="rv-h2-text"> Growth in leads
+                                        </p>
+                                    </div>
+                                    <div class="rv-secondary-link rv-read-case">
+                                        <a href="/en/work/mercedes-benz" class="rv-link" target="" id="gtm-MercedesHome"
+                                            title="Mercedez Benz">Read case study</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <div class="rv-card">
+                                <a href="/en/work/abu-dhabi-airport" target="" class="rv-card-anchor" id=""
+                                    title="ADAC"></a>
+                                <div class="rv-box rv-cornercut">
+                                    <div class="rv-bgoverlay"></div>
+                                    <picture class="lozad" data-class="rv-bgimage objectfit"
+                                        data-iesrc="./-/media/revonic/overview-pages/work-overview/adacworkoverview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=400&amp;hash=1EA54B391BDA268995F803DF1A40C528"
+                                        data-alt="ADAC">
+                                        <source media="(max-width: 600px) and (orientation: portrait)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview/adacworkoverview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=C5C935D01B19E07E257B0C5C7BF8E107, ./-/media/revonic/overview-pages/work-overview/adacworkoverview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=C5C935D01B19E07E257B0C5C7BF8E107 2x">
+                                        <source media="(max-width: 1023px) and (orientation: landscape)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview/adacworkoverview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=C5C935D01B19E07E257B0C5C7BF8E107, ./-/media/revonic/overview-pages/work-overview/adacworkoverview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=C5C935D01B19E07E257B0C5C7BF8E107 2x">
+                                        <source media="(min-width: 320px)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview/adacworkoverview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=400&amp;hash=1EA54B391BDA268995F803DF1A40C528, ./-/media/revonic/overview-pages/work-overview/adacworkoverview.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=C5C935D01B19E07E257B0C5C7BF8E107 2x">
+                                    </picture>
+                                </div>
+                                <div class="rv-description-static text-center">
+                                    <div class="rv-title">
+                                        <img data-src="./-/media/revonic/clients/abu-dhabi-airports/abudhabiairports-white-logo.svg?h=54&amp;w=188&amp;hash=16C0F8A8577F929F977090493F8E359E"
+                                            class="rv-logo mb-20 lozad" alt="ADAC">
+                                        <h1 class="rv-h2-heading">+200K</h1>
+                                        <p class="rv-h2-text"> Customers impacted by improved service
+                                        </p>
+                                    </div>
+                                    <div class="rv-secondary-link rv-read-case">
+                                        <a href="/en/work/abu-dhabi-airport" class="rv-link" target="" id=""
+                                            title="ADAC">Read case study</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <div class="rv-card">
+                                <a href="/en/work/noor-bank" target="" class="rv-card-anchor" id=""
+                                    title="Noor Bank"></a>
+                                <div class="rv-box rv-cornercut">
+                                    <div class="rv-bgoverlay"></div>
+                                    <picture class="lozad" data-class="rv-bgimage objectfit"
+                                        data-iesrc="./-/media/revonic/overview-pages/work-overview/noorbankoverviewhomepage.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=400&amp;hash=0496E595881363D04424DF17F0B3B0D7"
+                                        data-alt="Noor Bank">
+                                        <source media="(max-width: 600px) and (orientation: portrait)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview/noorbankoverviewhomepage.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=662805E14F30276B89A0589659FD8B22, ./-/media/revonic/overview-pages/work-overview/noorbankoverviewhomepage.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=662805E14F30276B89A0589659FD8B22 2x">
+                                        <source media="(max-width: 1023px) and (orientation: landscape)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview/noorbankoverviewhomepage.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=662805E14F30276B89A0589659FD8B22, ./-/media/revonic/overview-pages/work-overview/noorbankoverviewhomepage.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=662805E14F30276B89A0589659FD8B22 2x">
+                                        <source media="(min-width: 320px)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview/noorbankoverviewhomepage.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=400&amp;hash=0496E595881363D04424DF17F0B3B0D7, ./-/media/revonic/overview-pages/work-overview/noorbankoverviewhomepage.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=0&amp;hash=662805E14F30276B89A0589659FD8B22 2x">
+                                    </picture>
+                                </div>
+                                <div class="rv-description-static text-center">
+                                    <div class="rv-title">
+                                        <img data-src="./-/media/revonic/clients/noor-bank/noor_white.svg"
+                                            class="rv-logo mb-20 lozad" alt="Noor Bank">
+                                        <h1 class="rv-h2-heading">+15&#160;</h1>
+                                        <p class="rv-h2-text"> New products
+                                        </p>
+                                    </div>
+                                    <div class="rv-secondary-link rv-read-case">
+                                        <a href="/en/work/noor-bank" class="rv-link" target="" id=""
+                                            title="Noor Bank">Read case study</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="rv-card">
+                                <a href="/en/work/emirates-nbd" target="" class="rv-card-anchor"
+                                    id="gtm-EmiratesNBDboxHome" title="ENBD"></a>
+                                <div class="rv-box ">
+                                    <div class="rv-bgoverlay"></div>
+                                    <picture class="lozad" data-class="rv-bgimage objectfit"
+                                        data-iesrc="./-/media/revonic/overview-pages/work-overview/enbdoverviewwork.jpg?cx=0.48&amp;cy=0.83&amp;cw=0&amp;ch=400&amp;hash=5F00C2B6025503BCA9829F3F62DB2F02"
+                                        data-alt="ENBD">
+                                        <source media="(max-width: 600px) and (orientation: portrait)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview-mobile/enbd-1.jpg?cx=0.56&amp;cy=0.66&amp;cw=0&amp;ch=0&amp;hash=F15EDC495B652DCB0EFF4B113C7F8FD3, ./-/media/revonic/overview-pages/work-overview-mobile/enbd-1.jpg?cx=0.56&amp;cy=0.66&amp;cw=0&amp;ch=0&amp;hash=F15EDC495B652DCB0EFF4B113C7F8FD3 2x">
+                                        <source media="(max-width: 1023px) and (orientation: landscape)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview-mobile/enbd-1.jpg?cx=0.56&amp;cy=0.66&amp;cw=0&amp;ch=0&amp;hash=F15EDC495B652DCB0EFF4B113C7F8FD3, ./-/media/revonic/overview-pages/work-overview-mobile/enbd-1.jpg?cx=0.56&amp;cy=0.66&amp;cw=0&amp;ch=0&amp;hash=F15EDC495B652DCB0EFF4B113C7F8FD3 2x">
+                                        <source media="(min-width: 320px)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview/enbdoverviewwork.jpg?cx=0.48&amp;cy=0.83&amp;cw=0&amp;ch=400&amp;hash=5F00C2B6025503BCA9829F3F62DB2F02, ./-/media/revonic/overview-pages/work-overview/enbdoverviewwork.jpg?cx=0.48&amp;cy=0.83&amp;cw=0&amp;ch=0&amp;hash=110B8A712CC82E7E82DBDDB6E0B8F2D0 2x">
+                                    </picture>
+                                </div>
+                                <div class="rv-description-static text-center">
+                                    <div class="rv-title">
+                                        <img data-src="./-/media/revonic/clients/enbd/enbd_white.svg"
+                                            class="rv-logo mb-20 lozad" alt="ENBD">
+                                        <h1 class="rv-h2-heading">+100</h1>
+                                        <p class="rv-h2-text"> Personalisation rules within Sitecore
+                                        </p>
+                                    </div>
+                                    <div class="rv-secondary-link rv-read-case">
+                                        <a href="/en/work/emirates-nbd" class="rv-link" target=""
+                                            id="gtm-EmiratesNBDHome" title="ENBD">Read case study</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="rv-align-text">
+                                <div class="rv-secondary-link rv-read-case">
+                                    <a href="/en/work" class="rv-link" target="" id="gmt-ViewWorkCtaHome">View all
+                                        work</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="rv-testimonial rv-component rv-theme-dark rv-brand-logo animateOnView">
+            <div class="rv-container-block container">
+                <div class="row offset-md-1">
+                    <div class="col-3 rv-logo-wrap">
+                        <svg width="130px" height="40px" viewBox="0 0 130 40" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            class="rv-logo rv-brand-inline-logo">
+                            <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+                            <title>riyad-bank-vector-logo</title>
+                            <desc>Created with Sketch.</desc>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="riyad-bank-vector-logo" fill="#FFFFFF" fill-rule="nonzero">
+                                    <path
+                                        d="M4.08818636,24.59401 C2.4875208,24.8968386 0.908485857,25.7620632 0.389351082,27.6439268 C0.259567388,28.1414309 0.216306156,28.6605657 0.216306156,29.3094842 L0.216306156,34.6955075 L0.800332779,34.6955075 C1.94675541,34.6955075 2.85524126,34.2412646 3.35274542,33.5274542 C3.61231281,33.1597338 3.72046589,32.6189684 3.72046589,32.0133111 L3.72046589,29.4608985 C3.72046589,28.7470882 3.78535774,28.2712146 4.06655574,27.9467554 C4.43427621,27.5141431 4.9750416,27.3410982 5.77537438,27.3410982 L11.4209651,27.3410982 L11.4209651,24.4425957 L6.12146423,24.4425957 C5.32113145,24.4425957 4.67221298,24.4858569 4.08818636,24.59401"
+                                        id="Path"></path>
+                                    <path
+                                        d="M111.72213,24.4642263 C111.159734,24.3560732 110.489185,24.312812 109.710483,24.312812 L107.569052,24.312812 C106.790349,24.312812 106.1198,24.3560732 105.535774,24.4642263 C103.913478,24.7670549 102.356073,25.6106489 101.836938,27.5357737 C101.707155,28.0116473 101.642263,28.530782 101.642263,29.1797005 L101.642263,34.7171381 L102.24792,34.7171381 C103.394343,34.7171381 104.302829,34.2628952 104.800333,33.5490849 C105.0599,33.1813644 105.168053,32.640599 105.168053,32.0349418 L105.168053,29.3527454 C105.168053,28.6389351 105.232945,28.1630616 105.514143,27.8386023 C105.881864,27.40599 106.422629,27.2329451 107.201331,27.2329451 L110.034942,27.2329451 C110.813644,27.2329451 111.37604,27.40599 111.74376,27.8386023 C112.003328,28.1846922 112.08985,28.6605657 112.08985,29.3527454 L112.08985,32.0133111 C112.08985,32.6189684 112.219634,33.1597338 112.479201,33.5274542 C112.955075,34.2412646 113.863561,34.6955075 115.009983,34.6955075 L115.615641,34.6955075 L115.615641,29.1580699 C115.615641,28.530782 115.572379,27.9900166 115.420965,27.5141431 C114.90183,25.6106489 113.344426,24.7454243 111.72213,24.4642263"
+                                        id="Path"></path>
+                                    <path
+                                        d="M12.6106489,34.6955075 L13.1946755,34.6955075 C14.3410982,34.6955075 15.2712146,34.2412646 15.7470882,33.5274542 C16.0066556,33.1597338 16.1364393,32.6189684 16.1364393,32.0133111 L16.1364393,24.4642263 L12.6106489,24.4642263 L12.6106489,34.6955075 Z"
+                                        id="Path"></path>
+                                    <path
+                                        d="M27.9034942,25.6322795 C27.6439268,26 27.5141431,26.562396 27.5141431,27.1464226 L27.5141431,31.797005 L23.0366057,31.797005 C22.2146423,31.797005 21.6955075,31.6239601 21.3494176,31.1913478 C21.0682196,30.8452579 21.0033278,30.391015 21.0033278,29.6772047 L21.0033278,24.4425957 L17.4775374,24.4425957 L17.4775374,29.936772 C17.4775374,31.0183028 17.5424293,32.3810316 18.5806988,33.4409318 C19.6189684,34.5008319 21.0898502,34.6955075 23.3826955,34.6955075 L27.5141431,34.6955075 L27.5141431,39.0865225 L31.0399334,39.0865225 L31.0399334,24.4642263 L30.4342762,24.4642263 C29.3094842,24.4642263 28.3793677,24.8968386 27.9034942,25.6322795"
+                                        id="Path"></path>
+                                    <path
+                                        d="M129.956739,26.3244592 L129.956739,24.3777038 L126.430948,24.3777038 L126.430948,26.3244592 C126.430948,27.1031614 125.933444,27.7520799 124.440932,27.7520799 L120.439268,27.7520799 L120.439268,21.3710483 C120.439268,20.7870216 120.309484,20.2246256 120.049917,19.8569052 C119.574043,19.1430948 118.643927,18.6888519 117.497504,18.6888519 L116.913478,18.6888519 L116.913478,34.6522463 L120.439268,34.6522463 L120.439268,29.8935108 C121.023295,30.3044925 121.845258,30.5640599 122.667221,30.5640599 L124.549085,30.5640599 C125.933444,30.5640599 126.452579,31.2778702 126.452579,32.0565724 L126.452579,34.6522463 L129.978369,34.6522463 L129.978369,32.0349418 C129.978369,30.8885191 129.63228,29.9151414 128.529118,29.1797005 C129.437604,28.4442596 129.956739,27.4276206 129.956739,26.3244592"
+                                        id="Path"></path>
+                                    <path
+                                        d="M43.1530782,31.7753744 L37.6589018,31.7753744 C36.8801997,31.7753744 36.2529118,31.6023295 35.906822,31.1480865 C35.625624,30.8236273 35.5607321,30.3693844 35.5607321,29.655574 L35.5607321,29.4392679 C35.5607321,28.7254576 35.6472546,28.2712146 35.906822,27.9251248 C36.2745424,27.4925125 36.7936772,27.3194676 37.5723794,27.3194676 L43.1314476,27.3194676 L43.1314476,31.7753744 L43.1530782,31.7753744 Z M37.9833611,24.4425957 C36.0582363,24.4425957 34.3710483,24.8968386 33.3327787,25.9351082 C32.5757072,26.7138103 31.9916805,27.8169717 31.9916805,29.3527454 L31.9916805,29.7853577 C31.9916805,31.4292845 32.5540765,32.4459235 33.3111481,33.202995 C34.3494176,34.2628952 35.9933444,34.6738769 37.9184692,34.6738769 L46.6788686,34.6738769 L46.6788686,24.4425957 L43.8668885,24.4425957 L37.9833611,24.4425957 Z"
+                                        id="Shape"></path>
+                                    <path
+                                        d="M96.7753744,31.7753744 L91.4758735,31.7753744 C90.6755408,31.7753744 90.0698835,31.6023295 89.7237937,31.1480865 C89.4425957,30.8236273 89.3777038,30.3693844 89.3777038,29.655574 L89.3777038,29.4392679 C89.3777038,28.7254576 89.4642263,28.2712146 89.7454243,27.9251248 C90.0915141,27.4925125 90.6322795,27.3194676 91.4109817,27.3194676 L96.7753744,27.3194676 L96.7753744,31.7753744 L96.7753744,31.7753744 Z M91.7787022,24.4425957 C89.8535774,24.4425957 88.1663894,24.8968386 87.1281198,25.9351082 C86.3710483,26.7138103 85.7870216,27.8169717 85.7870216,29.3527454 L85.7870216,29.7853577 C85.7870216,31.4292845 86.3494176,32.4459235 87.1064892,33.202995 C88.1663894,34.2628952 89.7886855,34.6738769 91.7138103,34.6738769 L100.279534,34.6738769 L100.279534,24.4425957 L97.6622296,24.4425957 L91.7787022,24.4425957 Z"
+                                        id="Shape"></path>
+                                    <path
+                                        d="M59.1813644,28.2928453 L59.1813644,29.6772047 C59.1813644,30.391015 59.0948419,30.8236273 58.8352745,31.1697171 C58.4675541,31.6023295 57.8618968,31.797005 57.0831947,31.797005 L53.3410982,31.797005 C52.562396,31.797005 51.9351082,31.6239601 51.5890183,31.1697171 C51.3078203,30.8452579 51.2429285,30.391015 51.2429285,29.6772047 L51.2429285,29.4608985 C51.2429285,28.7470882 51.3294509,28.2928453 51.6106489,27.9467554 C51.9567388,27.5141431 52.4975042,27.3410982 53.2762063,27.3410982 L59.1813644,27.3410982 L59.1813644,28.2928453 L59.1813644,28.2928453 Z M59.5707155,21.2196339 C59.3327787,21.5873544 59.202995,22.1497504 59.202995,22.733777 L59.202995,24.4425957 L53.687188,24.4425957 C51.7836938,24.4425957 50.0748752,24.8968386 49.0366057,25.9351082 C48.2795341,26.6921797 47.6955075,27.8169717 47.6955075,29.3527454 L47.6955075,29.7853577 C47.6955075,31.4292845 48.2795341,32.4459235 49.014975,33.202995 C50.0532446,34.2412646 51.6755408,34.6738769 53.6222962,34.6738769 L56.8019967,34.6738769 C58.7271215,34.6738769 60.3494176,34.2412646 61.3876872,33.202995 C62.1231281,32.4242928 62.7287854,31.4292845 62.7287854,29.7853577 L62.7287854,20.0515807 L62.1231281,20.0515807 C60.9767055,20.0515807 60.0682196,20.5058236 59.5707155,21.2196339"
+                                        id="Shape"></path>
+                                    <path
+                                        d="M81.4176373,29.6772047 C81.4176373,30.391015 81.3311148,30.8236273 81.0499168,31.1697171 C80.6821963,31.6023295 80.0765391,31.797005 79.2978369,31.797005 L75.6855241,31.797005 C74.906822,31.797005 74.3011647,31.6239601 73.9334443,31.1697171 C73.6738769,30.8452579 73.5657238,30.391015 73.5657238,29.6772047 L73.5657238,27.3194676 L79.3410982,27.3194676 C80.1414309,27.3194676 80.6605657,27.4925125 81.0282862,27.9251248 C81.2878536,28.2712146 81.3960067,28.7254576 81.3960067,29.4392679 M78.9733777,24.4425957 L73.5657238,24.4425957 L73.5657238,18.4509151 L72.9816972,18.4509151 C71.8352745,18.4509151 70.9267887,18.9051581 70.4292845,19.6189684 C70.1697171,19.9866889 70.0399334,20.5490849 70.0399334,21.1331115 L70.0399334,29.7637271 C70.0399334,31.4076539 70.6239601,32.4242928 71.3810316,33.1813644 C72.4193012,34.2412646 74.063228,34.6522463 75.9667221,34.6522463 L79.0382696,34.6522463 C80.9417637,34.6522463 82.5856905,34.2196339 83.6239601,33.1813644 C84.359401,32.4026622 84.9434276,31.4076539 84.9434276,29.7637271 L84.9434276,29.3311148 C84.9434276,27.7953411 84.359401,26.6705491 83.6023295,25.9134775 C82.5856905,24.875208 80.8768719,24.4425957 78.9733777,24.4425957"
+                                        id="Shape"></path>
+                                    <path
+                                        d="M26.9084859,1.01663894 C25.718802,1.01663894 24.7454243,1.75207987 24.7454243,2.63893511 C24.7454243,3.54742097 25.718802,4.26123128 26.9084859,4.26123128 C28.0981697,4.26123128 29.0499168,3.54742097 29.0499168,2.63893511 C29.0499168,1.75207987 28.0765391,1.01663894 26.9084859,1.01663894"
+                                        id="Path"></path>
+                                    <path
+                                        d="M116.589018,1.01663894 C115.399334,1.01663894 114.447587,1.75207987 114.447587,2.63893511 C114.447587,3.54742097 115.399334,4.26123128 116.589018,4.26123128 C117.778702,4.26123128 118.730449,3.54742097 118.730449,2.63893511 C118.75208,1.75207987 117.778702,1.01663894 116.589018,1.01663894"
+                                        id="Path"></path>
+                                    <path
+                                        d="M51.1996672,15.9417637 C50.1830283,15.9417637 49.3610649,16.4608985 49.1014975,17.1530782 C48.8635607,16.4392679 48.0415973,15.9417637 47.0249584,15.9417637 C45.8352745,15.9417637 44.8835275,16.6772047 44.8835275,17.5640599 C44.8835275,18.4725458 45.8352745,19.1863561 47.0249584,19.1863561 C48.0415973,19.1863561 48.8635607,18.6888519 49.1014975,17.9750416 C49.3394343,18.6888519 50.1613977,19.1863561 51.1996672,19.1863561 C52.3893511,19.1863561 53.3410982,18.4725458 53.3410982,17.5640599 C53.3410982,16.655574 52.4109817,15.9417637 51.1996672,15.9417637"
+                                        id="Path"></path>
+                                    <path
+                                        d="M125.111481,15.8985025 C123.921797,15.8985025 122.926789,16.655574 122.926789,17.5640599 C122.926789,18.4941764 123.878536,19.2296173 125.111481,19.2296173 C126.344426,19.2296173 127.296173,18.4941764 127.296173,17.5640599 C127.317804,16.6339434 126.366057,15.8985025 125.111481,15.8985025"
+                                        id="Path"></path>
+                                    <path
+                                        d="M98.7437604,3.65557404 L95.672213,3.65557404 L94.6772047,5.77537438 C94.5690516,5.99168053 94.547421,6.20798669 94.547421,6.42429285 C94.547421,6.66222962 94.6123128,6.87853577 94.7420965,7.09484193 C95.0232945,7.52745424 95.5424293,7.72212978 96.0399334,7.80865225 C95.8452579,8.21963394 95.1747088,9.56073211 95.1747088,9.56073211 L98.2678869,9.56073211 L99.2412646,7.24625624 C99.327787,7.02995008 99.3710483,6.83527454 99.3710483,6.640599 C99.3710483,6.38103161 99.3061564,6.16472546 99.1547421,5.97004992 C98.9384359,5.62396007 98.5058236,5.40765391 97.9001664,5.32113145 C98.1164725,4.91014975 98.7437604,3.65557404 98.7437604,3.65557404"
+                                        id="Path"></path>
+                                    <path
+                                        d="M79.3194676,0.129783694 L75.577371,0.129783694 L75.577371,14.7953411 L75.7287854,14.7953411 C76.59401,14.7953411 77.3727121,14.6222962 78.0648918,14.1896839 C79.0166389,13.5840266 79.2978369,12.6322795 79.2978369,11.9184692 L79.2978369,0.129783694 L79.3194676,0.129783694 Z"
+                                        id="Path"></path>
+                                    <path
+                                        d="M103.30782,0.151414309 L103.156406,0.151414309 L103.156406,8.63061564 C103.156406,9.75540765 102.853577,10.4908486 102.334443,11.031614 C101.447587,11.9184692 100.582363,12.1347754 97.4891847,12.1347754 L95.9317804,12.1347754 C93.4875208,12.1347754 93.0332779,12.0698835 92.5141431,11.8968386 C91.9517471,11.7021631 91.4975042,11.3993344 91.2379368,10.9667221 C90.9567388,10.5557404 90.8702163,10.014975 90.8702163,9.23627288 L90.8702163,5.2562396 L87.1064892,5.2562396 L87.1064892,9.10648918 C87.1064892,10.4908486 87.3011647,12.1780366 88.750416,13.3677205 C90.0915141,14.4276206 92.124792,14.7953411 94.2878536,14.7953411 L99.2845258,14.7953411 C101.750416,14.7953411 103.610649,14.2978369 104.865225,12.8918469 C105.881864,14.0815308 107.396007,14.8386023 109.883527,14.8386023 L125.327787,14.8386023 C127.663894,14.8386023 128.745424,14.0599002 129.242928,13.4542429 C129.762063,12.8269551 129.956739,12.0049917 129.956739,11.1397671 L129.956739,5.27787022 L129.783694,5.27787022 C128.918469,5.27787022 128.118136,5.45091514 127.447587,5.88352745 C126.47421,6.46755408 126.214642,7.44093178 126.214642,8.1547421 L126.214642,11.0748752 C126.214642,11.2911814 126.171381,11.5291181 126.041597,11.6805324 C125.890183,11.8535774 125.630616,11.8968386 125.111481,11.8968386 L118.492512,11.8968386 L118.492512,5.27787022 L114.750416,5.27787022 L114.750416,11.8968386 L110.143095,11.8968386 C109.212978,11.8968386 108.412646,11.7021631 107.85025,11.2695507 C107.136439,10.750416 106.941764,10.0582363 106.941764,9.17138103 L106.941764,3.02828619 C106.941764,2.31447587 106.660566,1.34109817 105.708819,0.757071547 C104.973378,0.324459235 104.173045,0.151414309 103.30782,0.151414309"
+                                        id="Path"></path>
+                                    <path
+                                        d="M73.8252912,0.129783694 L73.6522463,0.129783694 C72.7870216,0.129783694 72.0083195,0.302828619 71.3161398,0.735440932 C70.3427621,1.34109817 70.0615641,2.29284526 70.0615641,3.00665557 L70.0615641,11.0532446 C70.0615641,11.2695507 70.0399334,11.5074875 69.9101498,11.6589018 C69.7587354,11.8319468 69.4775374,11.875208 68.9584027,11.875208 L62.8585691,11.875208 L62.8585691,8.13311148 C62.8585691,7.39767055 62.5990017,6.46755408 61.625624,5.86189684 C60.9334443,5.42928453 60.1331115,5.2562396 59.2678869,5.2562396 L59.1164725,5.2562396 L59.1164725,13.5840266 C59.1164725,15.0332779 58.8136439,15.7687188 56.0665557,16.4825291 L55.6123128,16.5906822 L55.9151414,18.9051581 L56.4342762,18.8402662 C60.2412646,18.3427621 62.577371,16.8502496 62.7720466,14.8386023 L69.1747088,14.8386023 C71.5108153,14.8386023 72.5923461,14.0599002 73.1114809,13.4542429 C73.6306156,12.8269551 73.8252912,12.0049917 73.8252912,11.1397671 L73.8252912,0.129783694 Z"
+                                        id="Path"></path>
+                                    <path
+                                        d="M38.3294509,0.129783694 L38.1780366,0.129783694 L38.1780366,11.1181364 C38.1780366,11.9833611 38.3510815,12.8269551 38.8918469,13.4326123 C39.4109817,14.0382696 40.4925125,14.8169717 42.8069884,14.8169717 L49.9018303,14.8169717 C52.2379368,14.8169717 53.3194676,14.0382696 53.8386023,13.4326123 C54.3577371,12.8053245 54.5524126,11.9833611 54.5524126,11.1181364 L54.5524126,5.2562396 L50.8103161,5.2562396 L50.8103161,11.031614 C50.8103161,11.2479201 50.7886855,11.4858569 50.6372712,11.6372712 C50.4642263,11.8103161 50.2262895,11.8535774 49.6855241,11.8535774 L43.0449251,11.8535774 C42.5257903,11.8535774 42.2445923,11.7886855 42.093178,11.6372712 C41.9633943,11.4858569 41.9201331,11.2479201 41.9201331,11.031614 L41.9201331,2.98502496 C41.9201331,2.27121464 41.6605657,1.31946755 40.687188,0.713810316 C39.9733777,0.324459235 39.1946755,0.129783694 38.3294509,0.129783694"
+                                        id="Path"></path>
+                                    <path
+                                        d="M19.8785358,3.50415973 L16.2229617,3.50415973 L16.2229617,11.59401 C16.2229617,12.6971714 15.9633943,13.4542429 15.4442596,13.9733777 C14.5574043,14.8602329 13.6921797,15.0765391 10.6206323,15.0765391 L8.99833611,15.0765391 C6.57570715,15.0765391 6.12146423,15.0116473 5.60232945,14.8386023 C5.03993344,14.6439268 4.58569052,14.3410982 4.32612313,13.9301165 C4.04492512,13.5191348 3.93677205,12.9567388 3.93677205,12.1780366 L3.93677205,11.4425957 C3.93677205,10.7287854 3.67720466,9.75540765 2.70382696,9.17138103 C2.01164725,8.73876872 1.21131448,8.56572379 0.367720466,8.56572379 L0.194675541,8.56572379 L0.194675541,12.0482529 C0.194675541,13.4109817 0.389351082,15.1414309 1.86023295,16.3094842 C3.1797005,17.3693844 5.21297837,17.7371048 7.39767055,17.7371048 L12.5241265,17.7371048 C14.9900166,17.7371048 17.1963394,17.2612313 18.3643927,15.8768719 C18.8402662,15.3361065 18.9700499,15.0549085 19.0998336,14.7953411 L31.2562396,14.7953411 C33.5923461,14.7953411 34.6738769,14.0166389 35.171381,13.4109817 C35.6905158,12.7836938 35.8851913,11.9617304 35.8851913,11.0965058 L35.8851913,5.2562396 L26.7570715,5.2562396 C25.3727121,5.2562396 24.2262895,5.29950083 23.2745424,5.45091514 C21.9550749,5.62396007 20.765391,5.99168053 19.9001664,6.61896839 L19.9001664,3.50415973 L19.8785358,3.50415973 Z M19.8785358,11.875208 L19.8785358,11.6372712 C19.8785358,8.21963394 22.7121464,7.89517471 28.2063228,7.89517471 L32.1214642,7.89517471 L32.1214642,11.0532446 C32.1214642,11.2695507 32.078203,11.5074875 31.9484193,11.6589018 C31.797005,11.8103161 31.5374376,11.875208 30.9966722,11.875208 L19.8785358,11.875208 Z"
+                                        id="Shape"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="col-md-11 rv-response">
+                        <h3 class="rv-h4 rv-blockquote">
+                            <svg class="rv-toSvg open-quote" alt="Website link">
+                                <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-open-quote"></use>
+                            </svg>
+                            Revonic is a very professional organisation that put their customers first. Their continued
+                            support, especially with legacy systems integration, has been great.
+                            <svg class="rv-toSvg close-quote" alt="Website link">
+                                <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-close-quote"></use>
+                            </svg>
+                        </h3>
+                    </div>
+                    <div class="rv-hockey-image-ext rv-component">
+                        <svg class="rv-hockey-svg js-svg rv-animated-svg" viewBox="0 0 1200 443" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="C16---Testimonials" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="C16.1---Testimonial---Dark---Desktop"
+                                    transform="translate(-261.000000, -83.000000)" stroke="#E44A21">
+                                    <g transform="translate(0.000000, 40.000000)" id="hockey">
+                                        <path d="M261.495121 485 1177.92098 485 1610.79158 43.875"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        <svg class="rv-hockey-svg js-svg rv-ie-svg" width="1009px" height="277px" viewBox="0 0 1009 277"
+                            version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="T1---Homepage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="T1---Homepage---Desktop" transform="translate(-431.000000, -2620.000000)"
+                                    stroke="#E44A21">
+                                    <g id="c6" transform="translate(0.000000, 2570.000000)">
+                                        <polyline id="Stroke-3" points="431 326 1168.92098 326 1448 43"></polyline>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="col-12 col-lg-8 rv-responder-details">
+                        <h4 class="rv-h6 rv-responder-name d-inline-block">Najam UlSaqib M Sahto</h4>
+                        <p class="rv-responder-title d-block">Senior Digital Portfolio Manager, Riyad Bank</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="rv-sec-container rv-bg-light">
+        <div class="rv-cta-text-banner rv-component" data-comp-name="ctatextbanner">
+            <div class="rv-container container">
+                <div class="row">
+                    <div class="rv-text-wrapper col-12 d-inline-block ">
+                        <h2 class="rv-h1 rv-title rv-static-text">Let&#39;s work together on</h2>
+                        <h2 class="rv-h1 rv-title rv-animated-text">
+                            <div id="rv-vertical-flip-text" class="rv-vertical-flip-text" data-duration="500"
+                                data-delay="2500">
+                                <span class="is-hidden">UX &amp; UI Design</span>
+                                <span class="is-hidden">Web &amp; Mobile</span>
+                                <span class="is-hidden">User Testing</span>
+                                <span class="is-hidden">User Research</span>
+                                <span class="is-hidden">Data Analysis</span>
+                                <span class="is-hidden">Digital Strategy</span>
+                                <span class="is-hidden">Content Services</span>
+                            </div>
+                        </h2>
+                    </div>
+                    <div class="col">
+                        <div onclick="window.location='/en/contact'"
+                            class="rv-contactus-wrap rv-boldbutton rv-component" data-comp-name="boldbutton">
+                            <button class="btn-bold rv-link">
+                                <span data-btn-label='LET&#39;S TALK' class="rv-text-fill" id="">LET&#39;S TALK</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <section class="rv-sec-container rv-bg-grey">
+        <div class="rv-component js-titleSticky parentSticky content-3 rv-theme-light" data-comp-name="stickytitle">
+            <div class="container rv-sticky-container">
+                <h1 class="rv-sticky-text rv-line-cut js-titleChild rv-sticky">
+                    <span class="rv-line-cut-tr"></span>
+                    <span>Our</span>
+                    Services
+                </h1>
+            </div>
+        </div>
+        <div class="rv-editorialicons rv-component rv-theme-light">
+            <div class="container rv-container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="richtext feature-richtext">
+                            <h2>Creating digital solutions through end-to-end services.</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="rv-jobcard-wrap">
+                                    <div class="rv-jobcardbox is--chip rv-cornercut ">
+                                        <a href="/en/services/digital-strategy" target="" class="rv-card-anchor" id=""
+                                            title="Digital Strategy"></a>
+                                        <span class="rv-component" data-comp-name="changesvg">
+
+                                            <svg width="60px" height="50px" viewBox="0 0 60 50" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                class="rv-toSvg icon-strategy js-change-svg">
+                                                <title>noun_Digital Strategy_3146864</title>
+                                                <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                    fill-rule="evenodd">
+                                                    <g id="Services" transform="translate(-809.000000, -221.000000)"
+                                                        fill="#E6552F" fill-rule="nonzero" stroke="#E6552F">
+                                                        <g id="services-new">
+                                                            <g id="noun_Digital-Strategy_3146864"
+                                                                transform="translate(809.000000, 221.000000)">
+                                                                <path
+                                                                    d="M58.7234043,0.510638298 L1.27659574,0.510638298 C0.765957447,0.510638298 0.319148936,0.957446809 0.319148936,1.46808511 L0.319148936,40.8510638 C0.319148936,41.3617021 0.765957447,41.8085106 1.27659574,41.8085106 L25.9787234,41.8085106 L25.9787234,47.2978723 L21.3191489,47.2978723 C20.8085106,47.2978723 20.3617021,47.7446809 20.3617021,48.2553191 C20.3617021,48.7659574 20.8085106,49.212766 21.3191489,49.212766 L26.9361702,49.212766 L33,49.212766 L38.6170213,49.212766 C39.1276596,49.212766 39.5744681,48.7659574 39.5744681,48.2553191 C39.5744681,47.7446809 39.1276596,47.2978723 38.6170213,47.2978723 L33.9574468,47.2978723 L33.9574468,41.8085106 L58.7234043,41.8085106 C59.2340426,41.8085106 59.6808511,41.3617021 59.6808511,40.8510638 L59.6808511,1.46808511 C59.6808511,0.957446809 59.2340426,0.510638298 58.7234043,0.510638298 Z M32.0425532,47.3617021 L27.893617,47.3617021 L27.893617,41.8723404 L32.0425532,41.8723404 L32.0425532,47.3617021 Z M57.7659574,39.893617 L33,39.893617 L26.9361702,39.893617 L2.23404255,39.893617 L2.23404255,2.42553191 L57.7021277,2.42553191 L57.7021277,39.893617 L57.7659574,39.893617 Z"
+                                                                    id="Shape" stroke-width="0.5"></path>
+                                                                <path
+                                                                    d="M17.4893617,33.5744681 C19.787234,33.5744681 21.7021277,31.9148936 22.1489362,29.7446809 C32.6170213,29.4255319 41.1702128,21.3191489 42.0638298,11.0425532 L43.787234,14.0425532 C43.9787234,14.3617021 44.2978723,14.5531915 44.6170213,14.5531915 C44.8085106,14.5531915 44.9361702,14.4893617 45.0638298,14.4255319 C45.5106383,14.1702128 45.7021277,13.5957447 45.3829787,13.1489362 L41.9361702,7.21276596 C41.7446809,6.89361702 41.4255319,6.70212766 41.106383,6.70212766 C40.787234,6.70212766 40.4680851,6.89361702 40.2765957,7.21276596 L36.8297872,13.1489362 C36.5744681,13.5957447 36.7021277,14.1702128 37.1489362,14.4255319 C37.5957447,14.6808511 38.1702128,14.5531915 38.4255319,14.106383 L39.893617,11.4893617 C38.8085106,20.5531915 31.212766,27.5744681 21.9574468,27.893617 C21.5106383,25.7234043 19.5957447,24.1276596 17.2978723,24.1276596 C14.6808511,24.1276596 12.5744681,26.2340426 12.5744681,28.8510638 C12.7021277,31.4680851 14.8723404,33.5744681 17.4893617,33.5744681 Z M17.4893617,25.9787234 C19.0851064,25.9787234 20.2978723,27.2553191 20.2978723,28.787234 C20.2978723,30.3191489 19.0212766,31.5957447 17.4893617,31.5957447 C15.9574468,31.5957447 14.6808511,30.3191489 14.6808511,28.787234 C14.6808511,27.2553191 15.893617,25.9787234 17.4893617,25.9787234 Z"
+                                                                    id="Shape" stroke-width="0.3"></path>
+                                                                <path
+                                                                    d="M39.3829787,26.4255319 C39,26.0425532 38.4255319,26.0425532 38.0425532,26.4255319 C37.6595745,26.8085106 37.6595745,27.3829787 38.0425532,27.7659574 L41.1702128,30.893617 L38.0425532,34.0212766 C37.6595745,34.4042553 37.6595745,34.9787234 38.0425532,35.3617021 C38.2340426,35.5531915 38.4893617,35.6170213 38.7446809,35.6170213 C39,35.6170213 39.2553191,35.5531915 39.4468085,35.3617021 L42.5744681,32.2340426 L45.7021277,35.3617021 C45.893617,35.5531915 46.1489362,35.6170213 46.4042553,35.6170213 C46.6595745,35.6170213 46.9148936,35.5531915 47.106383,35.3617021 C47.4893617,34.9787234 47.4893617,34.4042553 47.106383,34.0212766 L43.9787234,30.893617 L47.106383,27.7659574 C47.4893617,27.3829787 47.4893617,26.8085106 47.106383,26.4255319 C46.7234043,26.0425532 46.1489362,26.0425532 45.7659574,26.4255319 L42.6382979,29.5531915 L39.3829787,26.4255319 Z"
+                                                                    id="Path" stroke-width="0.3"></path>
+                                                                <path
+                                                                    d="M19.6595745,18.893617 C19.8510638,19.0851064 20.106383,19.1489362 20.3617021,19.1489362 C20.6170213,19.1489362 20.8723404,19.0851064 21.0638298,18.893617 L24.1914894,15.7659574 L27.3191489,18.893617 C27.5106383,19.0851064 27.7659574,19.1489362 28.0212766,19.1489362 C28.2765957,19.1489362 28.5319149,19.0851064 28.7234043,18.893617 C29.106383,18.5106383 29.106383,17.9361702 28.7234043,17.5531915 L25.5957447,14.4255319 L28.7234043,11.2978723 C29.106383,10.9148936 29.106383,10.3404255 28.7234043,9.95744681 C28.3404255,9.57446809 27.7659574,9.57446809 27.3829787,9.95744681 L24.2553191,13.0851064 L21.1276596,9.95744681 C20.7446809,9.57446809 20.1702128,9.57446809 19.787234,9.95744681 C19.4042553,10.3404255 19.4042553,10.9148936 19.787234,11.2978723 L22.9148936,14.4255319 L19.787234,17.5531915 C19.2765957,17.9361702 19.2765957,18.5106383 19.6595745,18.893617 Z"
+                                                                    id="Path" stroke-width="0.3"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <h2 class="rv-title rv-textdot">Digital Strategy</h2>
+                                        <p class="rv-description">Creating a plan to maximise and deliver your digital
+                                            product and service needs by aligning with your business and its goals.</p>
+                                        <div class="rv-chips fill-chips">
+                                            <div class="chips">
+                                                <span>Product Roadmap</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Benchmarking</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Customer Journey Mapping</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Ideation</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>KPI Mapping</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Workshops</span>
+                                            </div>
+                                        </div>
+                                        <a href="/en/services/digital-strategy" target="" class="btn-withline" id=""
+                                            title="Digital Strategy">Know more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="rv-jobcard-wrap">
+                                    <div class="rv-jobcardbox is--chip rv-cornercut ">
+                                        <a href="/en/services/ux-and-ui-design" target="" class="rv-card-anchor" id=""
+                                            title="UX &amp; UI Design"></a>
+                                        <span class="rv-component" data-comp-name="changesvg">
+
+                                            <svg width="61px" height="61px" viewBox="0 0 61 61" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                class="rv-toSvg icon-strategy js-change-svg">
+                                                <title>noun_design_2123403</title>
+                                                <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                    fill-rule="evenodd">
+                                                    <g id="Services" transform="translate(-808.000000, -669.000000)"
+                                                        fill="#E6552F" fill-rule="nonzero">
+                                                        <g id="services-new">
+                                                            <g id="noun_design_2123403"
+                                                                transform="translate(809.000000, 670.000000)">
+                                                                <rect id="Rectangle" x="11.9680851" y="3.9893617"
+                                                                    width="1.99468085" height="1.99468085"></rect>
+                                                                <rect id="Rectangle" x="15.9574468" y="3.9893617"
+                                                                    width="1.99468085" height="1.99468085"></rect>
+                                                                <rect id="Rectangle" x="19.9468085" y="3.9893617"
+                                                                    width="1.99468085" height="1.99468085"></rect>
+                                                                <path
+                                                                    d="M0.997340426,59.8404255 L31.9148936,59.8404255 C32.318214,59.8404255 32.6817826,59.5973462 32.836115,59.224722 C32.9904474,58.8520977 32.9051608,58.4231991 32.6200133,58.1379654 L1.70246011,27.2204122 C1.41722648,26.9352647 0.988327843,26.8499782 0.615703566,27.0043105 C0.243079289,27.1586429 0,27.5222115 0,27.9255319 L0,58.8430851 C0,59.393901 0.446524518,59.8404255 0.997340426,59.8404255 Z M1.99468085,30.3331117 L29.5073138,57.8457447 L1.99468085,57.8457447 L1.99468085,30.3331117 Z"
+                                                                    id="Shape" stroke="#E6552F" stroke-width="0.3">
+                                                                </path>
+                                                                <path
+                                                                    d="M17.6599069,52.1539229 L7.68650266,42.1805186 C7.40126903,41.8953711 6.9723704,41.8100845 6.59974612,41.9644169 C6.22712184,42.1187493 5.98404255,42.4823179 5.98404255,42.8856383 L5.98404255,52.8590426 C5.98404255,53.4098585 6.43056707,53.856383 6.98138298,53.856383 L16.9547872,53.856383 C17.3581076,53.856383 17.7216762,53.6133037 17.8760086,53.2406794 C18.030341,52.8680551 17.9450544,52.4391565 17.6599069,52.1539229 Z M7.9787234,51.8617021 L7.9787234,45.2932181 L14.5472074,51.8617021 L7.9787234,51.8617021 Z"
+                                                                    id="Shape" stroke="#E6552F" stroke-width="0.3">
+                                                                </path>
+                                                                <path
+                                                                    d="M58.7214096,8.51329787 C60.2124682,7.02223921 60.2124682,4.60475547 58.7214096,3.11369681 C57.2303509,1.62263815 54.8128672,1.62263815 53.3218085,3.11369681 L51.8257979,4.60970745 C51.6334897,2.01558862 49.4762279,0.00695364616 46.875,0 L12.9654255,0 C10.2127129,0.00329732347 7.98202073,2.23398954 7.9787234,4.98670213 L7.9787234,30.9175532 L9.97340426,30.9175532 L9.97340426,4.98670213 C9.97340426,3.33425441 11.3129778,1.99468085 12.9654255,1.99468085 L46.875,1.99468085 C48.5274477,1.99468085 49.8670213,3.33425441 49.8670213,4.98670213 L49.8670213,6.56848404 L40.4780585,15.9574468 L33.1476064,15.9574468 C31.1810476,10.9223701 25.8386582,8.0714344 20.5611559,9.24075923 C15.2836536,10.4100841 11.6454916,15.2508212 11.9897953,20.6453375 C12.334099,26.0398538 16.5581513,30.3787869 21.9414894,30.8676862 L21.9414894,34.9069149 C21.9414894,35.4577308 22.3880139,35.9042553 22.9388298,35.9042553 L44.8803191,35.9042553 C45.4311351,35.9042553 45.8776596,35.4577308 45.8776596,34.9069149 L45.8776596,21.3570479 L49.8670213,17.3676862 L49.8670213,37.8989362 L26.9281915,37.8989362 C26.3773756,37.8989362 25.9308511,38.3454607 25.9308511,38.8962766 L25.9308511,46.875 C25.9308511,47.4258159 26.3773756,47.8723404 26.9281915,47.8723404 L49.8670213,47.8723404 L49.8670213,48.8696809 C49.8670213,50.5221286 48.5274477,51.8617021 46.875,51.8617021 L30.9175532,51.8617021 L30.9175532,53.856383 L46.875,53.856383 C49.6277126,53.8530857 51.8584048,51.6223934 51.8617021,48.8696809 L51.8617021,47.8723404 L58.8430851,47.8723404 C59.393901,47.8723404 59.8404255,47.4258159 59.8404255,46.875 L59.8404255,38.8962766 C59.8404255,38.3454607 59.393901,37.8989362 58.8430851,37.8989362 L51.8617021,37.8989362 L51.8617021,15.3730053 L58.7214096,8.51329787 Z M54.7320479,4.52393617 C55.1893282,4.04657818 55.8690796,3.85396629 56.5088053,4.02048065 C57.1485309,4.186995 57.6481114,4.68657546 57.8146257,5.32630113 C57.9811401,5.9660268 57.7885282,6.64577817 57.3111702,7.10305851 L56.8484043,7.56582447 L54.2692819,4.98670213 L54.7320479,4.52393617 Z M31.9148936,19.9468085 C31.9087013,24.5152304 28.4758029,28.3519235 23.9361702,28.8640293 L23.9361702,17.9521277 L31.6835106,17.9521277 C31.8352432,18.6062323 31.9128596,19.2753389 31.9148936,19.9468085 Z M21.9414894,16.9547872 L21.9414894,28.8640293 C17.6632694,28.3928211 14.3217004,24.9511364 13.9769564,20.6608737 C13.6322125,16.3706109 16.3813414,12.4395083 20.5294256,11.2912048 C24.6775097,10.1429012 29.0568349,12.1006519 30.9674202,15.9574468 L22.9388298,15.9574468 C22.6743187,15.9574468 22.4206412,16.0625234 22.2336036,16.2495611 C22.046566,16.4365987 21.9414894,16.6902761 21.9414894,16.9547872 Z M43.8829787,33.9095745 L23.9361702,33.9095745 L23.9361702,30.8676862 C27.0113842,30.5985784 29.8292491,29.0411411 31.6931434,26.5803978 C33.5570377,24.1196545 34.2929978,20.9852747 33.7190824,17.9521277 L38.4833777,17.9521277 L36.1964761,20.2390293 C36.0569784,20.3779954 35.962168,20.555461 35.9242021,20.7486702 L34.9268617,25.7353723 C34.8683223,26.0282496 34.9441211,26.3319464 35.1334187,26.5629667 C35.3227162,26.793987 35.6055851,26.9280111 35.9042553,26.9281915 C35.9712693,26.9287526 36.0381475,26.9220648 36.1037234,26.9082447 L41.0904255,25.9109043 C41.2836347,25.8729384 41.4611003,25.778128 41.6000665,25.6386303 L43.8829787,23.3517287 L43.8829787,33.9095745 Z M37.5139628,22.9667553 L38.8683511,24.3211436 L37.1728723,24.659242 L37.5139628,22.9667553 Z M53.856383,39.893617 L53.856383,41.8882979 L55.8510638,41.8882979 L55.8510638,39.893617 L57.8457447,39.893617 L57.8457447,45.8776596 L27.9255319,45.8776596 L27.9255319,39.893617 L29.9202128,39.893617 L29.9202128,41.8882979 L31.9148936,41.8882979 L31.9148936,39.893617 L33.9095745,39.893617 L33.9095745,41.8882979 L35.9042553,41.8882979 L35.9042553,39.893617 L37.8989362,39.893617 L37.8989362,41.8882979 L39.893617,41.8882979 L39.893617,39.893617 L41.8882979,39.893617 L41.8882979,41.8882979 L43.8829787,41.8882979 L43.8829787,39.893617 L45.8776596,39.893617 L45.8776596,41.8882979 L47.8723404,41.8882979 L47.8723404,39.893617 L49.8670213,39.893617 L49.8670213,41.8882979 L51.8617021,41.8882979 L51.8617021,39.893617 L53.856383,39.893617 Z M40.8909574,23.5232713 L38.3118351,20.9441489 L52.8590426,6.39694149 L55.4381649,8.97606383 L40.8909574,23.5232713 Z"
+                                                                    id="Shape" stroke="#E6552F" stroke-width="0.3">
+                                                                </path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <h2 class="rv-title rv-textdot">UX &amp; UI Design</h2>
+                                        <p class="rv-description">Combining function, brand and business objectives to
+                                            provide users with meaningful experiences.</p>
+                                        <div class="rv-chips fill-chips">
+                                            <div class="chips">
+                                                <span>Co-Creation</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Design Thinking</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Human-Centred Design</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Concepting</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Design System</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Information Architecture</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Rapid Prototyping</span>
+                                            </div>
+                                        </div>
+                                        <a href="/en/services/ux-and-ui-design" target="" class="btn-withline" id=""
+                                            title="UX &amp; UI Design">Know more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="rv-jobcard-wrap">
+                                    <div class="rv-jobcardbox is--chip rv-cornercut ">
+                                        <a href="/en/services/user-research" target="" class="rv-card-anchor" id=""
+                                            title="User Research"></a>
+                                        <span class="rv-component" data-comp-name="changesvg">
+
+                                            <svg width="61px" height="60px" viewBox="0 0 61 60" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                class="rv-toSvg icon-strategy js-change-svg">
+                                                <title>noun_user research_2406279</title>
+                                                <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                    fill-rule="evenodd">
+                                                    <g id="Services" transform="translate(-291.000000, -670.000000)"
+                                                        fill="#E6552F" fill-rule="nonzero">
+                                                        <g id="services-new">
+                                                            <g id="noun_user-research_2406279"
+                                                                transform="translate(292.000000, 671.000000)">
+                                                                <rect id="Rectangle" x="8.97606383" y="27.9255319"
+                                                                    width="4.65757979" height="1.99468085"></rect>
+                                                                <path
+                                                                    d="M57.7260638,2.04454787 C56.4171966,0.746646643 54.6423534,0.0280866502 52.7992021,0.0493859335 L12.9654255,0.0493859335 C9.10971418,0.0493859335 5.98404255,3.17553865 5.98404255,7.03125 L5.98404255,46.8151596 L0.997340426,46.8151596 C0.446524518,46.8151596 -7.73320699e-05,47.2616841 -7.73320699e-05,47.8125 L-7.73320699e-05,51.143617 C-0.0175885676,55.0756816 2.9671336,58.371853 6.88164894,58.7433511 C7.13430851,58.7433511 7.38364362,58.7433511 7.62965426,58.7433511 L40.8909574,58.7433511 C44.7466688,58.7433511 47.8723404,55.6176794 47.8723404,51.7619681 L47.8723404,46.3763298 C48.4635846,46.0962994 49.0277996,45.7624444 49.5578457,45.3789894 L57.137633,54.5146277 C57.317382,54.7197186 57.5732735,54.8422582 57.8457447,54.8537234 C58.0787754,54.8541787 58.304609,54.7730198 58.4840426,54.6243351 C58.6880058,54.4552379 58.8163044,54.2119341 58.8406286,53.9481099 C58.8649528,53.6842857 58.7833034,53.421625 58.6136968,53.2180851 L50.994016,44.0425532 C53.4059239,41.4896374 54.4593312,37.9414893 53.8312452,34.4860317 C53.2031592,31.0305742 50.9685177,28.0800828 47.8125,26.5392287 L47.8125,13.962766 L58.7832447,13.962766 C59.3340606,13.962766 59.7806261,13.5162414 59.7806261,12.9654255 L59.7806261,6.98138298 C59.7869712,5.1265488 59.0464817,3.34721716 57.7260638,2.04454787 Z M7.62965426,56.7785904 L7.07114362,56.7785904 C4.17671114,56.4950429 1.97566888,54.0518428 1.99455862,51.143617 L1.99455862,48.8098404 L33.9095745,48.8098404 L33.9095745,51.8018617 C33.8900286,53.6445908 34.6082529,55.4186049 35.9042553,56.7287234 L35.9541223,56.7287234 L7.62965426,56.7785904 Z M45.8178191,51.7918883 C45.8054115,53.799222 44.5906081,55.6034193 42.7353383,56.3699157 C40.8800685,57.1364122 38.7460763,56.7157549 37.3204787,55.3025266 C36.4077483,54.3664135 35.8991668,53.1092861 35.9042553,51.8018617 L35.9042553,47.8125 C35.9042553,47.2616841 35.4577308,46.8151596 34.9069149,46.8151596 L7.9787234,46.8151596 L7.9787234,6.98138298 C7.9787234,4.22730344 10.211346,1.99468085 12.9654255,1.99468085 L47.8723404,1.99468085 C47.8723404,1.99468085 47.8723404,1.99468085 47.8723404,1.99468085 L47.7925532,2.08444149 C47.6628989,2.22406915 47.5332447,2.3537234 47.4135638,2.50332447 L47.4135638,2.50332447 C46.3688868,3.76037004 45.8035063,5.34696908 45.8178191,6.98138298 L45.8178191,25.78125 L45.5884309,25.78125 C45.2792553,25.7014628 44.9700798,25.6416223 44.6509309,25.5917553 L44.2719415,25.5319149 C43.8383337,25.4802073 43.4021031,25.4535672 42.9654255,25.4521277 C39.2212943,25.4447513 35.7319339,27.3473551 33.7101064,30.4986702 C32.4723569,29.7436943 31.0508946,29.3434768 29.6010638,29.3417553 L29.1821809,29.3417553 L29.1821809,27.7460106 C30.9615359,26.5865603 32.3133616,24.8775164 33.0319149,22.8789894 C34.7414632,22.7686367 36.0721062,21.3507384 36.0738032,19.637633 C36.0712301,18.8501513 35.7802971,18.0908871 35.255984,17.5033245 C35.8021595,16.1781319 36.0801268,14.757787 36.0738032,13.3244681 C36.0923496,12.1913043 35.9410705,11.0617532 35.625,9.97340426 L37.7593085,9.97340426 L37.7593085,7.9787234 L34.7672872,7.9787234 C33.8665325,6.18862993 32.0714789,5.02241678 30.0698138,4.9268617 L29.6409574,4.9268617 C28.2351678,4.11088068 26.6387422,3.68080912 25.0132979,3.68018617 C19.5478723,3.68018617 15.099734,8.53723404 15.099734,14.4913564 C15.102322,15.6339458 15.2737207,16.7698827 15.6083777,17.862367 C15.2777061,18.3735078 15.1011304,18.9690179 15.099734,19.5777926 C15.1024183,21.2516897 16.375574,22.6500032 18.0418883,22.8091755 C18.7040679,24.9788349 20.1752985,26.8107313 22.1509309,27.9255319 L22.081117,29.2918883 L21.5525266,29.2918883 C17.2898587,29.2870769 13.7762773,32.6337632 13.5738032,36.8916223 L11.9680851,36.8916223 L11.9680851,31.9148936 L9.97340426,31.9148936 L9.97340426,37.8989362 C9.97340426,38.4497521 10.4199288,38.8962766 10.9707447,38.8962766 L13.5738032,38.8962766 L13.5738032,44.2021277 C13.5738032,44.7529436 14.0203277,45.1994681 14.5711436,45.1994681 L36.2333777,45.1994681 C38.1630947,46.6866312 40.5291551,47.4963497 42.9654255,47.5033245 C43.4021031,47.5018849 43.8383337,47.4752449 44.2719415,47.4235372 L44.6509309,47.3636968 C44.9700798,47.3138298 45.2792553,47.2539894 45.5884309,47.1742021 L45.8178191,47.1742021 L45.8178191,51.7918883 Z M33.4408245,42.0478723 C33.5006649,42.137633 33.5505319,42.2273936 33.6003989,42.3171543 C33.7905956,42.6238102 33.9970055,42.9201084 34.21875,43.2047872 L15.568484,43.2047872 L15.568484,38.8962766 L20.9441489,38.8962766 L20.9441489,36.9015957 L15.5884309,36.9015957 C15.7887087,33.7455619 18.4100976,31.2901943 21.5724734,31.2965426 L22.2107713,31.2965426 L22.4900266,31.6555851 L23.2779255,32.6529255 C23.6138062,33.0583565 24.0507207,33.367981 24.5445479,33.5505319 C24.879215,33.6792232 25.2333352,33.7500472 25.5917553,33.7599734 L25.5917553,33.7599734 C25.883754,33.7555879 26.1732265,33.7050985 26.4494681,33.6103723 C27.0271871,33.438364 27.5364412,33.0895599 27.9055851,32.6130319 L28.6336436,31.6954787 L28.9727394,31.2764936 L29.6110372,31.2764936 C30.7332053,31.2699787 31.8337887,31.5849256 32.7825798,32.1841755 C32.7482609,32.2656374 32.7182984,32.3488666 32.6928191,32.4335106 C32.6329787,32.5731383 32.5831117,32.712766 32.5332447,32.8523936 C32.4833777,32.9920213 32.3736702,33.3510638 32.3038564,33.6003989 C32.2340426,33.849734 32.2340426,33.8896277 32.1941489,34.0292553 C32.1542553,34.168883 32.0944149,34.5678191 32.0545213,34.8470745 L31.9946809,35.2260638 C31.9946809,35.625 31.924867,36.0339096 31.924867,36.4428191 C31.9249106,36.8126422 31.9448864,37.1821941 31.9847074,37.549867 C31.9847074,37.6595745 31.9847074,37.7593085 31.9847074,37.869016 C31.9847074,38.1382979 32.0644947,38.4075798 32.1243351,38.6668883 L32.1841755,38.9860372 C32.2739362,39.3351064 32.3636968,39.6841755 32.4833777,39.9833777 L32.4833777,39.9833777 C32.5966798,40.3233613 32.7298887,40.6563836 32.8823138,40.9807181 C32.8823138,41.0804521 32.9720745,41.1702128 33.0219415,41.2699468 C33.0718085,41.3696809 33.3011968,41.818484 33.4408245,42.0478723 Z M17.293883,16.5359043 C17.1557142,15.8799737 17.0855295,15.2115474 17.0844415,14.5412234 C17.0844415,9.68417553 20.6349734,5.72473404 25.0033245,5.72473404 C26.3881831,5.71609652 27.7471597,6.0999296 28.9228723,6.83178191 C29.1399768,6.96670165 29.4005968,7.01311344 29.6509309,6.96143617 C29.7969919,6.95020681 29.9436996,6.95020681 30.0897606,6.96143617 C30.9181448,6.99762309 31.697553,7.3639809 32.2539894,7.9787234 L30.9175532,7.9787234 L30.9175532,9.97340426 L33.4906915,9.97340426 C33.9039123,11.0282174 34.1137229,12.1517195 34.1091552,13.2845745 C34.1139423,14.2769531 33.9590345,15.2636481 33.650266,16.2067819 L33.650266,16.0970745 C33.5518493,15.6353351 33.4286661,15.179224 33.28125,14.7307181 C33.1660908,14.4000573 32.8859685,14.1540038 32.5432181,14.0824468 C32.3086385,14.0309932 32.0785242,13.9609584 31.8550532,13.8730053 C30.8821224,13.5463398 30.0671291,12.8665856 29.5711436,11.9680851 C29.4166483,11.6234832 29.080766,11.395701 28.7034574,11.3796543 L28.7034574,11.3796543 L28.5339096,11.3796543 L28.4341755,11.3796543 C28.1585623,11.4432546 27.922918,11.6208941 27.7859043,11.8683511 C27.6681259,12.0665513 27.5238416,12.2477454 27.3570479,12.4069149 C25.8284859,13.6340946 23.8982312,14.2490745 21.9414894,14.1323138 C21.1697484,14.1288436 20.400647,14.0419017 19.6476064,13.8730053 C19.5179521,13.8730053 19.3683511,13.8730053 19.2386968,13.7932181 L19.1389628,13.7932181 C18.8134425,13.7366485 18.4810343,13.8449612 18.2513298,14.0824468 C18.1675623,14.1713674 18.1030514,14.276622 18.0618351,14.3916223 C18.0019947,14.5212766 17.9720745,14.6609043 17.9222074,14.7905585 C17.7259955,15.3389356 17.5758738,15.9027258 17.4734043,16.4760638 L17.4734043,16.4760638 L17.293883,16.5359043 Z M17.4335106,18.75 C17.5482814,18.6262765 17.6875344,18.5277805 17.8424202,18.4607713 C18.0149571,18.3971182 18.197095,18.363389 18.380984,18.3610372 C18.5070678,18.3589526 18.6318686,18.3353417 18.75,18.2912234 C18.8364761,18.2529563 18.9170703,18.2025849 18.9893617,18.1416223 L19.0591755,18.1416223 C19.2428493,17.9730201 19.3567117,17.7417371 19.3783245,17.4933511 C19.3977297,17.2924469 19.4276914,17.0927027 19.4680851,16.8949468 C19.5148906,16.5826533 19.5781435,16.2730473 19.6575798,15.9674202 C20.4183327,16.1003004 21.1891654,16.1670391 21.9614362,16.1668883 C24.3457607,16.2626704 26.6873965,15.513912 28.5738032,14.0525266 C28.7168082,14.2088346 28.8700735,14.3554361 29.0325798,14.4913564 C29.7572545,15.1132419 30.6027731,15.5784469 31.5159574,15.8577128 C31.6676564,16.3824304 31.7711442,16.9198994 31.825133,17.4634309 L31.825133,17.4634309 C31.8437266,17.5891888 31.8842339,17.7107109 31.9448138,17.8224734 L31.9448138,17.8723404 C32.0124973,17.9812274 32.1005404,18.076043 32.2041223,18.1515957 L32.2041223,18.1515957 L32.2041223,18.1515957 L32.2041223,18.1515957 L32.34375,18.2014628 L32.4734043,18.2513298 C32.556225,18.261165 32.6399186,18.261165 32.7227394,18.2513298 L32.912234,18.2513298 C33.0496328,18.2562182 33.1849189,18.2866576 33.3111702,18.3410904 C33.3920006,18.3677227 33.4690897,18.4045915 33.5405585,18.4507979 C34.1048281,18.7591316 34.3386698,19.4484384 34.0784822,20.0364624 C33.8182945,20.6244864 33.1508974,20.915015 32.5432181,20.7047872 C32.0338205,20.5875138 31.5203026,20.8834394 31.3663564,21.3829787 C30.8197997,23.3886044 29.5046564,25.0979324 27.706117,26.1402926 C26.6345189,26.6869491 25.3996949,26.8217862 24.2353723,26.5192819 C24.1574906,26.5052361 24.0808024,26.4852304 24.005984,26.4594415 L23.8863032,26.4594415 L23.4973404,26.3297872 C21.5378918,25.3930599 20.1259938,23.5977745 19.6775266,21.4727394 C19.5571834,21.0247162 19.1438186,20.7188263 18.6801862,20.7347074 L18.5305851,20.7347074 C18.4375793,20.740142 18.3443356,20.740142 18.2513298,20.7347074 C17.7541893,20.7373973 17.3037661,20.4421352 17.10793,19.9851843 C16.9120939,19.5282334 17.0089201,18.9984358 17.3537234,18.6402926 L17.4335106,18.75 Z M26.3297872,31.3863032 C26.2844368,31.4315363 26.234271,31.4716689 26.1801862,31.505984 C25.8196255,31.787198 25.3140181,31.787198 24.9534574,31.505984 C24.9534574,31.505984 24.8537234,31.4461436 24.8138298,31.3962766 L24.0259309,30.3989362 L24.0259309,30.3989362 L24.1057181,28.693484 L24.1057181,28.693484 C24.3493341,28.744664 24.5957806,28.7812979 24.84375,28.8031915 L24.84375,28.8031915 C25.0731383,28.8031915 25.3025266,28.8031915 25.5418883,28.8031915 L25.7912234,28.8031915 L26.3696809,28.8031915 L26.4394947,28.8031915 C26.6713773,28.7744627 26.9012205,28.7311589 27.1276596,28.6735372 L27.1276596,28.6735372 L27.1276596,30.3789894 L27.1276596,30.4288564 L27.0079787,30.568484 L26.3297872,31.3863032 Z M52.0113032,36.462766 C52.0303947,40.1276213 49.8195391,43.4360087 46.4261968,44.8204787 C45.3304426,45.2796759 44.1534969,45.5137083 42.9654255,45.5087241 C37.9701818,45.5031604 33.9205621,41.4580006 33.9095745,36.462766 C33.9109875,36.079116 33.9376408,35.6959747 33.9893617,35.3158245 C34.1149682,34.2718799 34.4256803,33.2586884 34.9069149,32.3238032 C36.4419867,29.2867337 39.5624987,27.3788959 42.9654255,27.3968146 C43.2845745,27.3968146 43.6037234,27.3968146 43.962766,27.4468085 C44.8307014,27.5341473 45.6809716,27.7492354 46.4860372,28.0851064 C49.8626755,29.4910835 52.0484785,32.8052975 52.0113032,36.462766 L52.0113032,36.462766 Z M57.7759309,11.9680851 L47.8025266,11.9680851 L47.8025266,6.98138298 C47.8101929,4.92290181 49.0819223,3.08067709 51.0039894,2.34375 C51.5762652,2.1194607 52.1845778,2.0011777 52.7992021,1.99468085 C55.5532817,1.99468085 57.7859043,4.22730344 57.7859043,6.98138298 L57.7759309,11.9680851 Z"
+                                                                    id="Shape" stroke="#E6552F" stroke-width="0.3">
+                                                                </path>
+                                                                <path
+                                                                    d="M42.8856383,43.8829787 C47.2921656,43.8829787 50.8643617,40.3107826 50.8643617,35.9042553 L48.8696809,35.9042553 C48.8696809,39.2091508 46.1905337,41.8882979 42.8856383,41.8882979 L42.8856383,43.8829787 Z"
+                                                                    id="Path"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <h2 class="rv-title rv-textdot">User Research</h2>
+                                        <p class="rv-description">We gain insights into real needs, problems and
+                                            opportunities by empathising with users.</p>
+                                        <div class="rv-chips fill-chips">
+                                            <div class="chips">
+                                                <span>Ethnography</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>User Interviews</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Focus Groups</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Persona Creation</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Surveys</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Diary Studies</span>
+                                            </div>
+                                        </div>
+                                        <a href="/en/services/user-research" target="" class="btn-withline" id=""
+                                            title="User Research">Know more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="rv-jobcard-wrap">
+                                    <div class="rv-jobcardbox is--chip rv-cornercut ">
+                                        <a href="/en/services/user-testing" target="" class="rv-card-anchor" id=""
+                                            title="User Testing"></a>
+                                        <span class="rv-component" data-comp-name="changesvg">
+
+                                            <svg id="Page-1" xmlns="http://www.w3.org/2000/svg" width="60" height="57.5"
+                                                viewBox="0 0 60 57.5" class="rv-toSvg icon-strategy js-change-svg">
+                                                <g id="Web-and-Mobile">
+                                                    <g id="noun_testing_3185883">
+                                                        <path id="Shape"
+                                                            d="M56.25,5H52.5V1.25A1.25,1.25,0,0,0,51.25,0H8.75A1.25,1.25,0,0,0,7.5,1.25V5H3.75A3.75,3.75,0,0,0,0,8.75V42.5a3.75,3.75,0,0,0,3.75,3.75H24.725L23.975,50H22.5a3.75,3.75,0,0,0-3.75,3.75v2.5A1.25,1.25,0,0,0,20,57.5H40a1.25,1.25,0,0,0,1.25-1.25v-2.5A3.75,3.75,0,0,0,37.5,50H36.025l-.75-3.75H56.25A3.75,3.75,0,0,0,60,42.5V8.75A3.75,3.75,0,0,0,56.25,5ZM10,10H50V30H10Zm0-7.5H50v5H10ZM2.5,8.75A1.25,1.25,0,0,1,3.75,7.5H7.5V31.25A1.25,1.25,0,0,0,8.75,32.5h42.5a1.25,1.25,0,0,0,1.25-1.25V7.5h3.75A1.25,1.25,0,0,1,57.5,8.75V37.5H2.5Zm36.25,45V55H21.25V53.75A1.25,1.25,0,0,1,22.5,52.5h15A1.25,1.25,0,0,1,38.75,53.75ZM33.475,50h-6.95l.75-3.75h5.45ZM57.5,42.5a1.25,1.25,0,0,1-1.25,1.25H3.75A1.25,1.25,0,0,1,2.5,42.5V40h55Z"
+                                                            fill="#e24a26" />
+                                                        <path id="Path"
+                                                            d="M12.38,4.735a1.257,1.257,0,0,0-2.049-1.37C8.935,4.911,11.626,6.546,12.38,4.735Z"
+                                                            transform="translate(2.481 0.771)" fill="#e24a26" />
+                                                        <path id="Path-2" data-name="Path"
+                                                            d="M13.285,5.149a1.257,1.257,0,1,0-.154-1.586A1.257,1.257,0,0,0,13.285,5.149Z"
+                                                            transform="translate(3.226 0.773)" fill="#e24a26" />
+                                                        <path id="Path-3" data-name="Path"
+                                                            d="M16.243,5.156a1.257,1.257,0,1,0-.26-1.51,1.257,1.257,0,0,0,.26,1.51Z"
+                                                            transform="translate(3.955 0.765)" fill="#e24a26" />
+                                                        <path id="Shape-2" data-name="Shape"
+                                                            d="M33.544,10a7.544,7.544,0,1,0,7.543,7.543A7.543,7.543,0,0,0,33.544,10Zm0,12.573a5.029,5.029,0,1,1,5.029-5.029A5.029,5.029,0,0,1,33.544,22.573Z"
+                                                            transform="translate(6.437 2.474)" fill="#e24a26" />
+                                                        <path id="Path-4" data-name="Path"
+                                                            d="M33.5,13.942l-.893.893-.893-.893a1.257,1.257,0,0,0-1.773,1.773l.893.893-.893.893a1.257,1.257,0,0,0,1.773,1.773l.893-.893.893.893A1.257,1.257,0,0,0,35.273,17.5l-.893-.893.893-.893A1.257,1.257,0,0,0,33.5,13.942Z"
+                                                            transform="translate(7.386 3.399)" fill="#e24a26" />
+                                                        <path id="Shape-3" data-name="Shape"
+                                                            d="M17.543,10a7.544,7.544,0,1,0,7.544,7.543A7.544,7.544,0,0,0,17.543,10Zm0,12.573a5.029,5.029,0,1,1,5.029-5.029A5.029,5.029,0,0,1,17.543,22.573Z"
+                                                            transform="translate(2.476 2.474)" fill="#e24a26" />
+                                                        <path id="Path-5" data-name="Path"
+                                                            d="M18.4,14.071,15.89,16.585l-.779-.792a1.262,1.262,0,1,0-1.785,1.785c3,3,2.137,2.992,6.814-1.685A1.258,1.258,0,1,0,18.4,14.071Z"
+                                                            transform="translate(3.225 3.42)" fill="#e24a26" />
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <h2 class="rv-title rv-textdot">User Testing</h2>
+                                        <p class="rv-description">Observe how users interact with your digital channels
+                                            to uncover new opportunities, increase conversion and enhance user
+                                            experience.</p>
+                                        <div class="rv-chips fill-chips">
+                                            <div class="chips">
+                                                <span>Remote &amp; In-Person</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Remote &amp; In-Person</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Middle East Participants</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Card Sorting</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>First Click Test</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Preference Test</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Tree Test</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Usability Testing</span>
+                                            </div>
+                                        </div>
+                                        <a href="/en/services/user-testing" target="" class="btn-withline" id=""
+                                            title="User Testing">Know More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="rv-jobcard-wrap">
+                                    <div class="rv-jobcardbox is--chip rv-cornercut ">
+                                        <a href="/en/services/data-analytics-and-insights" target=""
+                                            class="rv-card-anchor" id="" title="Data &amp; Insights"></a>
+                                        <span class="rv-component" data-comp-name="changesvg">
+
+                                            <svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                class="rv-toSvg icon-strategy js-change-svg">
+                                                <title>noun_Infographic Chart_97428</title>
+                                                <defs>
+                                                    <rect id="path-1" x="0.156" y="0.155" width="55.688"
+                                                        height="55.689"></rect>
+                                                    <rect id="path-3" x="0.156" y="0.155" width="55.688"
+                                                        height="55.689"></rect>
+                                                </defs>
+                                                <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                    fill-rule="evenodd">
+                                                    <g id="Services" transform="translate(-294.000000, -227.000000)">
+                                                        <g id="services-new">
+                                                            <g id="noun_Infographic-Chart_97428"
+                                                                transform="translate(294.000000, 227.000000)">
+                                                                <rect id="Rectangle" x="0.156" y="0.155" width="55.688"
+                                                                    height="55.689"></rect>
+                                                                <rect id="Rectangle" x="0.156" y="0.155" width="55.688"
+                                                                    height="55.689"></rect>
+                                                                <g id="Clipped">
+                                                                    <mask id="mask-2" fill="white">
+                                                                        <use xlink:href="#path-1"></use>
+                                                                    </mask>
+                                                                    <g id="d"></g>
+                                                                    <path
+                                                                        d="M38.139,24.121 C36.026,24.121 34.307,22.402 34.307,20.289 C34.307,18.177 36.026,16.458 38.139,16.458 C40.25,16.458 41.969,18.177 41.969,20.289 C41.969,22.402 40.25,24.121 38.139,24.121 Z M38.139,18.958 C37.405,18.958 36.807,19.555 36.807,20.289 C36.807,21.023 37.405,21.621 38.139,21.621 C38.871,21.621 39.469,21.023 39.469,20.289 C39.469,19.555 38.871,18.958 38.139,18.958 Z"
+                                                                        id="Shape" fill="#E6552F" fill-rule="nonzero"
+                                                                        mask="url(#mask-2)"></path>
+                                                                </g>
+                                                                <path
+                                                                    d="M38.139,26.409 C37.448,26.409 36.889,25.849 36.889,25.159 L36.889,23.283 C36.889,22.593 37.448,22.033 38.139,22.033 C38.828,22.033 39.389,22.593 39.389,23.283 L39.389,25.159 C39.389,25.85 38.828,26.409 38.139,26.409 Z"
+                                                                    id="Path" fill="#E6552F" fill-rule="nonzero"></path>
+                                                                <path
+                                                                    d="M12.793,39.23 C12.103,39.23 11.543,38.669 11.543,37.98 L11.543,19.225 C11.543,18.535 12.103,17.975 12.793,17.975 C13.483,17.975 14.043,18.535 14.043,19.225 L14.043,37.98 C14.043,38.671 13.483,39.23 12.793,39.23 Z"
+                                                                    id="Path" fill="#E6552F" fill-rule="nonzero"></path>
+                                                                <path
+                                                                    d="M43.52,39.23 L12.792,39.23 C12.102,39.23 11.542,38.669 11.542,37.98 C11.542,37.29 12.102,36.73 12.792,36.73 L43.52,36.73 C44.209,36.73 44.77,37.29 44.77,37.98 C44.77,38.67 44.209,39.23 43.52,39.23 Z"
+                                                                    id="Path" fill="#E6552F" fill-rule="nonzero"></path>
+                                                                <path
+                                                                    d="M43.52,39.227 C43.201,39.227 42.879,39.106 42.635,38.862 L40.328,36.553 C39.84,36.065 39.84,35.274 40.328,34.785 C40.816,34.296 41.607,34.297 42.096,34.785 L44.403,37.093 C44.891,37.581 44.891,38.372 44.403,38.862 C44.158,39.104 43.838,39.227 43.52,39.227 Z"
+                                                                    id="Path" fill="#E6552F" fill-rule="nonzero"></path>
+                                                                <path
+                                                                    d="M41.211,41.542 C40.891,41.542 40.572,41.42 40.328,41.176 C39.84,40.688 39.84,39.897 40.328,39.408 L42.635,37.099 C43.123,36.611 43.914,36.611 44.403,37.099 C44.893,37.587 44.891,38.378 44.403,38.868 L42.096,41.176 C41.852,41.42 41.531,41.542 41.211,41.542 Z"
+                                                                    id="Path" fill="#E6552F" fill-rule="nonzero"></path>
+                                                                <path
+                                                                    d="M10.481,21.361 C10.161,21.361 9.841,21.239 9.597,20.995 C9.109,20.507 9.109,19.715 9.597,19.227 L11.905,16.919 C12.393,16.431 13.185,16.431 13.673,16.919 C14.161,17.407 14.161,18.198 13.673,18.687 L11.365,20.995 C11.121,21.239 10.801,21.361 10.481,21.361 Z"
+                                                                    id="Path" fill="#E6552F" fill-rule="nonzero"></path>
+                                                                <path
+                                                                    d="M15.104,21.361 C14.784,21.361 14.464,21.239 14.22,20.995 L11.912,18.687 C11.424,18.199 11.424,17.408 11.912,16.919 C12.4,16.43 13.192,16.431 13.68,16.919 L15.988,19.227 C16.476,19.715 16.476,20.507 15.988,20.995 C15.745,21.239 15.424,21.361 15.104,21.361 Z"
+                                                                    id="Path" fill="#E6552F" fill-rule="nonzero"></path>
+                                                                <g id="Clipped">
+                                                                    <mask id="mask-4" fill="white">
+                                                                        <use xlink:href="#path-3"></use>
+                                                                    </mask>
+                                                                    <g id="b"></g>
+                                                                    <path
+                                                                        d="M22.156,28.04 C20.043,28.04 18.324,26.321 18.324,24.209 C18.324,22.096 20.043,20.377 22.156,20.377 C24.268,20.377 25.987,22.096 25.987,24.209 C25.987,26.321 24.268,28.04 22.156,28.04 Z M22.156,22.877 C21.422,22.877 20.824,23.475 20.824,24.209 C20.824,24.942 21.422,25.54 22.156,25.54 C22.89,25.54 23.487,24.942 23.487,24.209 C23.487,23.475 22.89,22.877 22.156,22.877 Z"
+                                                                        id="Shape" fill="#E6552F" fill-rule="nonzero"
+                                                                        mask="url(#mask-4)"></path>
+                                                                </g>
+                                                                <path
+                                                                    d="M22.156,30.328 C21.466,30.328 20.906,29.767 20.906,29.078 L20.906,26.702 C20.906,26.012 21.466,25.452 22.156,25.452 C22.846,25.452 23.406,26.012 23.406,26.702 L23.406,29.078 C23.406,29.77 22.846,30.328 22.156,30.328 Z"
+                                                                    id="Path" fill="#E6552F" fill-rule="nonzero"></path>
+                                                                <path
+                                                                    d="M12.793,39.23 C12.473,39.23 12.153,39.107 11.909,38.864 C11.421,38.376 11.421,37.584 11.909,37.095 L17.953,31.051 C18.441,30.564 19.232,30.564 19.721,31.051 L21.86,33.189 L27.692,27.357 C28.18,26.869 28.971,26.869 29.459,27.357 L34.621,32.519 L42.635,24.502 C43.123,24.014 43.914,24.014 44.403,24.502 C44.891,24.99 44.891,25.782 44.403,26.27 L35.506,35.169 C35.037,35.638 34.207,35.638 33.737,35.169 L28.578,30.008 L22.745,35.84 C22.257,36.328 21.466,36.328 20.977,35.84 L18.838,33.702 L13.677,38.862 C13.433,39.107 13.113,39.23 12.793,39.23 Z"
+                                                                    id="Path" fill="#E6552F" fill-rule="nonzero"></path>
+                                                                <path
+                                                                    d="M28,55.846 C23.01,55.846 18.136,54.512 13.858,51.985 L2.197,55.74 C1.872,55.862 1.509,55.869 1.175,55.754 C0.865,55.65 0.591,55.442 0.404,55.153 C0.121,54.717 0.086,54.178 0.288,53.725 L4.017,42.141 C1.49,37.865 0.157,32.991 0.157,28 C0.157,12.646 12.648,0.155 28.002,0.155 C43.354,0.156 55.844,12.647 55.844,28 C55.844,43.354 43.354,55.846 28,55.846 Z M14.052,48.846 C14.33,48.846 14.606,48.924 14.847,49.075 C18.789,51.542 23.337,52.846 28,52.846 C41.699,52.846 52.843,41.7 52.843,28.001 C52.843,14.303 41.697,3.157 28,3.156 C14.301,3.156 3.155,14.302 3.155,28.001 C3.155,32.663 4.459,37.211 6.925,41.152 C7.159,41.527 7.217,41.986 7.081,42.409 L3.991,52.01 L13.592,48.919 C13.743,48.869 13.897,48.846 14.052,48.846 Z"
+                                                                    id="Shape" fill="#E6552F" fill-rule="nonzero">
+                                                                </path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <h2 class="rv-title rv-textdot">Data &amp; Insights</h2>
+                                        <p class="rv-description">We are driven by measurable data that validate our
+                                            ideas and influences your business performance.</p>
+                                        <div class="rv-chips fill-chips">
+                                            <div class="chips">
+                                                <span>Big Data</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Benchmarking</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Analytics</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Reporting</span>
+                                            </div>
+                                        </div>
+                                        <a href="/en/services/data-analytics-and-insights" target=""
+                                            class="btn-withline" id="" title="Data &amp; Insights">Know more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="rv-jobcard-wrap">
+                                    <div class="rv-jobcardbox is--chip rv-cornercut ">
+                                        <a href="/en/services/content-services" target="" class="rv-card-anchor" id=""
+                                            title="Content Services"></a>
+                                        <span class="rv-component" data-comp-name="changesvg">
+
+                                            <svg width="62px" height="62px" viewBox="0 0 62 62" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                class="rv-toSvg icon-strategy js-change-svg">
+                                                <title>noun_content_2344964</title>
+                                                <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                    fill-rule="evenodd">
+                                                    <g id="Services" transform="translate(-291.000000, -1219.000000)"
+                                                        fill="#E6552F" fill-rule="nonzero">
+                                                        <g id="services-new">
+                                                            <g id="noun_content_2344964"
+                                                                transform="translate(292.000000, 1220.000000)">
+                                                                <rect id="Rectangle" x="13.962766" y="25.9308511"
+                                                                    width="1.99468085" height="3.9893617"></rect>
+                                                                <rect id="Rectangle" x="28.9228723" y="53.856383"
+                                                                    width="1.99468085" height="1.99468085"></rect>
+                                                                <rect id="Rectangle" x="29.9202128" y="45.8776596"
+                                                                    width="1.99468085" height="1.99468085"></rect>
+                                                                <path
+                                                                    d="M52.8590494,59.8404255 L52.8590494,39.9375 C52.8619971,37.2899285 51.9053218,34.7309991 50.1662234,32.7347074 L48.6402926,30.8986037 L47.1043883,32.1712101 L48.6432846,34.0272606 C50.0749584,35.6633533 50.8641784,37.763451 50.8643617,39.9375 L50.8643617,59.8404255 L52.8590494,59.8404255 Z"
+                                                                    id="Path" stroke="#E6552F" stroke-width="0.3">
+                                                                </path>
+                                                                <path
+                                                                    d="M39.893617,59.8404255 L40.8909574,59.8404255 L40.8909574,57.8457447 C40.8910637,57.6191885 40.8140313,57.3993473 40.6725399,57.2224069 C38.5079463,54.5372451 38.2163322,50.7977694 39.9384973,47.809508 L40.7593085,46.3723404 C40.9808133,45.9826489 40.9151262,45.4930559 40.5987367,45.1755319 L34.6146941,39.1914894 C33.6534683,38.1994707 33.6659197,36.6197394 34.6426634,35.6429958 C35.619407,34.6662522 37.1991382,34.6538007 38.1911569,35.6150266 L46.1698803,43.59375 L47.5801197,42.1835106 L45.8776596,40.4780585 L45.8776596,32.912234 L43.8829787,32.912234 L43.8829787,38.4833777 L41.3038564,35.9042553 L41.8882979,35.9042553 L41.8882979,33.9095745 L39.2433511,33.9095745 C37.5883026,32.5611018 35.2135591,32.5611018 33.5585106,33.9095745 L29.9202128,33.9095745 L29.9202128,35.9042553 L32.1512633,35.9042553 C31.9288125,36.5441322 31.8528091,37.2257768 31.9288564,37.8989362 L29.9202128,37.8989362 L29.9202128,39.893617 L32.6289894,39.893617 C32.796527,40.1474726 32.9893316,40.3837168 33.2044548,40.5987367 L34.494016,41.8882979 L29.9202128,41.8882979 L29.9202128,43.8829787 L36.4886968,43.8829787 L38.4833777,45.8776596 L33.9095745,45.8776596 L33.9095745,47.8723404 L37.6994681,47.8723404 C37.4188772,48.5140497 37.20337,49.1822891 37.0561835,49.8670213 L29.9202128,49.8670213 L29.9202128,51.8617021 L36.8537234,51.8617021 C36.8274499,53.9972987 37.4652123,56.088323 38.6788564,57.8457447 L18.9494681,57.8457447 C17.2970204,57.8457447 15.9574468,56.5061711 15.9574468,54.8537234 L15.9574468,53.856383 L13.962766,53.856383 L13.962766,54.8537234 C13.9660633,57.606436 16.1967555,59.8371282 18.9494681,59.8404255 L39.893617,59.8404255 Z"
+                                                                    id="Path" stroke="#E6552F" stroke-width="0.3">
+                                                                </path>
+                                                                <path
+                                                                    d="M3.9893617,19.9468085 L8.6768617,19.9468085 L14.4095745,23.768617 C14.7155158,23.9711493 15.107955,23.9893455 15.431325,23.8159926 C15.754695,23.6426396 15.9567706,23.3057343 15.9574468,22.9388298 L15.9574468,19.9468085 L23.9361702,19.9468085 C26.1394338,19.9468085 27.9255319,18.1607104 27.9255319,15.9574468 L27.9255319,3.9893617 C27.9255319,1.78609807 26.1394338,0 23.9361702,0 L3.9893617,0 C1.78609807,0 0,1.78609807 0,3.9893617 L0,15.9574468 C0,18.1607104 1.78609807,19.9468085 3.9893617,19.9468085 Z M23.9361702,17.9521277 L14.9601064,17.9521277 C14.4092905,17.9521277 13.962766,18.3986522 13.962766,18.9494681 L13.962766,21.0748005 L9.52958777,18.1196809 C9.3655246,18.0107115 9.17301798,17.9524392 8.97606383,17.9521277 L3.9893617,17.9521277 C3.0332071,17.9510098 2.21233632,17.271553 2.03257979,16.3324468 L9.92453457,8.44049202 L16.2077793,15.6213431 C16.5593131,16.0227277 17.1644889,16.0763453 17.581117,15.7430186 L21.8696809,12.3111702 L25.8949468,16.3364362 C25.7133704,17.2746934 24.8918357,17.952334 23.9361702,17.9521277 Z M1.99468085,3.9893617 C1.99468085,2.88772989 2.88772989,1.99468085 3.9893617,1.99468085 L23.9361702,1.99468085 C25.037802,1.99468085 25.9308511,2.88772989 25.9308511,3.9893617 L25.9308511,13.549867 L22.646609,10.265625 C22.2872973,9.90608929 21.7150777,9.87429931 21.3181516,10.1918218 L17.0774601,13.5827793 L10.7234043,6.32413564 C10.5417154,6.11645193 10.2821012,5.99332477 10.0063165,5.98404255 C9.73074086,5.97667966 9.46412429,6.08224541 9.26828457,6.2762633 L1.99468085,13.549867 L1.99468085,3.9893617 Z"
+                                                                    id="Shape" stroke="#E6552F" stroke-width="0.3">
+                                                                </path>
+                                                                <path
+                                                                    d="M17.9521277,9.97340426 C19.6045754,9.97340426 20.9441489,8.6338307 20.9441489,6.98138298 C20.9441489,5.32893526 19.6045754,3.9893617 17.9521277,3.9893617 C16.2996799,3.9893617 14.9601064,5.32893526 14.9601064,6.98138298 C14.9601064,8.6338307 16.2996799,9.97340426 17.9521277,9.97340426 Z M17.9521277,5.98404255 C18.5029436,5.98404255 18.9494681,6.43056707 18.9494681,6.98138298 C18.9494681,7.53219889 18.5029436,7.9787234 17.9521277,7.9787234 C17.4013118,7.9787234 16.9547872,7.53219889 16.9547872,6.98138298 C16.9547872,6.43056707 17.4013118,5.98404255 17.9521277,5.98404255 Z"
+                                                                    id="Shape" stroke="#E6552F" stroke-width="0.3">
+                                                                </path>
+                                                                <path
+                                                                    d="M59.8404255,16.9547872 C59.8404255,15.3023395 58.500852,13.962766 56.8484043,13.962766 L45.8776596,13.962766 L45.8776596,8.97606383 C45.8743623,6.22335125 43.64367,3.99265903 40.8909574,3.9893617 L29.9202128,3.9893617 L29.9202128,5.98404255 L40.8909574,5.98404255 C42.5434052,5.98404255 43.8829787,7.32361611 43.8829787,8.97606383 L43.8829787,9.97340426 L29.9202128,9.97340426 L29.9202128,11.9680851 L43.8829787,11.9680851 L43.8829787,13.962766 L34.9069149,13.962766 C33.2544672,13.962766 31.9148936,15.3023395 31.9148936,16.9547872 L31.9148936,24.9335106 C31.9148936,26.5859584 33.2544672,27.9255319 34.9069149,27.9255319 L40.8909574,27.9255319 L40.8909574,30.9175532 C40.8910436,31.3208736 41.1340367,31.6844422 41.506661,31.8387746 C41.8792853,31.993107 42.3081839,31.9078204 42.5934176,31.6226729 L46.2905585,27.9255319 L56.8484043,27.9255319 C58.500852,27.9255319 59.8404255,26.5859584 59.8404255,24.9335106 L59.8404255,16.9547872 Z M57.8457447,24.9335106 C57.8457447,25.4843265 57.3992202,25.9308511 56.8484043,25.9308511 L45.8776596,25.9308511 C45.6131701,25.9309076 45.359534,26.0360212 45.1725399,26.2230718 L42.8856383,28.5099734 L42.8856383,26.9281915 C42.8856383,26.3773756 42.4391138,25.9308511 41.8882979,25.9308511 L34.9069149,25.9308511 C34.356099,25.9308511 33.9095745,25.4843265 33.9095745,24.9335106 L33.9095745,16.9547872 C33.9095745,16.4039713 34.356099,15.9574468 34.9069149,15.9574468 L56.8484043,15.9574468 C57.3992202,15.9574468 57.8457447,16.4039713 57.8457447,16.9547872 L57.8457447,24.9335106 Z"
+                                                                    id="Shape" stroke="#E6552F" stroke-width="0.3">
+                                                                </path>
+                                                                <rect id="Rectangle" stroke="#E6552F" stroke-width="0.3"
+                                                                    x="35.9042553" y="17.9521277" width="3.9893617"
+                                                                    height="1.99468085"></rect>
+                                                                <rect id="Rectangle" stroke="#E6552F" stroke-width="0.3"
+                                                                    x="41.8882979" y="17.9521277" width="13.962766"
+                                                                    height="1.99468085"></rect>
+                                                                <rect id="Rectangle" stroke="#E6552F" stroke-width="0.3"
+                                                                    x="35.9042553" y="21.9414894" width="9.97340426"
+                                                                    height="1.99468085"></rect>
+                                                                <rect id="Rectangle" stroke="#E6552F" stroke-width="0.3"
+                                                                    x="47.8723404" y="21.9414894" width="1.99468085"
+                                                                    height="1.99468085"></rect>
+                                                                <rect id="Rectangle" stroke="#E6552F" stroke-width="0.3"
+                                                                    x="51.8617021" y="21.9414894" width="3.9893617"
+                                                                    height="1.99468085"></rect>
+                                                                <path
+                                                                    d="M7.9787234,33.9095745 C5.77545977,33.9095745 3.9893617,35.6956725 3.9893617,37.8989362 L3.9893617,47.8723404 C3.9893617,50.0756041 5.77545977,51.8617021 7.9787234,51.8617021 L23.9361702,51.8617021 C26.1394338,51.8617021 27.9255319,50.0756041 27.9255319,47.8723404 L27.9255319,37.8989362 C27.9255319,35.6956725 26.1394338,33.9095745 23.9361702,33.9095745 L19.9468085,33.9095745 L19.9468085,30.9175532 C19.9468636,30.5496474 19.7443699,30.2115897 19.4199784,30.0380246 C19.095587,29.8644596 18.7019867,29.8835782 18.3959441,30.087766 L12.6662234,33.9095745 L7.9787234,33.9095745 Z M13.5189495,35.7367021 L17.9521277,32.7815824 L17.9521277,34.9069149 C17.9521277,35.4577308 18.3986522,35.9042553 18.9494681,35.9042553 L23.9361702,35.9042553 C25.037802,35.9042553 25.9308511,36.7973044 25.9308511,37.8989362 L25.9308511,47.8723404 C25.9308511,48.9739722 25.037802,49.8670213 23.9361702,49.8670213 L7.9787234,49.8670213 C6.87709159,49.8670213 5.98404255,48.9739722 5.98404255,47.8723404 L5.98404255,37.8989362 C5.98404255,36.7973044 6.87709159,35.9042553 7.9787234,35.9042553 L12.9654255,35.9042553 C13.1623797,35.9039437 13.3548863,35.8456715 13.5189495,35.7367021 L13.5189495,35.7367021 Z"
+                                                                    id="Shape" stroke="#E6552F" stroke-width="0.3">
+                                                                </path>
+                                                                <path
+                                                                    d="M12.4667553,47.7376995 C12.7753335,47.9158572 13.1555175,47.9158572 13.4640957,47.7376995 L20.4454787,43.7483378 C20.7559865,43.5707029 20.9475756,43.2403741 20.9475756,42.8826463 C20.9475756,42.5249185 20.7559865,42.1945896 20.4454787,42.0169548 L13.4640957,38.0275931 C13.1547491,37.8489858 12.7735039,37.8494565 12.4645992,38.0288272 C12.1556946,38.2081978 11.9663056,38.5390754 11.9680727,38.8962766 L11.9680727,46.875 C11.9684502,47.23095 12.1584933,47.5597246 12.4667553,47.7376995 L12.4667553,47.7376995 Z M13.962766,40.6146941 L17.9361702,42.8856383 L13.962766,45.1565824 L13.962766,40.6146941 Z"
+                                                                    id="Shape" stroke="#E6552F" stroke-width="0.3">
+                                                                </path>
+                                                                <rect id="Rectangle" stroke="#E6552F" stroke-width="0.3"
+                                                                    x="36.9015957" y="29.9202128" width="1.99468085"
+                                                                    height="1.99468085"></rect>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <h2 class="rv-title rv-textdot">Content Services</h2>
+                                        <p class="rv-description">Leading with a content first approach through strategy
+                                            and multimedia production that supports functionality, is informative and
+                                            converts users.</p>
+                                        <div class="rv-chips fill-chips">
+                                            <div class="chips">
+                                                <span>Content First Approach</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Content Strategy</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Copywriting</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>UX Writing</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Video Production</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Messaging Frameworks</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Graphics</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Photography</span>
+                                            </div>
+                                        </div>
+                                        <a href="/en/services/content-services" target="" class="btn-withline" id=""
+                                            title="Content Services">Know more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="rv-jobcard-wrap">
+                                    <div class="rv-jobcardbox is--chip rv-cornercut ">
+                                        <a href="/en/services/web-and-mobile" target="" class="rv-card-anchor" id=""
+                                            title="Web &amp; Mobile Build"></a>
+                                        <span class="rv-component" data-comp-name="changesvg">
+
+                                            <svg width="37px" height="62px" viewBox="0 0 37 62" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                class="rv-toSvg icon-strategy js-change-svg">
+                                                <title>noun_Mobile Web_2324133</title>
+                                                <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                    fill-rule="evenodd">
+                                                    <g id="Services" transform="translate(-808.000000, -1219.000000)"
+                                                        fill="#E6552F" fill-rule="nonzero" stroke="#E6552F"
+                                                        stroke-width="0.3">
+                                                        <g id="services-new">
+                                                            <g id="noun_Mobile-Web_2324133"
+                                                                transform="translate(809.000000, 1220.000000)">
+                                                                <path
+                                                                    d="M2.8125,3.75 C2.81366247,2.71494799 3.65244799,1.87616247 4.6875,1.875 L9.39975,1.875 L10.273125,3.49090781 C10.9920011,4.72657919 12.2894569,5.51234781 13.7175656,5.57693906 L21.9071953,5.57693906 C23.3350819,5.51200865 24.6323268,4.7265401 25.3516406,3.4913625 L26.22525,1.875 L30.9375281,1.875 C31.9725759,1.87617278 32.8113553,2.71495227 32.8125281,3.75 L32.8125281,17.7379688 C33.5069414,18.5532569 34.1340022,19.423589 34.6875281,20.3403844 L34.6875281,3.75 C34.6875281,1.67893219 33.0085959,0 30.9375281,0 L4.6875,0 C2.61643219,0 0.9375,1.67893219 0.9375,3.75 L0.9375,20.3403844 C1.49104285,19.4235528 2.11810267,18.5532314 2.8125,17.7379406 L2.8125,3.75 Z M23.7025453,2.59918125 C23.308682,3.22649921 22.6448112,3.63426682 21.9071953,3.70193438 L13.717575,3.70193438 C12.9800474,3.63472503 12.316189,3.22703054 11.9226844,2.59964063 L11.5310391,1.875 L24.0939609,1.875 L23.7025453,2.59918125 Z"
+                                                                    id="Shape"></path>
+                                                                <path
+                                                                    d="M32.8125281,56.25 C32.8113553,57.2850477 31.9725759,58.1238272 30.9375281,58.125 L4.6875,58.125 C3.65244799,58.1238375 2.81366247,57.285052 2.8125,56.25 L2.8125,43.1995594 C2.11810267,42.3842686 1.49104285,41.5139472 0.9375,40.5971156 L0.9375,56.25 C0.9375,58.3210678 2.61643219,60 4.6875,60 L30.9375281,60 C33.0085959,60 34.6875281,58.3210678 34.6875281,56.25 L34.6875281,40.5971156 C34.1340022,41.513911 33.5069414,42.3842431 32.8125281,43.1995312 L32.8125281,56.25 Z"
+                                                                    id="Path"></path>
+                                                                <path
+                                                                    d="M28.2994078,38.8897687 C29.2444594,38.7107812 30.0288375,37.62405 30.2467359,37.2949219 C30.5701453,36.8074219 31.2668625,35.5769531 30.7571438,34.6893328 C30.516505,34.2703518 29.9968876,34.1028242 29.5568394,34.3023479 C29.1167912,34.5018716 28.900403,35.0031139 29.0569875,35.4602062 C28.9820885,35.7470314 28.8556742,36.0178525 28.6839094,36.2594625 C28.4947994,36.5687381 28.2454072,36.8368117 27.9505734,37.0477313 C27.4754736,37.137748 27.1467919,37.5743614 27.1916822,38.0558256 C27.2365725,38.5372898 27.6403043,38.9056152 28.1238563,38.9062529 C28.1827666,38.9063988 28.2415546,38.9008796 28.2994078,38.8897687 Z"
+                                                                    id="Path"></path>
+                                                                <path
+                                                                    d="M13.59375,54.375 C13.075983,54.375 12.65625,54.794733 12.65625,55.3125 C12.65625,55.830267 13.075983,56.25 13.59375,56.25 L22.03125,56.25 C22.549017,56.25 22.96875,55.830267 22.96875,55.3125 C22.96875,54.794733 22.549017,54.375 22.03125,54.375 L13.59375,54.375 Z"
+                                                                    id="Path"></path>
+                                                                <path
+                                                                    d="M17.1601594,48.2646844 L16.5133969,46.3488562 C15.2064058,46.2423508 13.917713,45.9738564 12.6769359,45.5495437 C13.6500103,45.0942319 14.732559,44.9252206 15.7981125,45.0622547 C15.9021375,45.08085 16.0028203,45.1068844 16.1031844,45.1336922 L15.4300594,43.1397609 C13.1584734,43.0115297 11.1199687,44.1740625 10.4592187,44.5969969 C9.21202969,43.9457109 8.05614589,43.1328434 7.02144375,42.1794047 C7.08175904,42.1299407 7.13914362,42.0770074 7.19330625,42.0208734 C7.95342187,41.2184156 7.87171406,40.0131234 7.75521094,39.3663 C7.72677569,39.0352439 7.76030791,38.7017879 7.85408906,38.3830219 L7.86713437,38.3221406 C7.92281014,38.0946427 7.99345939,37.8710727 8.07862031,37.6528922 C8.32666572,37.084453 8.44646298,36.4683567 8.42949844,35.8483875 C8.33085,34.5213328 7.39815469,33.7220766 6.64879687,33.0798328 C5.97152812,32.499375 5.55609375,32.109375 5.496825,31.5911859 C5.42102145,30.8866244 5.41343311,30.1763891 5.47416562,29.4703688 C5.47695387,29.4355006 5.47779424,29.400504 5.47668281,29.3655422 C5.43179531,27.9459047 4.2618375,27.0052266 2.31230625,26.7726563 C2.41447188,26.3442469 2.53351875,25.9227797 2.66944688,25.5082547 C2.77090352,25.5306215 2.87415999,25.5438541 2.97797812,25.5477938 C2.99995312,25.5487313 3.02169375,25.5491672 3.04343906,25.5491672 C4.09675313,25.5491672 5.01090938,24.6221953 5.69389219,23.8078359 C6.1567745,23.324055 6.72524434,22.9538484 7.35488906,22.7261391 L7.70759531,22.5613453 C8.60950696,22.2017219 9.32274456,21.485419 9.67849688,20.5819734 C9.87743328,19.8956375 9.89752461,19.169826 9.73686094,18.4735359 C9.72289688,18.3911391 9.70985156,18.2844797 9.69474844,18.1654594 C9.65211657,17.7391674 9.57224603,17.3174261 9.45605156,16.9050656 C11.2893844,15.769839 13.3353492,15.0211983 15.4684031,14.7050813 C15.4683469,14.7287438 15.4682016,14.7507984 15.4680609,14.7670219 L15.4678313,14.8691016 C15.4694344,15.1561172 15.4719516,15.5497969 15.3602578,15.6418078 C15.1772153,15.7635602 14.977868,15.858804 14.7681422,15.9247078 C14.6122734,15.9837703 14.4570938,16.0432688 14.3094609,16.1110172 C13.5619861,16.4125306 12.8760173,16.8483234 12.2854687,17.39685 C11.5903547,18.1082156 11.6571891,18.7335187 11.8357172,19.1326922 C12.0196278,19.5442744 12.4704346,19.7666876 12.9089597,19.6621945 C13.3474848,19.5577014 13.6495499,19.1558917 13.6280906,18.7056 C14.0613017,18.3282114 14.5556704,18.0274259 15.0899578,17.8161656 C15.2009672,17.7648984 15.3174656,17.7214078 15.4341984,17.6770078 C15.8380099,17.5457867 16.2165061,17.3467089 16.5534328,17.0883234 C17.352,16.4282297 17.3465063,15.4834031 17.3428453,14.8567266 L17.343075,14.7802781 C17.3435438,14.7114984 17.3433047,14.6300438 17.3415281,14.5432125 C17.4983578,14.5386328 17.6545312,14.53125 17.8125,14.53125 C18.9721359,14.5319521 20.128226,14.6593167 21.2602031,14.9110781 C20.8270071,15.5782517 20.6915349,16.3958075 20.8863797,17.16705 C20.8930172,17.1945141 20.9010281,17.2219828 20.9099531,17.2485328 C20.9669544,17.4280865 20.9990675,17.6146079 21.0053953,17.8028859 C20.1100078,17.7484125 17.2579125,17.7360516 17.0075156,19.745175 L17.0093484,19.745175 C17.0029406,19.7859141 16.9985906,19.8284859 16.9958438,19.8728906 C17.003705,20.1759177 16.9363099,20.4761662 16.7996906,20.7467625 C16.7520844,20.7769734 16.6612172,20.8241063 16.5978188,20.8570828 C16.2408714,21.0081009 15.933268,21.2559284 15.7097578,21.5725688 C15.5296266,21.8641641 14.9814562,22.7513109 15.4595906,23.5720828 C15.9972469,24.4958484 17.2151156,24.4500516 18.7541156,24.3928641 C19.9557469,24.3484594 21.6014062,24.2871188 22.1569031,24.8616141 C22.2223641,24.9289031 22.4153109,25.1289469 22.3903406,25.7359406 C22.1587779,25.8596092 21.8927166,25.9029204 21.6338859,25.8590813 L21.5405016,25.8540469 C20.7970951,25.8491558 20.0553338,25.783476 19.3226344,25.6576641 C17.9019656,25.2237047 16.1338547,24.6844594 14.2638844,25.1641969 C12.1523394,25.75154 10.6052814,27.5569658 10.3484156,29.7335719 C10.1403609,31.8722438 10.8691172,33.3466969 12.5147813,34.1166609 L12.6782016,34.1935641 C13.4646631,34.6480225 14.3629548,34.8724573 15.2707453,34.8413016 C15.3075706,34.8385632 15.3441878,34.8335174 15.3803813,34.8261938 C15.7198125,34.7579859 16.5902484,34.7204484 16.9608094,35.0559891 C17.1726093,35.3169413 17.2516321,35.6612636 17.1748125,35.9884547 C17.1460935,36.4958354 17.2717699,37.0000122 17.5352812,37.4345484 C17.5784062,37.5188906 17.6158781,37.5964547 17.6473453,37.6687219 C18.2513601,37.4800119 18.8936056,37.448938 19.5130172,37.5784547 L19.5750141,37.5913312 C19.5480225,37.4557875 19.5135812,37.3218344 19.4718469,37.1900812 C19.3998321,36.9800953 19.3105049,36.7764518 19.2047859,36.58125 C19.1264066,36.4555747 19.0708495,36.3170389 19.0406766,36.1720313 C19.1989344,35.2518914 18.891121,34.3131079 18.2187609,33.6653156 C17.1388969,32.6889094 15.4724062,32.9063438 15.0782719,32.9754656 C14.5125337,32.9547337 13.9614242,32.7900929 13.4770219,32.4971016 L13.3090219,32.4183516 C12.6443344,32.1075281 12.0517734,31.5888844 12.2147391,29.9153016 C12.3918526,28.5224859 13.3808183,27.3686628 14.73015,26.9805797 C15.9899156,26.6569406 17.2535719,26.9860734 18.7747219,27.4507031 C19.6543678,27.6283187 20.5490823,27.7207568 21.4464609,27.7267359 L21.5366391,27.7313156 C22.2943942,27.8242049 23.0573414,27.6049214 23.6501344,27.1238625 C23.9965279,26.8174415 24.2135773,26.3908691 24.2573578,25.9304719 C24.3673292,25.067624 24.0921807,24.2000832 23.5050141,23.5583391 C22.3677,22.3823437 20.3251594,22.4578734 18.6843047,22.5192141 C18.3064219,22.5334031 17.8086047,22.5535453 17.4288891,22.5379641 L17.4625359,22.5205687 C17.7393264,22.3954883 17.9894641,22.2183176 18.1993078,21.9987187 C18.6268883,21.4162082 18.8605283,20.7140206 18.8671875,19.9914562 C19.0539562,19.7863781 20.0543953,19.6051031 21.0040266,19.6824656 C21.0255422,19.6842984 21.0470578,19.6852125 21.0685734,19.6856719 C21.6357322,19.7097174 22.1795048,19.457997 22.5281531,19.0100109 C23.1175219,18.1993125 22.8080766,17.0283516 22.7011875,16.693725 C22.6259411,16.2204335 22.8338108,15.7467628 23.2330781,15.4817109 C27.8205258,17.1538142 31.394317,20.8277267 32.9390625,25.4596125 C32.2645379,25.4689596 31.5970155,25.5978505 30.9675,25.8402984 C30.8899078,25.8659344 30.8001891,25.8956859 30.7166437,25.9222359 C30.1162739,25.4107925 29.3630405,25.1132344 28.575225,25.0762875 C27.9337607,25.0358062 27.3115175,25.3040182 26.9004984,25.7981625 C26.4799343,26.291537 26.3177873,26.9548945 26.4633328,27.5866453 C26.5255904,27.8170758 26.6147027,28.0393947 26.7288375,28.2490312 C26.6341775,28.2446957 26.5411017,28.2231336 26.4541781,28.1854031 C25.9982446,27.6804012 25.2937195,27.4805301 24.6405187,27.670875 C24.0670565,27.8823199 23.6763551,28.4170862 23.6492297,29.0276859 C23.5457758,30.0243341 23.8597335,31.019319 24.5164641,31.7760984 C24.9667863,32.2465918 25.5298742,32.5941985 26.1522844,32.7859266 L26.1204703,32.8399406 C26.0074031,33.0322031 25.8936469,33.2262938 25.771425,33.4066594 C25.6160156,33.6364547 25.4434359,33.8561906 25.2713203,34.0772813 C24.7780705,34.6501022 24.3806432,35.2988782 24.0944109,35.9985141 C23.8959771,36.6153137 23.7825516,37.2562851 23.7572672,37.903725 C23.7420469,38.0914359 23.7259969,38.2726828 23.7060844,38.4498188 L25.5486703,38.8327359 C25.5832312,38.56935 25.6053891,38.3100563 25.6260891,38.0556844 C25.6425133,37.5736051 25.7206642,37.0956195 25.8586312,36.6334125 C26.0822419,36.1227756 26.3828231,35.6494419 26.7498984,35.2299094 C26.9412422,34.9845469 27.1392281,34.7309484 27.323475,34.4590359 C27.4674422,34.2466359 27.6029391,34.01775 27.7366078,33.7907016 C27.7984078,33.6854156 27.8599734,33.5805891 27.9222328,33.4794234 C28.2352033,33.0782802 28.3465042,32.5555789 28.2241078,32.0617312 C28.0892485,31.679087 27.7861665,31.3795492 27.4019625,31.2492 C27.2673797,31.1961 27.1307391,31.1462016 26.9943234,31.0972219 C26.5955183,30.9950728 26.2263664,30.8004612 25.9167469,30.5291391 C25.7426362,30.3301864 25.6203065,30.0913461 25.5606047,29.8337953 C26.0744313,30.0890089 26.6538655,30.1814692 27.2216016,30.0988406 C27.8180971,30.0466336 28.3494985,29.7010038 28.6390687,29.1769031 C28.9624781,28.5351187 28.6438734,27.8910469 28.4113312,27.4213781 C28.3678453,27.3334875 28.3023844,27.2011922 28.2920859,27.1728141 C28.2785342,27.1147446 28.2934995,27.0536941 28.3323703,27.008475 C28.3645783,26.9646301 28.4180144,26.9416786 28.4719875,26.9485078 C28.8736725,26.9523081 29.2574047,27.1154822 29.5388062,27.40215 C30.0574547,28.11855 30.8896687,27.8420625 31.5589172,27.6191297 C32.0555906,27.4547906 32.8065516,27.2053125 33.1638375,27.3929953 C33.3708524,27.5534062 33.5128062,27.783329 33.5634656,28.0402734 L33.5663859,28.0474547 C34.3454526,33.1331164 32.6194825,38.2818443 28.9326141,41.8704234 C28.9523016,41.9687016 28.9794891,42.0643734 28.9913812,42.1651969 C29.0491034,42.6527754 29.0103538,43.1469465 28.8773391,43.6195688 C29.0231092,43.7641128 29.1567412,43.920404 29.2768828,44.0868609 C35.8348054,38.5605571 37.5211629,29.1444105 33.2887637,21.6856452 C29.0563645,14.2268799 20.1080511,10.8452674 12.000533,13.640716 C3.89301489,16.4361647 -1.0695616,24.6142116 0.194456465,33.0964661 C1.45847453,41.5787206 8.58985485,47.9545368 17.1601641,48.2646844 L17.1601594,48.2646844 Z M7.79268281,18.0869859 C7.81013437,18.2085516 7.82464219,18.3213891 7.83462656,18.4002656 C7.85337656,18.5490375 7.87056094,18.6817922 7.88795625,18.7847859 C7.98510402,19.1734984 7.99121419,19.5793895 7.90581094,19.97085 C7.78450312,20.32335 7.48466719,20.5915781 6.90285,20.8680656 L6.56822344,21.0236906 C5.68413551,21.3611326 4.89211823,21.902371 4.25651719,22.6034344 C4.04500568,22.8619776 3.8153112,23.1050953 3.56918437,23.3309344 C4.59006431,21.3037692 6.02962243,19.5163958 7.79268281,18.0869859 L7.79268281,18.0869859 Z M1.98515625,28.6237922 C2.67163125,28.6989797 3.54234375,28.9154719 3.59983125,29.3884313 C3.53513918,30.1929159 3.54655704,31.0017121 3.63393281,31.80405 C3.78112031,33.0917391 4.69457344,33.8745188 5.42882344,34.5034828 C6.10448437,35.0825531 6.52058906,35.4643266 6.5595,35.9880141 C6.54622374,36.3427744 6.46340665,36.6914741 6.31575,37.0143188 C6.19971244,37.3139312 6.10509944,37.6214062 6.032625,37.9344234 L6.02003437,37.9934859 C5.86863434,38.5484651 5.83118492,39.1283556 5.90994375,39.6981984 C6.0090262,40.0407477 5.98140262,40.4075256 5.83213125,40.7313703 C5.78425505,40.7629299 5.72783104,40.7790017 5.67051094,40.7775145 C2.80086988,37.4174459 1.46490257,33.0116743 1.98515625,28.6237922 L1.98515625,28.6237922 Z"
+                                                                    id="Shape"></path>
+                                                                <path
+                                                                    d="M24.7703062,49.6874451 C25.2760487,49.6880414 25.7604872,49.4838544 26.1132141,49.1214188 L27.5924484,47.6043047 C27.954007,47.2334972 28.1460896,46.7296563 28.1231458,46.2122625 C28.1002021,45.6948687 27.8642756,45.2100077 27.4713141,44.8726594 L26.487525,44.0280844 C27.0302333,43.562819 27.2611897,42.8294584 27.0830284,42.1371704 C26.9048672,41.4448823 26.3485866,40.9141183 25.6487016,40.7686359 L19.1315625,39.414225 C18.4734458,39.2774546 17.7924676,39.5034372 17.346691,40.0065346 C16.9009144,40.5096319 16.7585507,41.2128616 16.97355,41.8497281 L18.9893109,47.8208531 C19.2386326,48.5594162 19.9189056,49.0666815 20.6979047,49.0949156 C20.7207172,49.0957438 20.7434906,49.0961531 20.766225,49.0961438 C21.4137903,49.0959883 22.0154503,48.7617362 22.3576969,48.2120016 L23.5494281,49.2351047 C23.8890313,49.527318 24.3222898,49.6878415 24.7703063,49.6874451 L24.7703062,49.6874451 Z M21.6453562,45.1292906 L20.7657937,47.2211297 L18.7500281,41.25 L25.2671813,42.6044062 L23.1246187,43.6122609 L26.25,46.2953297 L24.7707375,47.8124437 L21.6453562,45.1292906 Z"
+                                                                    id="Shape"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <h2 class="rv-title rv-textdot">Web &amp; Mobile Build</h2>
+                                        <p class="rv-description">Developing innovative and advanced digital
+                                            capabilities through an in-house tech ecosystem.</p>
+                                        <div class="rv-chips fill-chips">
+                                            <div class="chips">
+                                                <span>Sitecore</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Umbraco</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>eCommerce</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Android and IOS</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>React Native</span>
+                                            </div>
+                                            <div class="chips">
+                                                <span>Hosting</span>
+                                            </div>
+                                        </div>
+                                        <a href="/en/services/web-and-mobile" target="" class="btn-withline" id=""
+                                            title="Web &amp; Mobile Build">Know more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+    <section class="rv-sec-container rv-bg-dark">
+
+        <h1 class="sr-only"></h1>
+        <h2 class="sr-only">revonic is now valtech_</h2>
+        <div class="rv-hero-banner rv-hero-banner-inner rv-component rv-bg-dark" data-comp-name="herobanner">
+            <div class="rv-banner-pictures">
+                <div class="rv-bgoverlay"></div>
+                <picture class="lozad" data-class="objectfit"
+                    data-iesrc="./-/media/revonic/banners/home/website-header-desktop.png?cx=0.39&amp;cy=0.51&amp;cw=0&amp;ch=0&amp;hash=ED11BAB09E020ACC19F56C2EE6E49911"
+                    data-alt="">
+                    <source media="(max-width: 600px) and (orientation: portrait)"
+                        srcset="./-/media/revonic/banners/home/website-header-desktop.png?cx=0.32&amp;cy=0.55&amp;cw=0&amp;ch=0&amp;hash=A0A9FAA24326126295833B974282ECF9, ./-/media/revonic/banners/home/website-header-desktop.png?cx=0.32&amp;cy=0.55&amp;cw=0&amp;ch=0&amp;hash=A0A9FAA24326126295833B974282ECF9 2x" />
+                    <source media="(min-width: 320px)"
+                        srcset="./-/media/revonic/banners/home/website-header-desktop.png?cx=0.39&amp;cy=0.51&amp;cw=0&amp;ch=0&amp;hash=ED11BAB09E020ACC19F56C2EE6E49911, ./-/media/revonic/banners/home/website-header-desktop.png?cx=0.39&amp;cy=0.51&amp;cw=0&amp;ch=0&amp;hash=ED11BAB09E020ACC19F56C2EE6E49911 2x" />
+                </picture>
+            </div>
+            <div class="container rv-container">
+                <div class="row">
+                    <div class="col-lg-8">
+                    </div>
+                    <div class="col-lg-6 col-md-8">
+                        <div class="rv-title">
+                            <span class="rv-feature-news">we have grown</span>
+                            <h3 class="rv-h1-heading">revonic is now valtech_</h3>
+                            <div class="mt-3 d-inline-block">
+                                <a href="https://www.valtech.com/news/valtech-acquires-revonic/"
+                                    id="gtm-UxLabBannerHomeHome" class="rv-link btn-withline" target="">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="rv-newsandevents rv-component rv-featured rv-bg-dark">
+            <div class="container">
+                <div class="rv-news-event">
+                    <div class="rv-line-label rv-line-cut">
+                        <span class="rv-line-cut-tr"></span>
+                        STAY UP TO DATE
+                    </div>
+                    <h1 class="rv-hero-heading">
+                        <span class="rv-bold-heading">
+                            NEWS &amp; EVENTS
+                        </span>
+                    </h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-6 offset-lg-1 order-md-1 order-lg-2">
+                        <div class="rv-card">
+                            <a href="/en/news-and-events/2019/12/the-red-sea-development" target=""
+                                class="rv-card-anchor"
+                                title="Revonic wins contract to develop website for The Red Sea&#160;"></a>
+                            <div class="rv-box rv-cornercut">
+                                <a href="/en/news-and-events/2019/12/the-red-sea-development" target=""
+                                    title="Revonic wins contract to develop website for The Red Sea&#160;">
+                                    <picture class="lozad" data-class="rv-bgimage objectfit"
+                                        data-iesrc="./-/media/revonic/overview-pages/work-overview/redseanewshomepage.jpg?cx=0.84&amp;cy=0.41&amp;cw=540&amp;ch=522&amp;hash=13E22D80BA985E2D0999EC448D8B5BB7">
+                                        <!-- Desktop / Table landscape  (max-width: 1200px) => Image dimension: 771x548px -->
+                                        <source media="(max-width: 1200px)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview/redseanewshomepage.jpg?cx=0.84&amp;cy=0.41&amp;cw=540&amp;ch=522&amp;hash=13E22D80BA985E2D0999EC448D8B5BB7, ./-/media/revonic/overview-pages/work-overview/redseanewshomepage.jpg?cx=0.84&amp;cy=0.41&amp;cw=1080&amp;ch=1044&amp;hash=239EFF901FAB3860C93A66E4AD56925B 2x">
+                                        <!-- Tablet portrait (max-width: 992px) => Image dimension: 992x475px -->
+                                        <source media="(max-width: 992px)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview/redseanewshomepage.jpg?cx=0.84&amp;cy=0.41&amp;cw=450&amp;ch=522&amp;hash=B52BDF3D5B7D939E1BCE588E8AC33072, ./-/media/revonic/overview-pages/work-overview/redseanewshomepage.jpg?cx=0.84&amp;cy=0.41&amp;cw=900&amp;ch=1044&amp;hash=CA85B238F474409215136F5233B12871 2x">
+                                        <!-- Mobile landscape (max-width: 680px) and (orientation: landscape) => Image dimension: 680x375px -->
+                                        <source media="(max-width: 680px) and (orientation: landscape)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview/redseanewshomepage.jpg?cx=0.84&amp;cy=0.41&amp;cw=690&amp;ch=350&amp;hash=A3FA93E2344C9836DFBA6C30B705AB53, ./-/media/revonic/overview-pages/work-overview/redseanewshomepage.jpg?cx=0.84&amp;cy=0.41&amp;cw=1380&amp;ch=700&amp;hash=F2FE4ECEEE9814AAB5B186435CE708C1 2x">
+                                        <!-- Mobile portrait (max-width: 480px) => Image dimension: 480x275px -->
+                                        <source media="(max-width: 480px)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview/redseanewshomepage.jpg?cx=0.84&amp;cy=0.41&amp;cw=345&amp;ch=350&amp;hash=75914B06A4DE5B6A424043E65A543EC8, ./-/media/revonic/overview-pages/work-overview/redseanewshomepage.jpg?cx=0.84&amp;cy=0.41&amp;cw=690&amp;ch=700&amp;hash=DBE25FE2C49A2A0247CEAF46414D0D61 2x">
+
+                                        <source media="(min-width: 320px)"
+                                            srcset="./-/media/revonic/overview-pages/work-overview/redseanewshomepage.jpg?cx=0.84&amp;cy=0.41&amp;cw=540&amp;ch=522&amp;hash=13E22D80BA985E2D0999EC448D8B5BB7, ./-/media/revonic/overview-pages/work-overview/redseanewshomepage.jpg?cx=0.84&amp;cy=0.41&amp;cw=1080&amp;ch=1044&amp;hash=239EFF901FAB3860C93A66E4AD56925B 2x">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="rv-description-box">
+                                <div class="rv-title mb-30 mt-3">
+                                    <span class="rv-feature-news">FEATURED NEWS</span>
+
+                                    <a href="/en/news-and-events/2019/12/the-red-sea-development" target="">
+                                        <h1 class="rv-h1-heading">
+                                            Revonic wins contract to develop website for The Red Sea 
+                                        </h1>
+                                    </a>
+                                </div>
+                                <p class="rv-description mb-2">Saudi Arabia’s The Red Sea Development Company (TRSDC),
+                                    has selected Revonic, an experience design agency, to develop their new website
+                                    which will serve as the first touch point for online visitors keen to find out more
+                                    about the ground-breaking new smart destination which will offer visitors a
+                                    seamless, personalized and smart experience.</p>
+
+                                <a href="/en/news-and-events/2019/12/the-red-sea-development" target=""
+                                    class="btn-withline mb-10 rv-anchor-none">
+                                    Read more </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12 col-lg-5 order-md-2 order-lg-1">
+                        <div class="rv-description-box rv-news">
+                            <div class="rv-title mb-30 News Detail">
+                                <span class="rv-feature-news">BLOG</span>
+                                <h1 class="rv-h1-heading"> Driving sales through strategic content
+                                </h1>
+                            </div>
+                            <a href="/en/news-and-events/2020/06/driving-sales-through-strategic-content"
+                                class="btn-withline mb-10">
+                                READ MORE
+                            </a>
+                        </div>
+                        <div class="rv-event-date rv-title my-30">
+                            <div class="rv-title mb-30 News Detail">
+                                <span class="rv-feature-news">BLOG</span>
+                                <h1 class="rv-h1-heading"> Data touchpoints and the purchase journey
+                                </h1>
+                            </div>
+                            <a href="/en/news-and-events/2020/06/data-touchpoints-and-the-purchase-journey"
+                                class="btn-withline mb-10">
+                                READ MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="rv-sec-container rv-bg-light">
+
+        <div class="rv-partners rv-component ">
+            <div class="rv-container-block container">
+                <div class="rv-comp-title">
+                    <h3 class="rv-h6 rv-default-label rv-skewed-line">Our Strategic</h3>
+                    <h2 class="rv-h1 rv-title">Partners</h2>
+                    <p class="rv-regular rv-message">We work with leading digital technology partners. </p>
+                </div>
+                <div class="row rv-main-content">
+                    <div class="rv-partners-message col-xl-5 col-lg-6 col-md-6">
+                        <h3 class="rv-h3 rv-title d-md-flex d-none">We provide the most flexible platforms to scale
+                            clients&#39; digital capability and support security protocols. </h3>
+                        <div class="rv-readmore">
+                            <h4 href="/en/partners" class="rv-h6 rv-primary-link">
+                                <a href="/en/partners">Read More&#160;</a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="rv-partners-logo-grid col-lg-6 col-md-6 offset-xl-1">
+                        <div class="row rv-row">
+                            <div class="col-6 rv-partners-logo" title="Sitecore">
+
+                                <img data-src="./-/media/revonic/sponsor/sitecore/logo-sitecore.svg"
+                                    class="rv-logo lozad" alt="Sitecore">
+                            </div>
+                            <div class="col-6 rv-partners-logo" title="Microsoft">
+
+                                <img data-src="./-/media/revonic/partners/logo-microsoft-partner.svg"
+                                    class="rv-logo lozad" alt="Microsoft">
+                            </div>
+                            <div class="col-6 rv-partners-logo" title="Algolia">
+
+                                <img data-src="./-/media/revonic/partners/algolia-logo.svg" class="rv-logo lozad"
+                                    alt="Algolia">
+                            </div>
+                            <div class="col-6 rv-partners-logo" title="Umbraco">
+
+                                <img data-src="./-/media/revonic/partners/logo-umbraco-partner.svg"
+                                    class="rv-logo lozad" alt="Umbraco">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="rv-footer rv-component rv-theme-dark" data-comp-name="footer">
+        <div class="container rv-container">
+            <div class="row rv-fullWidth rv-footer-content">
+                <div class="rv-contact-message col-lg-5 col-md-12">
+
+                    <h3 class="rv-h6 rv-default-label rv-skewed-line">SAY HI</h3>
+                    <h2 class="rv-h1 rv-title">GET IN TOUCH</h2>
+                    <h4 class="rv-h6 rv-primary-link float-left"><a id="gtm-letstalkfooter" href="/en/contact">CONTACT
+                            US.</a>
+                        <p />
+                    </h4>
+                </div>
+                <address class="rv-address-block rv-quick-contacts col-lg-2 col-md-4">
+
+                    <h6 class='rv-h6 rv-default-label'>Contact</h6>
+                    <ul class="rv-list-secondary">
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="/en/contact" target="_self" id="GTM001">
+                                Email us </a>
+                        </li>
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="tel:+971 4 225 0572" target="_self" id="">
+                                +971 4 225 0572 </a>
+                        </li>
+                    </ul>
+
+
+
+
+
+
+
+
+                </address>
+                <address class="rv-address-block rv-address col-lg-3 col-md-4">
+
+                    <h6 class='rv-h6 rv-default-label'>Visit</h6>
+                    <ul class="rv-list-secondary rv-regular">
+                        <li class="rv-list-item">Level 46, Tower B</li>
+                        <li class="rv-list-item">Business Central Towers</li>
+                        <li class="rv-list-item">Media City, Dubai</li>
+                    </ul>
+                    <ul class="rv-list-secondary">
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link "
+                                href="https://www.google.com/maps/place/REVONIC/@25.1004538,55.1673033,17z/data=!3m1!4b1!4m5!3m4!1s0x3e5f6bc02f741831:0x3fd4128e657a3681!8m2!3d25.100449!4d55.169492"
+                                target="_blank" id="">
+                                Get directions </a>
+                        </li>
+                    </ul>
+
+
+
+
+
+
+
+
+                </address>
+                <address class="rv-address-block rv-social-links col-lg-2 col-md-4">
+
+                    <h6 class='rv-h6 rv-default-label'>Follow</h6>
+                    <ul class="rv-list-secondary">
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="https://www.facebook.com/indivirtualdubai/"
+                                target="_blank" id="">
+                                Facebook </a>
+                        </li>
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="https://www.instagram.com/wearerevonic/"
+                                target="_blank" id="">
+                                Instagram </a>
+                        </li>
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="https://www.linkedin.com/company/revonic/"
+                                target="_blank" id="">
+                                LinkedIn </a>
+                        </li>
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="https://twitter.com/wearerevonic" target="_blank"
+                                id="">
+                                Twitter </a>
+                        </li>
+                    </ul>
+
+
+
+
+
+
+
+
+                </address>
+            </div>
+            <div class="rv-fullWidth rv-footer-links row">
+                <div class="rv-links col-md-6">
+
+
+                </div>
+
+                <span class="rv-copyrights col-md-6 ">&copy; 2021 Valtech_ Revonic</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/vendors~main.js?v=1.12" defer></script>
+    <script src="./assets/js/main.js?v=1.12" defer></script>
+</body>
+
+</html>
