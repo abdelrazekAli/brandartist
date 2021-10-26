@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en" class="rv-html loading">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <style>
+        body,
+        html {
+            background: #121212
+        }
+
+        .loading .rv-header {
+            transform: translateX(-100%);
+            height: 50px;
+            overflow: hidden
+        }
+
+        .loading img,
+        .loading svg {
+            width: 0;
+            height: 0
+        }
+
+        .rv-sec-container {
+            position: relative;
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 0
+        }
+
+        .rv-hero-banner .lozad {
+            display: block;
+            min-height: 500px
+        }
+
+        .lozad {
+            display: block;
+            min-height: 1rem
+        }
+
+        img.lozad {
+            transition: opacity 1s linear
+        }
+
+        img.lozad:not([data-loaded]) {
+            position: relative;
+            max-width: 100%;
+            height: auto;
+            opacity: 0
+        }
+
+        img.lozad[data-loaded=true] {
+            transition: opacity 1s linear
+        }
+
+        .rv-casestudyfigures .rv-box .lozad {
+            display: block;
+            min-height: 260px
+        }
+
+        /* @media (max-width: 767px) {
+max-height: 260px
+} */
+        .rv-hero-banner .rv-banner-pictures .video-js {
+            height: 100vh;
+            width: 100%;
+            padding: 0;
+            z-index: 0;
+            min-height: 450px;
+            max-height: 1200px
+        }
+
+        .rv-roundbtn {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: transparent;
+            border: 0;
+            padding: 0;
+            cursor: pointer
+        }
+
+        .rv-forms .rv-input,
+        .rv-forms .rv-textarea {
+            font-family: Gilroy-Regular, sans-serif, Helvetica, Verdana, Arial;
+            font-weight: 500;
+            text-transform: none;
+            font-size: 18px;
+            font-size: 1.125rem;
+            line-height: 1.66667;
+            line-height: 30px;
+            padding: 10px 0;
+            position: relative;
+            background: 0 0;
+            color: #fff;
+            height: 45px;
+            width: 100%;
+            outline: 0;
+            border: none;
+            caret-color: #e44a21
+        }
+    </style>
+    <script>window.onload = function () { document.querySelector('html').classList.remove('loading') }</script>
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/icons/favicon.ico">
+    <link rel="manifest" href="./assets/manifest.json">
+    <link rel="prefetch" href="./assets/img/sprite/svg-sprite.svg" as="image" crossorigin="anonymous">
+    <link rel="preload" name="Gilroy-Bold" href="./assets/fonts/Gilroy-Bold.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload" name="Gilroy-Regular" href="./assets/fonts/Gilroy-Regular.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <!-- Order is important -->
+    <link rel="prefetch" name="Gilroy-Thin" href="./assets/fonts/Gilroy-Thin.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="prefetch" name="Gilroy-SemiBold" href="./assets/fonts/Gilroy-SemiBold.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="prefetch" name="Gilroy-SemiBoldItalic" href="./assets/fonts/Gilroy-SemiBoldItalic.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./assets/css/vendors~main.css" as="style"
+        onload="this.rel='stylesheet'; this.onload = null;">
+    <link rel="preload" href="./assets/css/main.css" as="style" onload="this.rel='stylesheet'; this.onload = null;">
+    <link rel="preload" href="./assets/css/dark.css" as="style" onload="this.rel='stylesheet'; this.onload = null;">
+    <link rel="preload" href="./assets/css/light.css" as="style" onload="this.rel='stylesheet'; this.onload = null;">
+    <script>
+        window.rv = {};
+        window.rv.resourcePath = './assets/';
+    </script>
+    <script>
+        /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+        /* This file is meant as a standalone workflow for
+        - testing support for link[rel=preload]
+        - enabling async CSS loading in browsers that do not support rel=preload
+        - applying rel preload css once loaded, whether supported or not.
+        */
+        !function (t) { "use strict"; t.loadCSS || (t.loadCSS = function () { }); var e = loadCSS.relpreload = {}; if (e.support = function () { var e; try { e = t.document.createElement("link").relList.supports("preload") } catch (t) { e = !1 } return function () { return e } }(), e.bindMediaToggle = function (t) { var e = t.media || "all"; function a() { t.addEventListener ? t.removeEventListener("load", a) : t.attachEvent && t.detachEvent("onload", a), t.setAttribute("onload", null), t.media = e } t.addEventListener ? t.addEventListener("load", a) : t.attachEvent && t.attachEvent("onload", a), setTimeout(function () { t.rel = "stylesheet", t.media = "only x" }), setTimeout(a, 3e3) }, e.poly = function () { if (!e.support()) for (var a = t.document.getElementsByTagName("link"), n = 0; n < a.length; n++) { var o = a[n]; "preload" !== o.rel || "style" !== o.getAttribute("as") || o.getAttribute("data-loadcss") || (o.setAttribute("data-loadcss", !0), e.bindMediaToggle(o)) } }, !e.support()) { e.poly(); var a = t.setInterval(e.poly, 500); t.addEventListener ? t.addEventListener("load", function () { e.poly(), t.clearInterval(a) }) : t.attachEvent && t.attachEvent("onload", function () { e.poly(), t.clearInterval(a) }) } "undefined" != typeof exports ? exports.loadCSS = loadCSS : t.loadCSS = loadCSS }("undefined" != typeof global ? global : this);
+    </script>
+    <noscript>
+        <link rel="stylesheet" href="./assets/css/vendors~main.css" type="text/css">
+        <link rel="stylesheet" href="./assets/css/main.css">
+    </noscript>
+    <link href="./assets/css/base.css?v=1.13" rel="stylesheet" />
+    <title>UX and UI Design | Revonic</title>
+    <meta property="og:title" content="UX and UI Design | Revonic" />
+    <meta name="keywords" content="Agency, Digital Agency, Experience Design, Revonic, Sitecore, UI, UX, Website" />
+    <meta name="description"
+        content="Best user experience agency in uae offering high quality web design Services based on latest UX factors and making your online business extremely interactive." />
+    <meta name="og:description"
+        content="Best user experience agency in uae offering high quality web design Services based on latest UX factors and making your online business extremely interactive." />
+    <meta name="og:image" content="https://www.revonic.com/./-/media/revonic/media/ogimage/rsz_web_and_mobile.jpg" />
+    <meta property="og:image:url"
+        content="https://www.revonic.com/./-/media/revonic/media/ogimage/rsz_web_and_mobile.jpg">
+    <meta property="og:url" content="https://www.revonic.com/en/Services/UX and UI Design" />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.revonic.com/en/services/ux-and-ui-design" /><!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5K9P7WQ');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156926072-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-156926072-1');
+    </script>
+    <script>
+        // register service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(function (registration) { console.log('Service Worker Registered'); });
+            navigator.serviceWorker.ready.then(function (registration) { console.log('Service Worker Ready'); });
+        }
+    </script>
+</head>
+
+<body class="rv-body ">
+    <header class="rv-header rv-component rv-theme-dark" data-comp-name="header">
+        <div class="rv-wrapper">
+            <div class="rv-container container">
+                <a class="rv-logo rv-column" href="/"><span class="sr-only">Revonic</span><img
+                        src="./assets/img/svg/light.svg" class="rv-revonic-logo light-variant"
+                        alt="rv-revonic-logo" /></a>
+                <div class="rv-navigation">
+                    <a class="rv-nav-trigger rv-link" href="javascript:;">
+                        <span class="rv-label d-lg-inline-block">Navigation</span>
+                        <div class="rv-nav-icon">
+                            <div class="rv-icon-content">
+                                <span class="sr-only">Show / Hide Navigation</span>
+                                <span class="rv-animated-icon rv-nav-iconbar-top d-block"></span>
+                                <span class="rv-animated-icon rv-nav-iconbar-bottom d-block"></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="rv-caption d-none d-lg-block">
+                    <div class="rv-secondary-link">
+                        <a href="/en/contact" id="test" class="rv-link">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <nav class="rv-nav-menu is-hidden">
+                <div class="rv-container container rv-fullWidth">
+                    <div class="w-100">
+                        <ul class="rv-list-main-nav">
+                            <li class="rv-list-item row has-sub-menu">
+                                <a class="rv-h1 rv-link rv-nav-link col-lg-8" href="/en/work" target="_self" id="">
+                                    Work </a>
+                                <div class="rv-sub-menu col-lg-4 d-lg-block">
+                                    <h6 class="rv-h6 rv-default">Case Studies</h6>
+                                    <ul class="rv-list-primary">
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/emirates-airline" target="_self"
+                                                id="gtm-NavigationEmirates">
+                                                Emirates Airline </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/meraas" target="_self"
+                                                id="gtm-NavigationMeraas">
+                                                Meraas </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/ubyemaar" target="_self" id="">
+                                                U by Emaar </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/the-red-sea" target="_self" id="">
+                                                The Red Sea Project </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/mercedes-benz" target="_self" id="">
+                                                Mercedes-Benz </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/abu-dhabi-airport" target="_self"
+                                                id="">
+                                                Abu Dhabi Airport </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/noor-bank" target="_self" id="">
+                                                Noor Bank </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/emirates-nbd" target="_self" id="">
+                                                Emirates NBD </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="rv-list-item row has-sub-menu">
+                                <a class="rv-h1 rv-link rv-nav-link col-lg-8" href="/en/services" target="_self" id="">
+                                    Services </a>
+                                <div class="rv-sub-menu col-lg-4 d-lg-block">
+                                    <h6 class="rv-h6 rv-default">Our Services</h6>
+                                    <ul class="rv-list-primary">
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/digital-strategy" target="_self"
+                                                id="">
+                                                Digital Strategy </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/ux-and-ui-design" target="_self"
+                                                id="">
+                                                UX &amp; UI Design </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/user-research" target="_self"
+                                                id="">
+                                                User Research </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/user-testing" target="_self"
+                                                id="">
+                                                User Testing </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/data-analytics-and-insights"
+                                                target="_self" id="">
+                                                Data Analytics &amp; Insights </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/content-services" target="_self"
+                                                id="">
+                                                Content Services </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/web-and-mobile" target="_self"
+                                                id="">
+                                                Web &amp; Mobile Build </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="rv-list-item ">
+                                <a class="rv-h1 rv-link rv-nav-link " href="/en/news-and-events" target="_self" id="">
+                                    News &amp; Events </a>
+                            </li>
+                            <li class="rv-list-item ">
+                                <a class="rv-h1 rv-link rv-nav-link " href="/en/careers" target="_self" id="">
+                                    Careers </a>
+                            </li>
+                            <li class="rv-list-item ">
+                                <a class="rv-h1 rv-link rv-nav-link " href="/en/contact" target="_self" id="">
+                                    Contact </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5K9P7WQ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <section class="rv-sec-container headerpd rv-bg-light">
+        <h1 class="sr-only">UX &amp; UI DESIGN</h1>
+        <h2 class="sr-only">Combining function, brand and business objectives to provide users with meaningful
+            experiences.</h2>
+        <div class="rv-content-page-header rv-theme-light rv-component">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-4 rv-m-mb-section ">
+                        <h1 class="rv-main-heading">UX &amp; UI</h1>
+                        <h2 class="rv-sub-heading">DESIGN</h2>
+                    </div>
+                    <div class="col-12 offset-md-1 col-md-7">
+                        <p class="rv-paragraph">
+                            Combining function, brand and business objectives to provide users with meaningful
+                            experiences.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="rv-hockey-image rv-component" data-comp-name="animatesvg">
+                <svg class="rv-hockey-svg js-svg" viewBox="0 0 803 303" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(-1110.000000, -79.000000)" stroke="#E44A21">
+                            <g transform="translate(0.000000, 79.000000)">
+                                <g transform="translate(405.000000, -49.000000)">
+                                    <polyline points="705.333202 351.373997 1192.8631 351.373997 1557.35352 0">
+                                    </polyline>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div class="rv-editorialicons rv-component rv-theme-light">
+            <div class="container rv-container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="richtext feature-richtext">
+                            <h2>Our ways of working</h2>
+                            <p><span style="background-color: white; color: #333333;">We are passionate about designing
+                                    functional user experiences and impactful visual interfaces. Through User Experience
+                                    (UX) design, we study and gain insights into how efficiently a system functions for
+                                    its users.</span></p>
+                            <p><span style="background: white; color: #333333;"></span><span
+                                    style="background-color: white; color: #333333;">We use those insights to improve
+                                    the usability, accessibility and desirability of a product. This helps us to design
+                                    effective visual and interactive elements of a product, the User Interface
+                                    (UI).</span></p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="rv-jobcard-wrap">
+                                    <div class="rv-jobcardbox no-pd ">
+                                        <span class="rv-component" data-comp-name="changesvg">
+                                            <svg width="60px" height="57px" viewBox="0 0 60 57" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                class="rv-toSvg icon-strategy js-change-svg">
+                                                <title>noun_collaboration_3132473</title>
+                                                <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                    fill-rule="evenodd">
+                                                    <g id="UX/UI-Design" transform="translate(-40.000000, -36.000000)"
+                                                        fill="#E6552F" fill-rule="nonzero">
+                                                        <g id="ui-ux-new" transform="translate(1.000000, 0.000000)">
+                                                            <g id="noun_collaboration_3132473"
+                                                                transform="translate(39.000000, 36.000000)">
+                                                                <path
+                                                                    d="M42.6500756,43.0922379 C42.372078,42.9049023 42.0191415,42.8680171 41.7084173,42.9938256 C40.7309008,43.3906748 39.6764958,43.5620517 38.6236139,43.4952117 C35.0669103,43.2783518 32.1630544,40.3198085 32.0124748,36.7591986 C31.9077066,34.3604693 33.029832,32.0730652 34.990916,30.6877752 C36.952,29.3024852 39.4829083,29.0094229 41.7086694,29.9099042 C42.0193777,30.035592 42.3722361,29.998632 42.6501561,29.8112886 C42.9280762,29.6239452 43.0947581,29.3107217 43.0947581,28.9755544 L43.0947581,19.3145161 C43.0947581,18.7577775 42.6434322,18.3064516 42.0866935,18.3064516 L35.812878,18.3064516 C36.6393917,14.6698607 35.1563476,10.897921 32.0743855,8.79805714 C28.9924234,6.69819329 24.9394062,6.69819329 21.8574441,8.79805714 C18.775482,10.897921 17.2924379,14.6698607 18.1189516,18.3064516 L10.8366935,18.3064516 C10.2799549,18.3064516 9.82862903,18.7577775 9.82862903,19.3145161 L9.82862903,29.3951613 L6.80443548,29.3951613 C4.57851718,29.3976612 2.77467736,31.2015011 2.77217742,33.4274194 L2.77217742,42.0825353 L0.0432207661,44.8113659 L1.46887601,46.2370212 L4.49306956,43.2128276 C4.68211609,43.0237713 4.78831619,42.7673591 4.78830645,42.5 L4.78830645,33.4274194 C4.78962571,32.3144889 5.69150508,31.4126096 6.80443548,31.4112903 L9.82862903,31.4112903 L9.82862903,34.0180192 L8.1077369,35.7387853 L9.53339214,37.1644405 L14.0696825,32.6281502 C14.5111066,32.1867261 15.2267966,32.1867261 15.6682207,32.6281502 C16.1096449,33.0695744 16.1096449,33.7852643 15.6682208,34.2266885 L11.1319304,38.7629788 C10.9428704,38.9520291 10.8366568,39.2084421 10.8366568,39.4758065 C10.8366568,39.7431708 10.9428704,39.9995838 11.1319304,40.1886341 C12.9620503,42.023209 12.9620503,44.9929201 11.1319304,46.827495 L6.09160786,51.8678175 L7.5172631,53.2934728 L9.98828125,50.8224546 C10.7092122,54.1959094 13.6874712,56.6082609 17.1370968,56.6129032 L42.0866935,56.6129032 C42.6434322,56.6129032 43.0947581,56.1615774 43.0947581,55.6048387 L43.0947581,43.9276714 C43.0947581,43.5925954 42.9279381,43.2795035 42.6500756,43.0922379 Z M41.078629,54.5967742 L17.1370968,54.5967742 C14.2155718,54.5935103 11.8480219,52.2259604 11.8447581,49.3044355 L11.8447581,48.9658518 L12.5575857,48.2531502 C14.9024769,45.9072571 15.1828955,42.2005704 13.2176159,39.5286038 L17.093876,35.6523438 C18.3136602,34.4220178 18.3093901,32.4371136 17.0843237,31.2120472 C15.8592573,29.9869809 13.8743532,29.9827108 12.6440272,31.202495 L11.8447581,32.0018901 L11.8447581,20.3225806 L19.4896673,20.3225806 C19.8248346,20.3225304 20.1380581,20.1558988 20.3254015,19.8779787 C20.5127449,19.6000587 20.5497049,19.2472003 20.4240171,18.9364919 C19.5236919,16.7108436 19.8167577,14.1801287 21.2019097,12.2191468 C22.5870616,10.2581649 24.8742319,9.13599821 27.2728075,9.2405494 C30.8331653,9.39112903 33.7919607,12.2949849 34.0088206,15.8515625 C34.0756797,16.9044864 33.9043025,17.9589365 33.5074345,18.9364919 C33.3817467,19.2472003 33.4187068,19.6000587 33.6060501,19.8779787 C33.7933935,20.1558988 34.106617,20.3225304 34.4417843,20.3225806 L41.078629,20.3225806 L41.078629,27.6049647 C37.4419965,26.7783218 33.6699457,28.2613186 31.5700107,31.3433159 C29.4700757,34.4253132 29.4700757,38.4784166 31.5700107,41.5604139 C33.6699457,44.6424112 37.4419965,46.1254081 41.078629,45.2987651 L41.078629,54.5967742 Z"
+                                                                    id="Shape"></path>
+                                                                <path
+                                                                    d="M57.2076613,19.9051159 L57.2076613,11.25 C57.2051613,9.0240817 55.4013215,7.22024188 53.1754032,7.21774194 L50.1447833,7.21774194 C50.005204,3.28431824 46.7786382,0.166271636 42.8427419,0.161290323 L14.8689516,0.161290323 C14.312213,0.161290323 13.8608871,0.61261618 13.8608871,1.16935484 L13.8608871,9.52923387 C9.48475631,8.53322066 5.03783716,10.8857474 3.39893991,15.0638544 C1.76004266,19.2419615 3.42149169,23.9905465 7.30771169,26.2355091 L8.31728831,24.4902974 C5.10898656,22.6355833 3.88125612,18.615612 5.5058835,15.2848838 C7.13051088,11.9541556 11.0542475,10.4469125 14.4909274,11.8334173 C14.8016565,11.9591134 15.1545396,11.9221397 15.4324664,11.7347665 C15.7103933,11.5473932 15.8770078,11.2341311 15.8770161,10.8989415 L15.8770161,2.17741935 L42.8427419,2.17741935 C45.7642669,2.1806832 48.1318168,4.5482331 48.1350806,7.46975806 L48.1350806,9.82447077 L47.3358115,9.0250756 C46.542072,8.22447634 45.3806687,7.90970601 44.2912876,8.19993089 C43.2019065,8.49015577 42.3510429,9.34101944 42.060818,10.4304005 C41.7705931,11.5197816 42.0853634,12.6811849 42.8859627,13.4749244 L46.7622228,17.3511845 C44.7969432,20.0231511 45.0773618,23.7298377 47.422253,26.0757308 L48.1350806,26.7884325 L48.1350806,35.4435484 L38.8379536,35.4435484 C39.1568407,34.0309796 39.1358087,32.5628844 38.7765877,31.1600302 L36.8234627,31.6625504 C37.1986893,33.1260237 37.0971592,34.6710481 36.5336442,36.0728327 C36.4079481,36.3835617 36.4449218,36.7364448 36.632295,37.0143717 C36.8196683,37.2922985 37.1329304,37.4589214 37.46812,37.4589214 L49.1431452,37.4589214 C49.6998838,37.4589214 50.1512097,37.0075955 50.1512097,36.4508569 L50.1512097,28.8045615 L52.4625756,31.1160534 L53.8882308,29.6903982 L48.8479083,24.6500756 C47.0177885,22.8155007 47.0177885,19.8457896 48.8479083,18.0112147 C49.0369683,17.8221645 49.1431819,17.5657514 49.1431819,17.2983871 C49.1431819,17.0310228 49.0369683,16.7746097 48.8479083,16.5855595 L44.3116179,12.0492692 C44.0260666,11.7637178 43.914546,11.3475176 44.0190651,10.9574472 C44.1235841,10.5673767 44.4282638,10.262697 44.8183343,10.158178 C45.2084047,10.0536589 45.6246049,10.1651795 45.9101563,10.4507308 L50.4464466,14.9870212 L51.8721018,13.5613659 L50.1512097,11.8405998 L50.1512097,9.23387097 L53.1754032,9.23387097 C54.2883336,9.23519022 55.190213,10.1370696 55.1915323,11.25 L55.1915323,20.3225806 C55.1915225,20.5899397 55.2977226,20.846352 55.4867692,21.0354083 L58.5109627,24.0596018 L59.9366179,22.6339466 L57.2076613,19.9051159 Z"
+                                                                    id="Path"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <h2 class="rv-title rv-textdot">Co-Creation</h2>
+                                        <p class="rv-description">We work with our clients to develop solutions that
+                                            address user and business needs.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="rv-jobcard-wrap">
+                                    <div class="rv-jobcardbox no-pd ">
+                                        <span class="rv-component" data-comp-name="changesvg">
+                                            <svg width="55px" height="55px" viewBox="0 0 55 55" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                class="rv-toSvg icon-strategy js-change-svg">
+                                                <title>noun_creative_2068926</title>
+                                                <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                    fill-rule="evenodd">
+                                                    <g id="UX/UI-Design" transform="translate(-422.000000, -38.000000)"
+                                                        fill="#E6552F" fill-rule="nonzero" stroke="#E6552F"
+                                                        stroke-width="0.3">
+                                                        <g id="ui-ux-new" transform="translate(1.000000, 0.000000)">
+                                                            <g id="noun_creative_2068926"
+                                                                transform="translate(421.000000, 39.000000)">
+                                                                <path
+                                                                    d="M26.6658416,34.4392017 C26.5780748,34.7323798 26.6576407,35.0500815 26.8732289,35.2672867 C27.0888172,35.484492 27.4059155,35.5664295 27.6997412,35.4808558 C27.9935669,35.3952821 28.2170831,35.1558962 28.2823329,34.8568998 C28.6926855,33.5527524 29.918948,32.6795307 31.2855817,32.7182859 C32.2394019,32.6982382 33.1517903,33.107663 33.7708849,33.8335396 C34.0645009,34.1875974 34.5890869,34.2376983 34.9444127,33.9456182 C35.2997386,33.653538 35.3521106,33.1291739 35.0615718,32.7725866 C34.1319781,31.6595666 32.7523886,31.0218896 31.3022896,31.0349629 C29.1602985,30.9763358 27.2513474,32.3779531 26.6658416,34.4392017 Z"
+                                                                    id="Path"></path>
+                                                                <path
+                                                                    d="M38.6871906,27.7643874 L38.8250309,27.7643874 C39.2388801,27.7697139 39.5942399,27.4712117 39.660427,27.0626547 C39.7686306,26.4228953 39.6183912,25.7663493 39.242729,25.2373144 C38.6831887,24.4173087 37.5735917,24.1898413 36.7365408,24.7235458 C36.4688506,24.8787379 36.3088657,25.1691808 36.3207574,25.4783753 C36.3326492,25.7875699 36.5144696,26.0648667 36.793289,26.1990399 C37.0721084,26.333213 37.4022531,26.3022834 37.6512995,26.1186572 C37.6805384,26.1186572 37.7724319,26.0392946 37.9019183,26.2147277 C38.0147436,26.3904502 38.0537638,26.6035604 38.0105198,26.8078589 C37.9371972,27.2579484 38.2383672,27.6836763 38.6871906,27.7643874 Z"
+                                                                    id="Path"></path>
+                                                                <path
+                                                                    d="M32.8811881,19.8782488 C32.6695992,19.8115456 32.4401676,19.8317458 32.2434892,19.9343947 C32.0468108,20.0370435 31.8990406,20.2137097 31.8327661,20.4254332 C31.6069176,21.1562269 31.8290292,21.9515824 32.4008354,22.4596225 C32.9315913,22.9352604 33.6221686,23.1932947 34.3347772,23.1822401 C34.6913118,23.1826858 35.0450215,23.1190181 35.3790223,22.994276 C35.7923973,22.8197432 35.9940615,22.3498273 35.835771,21.9299645 C35.6774805,21.5101018 35.2157806,21.2902777 34.7900681,21.4320854 C34.4593468,21.5496355 34.0961815,21.5361849 33.7750619,21.3944926 L33.5912748,21.2775371 L33.545328,21.2441213 C33.4411312,21.1748864 33.3897955,21.0490311 33.4158416,20.9266708 C33.5558111,20.4896689 33.3171011,20.0215736 32.8811881,19.8782488 Z"
+                                                                    id="Path"></path>
+                                                                <path
+                                                                    d="M36.2645421,13.4248144 C36.0070388,13.592194 35.6835778,13.6218836 35.3999072,13.504177 C35.1179555,13.3423906 34.7677567,13.3588525 34.5022251,13.5463747 C34.2366935,13.7338968 34.1040536,14.0584224 34.1622227,14.3782473 C34.2203917,14.6980722 34.4588053,14.9551114 34.7733601,15.0371287 C35.5595243,15.3639956 36.4556034,15.2876341 37.1751238,14.8324567 C38.226501,14.1497239 38.6902813,12.8473739 38.3070854,11.6537748 C38.1686724,11.2131602 37.6992779,10.9681774 37.2586634,11.1065904 C36.8180488,11.2450033 36.573066,11.7143978 36.711479,12.1550124 C36.8620667,12.6305829 36.6798057,13.1484086 36.2645421,13.4248144 L36.2645421,13.4248144 Z"
+                                                                    id="Path"></path>
+                                                                <path
+                                                                    d="M26.7326733,24.4353342 C26.7326733,25.8194636 27.8547319,26.9415223 29.2388614,26.9415223 C29.7002379,26.9415223 30.0742574,26.5675027 30.0742574,26.1061262 C30.0742574,25.6447497 29.7002379,25.2707302 29.2388614,25.2707302 C28.7774849,25.2707302 28.4034653,24.8967107 28.4034653,24.4353342 C28.4034653,23.9739577 28.7774849,23.5999381 29.2388614,23.5999381 C29.7002379,23.5999381 30.0742574,23.2259186 30.0742574,22.7645421 C30.0742574,22.3031656 29.7002379,21.929146 29.2388614,21.929146 C27.8547319,21.929146 26.7326733,23.0512047 26.7326733,24.4353342 Z"
+                                                                    id="Path"></path>
+                                                                <path
+                                                                    d="M29.8695854,17.288521 C29.5764073,17.2007542 29.2587056,17.2803201 29.0415004,17.4959084 C28.8242952,17.7114966 28.7423576,18.0285949 28.8279313,18.3224206 C28.913505,18.6162463 29.152891,18.8397625 29.4518874,18.9050124 C29.7083009,18.9717678 29.972199,19.0054569 30.2371597,19.0052599 C31.4100501,19.0358305 32.4726319,18.3173707 32.8811881,17.2175124 C33.0949828,16.5965256 33.0373653,15.9142125 32.7224629,15.3378713 C32.3524118,14.6759578 31.7249593,14.1966748 30.9890161,14.0137686 C30.695838,13.9260018 30.3781363,14.0055676 30.1609311,14.2211559 C29.9437259,14.4367441 29.8617883,14.7538425 29.947362,15.0476682 C30.0329357,15.3414939 30.2723217,15.56501 30.5713181,15.6302599 C30.858096,15.6951413 31.1057091,15.8748118 31.2563428,16.1273205 C31.3496864,16.2944178 31.3678982,16.4932298 31.3064666,16.674505 C31.0517344,17.2131294 30.4349061,17.4767159 29.8695854,17.288521 Z"
+                                                                    id="Path"></path>
+                                                                <path
+                                                                    d="M15.8725248,28.6123144 C15.8725248,29.0736908 16.2465443,29.4477104 16.7079208,29.4477104 L24.2264851,29.4477104 C24.6878616,29.4477104 25.0618812,29.0736908 25.0618812,28.6123144 C25.0618812,28.1509379 24.6878616,27.7769183 24.2264851,27.7769183 L23.9716894,27.7769183 C24.0092822,26.6407797 24.1596535,25.4336324 24.2056002,25.0869431 C24.4353342,23.3827351 25.53388,21.7453589 26.5948329,20.1998762 C26.8872215,19.7821782 27.1712562,19.3644802 27.430229,18.9175433 C28.2840356,17.6526968 28.7659338,16.1737178 28.8211634,14.6486696 C28.8211634,9.91197401 25.0618812,6.05662129 20.467203,6.05662129 C15.8725248,6.05662129 12.1132401,9.91197401 12.1132401,14.6486696 C12.1119003,16.4219952 12.6622333,18.151822 13.6879641,19.5983911 C13.8842822,19.8782488 14.1056621,20.1539295 14.2894493,20.4337871 C15.3086324,21.8372525 16.2693379,23.1613552 16.6369121,24.8196163 C16.826619,25.7944757 16.9314361,26.7839491 16.9501856,27.7769183 L16.7079208,27.7769183 C16.2465443,27.7769183 15.8725248,28.1509379 15.8725248,28.6123144 Z M15.6386139,19.4480198 C15.4422958,19.1806931 15.2459777,18.9091894 15.0538366,18.6335087 C14.2334721,17.4670889 13.7956077,16.0746803 13.8006979,14.6486696 C13.8006979,10.8309097 16.7998144,7.72741337 20.4839109,7.72741337 C24.1680074,7.72741337 27.1670792,10.8350866 27.1670792,14.6486696 C27.1670792,15.7096225 26.8162129,16.7580446 26.0434715,18.0320235 C25.7886757,18.4497215 25.512995,18.8423577 25.2289604,19.2600557 C24.1137067,20.9057859 22.8480817,22.7687191 22.568224,24.8655631 C22.5181002,25.2331374 22.359375,26.5363552 22.3176052,27.7476795 C22.3176052,27.7476795 22.3176052,27.7476795 22.3176052,27.7727413 L18.6126238,27.7727413 C18.6126238,27.7727413 18.6126238,27.7393255 18.6126238,27.7226176 C18.5884642,26.6258411 18.4710859,25.5331052 18.2617574,24.4562191 C17.8231745,22.4596225 16.7079208,20.9266708 15.6386139,19.4480198 Z"
+                                                                    id="Shape"></path>
+                                                                <path
+                                                                    d="M19.2642327,16.6410891 L20.467203,15.5676052 L21.9876238,16.7413366 C22.3162678,16.9937199 22.7802494,16.9670543 23.0778156,16.6786819 L24.8029084,15.0078899 C25.1086339,14.6828188 25.1048925,14.1748625 24.7944117,13.8543302 C24.483931,13.5337979 23.9763515,13.5138798 23.6417079,13.8090965 L22.4345606,14.978651 L20.9392017,13.8216275 C20.6212349,13.5766379 20.1739756,13.5924235 19.8740718,13.8592203 L18.6669245,14.9327042 L17.2133354,13.8216275 C16.9760611,13.6403141 16.660081,13.5993579 16.3844219,13.7141868 C16.1087627,13.8290157 15.9153036,14.0821844 15.8769188,14.3783267 C15.8385339,14.674469 15.9610549,14.9685938 16.1983292,15.1499072 L18.1991027,16.6786819 C18.5170696,16.9236715 18.9643289,16.9078859 19.2642327,16.6410891 Z"
+                                                                    id="Path"></path>
+                                                                <path
+                                                                    d="M53.0476485,29.4477104 L51.7945545,29.4477104 L51.7945545,27.7769183 C51.7945545,27.3155418 51.4205349,26.9415223 50.9591584,26.9415223 C50.4977819,26.9415223 50.1237624,27.3155418 50.1237624,27.7769183 L50.1237624,29.4477104 L47.6175743,29.4477104 L47.6175743,27.7769183 C47.6175743,27.3155418 47.2435547,26.9415223 46.7821782,26.9415223 C46.3208017,26.9415223 45.9467822,27.3155418 45.9467822,27.7769183 L45.9467822,29.4477104 L44.6936881,29.4477104 C44.2323116,29.4477104 43.8582921,29.8217299 43.8582921,30.2831064 L43.8582921,34.4600866 C43.8582921,35.3828396 44.6063312,36.1308787 45.5290842,36.1308787 L46.3644802,36.1308787 L46.3644802,37.8016708 C46.3644802,38.7244238 47.1125193,39.4724629 48.0352723,39.4724629 L48.0352723,52.0034035 L38.0105198,52.0034035 L38.0105198,42.7764542 C38.0105198,41.8537012 37.2624807,41.1056621 36.3397277,41.1056621 L31.3273515,41.1056621 C31.432861,41.0003642 31.5318975,40.8887739 31.6239171,40.7715037 C33.9533827,40.7139565 36.0018667,39.2150658 36.7616027,37.0122215 C39.1843246,36.8577402 41.0688125,34.8451804 41.0638923,32.4175433 C41.0659927,31.8231208 40.9510275,31.2341016 40.7255569,30.6840965 C42.2573599,29.8028667 43.3044269,28.2719627 43.5702703,26.5248755 C43.8361137,24.7777884 43.2917898,23.0047323 42.0914295,21.7077661 C43.1298465,20.7798957 43.754573,19.475647 43.8267356,18.0849471 C43.8988983,16.6942473 43.412517,15.3323438 42.4757116,14.3019802 C42.6556531,13.7806005 42.7474122,13.2328693 42.7472153,12.6813119 C42.7508328,10.3382312 41.1307099,8.3052718 38.8459158,7.78589109 C38.4827602,5.38348088 36.4924108,3.56015377 34.0674505,3.40841584 C31.8954208,0.171256188 25.7552599,0 24.4938119,0 L24.4938119,0 C13.713026,0 4.96642946,9.47339109 4.59467822,21.5657488 C4.57907477,21.9486626 4.4926859,22.3253748 4.33988243,22.6768255 L0.893873762,28.7459777 C0.557395385,29.3166302 0.392102781,29.9720009 0.41769802,30.6339728 C0.52361605,32.4803916 2.04768551,33.9257876 3.89712252,33.9337871 C4.20138921,33.9348895 4.49269312,34.0571051 4.70666469,34.273428 C4.92063626,34.4897509 5.03966105,34.7823731 5.03743812,35.0866337 L5.03743812,39.0798267 C5.03078021,41.0738773 5.81653422,42.9889005 7.22184093,44.4036072 C8.62714764,45.818314 10.5368899,46.6168172 12.5309406,46.623453 L14.4941213,46.623453 C16.7079208,46.8114171 19.2141089,47.676052 19.1263923,52.6299505 C19.1263923,53.091327 19.5004119,53.4653465 19.9617884,53.4653465 L19.9617884,53.4653465 C20.4231649,53.4653465 20.7971844,53.091327 20.7971844,52.6299505 C20.884901,47.889078 18.7964109,45.3035272 14.6194307,44.9568379 L12.5309406,44.9568379 C10.9785558,44.9502102 9.49251245,44.3265894 8.40029889,43.2234067 C7.30808534,42.120224 6.6993452,40.6280233 6.7082302,39.0756498 L6.7082302,35.0866337 C6.70824553,33.5343685 5.4535493,32.274071 3.9012995,32.267172 C2.93286088,32.2617509 2.13723004,31.5009518 2.0884901,30.5337252 C2.08033469,30.1925826 2.17021383,29.8562607 2.34746287,29.5646658 L5.79764851,23.4579208 L5.84777228,23.3910891 C6.09582349,22.834755 6.23749791,22.236889 6.2654703,21.6284035 C6.60798267,10.4424505 14.6194307,1.67079208 24.4896349,1.67079208 C26.8078589,1.67079208 30.8428218,2.1929146 32.4258973,4.04749381 C31.0349629,4.86200495 30.0742574,6.58709777 30.0742574,8.55445545 C30.037634,10.0477167 30.6249249,11.4886985 31.6949257,12.5309406 C31.9187694,12.7338922 32.2338829,12.802008 32.521566,12.7096295 C32.8092491,12.617251 33.0257959,12.3784126 33.0896353,12.0830825 C33.1534748,11.7877524 33.0549081,11.4807982 32.8310644,11.2778465 C32.1153842,10.5544509 31.7235387,9.57182293 31.7450495,8.55445545 C31.7450495,6.88366337 32.7266399,5.42589728 33.9755569,5.24211015 C34.0932203,5.22431975 34.2057251,5.18159643 34.3055384,5.11680074 C35.9776985,5.3906526 37.2111154,6.82670225 37.2294245,8.5210396 C37.2283466,8.96051155 37.5679475,9.32567384 38.0063428,9.35643564 C39.1030067,9.44513866 40.0857279,10.067997 40.6340273,11.0218877 C41.1823267,11.9757785 41.2259305,13.1384445 40.7506188,14.130724 C40.5856624,14.4694001 40.6677827,14.8765802 40.9511139,15.1248453 C41.7804939,15.8438673 42.2301631,16.9064279 42.1688684,18.002378 C42.1075736,19.0983282 41.5422247,20.1041205 40.6378403,20.7261757 C39.2457947,21.0816582 37.8107018,20.3253011 37.3171411,18.976021 C37.1440003,18.5643472 36.6776924,18.3616592 36.2585695,18.5158964 C35.8394467,18.6701336 35.6157591,19.12674 35.7507735,19.5524443 C36.4631036,21.4961575 38.4200312,22.6934996 40.4749381,22.4429146 C41.4354041,23.2220127 41.9926132,24.3932263 41.9911819,25.6299505 C41.985358,27.2854782 41.0023239,28.7813285 39.4849938,29.4435334 C39.4016394,29.4423135 39.3185719,29.4535769 39.238552,29.4769493 C38.8405464,29.5981316 38.4265596,29.6586807 38.0105198,29.6565594 C35.8804688,29.7080028 34.1099459,28.0271266 34.0507426,25.8972772 C34.0507426,25.4359007 33.676723,25.0618812 33.2153465,25.0618812 C32.75397,25.0618812 32.3799505,25.4359007 32.3799505,25.8972772 C32.4393856,28.9498151 34.9578333,31.3785851 38.0105198,31.3273515 C38.3991223,31.3269071 38.7867129,31.2877283 39.1675433,31.210396 C39.5744079,32.1155058 39.4944231,33.1652005 38.9551167,33.9982137 C38.4158102,34.831227 37.4908047,35.3338413 36.498453,35.3330755 C36.4065594,35.3330755 36.3146658,35.3330755 36.2227723,35.3330755 C35.8009321,35.2994062 35.4205473,35.5864891 35.3372525,36.0013923 C34.9743435,37.7553738 33.4637188,39.0369072 31.6740408,39.1090656 C31.5480231,39.0328476 31.4036166,38.9924137 31.2563428,38.9921101 C31.1644493,38.9921101 30.3248762,38.8960396 29.8487005,37.4842203 C29.775536,37.1767372 29.5351032,36.9368739 29.2274474,36.8644387 C28.9197917,36.7920036 28.597599,36.8994011 28.3949355,37.1419427 C28.192272,37.3844843 28.1438437,37.7206346 28.269802,38.0105198 C28.5282286,38.9093144 29.0964328,39.6876357 29.8737624,40.2076114 C29.3091647,40.6471392 28.654516,40.9566354 27.9565285,41.1140161 L21.302599,41.1140161 L21.302599,32.7892946 L22.3468441,32.7892946 C22.8082206,32.7892946 23.1822401,32.415275 23.1822401,31.9538985 C23.1822401,31.492522 22.8082206,31.1185025 22.3468441,31.1185025 L18.5875619,31.1185025 C18.1261854,31.1185025 17.7521658,31.492522 17.7521658,31.9538985 C17.7521658,32.415275 18.1261854,32.7892946 18.5875619,32.7892946 L19.6318069,32.7892946 L19.6318069,41.1056621 C19.6318069,42.0284151 20.379846,42.7764542 21.302599,42.7764542 L36.3397277,42.7764542 L36.3397277,52.0034035 C36.3397277,52.9261565 37.0877668,53.6741955 38.0105198,53.6741955 L48.0352723,53.6741955 C48.9580253,53.6741955 49.7060644,52.9261565 49.7060644,52.0034035 L49.7060644,39.4724629 C50.6288173,39.4724629 51.3768564,38.7244238 51.3768564,37.8016708 L51.3768564,36.1308787 L52.2122525,36.1308787 C53.1350055,36.1308787 53.8830446,35.3828396 53.8830446,34.4600866 L53.8830446,30.2831064 C53.8830446,29.8217299 53.509025,29.4477104 53.0476485,29.4477104 Z M48.0352723,37.8016708 L48.0352723,36.1308787 L49.7060644,36.1308787 L49.7060644,37.8016708 L48.0352723,37.8016708 Z M52.2122525,34.4600866 L45.5290842,34.4600866 L45.5290842,31.1185025 L52.2122525,31.1185025 L52.2122525,34.4600866 Z"
+                                                                    id="Shape"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <h2 class="rv-title rv-textdot">Design Thinking</h2>
+                                        <p class="rv-description">This creative problem-solving process focuses on the
+                                            users we are creating for.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="rv-jobcard-wrap">
+                                    <div class="rv-jobcardbox no-pd ">
+                                        <span class="rv-component" data-comp-name="changesvg">
+                                            <svg width="62px" height="62px" viewBox="0 0 62 62" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                class="rv-toSvg icon-strategy js-change-svg">
+                                                <title>noun_User centered_996040</title>
+                                                <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                    fill-rule="evenodd">
+                                                    <g id="UX/UI-Design" transform="translate(-796.000000, -36.000000)"
+                                                        fill="#E6552F" fill-rule="nonzero" stroke="#E6552F"
+                                                        stroke-width="0.5">
+                                                        <g id="ui-ux-new" transform="translate(1.000000, 0.000000)">
+                                                            <g id="noun_User-centered_996040"
+                                                                transform="translate(796.000000, 37.000000)">
+                                                                <path
+                                                                    d="M30.3214286,7.96153846 C18.206044,7.96153846 8.28296703,17.8846154 8.28296703,30 C8.28296703,42.1153846 18.206044,52.0384615 30.3214286,52.0384615 C42.4368132,52.0384615 52.3598901,42.1153846 52.3598901,30 C52.3598901,17.8846154 42.4368132,7.96153846 30.3214286,7.96153846 Z M30.3214286,9.69230769 C41.5137363,9.69230769 50.6291209,18.8076923 50.6291209,30 C50.6291209,34.6153846 49.1291209,38.7692308 46.4752747,42.2307692 C46.3598901,40.8461538 46.2445055,40.0384615 46.2445055,40.0384615 C46.2445055,38.7692308 45.8983516,37.3846154 45.0906593,36.1153846 C44.282967,34.7307692 43.0137363,33.6923077 41.5137363,33.1153846 L35.9752747,31.1538462 L31.0137363,40.2692308 L29.3983516,40.2692308 L24.4368132,31.1538462 L18.8983516,33.1153846 C17.3983516,33.6923077 16.1291209,34.7307692 15.3214286,36 C14.5137363,37.3846154 14.1675824,38.6538462 14.1675824,39.8076923 C14.1675824,39.8076923 14.0521978,40.7307692 13.9368132,42.1153846 C11.3983516,38.7692308 9.78296703,34.5 9.78296703,29.8846154 C10.0137363,18.8076923 19.1291209,9.69230769 30.3214286,9.69230769 Z M30.3214286,50.3076923 C24.5521978,50.3076923 19.3598901,47.8846154 15.6675824,44.0769231 C15.8983516,41.7692308 16.0137363,40.1538462 16.0137363,40.0384615 C16.0137363,38.7692308 16.4752747,37.7307692 16.9368132,36.9230769 C17.5137363,35.8846154 18.4368132,35.1923077 19.5906593,34.7307692 L23.7445055,33.2307692 L28.4752747,42 L32.1675824,42 L36.8983516,33.2307692 L41.0521978,34.7307692 C42.206044,35.1923077 43.1291209,35.8846154 43.706044,36.9230769 C44.1675824,37.6153846 44.6291209,38.7692308 44.6291209,40.1538462 C44.6291209,40.1538462 44.8598901,41.7692308 44.9752747,44.0769231 C41.282967,47.8846154 36.0906593,50.3076923 30.3214286,50.3076923 Z"
+                                                                    id="Shape"></path>
+                                                                <path
+                                                                    d="M30.0906593,30.2307692 C34.2445055,30.2307692 37.5906593,26.8846154 37.5906593,22.7307692 C37.5906593,18.5769231 34.2445055,15.2307692 30.0906593,15.2307692 C25.9368132,15.2307692 22.5906593,18.5769231 22.5906593,22.7307692 C22.5906593,26.8846154 25.9368132,30.2307692 30.0906593,30.2307692 Z M30.0906593,17.0769231 C33.206044,17.0769231 35.8598901,19.6153846 35.8598901,22.8461538 C35.8598901,26.0769231 33.3214286,28.6153846 30.0906593,28.6153846 C26.8598901,28.6153846 24.3214286,26.0769231 24.3214286,22.8461538 C24.3214286,19.6153846 26.9752747,17.0769231 30.0906593,17.0769231 Z"
+                                                                    id="Shape"></path>
+                                                                <polygon id="Path"
+                                                                    points="56.9752747 9.23076923 51.782967 9.23076923 59.7445055 1.38461538 58.4752747 0.115384615 50.5137363 8.07692308 50.5137363 2.76923077 48.782967 2.76923077 48.782967 10.9615385 56.9752747 10.9615385">
+                                                                </polygon>
+                                                                <polygon id="Path"
+                                                                    points="0.898351648 1.38461538 8.85989011 9.23076923 3.66758242 9.23076923 3.66758242 10.9615385 11.8598901 10.9615385 11.8598901 2.76923077 10.1291209 2.76923077 10.1291209 8.07692308 2.16758242 0.115384615">
+                                                                </polygon>
+                                                                <polygon id="Path"
+                                                                    points="59.7445055 58.6153846 51.782967 50.7692308 56.9752747 50.7692308 56.9752747 49.0384615 48.782967 49.0384615 48.782967 57.2307692 50.5137363 57.2307692 50.5137363 51.9230769 58.4752747 59.8846154">
+                                                                </polygon>
+                                                                <polygon id="Path"
+                                                                    points="3.66758242 50.7692308 8.85989011 50.7692308 0.898351648 58.6153846 2.16758242 59.8846154 10.1291209 51.9230769 10.1291209 57.2307692 11.8598901 57.2307692 11.8598901 49.0384615 3.66758242 49.0384615">
+                                                                </polygon>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <h2 class="rv-title rv-textdot">Human-Centred Design</h2>
+                                        <p class="rv-description">Putting user needs first and adapting designs to
+                                            address those needs.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="rv-sec-container rv-bg-light">
+        <div class="rv-image-gallery rv-component " data-comp-name="imagegallery">
+            <div class="container rv-fullwidth-container">
+                <div class="rv-slider-container rv-fullwidth noGutter">
+                    <div class="js-slider rv-img-slider">
+                        <div class="rv-img-slide-wrap">
+                            <div class="rv-img-slide">
+                                <picture class="lozad" data-class="rv-bgimage objectfit"
+                                    data-iesrc="./-/media/revonic/media/image-galleries/services/ux-ui.jpg?cx=0.7&amp;cy=0.54&amp;cw=1116&amp;ch=628&amp;hash=827837A97D1DBF572269E63843FAA54C"
+                                    data-alt="">
+                                    <source media="(max-width: 600px) and (orientation: portrait)"
+                                        srcset="./-/media/revonic/media/image-galleries/services/ux-ui.jpg?cx=0.7&amp;cy=0.54&amp;cw=345&amp;ch=195&amp;hash=C0D1B8193D05E8035B34FE5971E1DE61, ./-/media/revonic/media/image-galleries/services/ux-ui.jpg?cx=0.7&amp;cy=0.54&amp;cw=690&amp;ch=390&amp;hash=C919F9925D801DBEE73EAB075DE55832 2x">
+                                    <source media="(max-width: 1200px) and (orientation: landscape)"
+                                        srcset="./-/media/revonic/media/image-galleries/services/ux-ui.jpg?cx=0.7&amp;cy=0.54&amp;cw=1116&amp;ch=628&amp;hash=827837A97D1DBF572269E63843FAA54C, ./-/media/revonic/media/image-galleries/services/ux-ui.jpg?cx=0.7&amp;cy=0.54&amp;cw=2232&amp;ch=1256&amp;hash=55F110CD6B8D3AC968B72B3F0C5A1ED7 2x">
+                                    <source media="(min-width: 320px)"
+                                        srcset="./-/media/revonic/media/image-galleries/services/ux-ui.jpg?cx=0.7&amp;cy=0.54&amp;cw=1116&amp;ch=628&amp;hash=827837A97D1DBF572269E63843FAA54C, ./-/media/revonic/media/image-galleries/services/ux-ui.jpg?cx=0.7&amp;cy=0.54&amp;cw=2232&amp;ch=1256&amp;hash=55F110CD6B8D3AC968B72B3F0C5A1ED7 2x">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="rv-sec-container rv-bg-light">
+    </section>
+    <section class="rv-sec-container rv-bg-dark">
+        <div class="rv-editorialcontent rv-component rv-editorialcontent-text rv-theme-dark rv-left">
+            <div class="rv-component js-contentSticky contentSticky rv-text-content" data-comp-name="stickycontent">
+                <div class="rv-component" data-comp-name="animateline">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-5">
+                                <div class="rv-text-section1 rv-sticky js-contentChild">
+                                    <h4 class="rv-h1-heading">Our approach</h4>
+                                    <p class="rv-paragraph">
+                                    </p>
+                                    <div class="rv-component" data-comp-name="tabs">
+                                        <ul class="rv-tab-section">
+                                            <li class="is--active">
+                                                <a href="javascript:;"
+                                                    id="customtab-4d216351-558e-4016-af83-29defaa0f924-1"
+                                                    class="btn-tab rv-textdot rv-btn-override js-tabit">Co-creation</a>
+                                            </li>
+                                            <li class="">
+                                                <a href="javascript:;"
+                                                    id="customtab-4d216351-558e-4016-af83-29defaa0f924-2"
+                                                    class="btn-tab rv-textdot rv-btn-override js-tabit">Concepting</a>
+                                            </li>
+                                            <li class="">
+                                                <a href="javascript:;"
+                                                    id="customtab-4d216351-558e-4016-af83-29defaa0f924-3"
+                                                    class="btn-tab rv-textdot rv-btn-override js-tabit">Design
+                                                    systems</a>
+                                            </li>
+                                            <li class="">
+                                                <a href="javascript:;"
+                                                    id="customtab-4d216351-558e-4016-af83-29defaa0f924-4"
+                                                    class="btn-tab rv-textdot rv-btn-override js-tabit">Design
+                                                    thinking</a>
+                                            </li>
+                                            <li class="">
+                                                <a href="javascript:;"
+                                                    id="customtab-4d216351-558e-4016-af83-29defaa0f924-5"
+                                                    class="btn-tab rv-textdot rv-btn-override js-tabit">Information
+                                                    architecture</a>
+                                            </li>
+                                            <li class="">
+                                                <a href="javascript:;"
+                                                    id="customtab-4d216351-558e-4016-af83-29defaa0f924-6"
+                                                    class="btn-tab rv-textdot rv-btn-override js-tabit">Rapid
+                                                    prototyping</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="select-container rv-component" data-comp-name="select2">
+                                        <select class="js-select js-selecttabs" data-exclass="dropdown-style"
+                                            name="tab-select2">
+                                            <option value="customtab-4d216351-558e-4016-af83-29defaa0f924-1">Co-creation
+                                            </option>
+                                            <option value="customtab-4d216351-558e-4016-af83-29defaa0f924-2">Concepting
+                                            </option>
+                                            <option value="customtab-4d216351-558e-4016-af83-29defaa0f924-3">Design
+                                                systems</option>
+                                            <option value="customtab-4d216351-558e-4016-af83-29defaa0f924-4">Design
+                                                thinking</option>
+                                            <option value="customtab-4d216351-558e-4016-af83-29defaa0f924-5">Information
+                                                architecture</option>
+                                            <option value="customtab-4d216351-558e-4016-af83-29defaa0f924-6">Rapid
+                                                prototyping</option>
+                                        </select>
+                                    </div>
+                                    <div class="rv-content">
+                                        <div class="rv-line-image1 rv-component" data-comp-name="animatesvg">
+                                            <svg class="rv-line-svg js-svg" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 143 112"
+                                                width="143" height="112" version="1.1">
+                                                <g>
+                                                    <line style="fill:none;stroke-miterlimit:10;" x1="0.4" y1="111.6"
+                                                        x2="142" y2="0.5" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-7 rv-order-first rv-text-content">
+                                <div class="rv-img-section">
+                                    <div class="rv-line-reveal rv-line-a js-animateline">
+                                        <div class="rv-line"></div>
+                                    </div>
+                                    <div class="d-flex casestudyimagecontainer">
+                                        <div
+                                            class="customtab-4d216351-558e-4016-af83-29defaa0f924-1 is--active tab-animate co-creation">
+                                            <h4 class="rv-h1-heading">Co-creation</h4>
+                                            <div class="rv-description">
+                                                <p><span
+                                                        style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Designers,
+                                                        stakeholders and/or users work together to explore problems and
+                                                        develop concepts and solutions. Our end goal is to identify a
+                                                        solution that provides users with better experiences, and our
+                                                        clients with improved and innovative services that best fit
+                                                        their business objectives.</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="customtab-4d216351-558e-4016-af83-29defaa0f924-2 concepting">
+                                            <h4 class="rv-h1-heading">Concepting</h4>
+                                            <div class="rv-description">
+                                                <p><span
+                                                        style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Using
+                                                        the ideas gathered from ideation sessions we can narrow in on
+                                                        tangible concepts that address the problems we are
+                                                        solving.</span><span
+                                                        style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"></span><span
+                                                        style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">The
+                                                        purpose of the process is to create concepts quickly, test them,
+                                                        then use the findings to iterate and improve upon the product.
+                                                        These concepts help demonstrate the design direction of a
+                                                        product through anything from low fidelity wireframes through to
+                                                        high fidelity designs.</span><span
+                                                        style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="customtab-4d216351-558e-4016-af83-29defaa0f924-3 design systems">
+                                            <h4 class="rv-h1-heading">Design systems</h4>
+                                            <div class="rv-description">
+                                                <p><span
+                                                        style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Design
+                                                        considers many elements such as images, typography, space,
+                                                        colour, animation, and how they may affect the user&rsquo;s
+                                                        experience on an interface. Our designers craft design systems
+                                                        that develop your digital brand by building a library of
+                                                        reusable design patterns, rules and UX guidelines, that ensure
+                                                        consistency throughout a design.</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="customtab-4d216351-558e-4016-af83-29defaa0f924-4 design thinking">
+                                            <h4 class="rv-h1-heading">Design thinking</h4>
+                                            <div class="rv-description">
+                                                <p><span
+                                                        style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">We
+                                                        use a design thinking approach to projects, engaging with users
+                                                        and business stakeholders to generate ideas and collaboratively
+                                                        create concepts.</span><span
+                                                        style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"></span><span
+                                                        style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Our
+                                                        user-centred approach reduces risks associated with launching
+                                                        new ideas and leads to more meaningful customer experiences.
+                                                    </span></p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="customtab-4d216351-558e-4016-af83-29defaa0f924-5 information architecture">
+                                            <h4 class="rv-h1-heading">Information architecture</h4>
+                                            <div class="rv-description">
+                                                <p><span
+                                                        style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">We
+                                                        create a site map as a visual representation of a website or
+                                                        app&rsquo;s infrastructure. This site map lists all the existing
+                                                        pages and allows you to have an overall view of where these
+                                                        pages live. The hierarchy of the elements plays a vital role in
+                                                        how users find information on your interface and we use various
+                                                        methods to validate hierarchy, such as research and card
+                                                        sorting.</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="customtab-4d216351-558e-4016-af83-29defaa0f924-6 rapid prototyping">
+                                            <h4 class="rv-h1-heading">Rapid prototyping</h4>
+                                            <div class="rv-description">
+                                                <p><span
+                                                        style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">When
+                                                        designing a website, we create digital wireframes that layout
+                                                        the interface elements and how they will function on a page.
+                                                        Once the wireframes are approved our UI designers will refer to
+                                                        the wireframes when designing how the pages should look and
+                                                        feel, aesthetically.</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rv-m-content ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="rv-sec-container rv-bg-light">
+        <div class="rv-cta-text-banner rv-component" data-comp-name="ctatextbanner">
+            <div class="rv-container container">
+                <div class="row">
+                    <div class="rv-text-wrapper col-12 d-inline-block ">
+                        <h2 class="rv-h1 rv-title rv-static-text">Let&#39;s work together on</h2>
+                        <h2 class="rv-h1 rv-title rv-animated-text">
+                            <div id="rv-vertical-flip-text" class="rv-vertical-flip-text" data-duration="500"
+                                data-delay="2500">
+                                <span class="is-hidden">UX &amp; UI Design</span>
+                                <span class="is-hidden">Web &amp; Mobile</span>
+                                <span class="is-hidden">User Testing</span>
+                                <span class="is-hidden">User Research</span>
+                                <span class="is-hidden">Data Analysis</span>
+                                <span class="is-hidden">Digital Strategy</span>
+                                <span class="is-hidden">Content Services</span>
+                            </div>
+                        </h2>
+                    </div>
+                    <div class="col">
+                        <div onclick="window.location='/en/contact'"
+                            class="rv-contactus-wrap rv-boldbutton rv-component" data-comp-name="boldbutton">
+                            <button class="btn-bold rv-link">
+                                <span data-btn-label='LET&#39;S TALK' class="rv-text-fill" id="">LET&#39;S TALK</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="rv-sec-container rv-bg-light">
+        <div class="rv-crosssell rv-component rv-theme-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-5 col-xl-4">
+                        <div class="rv-description-box">
+                            <div class="rv-title mt-3 mb-2">
+                                <div class="rv-line-label rv-line-cut">
+                                    <span class="rv-line-cut-tr"></span> RELATED
+                                </div>
+                                <h1 class="rv-h1-heading"> CASE STUDIES
+                                </h1>
+                            </div>
+                            <p class="rv-description mb-20"> See how we have applied our User Testing expertise to one
+                                of our projects.
+                            </p>
+                            <a href="/en/work" target="" class="btn-withline mb-1">
+                                View all work
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 offset-lg-1 offset-xl-2">
+                        <div class="rv-card">
+                            <div class="rv-card-anchor">
+                                <a href="/en/work/ubyemaar" class="rv-card-anchor" target=""></a>
+                            </div>
+                            <div class="rv-box">
+                                <div class="rv-bgoverlay"></div>
+                                <picture class="lozad" data-class="rv-bgimage objectfit"
+                                    data-iesrc="./-/media/revonic/overview-pages/work-overview/ubyemaarworkoverview.jpg?cx=0&amp;cy=0&amp;cw=255&amp;ch=420&amp;hash=E3CF599A71F5A7C5338E807A9D4F1BC0"
+                                    data-alt="U By Emaar">
+                                    <source media="(max-width: 600px) and (orientation: portrait)"
+                                        srcset="./-/media/revonic/overview-pages/work-overview/ubyemaarworkoverview.jpg?cx=0&amp;cy=0&amp;cw=345&amp;ch=322&amp;hash=CEAA1C8E7E975B01606387C2142E81CF,./-/media/revonic/overview-pages/work-overview/ubyemaarworkoverview.jpg?cx=0&amp;cy=0&amp;cw=690&amp;ch=644&amp;hash=0030400944C329D0AF6BD3FD02146B1A 2x">
+                                    <source media="(max-width: 1200px) and (orientation: landscape)"
+                                        srcset="./-/media/revonic/overview-pages/work-overview/ubyemaarworkoverview.jpg?cx=0&amp;cy=0&amp;cw=210&amp;ch=420&amp;hash=AAA3F468ED25AFDB576AC05C5D30AAFC, ./-/media/revonic/overview-pages/work-overview/ubyemaarworkoverview.jpg?cx=0&amp;cy=0&amp;cw=420&amp;ch=840&amp;hash=22D62E66BCC30EC879B3B343ADA9BC0F 2x">
+                                    <source
+                                        srcset="./-/media/revonic/overview-pages/work-overview/ubyemaarworkoverview.jpg?cx=0&amp;cy=0&amp;cw=255&amp;ch=420&amp;hash=E3CF599A71F5A7C5338E807A9D4F1BC0, ./-/media/revonic/overview-pages/work-overview/ubyemaarworkoverview.jpg?cx=0&amp;cy=0&amp;cw=510&amp;ch=840&amp;hash=6E56D07CAA3BD294296BA906F57F2EB3 2x"
+                                        alt="U By Emaar">
+                                </picture>
+                            </div>
+                            <div class="rv-description-static text-center">
+                                <div class="rv-title">
+                                    <img data-src="./-/media/revonic/clients/ubyemaar/u_by_emmaar_white.svg"
+                                        class="rv-logo mb-20 lozad" alt="U By Emaar">
+                                    <h1 class="rv-h2-heading">+32%</h1>
+                                    <p class="rv-h2-text"> Increase in loyalty &amp; retention
+                                    </p>
+                                </div>
+                                <div class="rv-secondary-link rv-read-case">
+                                    <a href="/en/work/ubyemaar" class="rv-link" target="">Read case study</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="downloadformpop" class="rv-bg-dark contact-popup-gallery" style="display:none;">
+        <div class="cwarp">
+            <h3 class="rv-h2 rv-form-title m-0">Please fill in some details for us </h3>
+            <div class="rv-contact rv-component">
+                <div class="rv-contact-section">
+                    <div class="rv-form-container rv-component" data-comp-name="inputfields">
+                        <form class="rv-contact-form js-validate-download rv-component" data-comp-name="downloads"
+                            data-action="/api/downloads/download" id="downloadForm" name="download-form" method="post"
+                            autocomplete="off" data-link="" data-contact-email="" data-is-known-contact="False"
+                            data-download-key="">
+                            <input name="__RequestVerificationToken" type="hidden"
+                                value="LAiDTLSSDB3FY5by-LUuTO66ZMxdXX0S77Gfv_Dh-yZVhf50qur6Eism5aRICf34fw5Cv-n68jsR8FGFkZWm_PoAY-Xpvcnjyfd7NqbvBAg1" />
+                            <input type="hidden" value="FMI8jmP3opG0MRk+DjobAvk7rAktVrh++IJhlTu3nCEYQfYfWwH0EQ=="
+                                id="hdnGoalId" name="GoalId" />
+                            <input type="hidden" value="05RGubXoNYbPFhgXQ7o6vQ==" id="hdnGoalText" name="GoalText" />
+                            <input type="hidden" id="hdnDownloadPath" name="DownloadPath" />
+                            <div class="form-group rv-forms">
+                                <input type="text" id="firstName" name="FirstName"
+                                    class="form-control-plaintext rv-input js-input-focus" data-rule-fullname="true"
+                                    data-msg="Please enter your first name" autocomplete="off" required>
+                                <label for="firstname" class="rv-label">First name</label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+                            <div class="form-group rv-forms">
+                                <input type="text" id="lastName" name="LastName"
+                                    class="form-control-plaintext rv-input js-input-focus" data-rule-fullname="true"
+                                    data-msg="Please enter your last name" autocomplete="off" required>
+                                <label for="lastName" class="rv-label">Last name</label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+                            <div class="form-group rv-forms rv-email">
+                                <input id="email" name="Email" class="form-control-plaintext rv-input js-input-focus"
+                                    type="email" data-rule-validEmail="true"
+                                    data-msg-validEmail="Please enter a valid email address"
+                                    data-msg="Please enter your email" autocomplete="off" required>
+                                <label for="email" class="rv-label">Email</label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+                            <div class="form-group rv-forms">
+                                <input type="text" id="company-name" name="CompanyName"
+                                    class="form-control-plaintext rv-input js-input-focus" data-rule-fullname="true"
+                                    data-msg="Please enter company name" autocomplete="off" required>
+                                <label for="company-name" class="rv-label">Company name<span
+                                        class="text -danger"></label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+                            <div class="form-group rv-forms">
+                                <input id="job-title" name="JobTitle" data-rule-required="true"
+                                    class="form-control-plaintext rv-input js-input-focus" data-rule-jobtitle="true"
+                                    data-msg="Please enter job title" autocomplete="off" required>
+                                <label for="job-title" class="rv-label">Job Title<span class="text -danger"></label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+                            <div class="rv-message-btn rv-boldbutton rv-component">
+                                <button class="btn-bold rv-component" type="submit">
+                                    <span class="rv-text-fill" data-btn-label="Send message">Download</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="rv-footer rv-component rv-theme-dark" data-comp-name="footer">
+        <div class="container rv-container">
+            <div class="row rv-fullWidth rv-footer-content">
+                <div class="rv-contact-message col-lg-5 col-md-12">
+                    <h3 class="rv-h6 rv-default-label rv-skewed-line">SAY HI</h3>
+                    <h2 class="rv-h1 rv-title">GET IN TOUCH</h2>
+                    <h4 class="rv-h6 rv-primary-link float-left"><a id="gtm-letstalkfooter" href="/en/contact">CONTACT
+                            US.</a>
+                        <p />
+                    </h4>
+                </div>
+                <address class="rv-address-block rv-quick-contacts col-lg-2 col-md-4">
+                    <h6 class='rv-h6 rv-default-label'>Contact</h6>
+                    <ul class="rv-list-secondary">
+                        <li class="rv-list-item ">
+                            <a class="rv-link rv-nav-link " href="/en/contact" target="_self" id="GTM001">
+                                Email us </a>
+                        </li>
+                        <li class="rv-list-item ">
+                            <a class="rv-link rv-nav-link " href="tel:+971 4 225 0572" target="_self" id="">
+                                +971 4 225 0572 </a>
+                        </li>
+                    </ul>
+                </address>
+                <address class="rv-address-block rv-address col-lg-3 col-md-4">
+                    <h6 class='rv-h6 rv-default-label'>Visit</h6>
+                    <ul class="rv-list-secondary rv-regular">
+                        <li class="rv-list-item">Level 46, Tower B</li>
+                        <li class="rv-list-item">Business Central Towers</li>
+                        <li class="rv-list-item">Media City, Dubai</li>
+                    </ul>
+                    <ul class="rv-list-secondary">
+                        <li class="rv-list-item ">
+                            <a class="rv-link rv-nav-link "
+                                href="https://www.google.com/maps/place/REVONIC/@25.1004538,55.1673033,17z/data=!3m1!4b1!4m5!3m4!1s0x3e5f6bc02f741831:0x3fd4128e657a3681!8m2!3d25.100449!4d55.169492"
+                                target="_blank" id="">
+                                Get directions </a>
+                        </li>
+                    </ul>
+                </address>
+                <address class="rv-address-block rv-social-links col-lg-2 col-md-4">
+                    <h6 class='rv-h6 rv-default-label'>Follow</h6>
+                    <ul class="rv-list-secondary">
+                        <li class="rv-list-item ">
+                            <a class="rv-link rv-nav-link " href="https://www.facebook.com/indivirtualdubai/"
+                                target="_blank" id="">
+                                Facebook </a>
+                        </li>
+                        <li class="rv-list-item ">
+                            <a class="rv-link rv-nav-link " href="https://www.instagram.com/wearerevonic/"
+                                target="_blank" id="">
+                                Instagram </a>
+                        </li>
+                        <li class="rv-list-item ">
+                            <a class="rv-link rv-nav-link " href="https://www.linkedin.com/company/revonic/"
+                                target="_blank" id="">
+                                LinkedIn </a>
+                        </li>
+                        <li class="rv-list-item ">
+                            <a class="rv-link rv-nav-link " href="https://twitter.com/wearerevonic" target="_blank"
+                                id="">
+                                Twitter </a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+            <div class="rv-fullWidth rv-footer-links row">
+                <div class="rv-links col-md-6">
+                </div>
+                <span class="rv-copyrights col-md-6 ">&copy; 2021 Valtech_ Revonic</span>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/js/vendors~main.js?v=1.13" defer></script>
+    <script src="./assets/js/main.js?v=1.13" defer></script>
+</body>
+
+</html>

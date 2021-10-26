@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en" class="rv-html loading">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <style>
+        body,
+        html {
+            background: #121212
+        }
+
+        .loading .rv-header {
+            transform: translateX(-100%);
+            height: 50px;
+            overflow: hidden
+        }
+
+        .loading img,
+        .loading svg {
+            width: 0;
+            height: 0
+        }
+
+        .rv-sec-container {
+            position: relative;
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 0
+        }
+
+        .rv-hero-banner .lozad {
+            display: block;
+            min-height: 500px
+        }
+
+        .lozad {
+            display: block;
+            min-height: 1rem
+        }
+
+        img.lozad {
+            transition: opacity 1s linear
+        }
+
+        img.lozad:not([data-loaded]) {
+            position: relative;
+            max-width: 100%;
+            height: auto;
+            opacity: 0
+        }
+
+        img.lozad[data-loaded=true] {
+            transition: opacity 1s linear
+        }
+
+        .rv-casestudyfigures .rv-box .lozad {
+            display: block;
+            min-height: 260px
+        }
+
+        /* @media (max-width: 767px) {
+max-height: 260px
+} */
+        .rv-hero-banner .rv-banner-pictures .video-js {
+            height: 100vh;
+            width: 100%;
+            padding: 0;
+            z-index: 0;
+            min-height: 450px;
+            max-height: 1200px
+        }
+
+        .rv-roundbtn {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: transparent;
+            border: 0;
+            padding: 0;
+            cursor: pointer
+        }
+
+        .rv-forms .rv-input,
+        .rv-forms .rv-textarea {
+            font-family: Gilroy-Regular, sans-serif, Helvetica, Verdana, Arial;
+            font-weight: 500;
+            text-transform: none;
+            font-size: 18px;
+            font-size: 1.125rem;
+            line-height: 1.66667;
+            line-height: 30px;
+            padding: 10px 0;
+            position: relative;
+            background: 0 0;
+            color: #fff;
+            height: 45px;
+            width: 100%;
+            outline: 0;
+            border: none;
+            caret-color: #e44a21
+        }
+    </style>
+    <script>window.onload = function () { document.querySelector('html').classList.remove('loading') }</script>
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/icons/favicon.ico">
+    <link rel="manifest" href="./assets/manifest.json">
+    <link rel="prefetch" href="./assets/img/sprite/svg-sprite.svg" as="image" crossorigin="anonymous">
+    <link rel="preload" name="Gilroy-Bold" href="./assets/fonts/Gilroy-Bold.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload" name="Gilroy-Regular" href="./assets/fonts/Gilroy-Regular.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <!-- Order is important -->
+    <link rel="prefetch" name="Gilroy-Thin" href="./assets/fonts/Gilroy-Thin.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="prefetch" name="Gilroy-SemiBold" href="./assets/fonts/Gilroy-SemiBold.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="prefetch" name="Gilroy-SemiBoldItalic" href="./assets/fonts/Gilroy-SemiBoldItalic.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./assets/css/vendors~main.css" as="style"
+        onload="this.rel='stylesheet'; this.onload = null;">
+    <link rel="preload" href="./assets/css/main.css" as="style" onload="this.rel='stylesheet'; this.onload = null;">
+    <link rel="preload" href="./assets/css/dark.css" as="style" onload="this.rel='stylesheet'; this.onload = null;">
+    <link rel="preload" href="./assets/css/light.css" as="style" onload="this.rel='stylesheet'; this.onload = null;">
+    <script>
+        window.rv = {};
+        window.rv.resourcePath = './assets/';
+    </script>
+    <script>
+        /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+        /* This file is meant as a standalone workflow for
+        - testing support for link[rel=preload]
+        - enabling async CSS loading in browsers that do not support rel=preload
+        - applying rel preload css once loaded, whether supported or not.
+        */
+        !function (t) { "use strict"; t.loadCSS || (t.loadCSS = function () { }); var e = loadCSS.relpreload = {}; if (e.support = function () { var e; try { e = t.document.createElement("link").relList.supports("preload") } catch (t) { e = !1 } return function () { return e } }(), e.bindMediaToggle = function (t) { var e = t.media || "all"; function a() { t.addEventListener ? t.removeEventListener("load", a) : t.attachEvent && t.detachEvent("onload", a), t.setAttribute("onload", null), t.media = e } t.addEventListener ? t.addEventListener("load", a) : t.attachEvent && t.attachEvent("onload", a), setTimeout(function () { t.rel = "stylesheet", t.media = "only x" }), setTimeout(a, 3e3) }, e.poly = function () { if (!e.support()) for (var a = t.document.getElementsByTagName("link"), n = 0; n < a.length; n++) { var o = a[n]; "preload" !== o.rel || "style" !== o.getAttribute("as") || o.getAttribute("data-loadcss") || (o.setAttribute("data-loadcss", !0), e.bindMediaToggle(o)) } }, !e.support()) { e.poly(); var a = t.setInterval(e.poly, 500); t.addEventListener ? t.addEventListener("load", function () { e.poly(), t.clearInterval(a) }) : t.attachEvent && t.attachEvent("onload", function () { e.poly(), t.clearInterval(a) }) } "undefined" != typeof exports ? exports.loadCSS = loadCSS : t.loadCSS = loadCSS }("undefined" != typeof global ? global : this);
+    </script>
+    <noscript>
+        <link rel="stylesheet" href="./assets/css/vendors~main.css" type="text/css">
+        <link rel="stylesheet" href="./assets/css/main.css">
+    </noscript>
+    <link href="./assets/css/base.css?v=1.13" rel="stylesheet" />
+    <title>Content Services | Revonic</title>
+    <meta property="og:title" content="Content Services | Revonic" />
+    <meta name="keywords"
+        content="Agency, Digital Agency, Experience Design, Revonic, Sitecore, UI, UX, Website, Content Services" />
+    <meta name="description"
+        content="Leading with a content-first approach through strategy and multimedia production that supports functionality, is informative and converts users." />
+    <meta name="og:description"
+        content="Leading with a content-first approach through strategy and multimedia production that supports functionality, is informative and converts users." />
+    <meta name="og:image" content="https://www.revonic.com/./-/media/revonic/media/ogimage/rsz_web_and_mobile.jpg" />
+    <meta property="og:image:url"
+        content="https://www.revonic.com/./-/media/revonic/media/ogimage/rsz_web_and_mobile.jpg">
+    <meta property="og:url" content="https://www.revonic.com/en/Services/Content Services" />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.revonic.com/en/services/content-services" /><!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5K9P7WQ');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156926072-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-156926072-1');
+    </script>
+    <script>
+        // register service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(function (registration) { console.log('Service Worker Registered'); });
+            navigator.serviceWorker.ready.then(function (registration) { console.log('Service Worker Ready'); });
+        }
+    </script>
+</head>
+
+<body class="rv-body ">
+    <header class="rv-header rv-component rv-theme-dark" data-comp-name="header">
+        <div class="rv-wrapper">
+            <div class="rv-container container">
+                <a class="rv-logo rv-column" href="/"><span class="sr-only">Revonic</span><img
+                        src="./assets/img/svg/light.svg" class="rv-revonic-logo light-variant"
+                        alt="rv-revonic-logo" /></a>
+                <div class="rv-navigation">
+                    <a class="rv-nav-trigger rv-link" href="javascript:;">
+                        <span class="rv-label d-lg-inline-block">Navigation</span>
+                        <div class="rv-nav-icon">
+                            <div class="rv-icon-content">
+                                <span class="sr-only">Show / Hide Navigation</span>
+                                <span class="rv-animated-icon rv-nav-iconbar-top d-block"></span>
+                                <span class="rv-animated-icon rv-nav-iconbar-bottom d-block"></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="rv-caption d-none d-lg-block">
+                    <div class="rv-secondary-link">
+                        <a href="/en/contact" id="test" class="rv-link">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <nav class="rv-nav-menu is-hidden">
+                <div class="rv-container container rv-fullWidth">
+                    <div class="w-100">
+                        <ul class="rv-list-main-nav">
+                            <li class="rv-list-item row has-sub-menu">
+                                <a class="rv-h1 rv-link rv-nav-link col-lg-8" href="/en/work" target="_self" id="">
+                                    Work </a>
+                                <div class="rv-sub-menu col-lg-4 d-lg-block">
+                                    <h6 class="rv-h6 rv-default">Case Studies</h6>
+                                    <ul class="rv-list-primary">
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/emirates-airline" target="_self"
+                                                id="gtm-NavigationEmirates">
+                                                Emirates Airline </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/meraas" target="_self"
+                                                id="gtm-NavigationMeraas">
+                                                Meraas </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/ubyemaar" target="_self" id="">
+                                                U by Emaar </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/the-red-sea" target="_self" id="">
+                                                The Red Sea Project </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/mercedes-benz" target="_self" id="">
+                                                Mercedes-Benz </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/abu-dhabi-airport" target="_self"
+                                                id="">
+                                                Abu Dhabi Airport </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/noor-bank" target="_self" id="">
+                                                Noor Bank </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/work/emirates-nbd" target="_self" id="">
+                                                Emirates NBD </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="rv-list-item row has-sub-menu">
+                                <a class="rv-h1 rv-link rv-nav-link col-lg-8" href="/en/services" target="_self" id="">
+                                    Services </a>
+                                <div class="rv-sub-menu col-lg-4 d-lg-block">
+                                    <h6 class="rv-h6 rv-default">Our Services</h6>
+                                    <ul class="rv-list-primary">
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/digital-strategy" target="_self"
+                                                id="">
+                                                Digital Strategy </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/ux-and-ui-design" target="_self"
+                                                id="">
+                                                UX &amp; UI Design </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/user-research" target="_self"
+                                                id="">
+                                                User Research </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/user-testing" target="_self"
+                                                id="">
+                                                User Testing </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/data-analytics-and-insights"
+                                                target="_self" id="">
+                                                Data Analytics &amp; Insights </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/content-services" target="_self"
+                                                id="">
+                                                Content Services </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/web-and-mobile" target="_self"
+                                                id="">
+                                                Web &amp; Mobile Build </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="rv-list-item ">
+                                <a class="rv-h1 rv-link rv-nav-link " href="/en/news-and-events" target="_self" id="">
+                                    News &amp; Events </a>
+                            </li>
+                            <li class="rv-list-item ">
+                                <a class="rv-h1 rv-link rv-nav-link " href="/en/careers" target="_self" id="">
+                                    Careers </a>
+                            </li>
+                            <li class="rv-list-item ">
+                                <a class="rv-h1 rv-link rv-nav-link " href="/en/contact" target="_self" id="">
+                                    Contact </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5K9P7WQ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <section class="rv-sec-container headerpd rv-bg-light">
+        <h1 class="sr-only">CONTENT SERVICES</h1>
+        <h2 class="sr-only">Putting content first through strategy and multimedia production that drives engagement, is
+            informative and converts users.</h2>
+        <div class="rv-content-page-header rv-theme-light rv-component">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-4 rv-m-mb-section ">
+                        <h1 class="rv-main-heading">CONTENT</h1>
+                        <h2 class="rv-sub-heading">SERVICES</h2>
+                    </div>
+                    <div class="col-12 offset-md-1 col-md-7">
+                        <p class="rv-paragraph">
+                            Putting content first through strategy and multimedia production that drives engagement, is
+                            informative and converts users.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="rv-hockey-image rv-component" data-comp-name="animatesvg">
+                <svg class="rv-hockey-svg js-svg" viewBox="0 0 803 303" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(-1110.000000, -79.000000)" stroke="#E44A21">
+                            <g transform="translate(0.000000, 79.000000)">
+                                <g transform="translate(405.000000, -49.000000)">
+                                    <polyline points="705.333202 351.373997 1192.8631 351.373997 1557.35352 0">
+                                    </polyline>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </section>
+    <section class="rv-sec-container rv-bg-light">
+        <div class="rv-editorialicons rv-component rv-theme-light">
+            <div class="container rv-container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="richtext feature-richtext">
+                            <h2>Leading with a content-first approach</h2>
+                            <p style="text-align: left;">Content plays a fundamental role within user experience which
+                                is why we believe in a content-first approach to design. Instead of trying to fit
+                                content into designs, we put content, the core message of your site, first. This means
+                                users find the right information at the right place and can convert faster.</p>
+                            <p
+                                style="color: #29333d; background-color: #f9fafb; margin-top: 0.75rem; margin-bottom: 1.25rem;">
+                                Through content strategy, we&rsquo;re able to empathise with your users to define the
+                                content rulebook and understand what content they want to receive. We&rsquo;re also then
+                                best placed to produce the multimedia content required to create a multi-sensory
+                                experience for your users through professional video production and animations,
+                                copywriting and photography and graphic design.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="rv-jobcard-wrap">
+                                    <div class="rv-jobcardbox no-pd ">
+                                        <span class="rv-component" data-comp-name="changesvg">
+                                            <svg height="100px" width="100px" fill="#e24722"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
+                                                viewBox="0 0 68 68" style="enable-background:new 0 0 68 68;"
+                                                xml:space="preserve" class="rv-toSvg icon-strategy js-change-svg">
+                                                <style type="text/css">
+                                                    .st0 {
+                                                        fill: #e24722;
+                                                    }
+                                                </style>
+                                                <g>
+                                                    <g>
+                                                        <g>
+                                                            <path class="st0"
+                                                                d="M67,42.9C67,42.9,67,42.9,67,42.9l0-33.2c0-1.8-1.5-3.3-3.3-3.3h-0.6c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h0.6 C64.4,8.4,65,9,65,9.7v32.2H3V9.7C3,9,3.6,8.4,4.3,8.4h32.1c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H4.3C2.5,6.4,1,7.9,1,9.7v41.5 c0,1.8,1.5,3.3,3.3,3.3h21.4l-3.1,5.7h-3.3c-0.6,0-1,0.4-1,1V66c0,0.6,0.4,1,1,1h29.5c0.6,0,1-0.4,1-1v-4.9c0-0.6-0.4-1-1-1h-3.3 l-3.1-5.7h21.4c1.8,0,3.3-1.5,3.3-3.3L67,42.9C67,42.9,67,42.9,67,42.9z M47.8,65H20.3v-2.9c37.7,0,18.7,0,27.5,0V65z M24.9,60.1 l3.1-5.7H40l3.1,5.7H24.9z M63.7,52.4H4.3c-0.7,0-1.3-0.6-1.3-1.3v-7.2h62v7.2C65,51.8,64.4,52.4,63.7,52.4z">
+                                                            </path>
+                                                        </g>
+                                                    </g>
+                                                    <g>
+                                                        <g>
+                                                            <path class="st0"
+                                                                d="M34,44.8c-1.8,0-3.3,1.5-3.3,3.3c0,1.8,1.5,3.3,3.3,3.3c1.8,0,3.3-1.5,3.3-3.3C37.3,46.2,35.8,44.8,34,44.8z M34,49.3c-0.7,0-1.3-0.6-1.3-1.3c0-0.7,0.6-1.3,1.3-1.3c0.7,0,1.3,0.6,1.3,1.3C35.3,48.8,34.7,49.3,34,49.3z">
+                                                            </path>
+                                                        </g>
+                                                    </g>
+                                                    <g>
+                                                        <g>
+                                                            <path class="st0"
+                                                                d="M36.8,14.2c0-1.1-0.9-2-2-2H7.3c-1.1,0-2,0.9-2,2v16.7c0,1.1,0.9,2,2,2h27.6c1.1,0,2-0.9,2-2V14.2z M34.8,30.8l-27.5,0l0-16.7l27.5,0V30.8z">
+                                                            </path>
+                                                        </g>
+                                                    </g>
+                                                    <g>
+                                                        <g>
+                                                            <path class="st0"
+                                                                d="M32.7,35.9c-0.4-1.2-1.6-2-2.9-2c-1.3,0-2.5,0.9-2.9,2H6.3c-0.6,0-1,0.4-1,1s0.4,1,1,1h20.5 c0.4,1.3,1.6,2.2,3,2.2c1.4,0,2.6-0.9,3-2.2h3.1c0.6,0,1-0.4,1-1s-0.4-1-1-1H32.7z M29.7,38.1c-0.6,0-1.1-0.5-1.1-1.1 c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C30.9,37.6,30.4,38.1,29.7,38.1z">
+                                                            </path>
+                                                        </g>
+                                                    </g>
+                                                    <g>
+                                                        <g>
+                                                            <path class="st0"
+                                                                d="M17.5,27.6c0.3,0.2,0.7,0.2,1.1,0l7.3-4.3c0.3-0.2,0.5-0.5,0.5-0.9c0-0.4-0.2-0.7-0.5-0.9l-7.3-4.3 c-0.3-0.2-0.8-0.1-1.1,0.1c-0.3,0.2-0.4,0.5-0.4,0.8v8.5C17,27.1,17.1,27.4,17.5,27.6z M19,19.9l4.4,2.6L19,25.1V19.9z">
+                                                            </path>
+                                                        </g>
+                                                    </g>
+                                                    <g>
+                                                        <g>
+                                                            <path class="st0"
+                                                                d="M40.1,16.9h1.6l-1,4.4c-0.1,0.4,0.1,0.9,0.5,1.1c0.4,0.2,0.9,0.2,1.2-0.1l6.1-5.3H60c0.7,0,1.3-0.6,1.3-1.3 V2.3C61.3,1.6,60.7,1,60,1H40.1c-0.7,0-1.3,0.6-1.3,1.3v13.4C38.8,16.4,39.4,16.9,40.1,16.9z M40.8,3h18.5v11.9H48 c-0.2,0-0.5,0.1-0.7,0.2l-4,3.5l0.6-2.6c0.1-0.3,0-0.6-0.2-0.8c-0.2-0.2-0.5-0.4-0.8-0.4h-2.1V3z">
+                                                            </path>
+                                                        </g>
+                                                    </g>
+                                                    <g>
+                                                        <g>
+                                                            <path class="st0"
+                                                                d="M59.6,37.4c1.7-1.7,2.7-4,2.7-6.5c0-2.5-1-4.8-2.7-6.5c-0.4-0.4-1-0.4-1.4,0c-0.4,0.4-0.4,1,0,1.4 c1.4,1.4,2.1,3.2,2.1,5.1c0,1.9-0.8,3.7-2.1,5.1c-0.4,0.4-0.4,1,0,1.4C58.6,37.7,59.2,37.8,59.6,37.4z">
+                                                            </path>
+                                                        </g>
+                                                    </g>
+                                                    <g>
+                                                        <g>
+                                                            <path class="st0"
+                                                                d="M55.8,35c0.4,0.4,1,0.4,1.4,0c1.1-1.1,1.7-2.6,1.7-4.2c0-1.6-0.6-3-1.7-4.2c-0.4-0.4-1-0.4-1.4,0 c-0.4,0.4-0.4,1,0,1.4c0.7,0.7,1.1,1.7,1.1,2.7c0,1-0.4,2-1.1,2.7C55.4,34,55.4,34.6,55.8,35z">
+                                                            </path>
+                                                        </g>
+                                                    </g>
+                                                    <g>
+                                                        <g>
+                                                            <path class="st0"
+                                                                d="M42.6,39.4c0.6,0,1-0.4,1-1V34h2.5l7.1,4.8c0.3,0.2,0.7,0.2,1,0.1c0.3-0.2,0.5-0.5,0.5-0.9V23.8 c0-0.4-0.2-0.7-0.5-0.9c-0.3-0.2-0.7-0.2-1,0.1l-7.1,4.8h-5.2c-0.6,0-1,0.4-1,1V33c0,0.6,0.4,1,1,1h0.7v4.4 C41.6,38.9,42,39.4,42.6,39.4z M52.7,36.1l-5.3-3.6v-3.1l5.3-3.6V36.1z M41.8,29.8h3.5V32h-3.5V29.8z">
+                                                            </path>
+                                                        </g>
+                                                    </g>
+                                                    <g>
+                                                        <g>
+                                                            <path class="st0"
+                                                                d="M45.1,7.4h10c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1h-10c-0.6,0-1,0.4-1,1C44.1,7,44.5,7.4,45.1,7.4z">
+                                                            </path>
+                                                        </g>
+                                                    </g>
+                                                    <g>
+                                                        <g>
+                                                            <path class="st0"
+                                                                d="M45.1,12.1h10c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1h-10c-0.6,0-1,0.4-1,1C44.1,11.6,44.5,12.1,45.1,12.1z">
+                                                            </path>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <h2 class="rv-title rv-textdot">Creative Content Producers</h2>
+                                        <p class="rv-description">Content is produced with functionality and purpose in
+                                            mind to meet your business KPIs.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="rv-jobcard-wrap">
+                                    <div class="rv-jobcardbox no-pd ">
+                                        <span class="rv-component" data-comp-name="changesvg">
+                                            <svg width="63px" height="62px" viewBox="0 0 63 62" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                class="rv-toSvg icon-strategy js-change-svg">
+                                                <title>Group 10</title>
+                                                <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                    fill-rule="evenodd">
+                                                    <g id="Content-Services"
+                                                        transform="translate(-419.000000, -32.000000)" fill="#E6552F"
+                                                        fill-rule="nonzero">
+                                                        <g id="content-services-new"
+                                                            transform="translate(2.000000, 0.000000)">
+                                                            <g id="Group-10"
+                                                                transform="translate(417.000000, 32.000000)">
+                                                                <g id="Group-9"
+                                                                    transform="translate(49.000000, 39.500000) scale(-1, 1) translate(-49.000000, -39.500000) translate(35.000000, 17.000000)">
+                                                                    <path
+                                                                        d="M19.3792841,34.439934 L15.3808073,34.439934 C15.1157135,34.439934 14.8614979,34.3355274 14.6740765,34.149835 C14.2050974,33.6376661 13.8116764,33.0623218 13.5055217,32.4409241 C13.2831484,31.9876111 13.004061,31.5638193 12.6748382,31.179538 C12.4873602,30.9939016 12.3819497,30.7421071 12.3819497,30.479538 L12.3819497,26.5191419 C12.3819497,23.785059 14.6196735,21.5686469 17.3800457,21.5686469 C20.1404179,21.5686469 22.3781417,23.785059 22.3781417,26.5191419 L22.3781417,30.479538 C22.3781417,30.7421071 22.2727312,30.9939016 22.0852532,31.179538 C21.7560304,31.5638193 21.476943,31.9876111 21.2545697,32.4409241 C20.948415,33.0623218 20.5549939,33.6376661 20.0860149,34.149835 C19.8985935,34.3355274 19.6443779,34.439934 19.3792841,34.439934 Z M15.843631,32.459736 L18.9164604,32.459736 C19.1305097,32.1472691 19.3264191,31.8229817 19.5032369,31.4884488 C19.7533306,31.0017553 20.0463592,30.5379048 20.3789033,30.1023102 L20.3789033,26.5191419 C20.3789033,24.8786922 19.036269,23.5488449 17.3800457,23.5488449 C15.7238224,23.5488449 14.3811881,24.8786922 14.3811881,26.5191419 L14.3811881,30.1042904 C14.7137322,30.539885 15.0067608,31.0037355 15.2568545,31.490429 C15.4337387,31.8242866 15.6296471,32.1479113 15.843631,32.459736 L15.843631,32.459736 Z"
+                                                                        id="Shape-Copy"></path>
+                                                                    <path
+                                                                        d="M26.3766184,44.9184818 L8.38347296,44.9184818 C7.83139853,44.9184818 7.38385377,44.4751994 7.38385377,43.9283828 L7.38385377,39.390429 C7.35227285,38.3307868 7.76338998,37.3051678 8.52020435,36.5555612 C9.27701872,35.8059546 10.3124994,35.3987529 11.3823305,35.430033 L14.3811881,35.430033 L14.3811881,33.449835 L16.3804265,33.449835 L16.3804265,36.420132 C16.3804265,36.9669486 15.9328817,37.410231 15.3808073,37.410231 L11.3823305,37.410231 C10.8422827,37.3761446 10.3135267,37.5738007 9.93088064,37.9528025 C9.54823458,38.3318043 9.34867796,38.8555245 9.38309216,39.390429 L9.38309216,42.9382838 L25.3769992,42.9382838 L25.3769992,39.390429 C25.4117464,38.8554374 25.2122973,38.3315208 24.8295741,37.9524426 C24.4468509,37.5733644 23.9178967,37.3758148 23.3777609,37.410231 L19.3792841,37.410231 C18.8272096,37.410231 18.3796649,36.9669486 18.3796649,36.420132 L18.3796649,33.449835 L20.3789033,33.449835 L20.3789033,35.430033 L23.3777609,35.430033 C24.447592,35.3987529 25.4830727,35.8059546 26.239887,36.5555612 C26.9967014,37.3051678 27.4078185,38.3307868 27.3762376,39.390429 L27.3762376,43.9283828 C27.3762376,44.4751994 26.9286929,44.9184818 26.3766184,44.9184818 Z"
+                                                                        id="Path-Copy"></path>
+                                                                    <path
+                                                                        d="M17.3800457,39.390429 C17.1149519,39.390373 16.8607363,39.2860225 16.6733149,39.10033 L14.6740765,37.120132 L16.0875381,35.720132 L17.3800457,37.00033 L18.6725533,35.720132 L20.0860149,37.120132 L18.0867765,39.10033 C17.8993551,39.2860225 17.6451395,39.390373 17.3800457,39.390429 L17.3800457,39.390429 Z"
+                                                                        id="Path-Copy-2"></path>
+                                                                    <path
+                                                                        d="M7.70406512,9.32079208 L6.29060358,7.92079208 L9.58234958,4.66039604 L6.29060358,1.4 L7.70406512,-3.69482223e-14 L11.7025419,3.96039604 C12.0927752,4.34702956 12.0927752,4.97376252 11.7025419,5.36039604 L7.70406512,9.32079208 Z"
+                                                                        id="Path-Copy-3"></path>
+                                                                    <path
+                                                                        d="M9.30578827,27.4326733 L0.999619193,27.4326733 C0.447544757,27.4326733 -2.81210952e-13,26.9893908 -2.81210952e-13,26.4425743 L-2.81210952e-13,4.66039604 C-2.81210952e-13,4.11357946 0.447544757,3.67029703 0.999619193,3.67029703 L10.9958111,3.67029703 L10.9958111,5.65049505 L1.99923839,5.65049505 L1.99923839,25.4524752 L9.30578827,25.4524752 L9.30578827,27.4326733 Z"
+                                                                        id="Path-Copy-4"></path>
+                                                                </g>
+                                                                <g id="Group-9-Copy"
+                                                                    transform="translate(0.000000, 17.000000)">
+                                                                    <path
+                                                                        d="M19.3792841,34.439934 L15.3808073,34.439934 C15.1157135,34.439934 14.8614979,34.3355274 14.6740765,34.149835 C14.2050974,33.6376661 13.8116764,33.0623218 13.5055217,32.4409241 C13.2831484,31.9876111 13.004061,31.5638193 12.6748382,31.179538 C12.4873602,30.9939016 12.3819497,30.7421071 12.3819497,30.479538 L12.3819497,26.5191419 C12.3819497,23.785059 14.6196735,21.5686469 17.3800457,21.5686469 C20.1404179,21.5686469 22.3781417,23.785059 22.3781417,26.5191419 L22.3781417,30.479538 C22.3781417,30.7421071 22.2727312,30.9939016 22.0852532,31.179538 C21.7560304,31.5638193 21.476943,31.9876111 21.2545697,32.4409241 C20.948415,33.0623218 20.5549939,33.6376661 20.0860149,34.149835 C19.8985935,34.3355274 19.6443779,34.439934 19.3792841,34.439934 Z M15.843631,32.459736 L18.9164604,32.459736 C19.1305097,32.1472691 19.3264191,31.8229817 19.5032369,31.4884488 C19.7533306,31.0017553 20.0463592,30.5379048 20.3789033,30.1023102 L20.3789033,26.5191419 C20.3789033,24.8786922 19.036269,23.5488449 17.3800457,23.5488449 C15.7238224,23.5488449 14.3811881,24.8786922 14.3811881,26.5191419 L14.3811881,30.1042904 C14.7137322,30.539885 15.0067608,31.0037355 15.2568545,31.490429 C15.4337387,31.8242866 15.6296471,32.1479113 15.843631,32.459736 L15.843631,32.459736 Z"
+                                                                        id="Shape-Copy"></path>
+                                                                    <path
+                                                                        d="M26.3766184,44.9184818 L8.38347296,44.9184818 C7.83139853,44.9184818 7.38385377,44.4751994 7.38385377,43.9283828 L7.38385377,39.390429 C7.35227285,38.3307868 7.76338998,37.3051678 8.52020435,36.5555612 C9.27701872,35.8059546 10.3124994,35.3987529 11.3823305,35.430033 L14.3811881,35.430033 L14.3811881,33.449835 L16.3804265,33.449835 L16.3804265,36.420132 C16.3804265,36.9669486 15.9328817,37.410231 15.3808073,37.410231 L11.3823305,37.410231 C10.8422827,37.3761446 10.3135267,37.5738007 9.93088064,37.9528025 C9.54823458,38.3318043 9.34867796,38.8555245 9.38309216,39.390429 L9.38309216,42.9382838 L25.3769992,42.9382838 L25.3769992,39.390429 C25.4117464,38.8554374 25.2122973,38.3315208 24.8295741,37.9524426 C24.4468509,37.5733644 23.9178967,37.3758148 23.3777609,37.410231 L19.3792841,37.410231 C18.8272096,37.410231 18.3796649,36.9669486 18.3796649,36.420132 L18.3796649,33.449835 L20.3789033,33.449835 L20.3789033,35.430033 L23.3777609,35.430033 C24.447592,35.3987529 25.4830727,35.8059546 26.239887,36.5555612 C26.9967014,37.3051678 27.4078185,38.3307868 27.3762376,39.390429 L27.3762376,43.9283828 C27.3762376,44.4751994 26.9286929,44.9184818 26.3766184,44.9184818 Z"
+                                                                        id="Path-Copy"></path>
+                                                                    <path
+                                                                        d="M17.3800457,39.390429 C17.1149519,39.390373 16.8607363,39.2860225 16.6733149,39.10033 L14.6740765,37.120132 L16.0875381,35.720132 L17.3800457,37.00033 L18.6725533,35.720132 L20.0860149,37.120132 L18.0867765,39.10033 C17.8993551,39.2860225 17.6451395,39.390373 17.3800457,39.390429 L17.3800457,39.390429 Z"
+                                                                        id="Path-Copy-2"></path>
+                                                                    <path
+                                                                        d="M7.70406512,9.32079208 L6.29060358,7.92079208 L9.58234958,4.66039604 L6.29060358,1.4 L7.70406512,-3.69482223e-14 L11.7025419,3.96039604 C12.0927752,4.34702956 12.0927752,4.97376252 11.7025419,5.36039604 L7.70406512,9.32079208 Z"
+                                                                        id="Path-Copy-3"></path>
+                                                                    <path
+                                                                        d="M9.30578827,27.4326733 L0.999619193,27.4326733 C0.447544757,27.4326733 -2.81210952e-13,26.9893908 -2.81210952e-13,26.4425743 L-2.81210952e-13,4.66039604 C-2.81210952e-13,4.11357946 0.447544757,3.67029703 0.999619193,3.67029703 L10.9958111,3.67029703 L10.9958111,5.65049505 L1.99923839,5.65049505 L1.99923839,25.4524752 L9.30578827,25.4524752 L9.30578827,27.4326733 Z"
+                                                                        id="Path-Copy-4"></path>
+                                                                </g>
+                                                                <g id="noun_creative-design_2227343"
+                                                                    transform="translate(16.000000, 0.000000)">
+                                                                    <path
+                                                                        d="M9.4365951,16.7435757 C9.62088891,16.9373488 9.86159919,17.0322581 10.1023095,17.0322581 C10.3430197,17.0322581 10.58373,16.9373488 10.7680238,16.7435757 C11.1366114,16.3560296 11.1366114,15.7312103 10.7680238,15.3436641 L5.27305952,9.5700173 L9.10185737,5.54428275 L14.3598725,11.0727473 C14.7284601,11.4602934 15.3227136,11.4602934 15.6913012,11.0727473 C16.0598888,10.6852011 16.0598888,10.0603818 15.6913012,9.67283567 L7.83436732,1.41177528 C6.96931476,0.502228181 5.81465765,0 4.58853967,0 C3.36242169,0 2.21152568,0.502228181 1.34271202,1.41177528 C0.477659457,2.32132238 0,3.53537003 0,4.82455418 C0,6.11373833 0.477659457,7.32383142 1.34271202,8.23733307 L9.4365951,16.7435757 Z M2.67414074,2.8116869 C3.69715942,1.73604859 5.47991992,1.73604859 6.5029386,2.8116869 L7.77418975,4.14832568 L3.9453919,8.17406023 L2.67414074,6.83742145 C2.1626314,6.2996023 1.88054904,5.58382828 1.88054904,4.82455418 C1.88054904,4.06528008 2.1626314,3.34950606 2.67414074,2.8116869 Z"
+                                                                        id="Shape"></path>
+                                                                    <path
+                                                                        d="M32.9207622,31.6087167 L28.8599455,22.0610846 C28.8599455,22.0610846 28.8599455,22.0610846 28.8599455,22.0610846 L28.8520374,22.0451386 C28.828313,21.9893278 28.7848184,21.949463 28.7531859,21.9016252 C28.7175994,21.8458144 28.689921,21.7820306 28.6424723,21.7341928 L23.2175058,16.2607486 C22.8300082,15.870073 22.2052672,15.870073 21.8177696,16.2607486 C21.430272,16.6514241 21.430272,17.2812888 21.8177696,17.6719644 L26.542868,22.4358142 L22.5215918,26.4940561 L17.6581014,21.5906793 C17.2706038,21.2000038 16.6458627,21.2000038 16.2583651,21.5906793 C15.8708675,21.9813549 15.8708675,22.6112195 16.2583651,23.0018951 L21.8217236,28.6108798 C21.8810345,28.6706771 21.9522075,28.7025689 22.0233806,28.7464203 C22.0629211,28.7703392 22.0905995,28.8062176 22.1340942,28.8221635 L22.1420023,28.82615 C22.1420023,28.82615 22.1420023,28.82615 22.1459563,28.82615 L31.6238315,32.9202703 C31.7503613,32.9760811 31.8808452,33 32.0113291,33 C32.2683428,33 32.5214025,32.9003379 32.7111972,32.7089866 C32.9958893,32.4179732 33.0789245,31.9834463 32.9207622,31.6087167 Z M24.2495148,27.5664207 L27.6065094,24.1779082 L30.1252438,30.1058117 L24.2495148,27.5664207 Z"
+                                                                        id="Shape"></path>
+                                                                    <path
+                                                                        d="M31.8860582,1.1115873 C30.400153,-0.374406493 27.9821447,-0.374406493 26.4728394,1.13498878 L11.7151884,16.9114845 C11.7112884,16.9153848 11.7073884,16.9153848 11.7034884,16.919285 C11.6995883,16.9231853 11.6956883,16.9309858 11.6917883,16.934886 L7.35497332,21.5722787 C6.43457014,21.6307824 4.36366297,21.9076999 3.09225858,23.1791801 C1.82865421,24.4428599 1.61025345,25.9600557 1.39575271,27.4304485 C1.20855206,28.7292304 1.01355139,30.0709151 0.139948365,31.5257069 C-0.0433522689,31.8299261 -0.0472522824,32.2121503 0.132148338,32.5163695 C0.307648945,32.8166884 0.627450051,33 0.974551252,33 C0.982351279,33 0.990151306,33 0.997951333,33 C1.23585216,32.9960998 6.90257176,32.8244889 9.81588183,29.9071048 C11.0872862,28.6356245 11.3641872,26.5645938 11.4226874,25.6441357 L31.8821582,6.50172751 C33.3719633,5.01573372 33.3719633,2.59758109 31.8860582,1.1115873 Z M10.4905842,23.8500225 L9.14897953,22.5083378 L12.4210908,19.0137172 L13.9888963,20.5816162 L10.4905842,23.8500225 Z M2.59695686,30.8938671 C3.03375837,29.7237932 3.18975891,28.6395248 3.32625939,27.7112662 C3.52516007,26.3500803 3.66556056,25.363318 4.47286335,24.5598673 C5.19436585,23.8383217 6.60227072,23.588706 7.41347352,23.526302 L9.47658066,25.5895323 C9.41418044,26.3968832 9.16457958,27.8087723 8.44307708,28.5303179 C6.92597184,30.0436134 4.30126276,30.6520518 2.59695686,30.8938671 Z M30.5327535,5.10153913 L15.4124012,19.247732 L13.7548955,17.5901274 L27.8768443,2.49227444 C28.6022468,1.76682866 29.7839509,1.76682866 30.5093534,2.49227444 C31.2347559,3.21381999 31.2347559,4.39559458 30.5327535,5.10153913 Z"
+                                                                        id="Shape"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <h2 class="rv-title rv-textdot">Design Collaboration</h2>
+                                        <p class="rv-description">We challenge aesthetical design to function cohesively
+                                            with content design, while putting content and user guidance first.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="rv-jobcard-wrap">
+                                    <div class="rv-jobcardbox no-pd ">
+                                        <span class="rv-component" data-comp-name="changesvg">
+                                            <svg width="61px" height="61px" viewBox="0 0 61 61" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                class="rv-toSvg icon-strategy js-change-svg">
+                                                <title>Group 35</title>
+                                                <defs>
+                                                    <polygon id="path-1"
+                                                        points="0 0.000137931034 19.31 0.000137931034 19.31 19.3104828 0 19.3104828">
+                                                    </polygon>
+                                                    <polygon id="path-3"
+                                                        points="-0.000344827586 0.000137931034 19.31 0.000137931034 19.31 19.3103448 -0.000344827586 19.3103448">
+                                                    </polygon>
+                                                </defs>
+                                                <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                    fill-rule="evenodd">
+                                                    <g id="Content-Services"
+                                                        transform="translate(-800.000000, -32.000000)">
+                                                        <g id="content-services-new"
+                                                            transform="translate(2.000000, 0.000000)">
+                                                            <g id="Group-35"
+                                                                transform="translate(798.000000, 32.000000)">
+                                                                <g id="Group-3"
+                                                                    transform="translate(0.000000, 36.551724)">
+                                                                    <mask id="mask-2" fill="white">
+                                                                        <use xlink:href="#path-1"></use>
+                                                                    </mask>
+                                                                    <g id="Clip-2"></g>
+                                                                    <path
+                                                                        d="M9.65482759,17.2415172 C5.47206897,17.2415172 2.06862069,13.8373793 2.06862069,9.65531034 C2.06862069,5.47255172 5.47206897,2.06910345 9.65482759,2.06910345 C13.8375862,2.06910345 17.2410345,5.47255172 17.2410345,9.65531034 C17.2410345,13.8373793 13.8375862,17.2415172 9.65482759,17.2415172 M9.65482759,0.000137931034 C4.32310345,0.000137931034 -0.000344827586,4.32289655 -0.000344827586,9.65531034 C-0.000344827586,14.9870345 4.32310345,19.3104828 9.65482759,19.3104828 C14.9872414,19.3104828 19.31,14.9870345 19.31,9.65531034 C19.31,4.32289655 14.9872414,0.000137931034 9.65482759,0.000137931034"
+                                                                        id="Fill-1" fill="#E24722" mask="url(#mask-2)">
+                                                                    </path>
+                                                                </g>
+                                                                <g id="Group-6"
+                                                                    transform="translate(20.689655, 40.689655)">
+                                                                    <mask id="mask-4" fill="white">
+                                                                        <use xlink:href="#path-3"></use>
+                                                                    </mask>
+                                                                    <g id="Clip-5"></g>
+                                                                    <path
+                                                                        d="M9.65482759,17.2415172 C5.47206897,17.2415172 2.06862069,13.8373793 2.06862069,9.65531034 C2.06862069,5.47255172 5.47206897,2.06910345 9.65482759,2.06910345 C13.8375862,2.06910345 17.2410345,5.47255172 17.2410345,9.65531034 C17.2410345,13.8373793 13.8375862,17.2415172 9.65482759,17.2415172 M9.65482759,0.000137931034 C4.32310345,0.000137931034 -0.000344827586,4.32289655 -0.000344827586,9.65531034 C-0.000344827586,14.9870345 4.32310345,19.3104828 9.65482759,19.3104828 C14.9872414,19.3104828 19.31,14.9870345 19.31,9.65531034 C19.31,4.32289655 14.9872414,0.000137931034 9.65482759,0.000137931034"
+                                                                        id="Fill-4" fill="#E24722" mask="url(#mask-4)">
+                                                                    </path>
+                                                                </g>
+                                                                <path
+                                                                    d="M30.3444828,2.06910345 C38.3306897,2.06910345 44.8272414,8.56634483 44.8272414,16.5518621 C44.8272414,24.5373793 38.3306897,31.0346207 30.3444828,31.0346207 C22.3589655,31.0346207 15.8617241,24.5373793 15.8617241,16.5518621 C15.8617241,8.56634483 22.3589655,2.06910345 30.3444828,2.06910345 M30.3444828,33.1035862 C39.4872414,33.1035862 46.8962069,25.693931 46.8962069,16.5518621 C46.8962069,7.41117241 39.4872414,0.000137931034 30.3444828,0.000137931034 C21.2024138,0.000137931034 13.7927586,7.41117241 13.7927586,16.5518621 C13.7927586,25.693931 21.2024138,33.1035862 30.3444828,33.1035862"
+                                                                    id="Fill-7" fill="#E24722"></path>
+                                                                <path
+                                                                    d="M51.0341379,53.7932414 C46.8513793,53.7932414 43.447931,50.3891034 43.447931,46.2070345 C43.447931,42.0242759 46.8513793,38.6208276 51.0341379,38.6208276 C55.2168966,38.6208276 58.6203448,42.0242759 58.6203448,46.2070345 C58.6203448,50.3891034 55.2168966,53.7932414 51.0341379,53.7932414 M51.0341379,36.5518621 C45.7024138,36.5518621 41.3789655,40.8746207 41.3789655,46.2070345 C41.3789655,51.5387586 45.7024138,55.8622069 51.0341379,55.8622069 C56.3665517,55.8622069 60.6893103,51.5387586 60.6893103,46.2070345 C60.6893103,40.8746207 56.3665517,36.5518621 51.0341379,36.5518621"
+                                                                    id="Fill-9" fill="#E24722"></path>
+                                                                <path
+                                                                    d="M30.3855862,37.5923448 C30.9566207,37.5923448 31.420069,38.0557931 31.420069,38.6268276 C31.420069,39.1978621 30.9566207,39.6613103 30.3855862,39.6613103 C29.8145517,39.6613103 29.3511034,39.1978621 29.3511034,38.6268276 C29.3511034,38.0557931 29.8145517,37.5923448 30.3855862,37.5923448"
+                                                                    id="Fill-11" fill="#E24722"></path>
+                                                                <path
+                                                                    d="M30.3855862,34.144069 C30.9566207,34.144069 31.420069,34.6075172 31.420069,35.1785517 C31.420069,35.7495862 30.9566207,36.2130345 30.3855862,36.2130345 C29.8145517,36.2130345 29.3511034,35.7495862 29.3511034,35.1785517 C29.3511034,34.6075172 29.8145517,34.144069 30.3855862,34.144069"
+                                                                    id="Fill-13" fill="#E24722"></path>
+                                                                <path
+                                                                    d="M44.8097241,35.8796552 C45.3807586,35.8796552 45.8442069,36.3431034 45.8442069,36.9141379 C45.8442069,37.4858621 45.3807586,37.9486207 44.8097241,37.9486207 C44.2386897,37.9486207 43.7752414,37.4858621 43.7752414,36.9141379 C43.7752414,36.3431034 44.2386897,35.8796552 44.8097241,35.8796552"
+                                                                    id="Fill-15" fill="#E24722"></path>
+                                                                <path
+                                                                    d="M42.593931,33.2388966 C43.1649655,33.2388966 43.6284138,33.7016552 43.6284138,34.2733793 C43.6284138,34.8444138 43.1649655,35.3078621 42.593931,35.3078621 C42.0222069,35.3078621 41.5594483,34.8444138 41.5594483,34.2733793 C41.5594483,33.7016552 42.0222069,33.2388966 42.593931,33.2388966"
+                                                                    id="Fill-17" fill="#E24722"></path>
+                                                                <path
+                                                                    d="M40.3768276,30.5975172 C40.9478621,30.5975172 41.4113103,31.0602759 41.4113103,31.632 C41.4113103,32.2030345 40.9478621,32.6664828 40.3768276,32.6664828 C39.8051034,32.6664828 39.3423448,32.2030345 39.3423448,31.632 C39.3423448,31.0602759 39.8051034,30.5975172 40.3768276,30.5975172"
+                                                                    id="Fill-19" fill="#E24722"></path>
+                                                                <path
+                                                                    d="M15.9533103,35.9598621 C16.5243448,35.9598621 16.9877931,36.4233103 16.9877931,36.9943448 C16.9877931,37.566069 16.5243448,38.0288276 15.9533103,38.0288276 C15.3815862,38.0288276 14.9188276,37.566069 14.9188276,36.9943448 C14.9188276,36.4233103 15.3815862,35.9598621 15.9533103,35.9598621"
+                                                                    id="Fill-21" fill="#E24722"></path>
+                                                                <path
+                                                                    d="M18.1697931,33.3184138 C18.7408276,33.3184138 19.2042759,33.7818621 19.2042759,34.3528966 C19.2042759,34.9246207 18.7408276,35.3873793 18.1697931,35.3873793 C17.598069,35.3873793 17.1353103,34.9246207 17.1353103,34.3528966 C17.1353103,33.7818621 17.598069,33.3184138 18.1697931,33.3184138"
+                                                                    id="Fill-23" fill="#E24722"></path>
+                                                                <path
+                                                                    d="M20.3862759,30.6762759 C20.9573103,30.6762759 21.4207586,31.1397241 21.4207586,31.7107586 C21.4207586,32.2824828 20.9573103,32.7452414 20.3862759,32.7452414 C19.8152414,32.7452414 19.3517931,32.2824828 19.3517931,31.7107586 C19.3517931,31.1397241 19.8152414,30.6762759 20.3862759,30.6762759"
+                                                                    id="Fill-25" fill="#E24722"></path>
+                                                                <path
+                                                                    d="M51.0287586,45.2250345 C50.3418621,45.2236552 49.786,44.6657241 49.7846207,43.9802069 C49.786,43.2926207 50.3418621,42.7381379 51.0287586,42.7367586 C51.7142759,42.7381379 52.2715172,43.2933103 52.2735862,43.9802069 C52.2715172,44.6664138 51.7142759,45.2236552 51.0287586,45.2250345 M54.0846207,46.096069 C53.9701379,46.0222759 53.8411724,45.9643448 53.7218621,45.8995172 C54.1087586,45.3567586 54.3418621,44.6981379 54.3425517,43.9808966 C54.3418621,42.1512414 52.8584138,40.6691724 51.0287586,40.6684828 C49.1991034,40.6691724 47.7163448,42.1512414 47.7156552,43.9808966 C47.7163448,44.6974483 47.9494483,45.3567586 48.3363448,45.8995172 C48.2142759,45.9643448 48.088069,46.0222759 47.9735862,46.096069 C47.1115172,46.6484828 46.4315172,47.4498621 46.103931,48.4202069 C45.9225517,48.9615862 46.2135862,49.5484828 46.7549655,49.7298621 C47.2956552,49.9126207 47.8825517,49.6215862 48.0646207,49.0802069 C48.2204828,48.6146897 48.5715172,48.1705517 49.0908276,47.8367586 C49.6073793,47.5050345 50.2804828,47.2933103 51.028069,47.294 C51.7749655,47.2933103 52.4494483,47.5050345 52.966,47.8367586 C53.4846207,48.1698621 53.8356552,48.6146897 53.9915172,49.0802069 C54.1742759,49.6215862 54.7604828,49.9126207 55.3018621,49.7298621 C55.8432414,49.5477931 56.1342759,48.9615862 55.9528966,48.4202069 C55.6253103,47.4498621 54.9466897,46.6484828 54.0846207,46.096069"
+                                                                    id="Fill-27" fill="#E24722"></path>
+                                                                <path
+                                                                    d="M30.3606897,49.3629655 C29.6737931,49.3615862 29.1172414,48.8036552 29.1165517,48.1181379 C29.1172414,47.4305517 29.6737931,46.876069 30.3606897,46.8746897 C31.0462069,46.876069 31.6034483,47.4312414 31.6048276,48.1181379 C31.6034483,48.8043448 31.0468966,49.3615862 30.3606897,49.3629655 M33.4158621,50.234 C33.3006897,50.1602069 33.1731034,50.1022759 33.0524138,50.0374483 C33.4406897,49.4946897 33.6731034,48.836069 33.6737931,48.1188276 C33.6731034,46.2891724 32.1903448,44.8071034 30.3606897,44.8064138 C28.5303448,44.8071034 27.0475862,46.2891724 27.0475862,48.1188276 C27.0475862,48.8353793 27.2813793,49.4946897 27.6675862,50.0374483 C27.5462069,50.1022759 27.42,50.1602069 27.3055172,50.234 C26.4434483,50.7864138 25.7634483,51.5877931 25.4358621,52.5581379 C25.2537931,53.0995172 25.5448276,53.6864138 26.0862069,53.8677931 C26.6275862,54.0505517 27.2144828,53.7595172 27.3965517,53.2181379 C27.5517241,52.7526207 27.9027586,52.3084828 28.4227586,51.9746897 C28.9393103,51.6429655 29.6131034,51.4312414 30.36,51.431931 C31.1068966,51.4312414 31.7813793,51.6429655 32.2972414,51.9746897 C32.817931,52.3077931 33.1675862,52.7526207 33.3234483,53.2181379 C33.5068966,53.7595172 34.0924138,54.0505517 34.6337931,53.8677931 C35.1751724,53.6857241 35.4662069,53.0995172 35.2841379,52.5581379 C34.957931,51.5877931 34.277931,50.7864138 33.4158621,50.234"
+                                                                    id="Fill-29" fill="#E24722"></path>
+                                                                <path
+                                                                    d="M9.67103448,45.2250345 C8.98413793,45.2236552 8.42758621,44.6657241 8.42689655,43.9802069 C8.42758621,43.2926207 8.98413793,42.7381379 9.67103448,42.7367586 C10.3565517,42.7381379 10.9137931,43.2933103 10.9151724,43.9802069 C10.9137931,44.6664138 10.3572414,45.2236552 9.67103448,45.2250345 M12.7262069,46.096069 C12.6110345,46.0222759 12.4834483,45.9643448 12.3627586,45.8995172 C12.7510345,45.3567586 12.9834483,44.6981379 12.9841379,43.9808966 C12.9834483,42.1512414 11.5006897,40.6691724 9.67103448,40.6684828 C7.84068966,40.6691724 6.35793103,42.1512414 6.35793103,43.9808966 C6.35793103,44.6974483 6.59172414,45.3567586 6.97793103,45.8995172 C6.85655172,45.9643448 6.73034483,46.0222759 6.61586207,46.096069 C5.7537931,46.6484828 5.0737931,47.4498621 4.7462069,48.4202069 C4.56413793,48.9615862 4.85517241,49.5484828 5.39655172,49.7298621 C5.93793103,49.9126207 6.52482759,49.6215862 6.70689655,49.0802069 C6.86206897,48.6146897 7.21310345,48.1705517 7.73310345,47.8367586 C8.24965517,47.5050345 8.92344828,47.2933103 9.67034483,47.294 C10.4172414,47.2933103 11.0917241,47.5050345 11.6075862,47.8367586 C12.1282759,48.1698621 12.477931,48.6146897 12.6337931,49.0802069 C12.8172414,49.6215862 13.4027586,49.9126207 13.9441379,49.7298621 C14.4855172,49.5477931 14.7765517,48.9615862 14.5944828,48.4202069 C14.2682759,47.4498621 13.5882759,46.6484828 12.7262069,46.096069"
+                                                                    id="Fill-31" fill="#E24722"></path>
+                                                                <path
+                                                                    d="M26.1634483,9.63234483 C27.2227586,8.602 28.6896552,7.93096552 30.3441379,7.93096552 C32,7.93096552 33.4662069,8.602 34.5262069,9.63234483 C35.5862069,10.6626897 36.2096552,12.0351034 36.2075913,13.3882069 C36.2048276,14.3578621 36.0068966,15.0006207 35.7268966,15.5288966 C35.3082759,16.3178621 34.622069,16.8792414 33.8786207,17.5909655 C33.5137931,17.9482069 33.1344828,18.3495862 32.8351724,18.8723448 C32.5337931,19.3916552 32.3386207,20.0385517 32.3427586,20.7530345 L32.3413793,21.3792414 L28.28,21.3792414 L28.28,20.7530345 C28.2813793,20.2792414 28.2006897,19.8337241 28.0551724,19.4371724 C27.8,18.7378621 27.3710345,18.2137241 26.9517241,17.779931 C26.3158621,17.1288966 25.6882759,16.6254483 25.2462069,16.0026897 C24.8082759,15.3792414 24.4903448,14.664069 24.4820638,13.3882069 C24.48,12.0351034 25.102069,10.662 26.1634483,9.63234483 M32.2172414,25.5702759 C32.1393103,25.6468276 32.0434483,25.6888966 31.9344828,25.6895862 L28.6827586,25.6895862 C28.5724138,25.6895862 28.477931,25.6468276 28.4,25.5702759 C28.3234483,25.4930345 28.28,25.3971724 28.28,25.2875172 L28.28,23.4482069 L32.3386207,23.4482069 L32.3365517,25.2861379 C32.3358621,25.3971724 32.2931034,25.4930345 32.2172414,25.5702759 M25.3158621,19.0682069 C25.6234483,19.3709655 25.8524138,19.6378621 25.9924138,19.8902759 C26.1310345,20.1461379 26.2082759,20.382 26.2103448,20.7530345 L26.2103448,25.2875172 C26.2151724,26.6530345 27.3165517,27.7544138 28.682069,27.7585517 L31.9337931,27.7585517 C33.2993103,27.7544138 34.4,26.6530345 34.4041379,25.2875172 L34.4110345,20.7544138 C34.4117241,20.5082069 34.4489655,20.3233793 34.5110345,20.1509655 C34.6206897,19.8544138 34.8324138,19.5668276 35.1703448,19.2233793 C35.6675862,18.7082069 36.4310345,18.124069 37.1006897,17.2164828 C37.7737931,16.3102759 38.2841379,15.0488966 38.2752887,13.3888966 C38.2724138,11.404069 37.3868966,9.53165517 35.9675862,8.14958621 C34.5503448,6.76751724 32.5689655,5.862 30.3441379,5.862 C28.1206897,5.862 26.1386207,6.76751724 24.72,8.14889655 C23.3013793,9.53027586 22.4165517,11.4033793 22.4137729,13.3882069 C22.4110345,14.6502759 22.6910345,15.6813103 23.1262069,16.5013103 C23.7827586,17.7337241 24.7124138,18.459931 25.3158621,19.0682069"
+                                                                    id="Fill-33" fill="#E24722"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <h2 class="rv-title rv-textdot">Strategic Alignment</h2>
+                                        <p class="rv-description">Closing the gap between discovery and practical
+                                            implementation guidelines to drive digital messaging consistency.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rv-image-gallery rv-component rv-theme-light" data-comp-name="imagegallery">
+            <div class="container rv-fullwidth-container">
+                <div class="rv-slider-container rv-fullwidth noGutter">
+                    <div class="js-slider rv-img-slider">
+                        <div class="rv-img-slide-wrap">
+                            <div class="rv-img-slide">
+                                <picture class="lozad" data-class="rv-bgimage objectfit"
+                                    data-iesrc="./-/media/revonic/media/image-galleries/services/content-services.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=A8540CBF2A50F143E917694508870C21"
+                                    data-alt="">
+                                    <source media="(max-width: 600px) and (orientation: portrait)"
+                                        srcset="./-/media/revonic/media/image-galleries/services/content-services.jpg?cx=0&amp;cy=0&amp;cw=345&amp;ch=195&amp;hash=1F8FFAF102DA529A89900059E0142EA8, ./-/media/revonic/media/image-galleries/services/content-services.jpg?cx=0&amp;cy=0&amp;cw=690&amp;ch=390&amp;hash=412B0E39E92D64CD06D5DD99FDE7E785 2x">
+                                    <source media="(max-width: 1200px) and (orientation: landscape)"
+                                        srcset="./-/media/revonic/media/image-galleries/services/content-services.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=A8540CBF2A50F143E917694508870C21, ./-/media/revonic/media/image-galleries/services/content-services.jpg?cx=0&amp;cy=0&amp;cw=2232&amp;ch=1256&amp;hash=5893C354A8E57DBA1923ACF7CF7AD6EC 2x">
+                                    <source media="(min-width: 320px)"
+                                        srcset="./-/media/revonic/media/image-galleries/services/content-services.jpg?cx=0&amp;cy=0&amp;cw=1116&amp;ch=628&amp;hash=A8540CBF2A50F143E917694508870C21, ./-/media/revonic/media/image-galleries/services/content-services.jpg?cx=0&amp;cy=0&amp;cw=2232&amp;ch=1256&amp;hash=5893C354A8E57DBA1923ACF7CF7AD6EC 2x">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="rv-sec-container rv-bg-dark">
+        <div class="rv-editorialcontent rv-component rv-editorialcontent-text rv-theme-dark rv-left">
+            <div class="rv-component js-contentSticky contentSticky rv-text-content" data-comp-name="stickycontent">
+                <div class="rv-component" data-comp-name="animateline">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-5">
+                                <div class="rv-text-section1 rv-sticky js-contentChild">
+                                    <h4 class="rv-h1-heading">Key functions</h4>
+                                    <p class="rv-paragraph">
+                                    </p>
+                                    <div class="rv-component" data-comp-name="tabs">
+                                        <ul class="rv-tab-section">
+                                            <li class="is--active">
+                                                <a href="javascript:;"
+                                                    id="customtab-baeadeeb-036a-4029-afbc-78fc8a214b94-1"
+                                                    class="btn-tab rv-textdot rv-btn-override js-tabit">Content
+                                                    strategy</a>
+                                            </li>
+                                            <li class="">
+                                                <a href="javascript:;"
+                                                    id="customtab-baeadeeb-036a-4029-afbc-78fc8a214b94-2"
+                                                    class="btn-tab rv-textdot rv-btn-override js-tabit">Content
+                                                    production</a>
+                                            </li>
+                                            <li class="">
+                                                <a href="javascript:;"
+                                                    id="customtab-baeadeeb-036a-4029-afbc-78fc8a214b94-3"
+                                                    class="btn-tab rv-textdot rv-btn-override js-tabit">Management</a>
+                                            </li>
+                                            <li class="">
+                                                <a href="javascript:;"
+                                                    id="customtab-baeadeeb-036a-4029-afbc-78fc8a214b94-4"
+                                                    class="btn-tab rv-textdot rv-btn-override js-tabit">Content
+                                                    design</a>
+                                            </li>
+                                            <li class="">
+                                                <a href="javascript:;"
+                                                    id="customtab-baeadeeb-036a-4029-afbc-78fc8a214b94-5"
+                                                    class="btn-tab rv-textdot rv-btn-override js-tabit">Maintenance</a>
+                                            </li>
+                                            <li class="">
+                                                <a href="javascript:;"
+                                                    id="customtab-baeadeeb-036a-4029-afbc-78fc8a214b94-6"
+                                                    class="btn-tab rv-textdot rv-btn-override js-tabit">Consultancy</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="select-container rv-component" data-comp-name="select2">
+                                        <select class="js-select js-selecttabs" data-exclass="dropdown-style"
+                                            name="tab-select2">
+                                            <option value="customtab-baeadeeb-036a-4029-afbc-78fc8a214b94-1">Content
+                                                strategy</option>
+                                            <option value="customtab-baeadeeb-036a-4029-afbc-78fc8a214b94-2">Content
+                                                production</option>
+                                            <option value="customtab-baeadeeb-036a-4029-afbc-78fc8a214b94-3">Management
+                                            </option>
+                                            <option value="customtab-baeadeeb-036a-4029-afbc-78fc8a214b94-4">Content
+                                                design</option>
+                                            <option value="customtab-baeadeeb-036a-4029-afbc-78fc8a214b94-5">Maintenance
+                                            </option>
+                                            <option value="customtab-baeadeeb-036a-4029-afbc-78fc8a214b94-6">Consultancy
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="rv-content">
+                                        <div class="rv-line-image1 rv-component" data-comp-name="animatesvg">
+                                            <svg class="rv-line-svg js-svg" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 143 112"
+                                                width="143" height="112" version="1.1">
+                                                <g>
+                                                    <line style="fill:none;stroke-miterlimit:10;" x1="0.4" y1="111.6"
+                                                        x2="142" y2="0.5" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-7 rv-order-first rv-text-content">
+                                <div class="rv-img-section">
+                                    <div class="rv-line-reveal rv-line-a js-animateline">
+                                        <div class="rv-line"></div>
+                                    </div>
+                                    <div class="d-flex casestudyimagecontainer">
+                                        <div
+                                            class="customtab-baeadeeb-036a-4029-afbc-78fc8a214b94-1 is--active tab-animate content strategy">
+                                            <h4 class="rv-h1-heading">Content strategy</h4>
+                                            <div class="rv-description">
+                                                <p
+                                                    style="margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; text-align: left;">
+                                                    Content strategy plays a fundamental role within XD strategy because
+                                                    we truly believe in a content first approach to design. Through
+                                                    content strategy, we&rsquo;re able to empathise with your users to
+                                                    define the content rulebook and understand what content they want to
+                                                    receive, how it should look and where it should live. </p>
+                                                <p>&nbsp;</p>
+                                                <p>Our goal is to u<span style="text-align: center;">nderstand what we
+                                                        need to achieve through content in order for the business to
+                                                        grow and meet KPIs, discover what the audience needs in terms of
+                                                        content in order to engage with the business, and create purpose
+                                                        for content, set all directions for new content production and
+                                                        create strategic alignment.&nbsp;</span></p>
+                                                <p>&nbsp;</p>
+                                                <p>&nbsp;</p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="customtab-baeadeeb-036a-4029-afbc-78fc8a214b94-2 content production">
+                                            <h4 class="rv-h1-heading">Content production</h4>
+                                            <div class="rv-description">
+                                                <p><span>Our in-house content production capabilities include web
+                                                        copywriting, UX writing, video production, photography, graphic
+                                                        design, and audio engineering. Before starting any productions,
+                                                        we work with you to draft detailed briefs and production
+                                                        guidelines. We produce all new content based on your content
+                                                        strategy to ensure consistency and correct messaging.</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="customtab-baeadeeb-036a-4029-afbc-78fc8a214b94-3 management">
+                                            <h4 class="rv-h1-heading">Management</h4>
+                                            <div class="rv-description">
+                                                <p><span>We integrate your preferred CMS into our processes and systems
+                                                        to migrate, manage and update your content as required. Once
+                                                        your content goes live, we monitor your content to ensure it
+                                                        adheres to the predefined guidelines we created during the
+                                                        strategy phase and provide benchmarking and analytics reports to
+                                                        show the performance of your existing and new content over
+                                                        time.</span></p>
+                                                <p><span>Through our content management tools, we also implement
+                                                        optimised workflows, create groups structures for different
+                                                        contributor levels, establish approval processes, content
+                                                        calendars and feedback processes. This sets you up for optimised
+                                                        content management that anyone can be involved in and we also
+                                                        provide training on how to use these toold and how these
+                                                        processes work.&nbsp;</span></p>
+                                                <p><span>&nbsp;</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="customtab-baeadeeb-036a-4029-afbc-78fc8a214b94-4 content design">
+                                            <h4 class="rv-h1-heading">Content design</h4>
+                                            <div class="rv-description">
+                                                <p><span>We make it as easy as possible for users to find the content
+                                                        they need by working with UX &amp; UI designers to structure
+                                                        your interface and where content should sit, based on
+                                                        quantitative and qualitative insights. A website might look and
+                                                        function well however if your users cannot find the right
+                                                        content at the right time during their journey, they will not
+                                                        convert.</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="customtab-baeadeeb-036a-4029-afbc-78fc8a214b94-5 maintenance">
+                                            <h4 class="rv-h1-heading">Maintenance</h4>
+                                            <div class="rv-description">
+                                                <p><span>Through our reactive content governance, we ensure your brand
+                                                        stays on point and consistent across all new content published
+                                                        on your platforms. We analyse new content based on the
+                                                        predefined content strategy and track content performance
+                                                        through data analytics.</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="customtab-baeadeeb-036a-4029-afbc-78fc8a214b94-6 consultancy">
+                                            <h4 class="rv-h1-heading">Consultancy</h4>
+                                            <div class="rv-description">
+                                                <p><span>We provide ongoing content consultancy to assist with content
+                                                        updates and the creation of new content requirements through any
+                                                        of our in-house content production capabilities.</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rv-m-content ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="rv-sec-container rv-bg-light">
+        <div class="rv-cta-text-banner rv-component" data-comp-name="ctatextbanner">
+            <div class="rv-container container">
+                <div class="row">
+                    <div class="rv-text-wrapper col-12 d-inline-block ">
+                        <h2 class="rv-h1 rv-title rv-static-text">Let&#39;s work together on</h2>
+                        <h2 class="rv-h1 rv-title rv-animated-text">
+                            <div id="rv-vertical-flip-text" class="rv-vertical-flip-text" data-duration="500"
+                                data-delay="2500">
+                                <span class="is-hidden">UX &amp; UI Design</span>
+                                <span class="is-hidden">Web &amp; Mobile</span>
+                                <span class="is-hidden">User Testing</span>
+                                <span class="is-hidden">User Research</span>
+                                <span class="is-hidden">Data Analysis</span>
+                                <span class="is-hidden">Digital Strategy</span>
+                                <span class="is-hidden">Content Services</span>
+                            </div>
+                        </h2>
+                    </div>
+                    <div class="col">
+                        <div onclick="window.location='/en/contact'"
+                            class="rv-contactus-wrap rv-boldbutton rv-component" data-comp-name="boldbutton">
+                            <button class="btn-bold rv-link">
+                                <span data-btn-label='LET&#39;S TALK' class="rv-text-fill" id="">LET&#39;S TALK</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="rv-sec-container rv-bg-light">
+        <div class="rv-crosssell rv-component rv-theme-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-5 col-xl-4">
+                        <div class="rv-description-box">
+                            <div class="rv-title mt-3 mb-2">
+                                <div class="rv-line-label rv-line-cut">
+                                    <span class="rv-line-cut-tr"></span> RELATED
+                                </div>
+                                <h1 class="rv-h1-heading"> CASE STUDIES
+                                </h1>
+                            </div>
+                            <p class="rv-description mb-20"> See how we have applied our Content Services expertise to
+                                our projects.
+                            </p>
+                            <a href="/en/work" target="" class="btn-withline mb-1">
+                                view all work.
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 offset-lg-1 offset-xl-2">
+                        <div class="rv-card">
+                            <div class="rv-card-anchor">
+                                <a href="/en/work/noor-bank" class="rv-card-anchor" target=""></a>
+                            </div>
+                            <div class="rv-box">
+                                <div class="rv-bgoverlay"></div>
+                                <picture class="lozad" data-class="rv-bgimage objectfit"
+                                    data-iesrc="./-/media/revonic/overview-pages/work-overview/noorbankoverviewhomepage.jpg?cx=0&amp;cy=0&amp;cw=255&amp;ch=420&amp;hash=1B9676E9F19556028D3C23B440D73F7D"
+                                    data-alt="Noor Bank">
+                                    <source media="(max-width: 600px) and (orientation: portrait)"
+                                        srcset="./-/media/revonic/overview-pages/work-overview/noorbankoverviewhomepage.jpg?cx=0&amp;cy=0&amp;cw=345&amp;ch=322&amp;hash=5FE01FE46B000B0B110E32BBFA8C5339,./-/media/revonic/overview-pages/work-overview/noorbankoverviewhomepage.jpg?cx=0&amp;cy=0&amp;cw=690&amp;ch=644&amp;hash=F0DE990C51A9E239970BC38878947C62 2x">
+                                    <source media="(max-width: 1200px) and (orientation: landscape)"
+                                        srcset="./-/media/revonic/overview-pages/work-overview/noorbankoverviewhomepage.jpg?cx=0&amp;cy=0&amp;cw=210&amp;ch=420&amp;hash=A209D251D68E6637FC813A6258E94073, ./-/media/revonic/overview-pages/work-overview/noorbankoverviewhomepage.jpg?cx=0&amp;cy=0&amp;cw=420&amp;ch=840&amp;hash=B0F6DAA8C75D9E46F13289A51D3CE8FD 2x">
+                                    <source
+                                        srcset="./-/media/revonic/overview-pages/work-overview/noorbankoverviewhomepage.jpg?cx=0&amp;cy=0&amp;cw=255&amp;ch=420&amp;hash=1B9676E9F19556028D3C23B440D73F7D, ./-/media/revonic/overview-pages/work-overview/noorbankoverviewhomepage.jpg?cx=0&amp;cy=0&amp;cw=510&amp;ch=840&amp;hash=B5B86689386FD95CDE83272801908CE6 2x"
+                                        alt="Noor Bank">
+                                </picture>
+                            </div>
+                            <div class="rv-description-static text-center">
+                                <div class="rv-title">
+                                    <img data-src="./-/media/revonic/clients/noor-bank/noor_white.svg"
+                                        class="rv-logo mb-20 lozad" alt="Noor Bank">
+                                    <h1 class="rv-h2-heading">+15&#160;</h1>
+                                    <p class="rv-h2-text"> New products
+                                    </p>
+                                </div>
+                                <div class="rv-secondary-link rv-read-case">
+                                    <a href="/en/work/noor-bank" class="rv-link" target="">Read case study</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 ">
+                        <div class="rv-card">
+                            <div class="rv-card-anchor">
+                                <a href="/en/work/emirates-airline" class="rv-card-anchor" target=""></a>
+                            </div>
+                            <div class="rv-box">
+                                <div class="rv-bgoverlay"></div>
+                                <picture class="lozad" data-class="rv-bgimage objectfit"
+                                    data-iesrc="./-/media/revonic/overview-pages/work-overview/emirates-540-x-400-work-overview.jpg?cx=0&amp;cy=0&amp;cw=255&amp;ch=420&amp;hash=EEC62DAB32FE7F3119F9991835D6A223"
+                                    data-alt="Emirates">
+                                    <source media="(max-width: 600px) and (orientation: portrait)"
+                                        srcset="./-/media/revonic/overview-pages/work-overview/emirates-540-x-400-work-overview.jpg?cx=0&amp;cy=0&amp;cw=345&amp;ch=322&amp;hash=224E08C1CA35146D0BE1C09C9F236185,./-/media/revonic/overview-pages/work-overview/emirates-540-x-400-work-overview.jpg?cx=0&amp;cy=0&amp;cw=690&amp;ch=644&amp;hash=E5C464E87DBECAAF648095476DFF137E 2x">
+                                    <source media="(max-width: 1200px) and (orientation: landscape)"
+                                        srcset="./-/media/revonic/overview-pages/work-overview/emirates-540-x-400-work-overview.jpg?cx=0&amp;cy=0&amp;cw=210&amp;ch=420&amp;hash=B7D61650F7950C2752B8831A312124B4, ./-/media/revonic/overview-pages/work-overview/emirates-540-x-400-work-overview.jpg?cx=0&amp;cy=0&amp;cw=420&amp;ch=840&amp;hash=73E3540C72FCF895BFF9AE89EF587AAF 2x">
+                                    <source
+                                        srcset="./-/media/revonic/overview-pages/work-overview/emirates-540-x-400-work-overview.jpg?cx=0&amp;cy=0&amp;cw=255&amp;ch=420&amp;hash=EEC62DAB32FE7F3119F9991835D6A223, ./-/media/revonic/overview-pages/work-overview/emirates-540-x-400-work-overview.jpg?cx=0&amp;cy=0&amp;cw=510&amp;ch=840&amp;hash=9150420A46422E312FDFA32C83C1A238 2x"
+                                        alt="Emirates">
+                                </picture>
+                            </div>
+                            <div class="rv-description-static text-center">
+                                <div class="rv-title">
+                                    <img data-src="./-/media/revonic/case-studies/case-study-preview-cards/emirates-logo.svg?h=240&amp;w=500&amp;hash=B3F74A28BE31EEAF5BFE51BC7DAF5015"
+                                        class="rv-logo mb-20 lozad" alt="Emirates">
+                                    <h1 class="rv-h2-heading">200k+</h1>
+                                    <p class="rv-h2-text"> Playlists created ahead of travel
+                                    </p>
+                                </div>
+                                <div class="rv-secondary-link rv-read-case">
+                                    <a href="/en/work/emirates-airline" class="rv-link" target="">Read case study</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="downloadformpop" class="rv-bg-dark contact-popup-gallery" style="display:none;">
+        <div class="cwarp">
+            <h3 class="rv-h2 rv-form-title m-0">Please fill in some details for us </h3>
+            <div class="rv-contact rv-component">
+                <div class="rv-contact-section">
+                    <div class="rv-form-container rv-component" data-comp-name="inputfields">
+                        <form class="rv-contact-form js-validate-download rv-component" data-comp-name="downloads"
+                            data-action="/api/downloads/download" id="downloadForm" name="download-form" method="post"
+                            autocomplete="off" data-link="" data-contact-email="" data-is-known-contact="False"
+                            data-download-key="">
+                            <input name="__RequestVerificationToken" type="hidden"
+                                value="bZ6MRfr_c-Z8dYhlpvaEzFTgDd3jfn0cNBH0LyWn-2J0zLj2O1FTj6B76RCVdGxJQfwaIpUX4KzOidFnfluNrkjTXRrUGVI_BT5egyrQ8v41" />
+                            <input type="hidden" value="FMI8jmP3opG0MRk+DjobAvk7rAktVrh++IJhlTu3nCEYQfYfWwH0EQ=="
+                                id="hdnGoalId" name="GoalId" />
+                            <input type="hidden" value="05RGubXoNYbPFhgXQ7o6vQ==" id="hdnGoalText" name="GoalText" />
+                            <input type="hidden" id="hdnDownloadPath" name="DownloadPath" />
+                            <div class="form-group rv-forms">
+                                <input type="text" id="firstName" name="FirstName"
+                                    class="form-control-plaintext rv-input js-input-focus" data-rule-fullname="true"
+                                    data-msg="Please enter your first name" autocomplete="off" required>
+                                <label for="firstname" class="rv-label">First name</label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+                            <div class="form-group rv-forms">
+                                <input type="text" id="lastName" name="LastName"
+                                    class="form-control-plaintext rv-input js-input-focus" data-rule-fullname="true"
+                                    data-msg="Please enter your last name" autocomplete="off" required>
+                                <label for="lastName" class="rv-label">Last name</label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+                            <div class="form-group rv-forms rv-email">
+                                <input id="email" name="Email" class="form-control-plaintext rv-input js-input-focus"
+                                    type="email" data-rule-validEmail="true"
+                                    data-msg-validEmail="Please enter a valid email address"
+                                    data-msg="Please enter your email" autocomplete="off" required>
+                                <label for="email" class="rv-label">Email</label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+                            <div class="form-group rv-forms">
+                                <input type="text" id="company-name" name="CompanyName"
+                                    class="form-control-plaintext rv-input js-input-focus" data-rule-fullname="true"
+                                    data-msg="Please enter company name" autocomplete="off" required>
+                                <label for="company-name" class="rv-label">Company name<span
+                                        class="text -danger"></label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+                            <div class="form-group rv-forms">
+                                <input id="job-title" name="JobTitle" data-rule-required="true"
+                                    class="form-control-plaintext rv-input js-input-focus" data-rule-jobtitle="true"
+                                    data-msg="Please enter job title" autocomplete="off" required>
+                                <label for="job-title" class="rv-label">Job Title<span class="text -danger"></label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+                            <div class="rv-message-btn rv-boldbutton rv-component">
+                                <button class="btn-bold rv-component" type="submit">
+                                    <span class="rv-text-fill" data-btn-label="Send message">Download</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="rv-footer rv-component rv-theme-dark" data-comp-name="footer">
+        <div class="container rv-container">
+            <div class="row rv-fullWidth rv-footer-content">
+                <div class="rv-contact-message col-lg-5 col-md-12">
+                    <h3 class="rv-h6 rv-default-label rv-skewed-line">SAY HI</h3>
+                    <h2 class="rv-h1 rv-title">GET IN TOUCH</h2>
+                    <h4 class="rv-h6 rv-primary-link float-left"><a id="gtm-letstalkfooter" href="/en/contact">CONTACT
+                            US.</a>
+                        <p />
+                    </h4>
+                </div>
+                <address class="rv-address-block rv-quick-contacts col-lg-2 col-md-4">
+                    <h6 class='rv-h6 rv-default-label'>Contact</h6>
+                    <ul class="rv-list-secondary">
+                        <li class="rv-list-item ">
+                            <a class="rv-link rv-nav-link " href="/en/contact" target="_self" id="GTM001">
+                                Email us </a>
+                        </li>
+                        <li class="rv-list-item ">
+                            <a class="rv-link rv-nav-link " href="tel:+971 4 225 0572" target="_self" id="">
+                                +971 4 225 0572 </a>
+                        </li>
+                    </ul>
+                </address>
+                <address class="rv-address-block rv-address col-lg-3 col-md-4">
+                    <h6 class='rv-h6 rv-default-label'>Visit</h6>
+                    <ul class="rv-list-secondary rv-regular">
+                        <li class="rv-list-item">Level 46, Tower B</li>
+                        <li class="rv-list-item">Business Central Towers</li>
+                        <li class="rv-list-item">Media City, Dubai</li>
+                    </ul>
+                    <ul class="rv-list-secondary">
+                        <li class="rv-list-item ">
+                            <a class="rv-link rv-nav-link "
+                                href="https://www.google.com/maps/place/REVONIC/@25.1004538,55.1673033,17z/data=!3m1!4b1!4m5!3m4!1s0x3e5f6bc02f741831:0x3fd4128e657a3681!8m2!3d25.100449!4d55.169492"
+                                target="_blank" id="">
+                                Get directions </a>
+                        </li>
+                    </ul>
+                </address>
+                <address class="rv-address-block rv-social-links col-lg-2 col-md-4">
+                    <h6 class='rv-h6 rv-default-label'>Follow</h6>
+                    <ul class="rv-list-secondary">
+                        <li class="rv-list-item ">
+                            <a class="rv-link rv-nav-link " href="https://www.facebook.com/indivirtualdubai/"
+                                target="_blank" id="">
+                                Facebook </a>
+                        </li>
+                        <li class="rv-list-item ">
+                            <a class="rv-link rv-nav-link " href="https://www.instagram.com/wearerevonic/"
+                                target="_blank" id="">
+                                Instagram </a>
+                        </li>
+                        <li class="rv-list-item ">
+                            <a class="rv-link rv-nav-link " href="https://www.linkedin.com/company/revonic/"
+                                target="_blank" id="">
+                                LinkedIn </a>
+                        </li>
+                        <li class="rv-list-item ">
+                            <a class="rv-link rv-nav-link " href="https://twitter.com/wearerevonic" target="_blank"
+                                id="">
+                                Twitter </a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+            <div class="rv-fullWidth rv-footer-links row">
+                <div class="rv-links col-md-6">
+                </div>
+                <span class="rv-copyrights col-md-6 ">&copy; 2021 Valtech_ Revonic</span>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/js/vendors~main.js?v=1.13" defer></script>
+    <script src="./assets/js/main.js?v=1.13" defer></script>
+</body>
+
+</html>
