@@ -23,6 +23,10 @@
             height: 0
         }
 
+        .fa-2x {
+            font-size: 1.5rem !important;
+        }
+
         .rv-sec-container {
             position: relative;
             max-width: 1920px;
@@ -102,6 +106,10 @@
             border: none;
             caret-color: #e44a21
         }
+
+        .filter-gray {
+            filter: grayscale(1);
+        }
     </style>
     <script>window.onload = function () { document.querySelector('html').classList.remove('loading') }</script>
 
@@ -147,7 +155,10 @@
         <link rel="stylesheet" href="./assets/css/main.css">
     </noscript>
 
-
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="./assets/css/base.css?v=1.12" rel="stylesheet" />
 
     <title>Digital Experience Design Agency</title>
@@ -241,7 +252,7 @@
                         <ul class="rv-list-main-nav">
                             <!-- <li class="rv-list-item  row has-sub-menu">
 
-                                <a class="rv-h1 rv-link rv-nav-link col-lg-8" href="/en/work" target="_self" id="">
+                                <a class="rv-h1 rv-link rv-nav-link col-lg-8" href="#" target="_self" id="">
                                     Work </a>
                                 <div class="rv-sub-menu col-lg-4 d-lg-block">
                                     <h6 class="rv-h6 rv-default">Case Studies</h6>
@@ -249,38 +260,38 @@
 
                                     <ul class="rv-list-primary">
                                         <li class="rv-list-item rv-secondary-link">
-                                            <a class="rv-h6 rv-link" href="/en/work/emirates-airline" target="_self"
+                                            <a class="rv-h6 rv-link" href="#" target="_self"
                                                 id="gtm-NavigationEmirates">
                                                 Emirates Airline </a>
                                         </li>
                                         <li class="rv-list-item rv-secondary-link">
-                                            <a class="rv-h6 rv-link" href="/en/work/meraas" target="_self"
+                                            <a class="rv-h6 rv-link" href="#" target="_self"
                                                 id="gtm-NavigationMeraas">
                                                 Meraas </a>
                                         </li>
                                         <li class="rv-list-item rv-secondary-link">
-                                            <a class="rv-h6 rv-link" href="/en/work/ubyemaar" target="_self" id="">
+                                            <a class="rv-h6 rv-link" href="#" target="_self" id="">
                                                 U by Emaar </a>
                                         </li>
                                         <li class="rv-list-item rv-secondary-link">
-                                            <a class="rv-h6 rv-link" href="/en/work/the-red-sea" target="_self" id="">
+                                            <a class="rv-h6 rv-link" href="#" target="_self" id="">
                                                 The Red Sea Project </a>
                                         </li>
                                         <li class="rv-list-item rv-secondary-link">
-                                            <a class="rv-h6 rv-link" href="/en/work/mercedes-benz" target="_self" id="">
+                                            <a class="rv-h6 rv-link" href="#" target="_self" id="">
                                                 Mercedes-Benz </a>
                                         </li>
                                         <li class="rv-list-item rv-secondary-link">
-                                            <a class="rv-h6 rv-link" href="/en/work/abu-dhabi-airport" target="_self"
+                                            <a class="rv-h6 rv-link" href="#" target="_self"
                                                 id="">
                                                 Abu Dhabi Airport </a>
                                         </li>
                                         <li class="rv-list-item rv-secondary-link">
-                                            <a class="rv-h6 rv-link" href="/en/work/noor-bank" target="_self" id="">
+                                            <a class="rv-h6 rv-link" href="#" target="_self" id="">
                                                 Noor Bank </a>
                                         </li>
                                         <li class="rv-list-item rv-secondary-link">
-                                            <a class="rv-h6 rv-link" href="/en/work/emirates-nbd" target="_self" id="">
+                                            <a class="rv-h6 rv-link" href="#" target="_self" id="">
                                                 Emirates NBD </a>
                                         </li>
                                     </ul>
@@ -373,7 +384,7 @@
         <div class="rv-hero-banner  rv-component rv-theme-dark" data-comp-name="herobanner">
             <div class="rv-banner-pictures">
                 <div class="rv-bgoverlay"></div>
-                <picture class="lozad" data-class="objectfit"
+                <picture class="lozad filter-gray" data-class="objectfit"
                     data-iesrc="./-/media/revonic/banners/home/banner-01.jpg?cx=0&amp;cy=0&amp;cw=1440&amp;ch=810&amp;hash=473C12B8DC9CFF27B2FC11B34943DFA8"
                     data-alt="Experience">
                     <source media="(max-width: 600px) and (orientation: portrait)"
@@ -398,9 +409,10 @@
                             data-video-poster="./-/media/revonic/banners/home/banner-01.jpg?h=810&amp;w=1440&amp;hash=79318E49A6264C1C21A6FDF349A61781"
                             data-video-url="SM4BppTELVQ">
                             <div class="rv-roundbox">
-                                <svg viewBox="0 0 14 25" class="rv-toSvg">
+                                <!-- <svg viewBox="0 0 14 25" class="rv-toSvg">
                                     <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-chevron-right"></use>
-                                </svg>
+                                </svg> -->
+                                <i style="color: #fff;" class="fas fa-chevron-right fa-2x"></i>
                             </div>
                             <div class="rv-secondary-link secondary-link--small">
                                 <a href="javascript:;" id="gtm-PlayShowReelCtaBannerHome" class="rv-link">Play
@@ -436,8 +448,8 @@
                     <div class="row">
                         <div class="col-md-12 col-lg-6">
                             <div class="rv-card">
-                                <a href="/en/work/emirates-airline" target="" class="rv-card-anchor"
-                                    id="gtm-EmiratesboxHome" title="Emirates"></a>
+                                <a href="#" target="" class="rv-card-anchor" id="gtm-EmiratesboxHome"
+                                    title="Emirates"></a>
                                 <div class="rv-box rv-cornercut">
                                     <div class="rv-bgoverlay"></div>
                                     <picture class="lozad" data-class="rv-bgimage objectfit"
@@ -460,16 +472,15 @@
                                         </p>
                                     </div>
                                     <div class="rv-secondary-link rv-read-case">
-                                        <a href="/en/work/emirates-airline" class="rv-link" target=""
-                                            id="gtm-EmiratesHome" title="Emirates">Read case study</a>
+                                        <a href="#" class="rv-link" target="" id="gtm-EmiratesHome"
+                                            title="Emirates">Read case study</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
                             <div class="rv-card">
-                                <a href="/en/work/meraas" target="" class="rv-card-anchor" id="gtm-MeraasboxHome"
-                                    title="Meraas"></a>
+                                <a href="#" target="" class="rv-card-anchor" id="gtm-MeraasboxHome" title="Meraas"></a>
                                 <div class="rv-box ">
                                     <div class="rv-bgoverlay"></div>
                                     <picture class="lozad" data-class="rv-bgimage objectfit"
@@ -492,16 +503,15 @@
                                         </p>
                                     </div>
                                     <div class="rv-secondary-link rv-read-case">
-                                        <a href="/en/work/meraas" class="rv-link" target="" id="gtm-MeraasHome"
-                                            title="Meraas">Read case study</a>
+                                        <a href="#" class="rv-link" target="" id="gtm-MeraasHome" title="Meraas">Read
+                                            case study</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
                             <div class="rv-card">
-                                <a href="/en/work/ubyemaar" target="" class="rv-card-anchor" id=""
-                                    title="U By Emaar"></a>
+                                <a href="#" target="" class="rv-card-anchor" id="" title="U By Emaar"></a>
                                 <div class="rv-box ">
                                     <div class="rv-bgoverlay"></div>
                                     <picture class="lozad" data-class="rv-bgimage objectfit"
@@ -524,16 +534,16 @@
                                         </p>
                                     </div>
                                     <div class="rv-secondary-link rv-read-case">
-                                        <a href="/en/work/ubyemaar" class="rv-link" target="" id=""
-                                            title="U By Emaar">Read case study</a>
+                                        <a href="#" class="rv-link" target="" id="" title="U By Emaar">Read case
+                                            study</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
                             <div class="rv-card">
-                                <a href="/en/work/the-red-sea" target="" class="rv-card-anchor"
-                                    id="gtm-TheRedSeaboxHome" title="The Red Sea Development"></a>
+                                <a href="#" target="" class="rv-card-anchor" id="gtm-TheRedSeaboxHome"
+                                    title="The Red Sea Development"></a>
                                 <div class="rv-box ">
                                     <div class="rv-bgoverlay"></div>
                                     <picture class="lozad" data-class="rv-bgimage objectfit"
@@ -556,7 +566,7 @@
                                         </p>
                                     </div>
                                     <div class="rv-secondary-link rv-read-case">
-                                        <a href="/en/work/the-red-sea" class="rv-link" target="" id="gtm-TheRedSeaHome"
+                                        <a href="#" class="rv-link" target="" id="gtm-TheRedSeaHome"
                                             title="The Red Sea Development">Read case study</a>
                                     </div>
                                 </div>
@@ -564,8 +574,8 @@
                         </div>
                         <div class="col-md-6 col-lg-3">
                             <div class="rv-card">
-                                <a href="/en/work/mercedes-benz" target="" class="rv-card-anchor"
-                                    id="gtm-MercedesboxHome" title="Mercedez Benz"></a>
+                                <a href="#" target="" class="rv-card-anchor" id="gtm-MercedesboxHome"
+                                    title="Mercedez Benz"></a>
                                 <div class="rv-box ">
                                     <div class="rv-bgoverlay"></div>
                                     <picture class="lozad" data-class="rv-bgimage objectfit"
@@ -588,7 +598,7 @@
                                         </p>
                                     </div>
                                     <div class="rv-secondary-link rv-read-case">
-                                        <a href="/en/work/mercedes-benz" class="rv-link" target="" id="gtm-MercedesHome"
+                                        <a href="#" class="rv-link" target="" id="gtm-MercedesHome"
                                             title="Mercedez Benz">Read case study</a>
                                     </div>
                                 </div>
@@ -596,8 +606,7 @@
                         </div>
                         <div class="col-md-12 col-lg-6">
                             <div class="rv-card">
-                                <a href="/en/work/abu-dhabi-airport" target="" class="rv-card-anchor" id=""
-                                    title="ADAC"></a>
+                                <a href="#" target="" class="rv-card-anchor" id="" title="ADAC"></a>
                                 <div class="rv-box rv-cornercut">
                                     <div class="rv-bgoverlay"></div>
                                     <picture class="lozad" data-class="rv-bgimage objectfit"
@@ -620,19 +629,17 @@
                                         </p>
                                     </div>
                                     <div class="rv-secondary-link rv-read-case">
-                                        <a href="/en/work/abu-dhabi-airport" class="rv-link" target="" id=""
-                                            title="ADAC">Read case study</a>
+                                        <a href="#" class="rv-link" target="" id="" title="ADAC">Read case study</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-12 col-lg-6">
                             <div class="rv-card">
-                                <a href="/en/work/noor-bank" target="" class="rv-card-anchor" id=""
-                                    title="Noor Bank"></a>
+                                <a href="#" target="" class="rv-card-anchor" id="" title="Noor Bank"></a>
                                 <div class="rv-box rv-cornercut">
                                     <div class="rv-bgoverlay"></div>
-                                    <picture class="lozad" data-class="rv-bgimage objectfit"
+                                    <picture class="lozad " data-class="rv-bgimage objectfit"
                                         data-iesrc="./-/media/revonic/overview-pages/work-overview/noorbankoverviewhomepage.jpg?cx=0&amp;cy=0&amp;cw=0&amp;ch=400&amp;hash=0496E595881363D04424DF17F0B3B0D7"
                                         data-alt="Noor Bank">
                                         <source media="(max-width: 600px) and (orientation: portrait)"
@@ -652,16 +659,16 @@
                                         </p>
                                     </div>
                                     <div class="rv-secondary-link rv-read-case">
-                                        <a href="/en/work/noor-bank" class="rv-link" target="" id=""
-                                            title="Noor Bank">Read case study</a>
+                                        <a href="#" class="rv-link" target="" id="" title="Noor Bank">Read case
+                                            study</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
                             <div class="rv-card">
-                                <a href="/en/work/emirates-nbd" target="" class="rv-card-anchor"
-                                    id="gtm-EmiratesNBDboxHome" title="ENBD"></a>
+                                <a href="#" target="" class="rv-card-anchor" id="gtm-EmiratesNBDboxHome"
+                                    title="ENBD"></a>
                                 <div class="rv-box ">
                                     <div class="rv-bgoverlay"></div>
                                     <picture class="lozad" data-class="rv-bgimage objectfit"
@@ -684,8 +691,8 @@
                                         </p>
                                     </div>
                                     <div class="rv-secondary-link rv-read-case">
-                                        <a href="/en/work/emirates-nbd" class="rv-link" target=""
-                                            id="gtm-EmiratesNBDHome" title="ENBD">Read case study</a>
+                                        <a href="#" class="rv-link" target="" id="gtm-EmiratesNBDHome" title="ENBD">Read
+                                            case study</a>
                                     </div>
                                 </div>
                             </div>
@@ -693,7 +700,7 @@
                         <div class="col-md-6 col-lg-3">
                             <div class="rv-align-text">
                                 <div class="rv-secondary-link rv-read-case">
-                                    <a href="/en/work" class="rv-link" target="" id="gmt-ViewWorkCtaHome">View all
+                                    <a href="#" class="rv-link" target="" id="gmt-ViewWorkCtaHome">View all
                                         work</a>
                                 </div>
                             </div>
@@ -1499,11 +1506,10 @@
                 <div class="row">
                     <div class="col-md-12 col-lg-6 offset-lg-1 order-md-1 order-lg-2">
                         <div class="rv-card">
-                            <a href="/en/news-and-events/2019/12/the-red-sea-development" target=""
-                                class="rv-card-anchor"
+                            <a href="./news-and-events.html" target="" class="rv-card-anchor"
                                 title="Revonic wins contract to develop website for The Red Sea&#160;"></a>
                             <div class="rv-box rv-cornercut">
-                                <a href="/en/news-and-events/2019/12/the-red-sea-development" target=""
+                                <a href="./news-and-events.html" target=""
                                     title="Revonic wins contract to develop website for The Red Sea&#160;">
                                     <picture class="lozad" data-class="rv-bgimage objectfit"
                                         data-iesrc="./-/media/revonic/overview-pages/work-overview/redseanewshomepage.jpg?cx=0.84&amp;cy=0.41&amp;cw=540&amp;ch=522&amp;hash=13E22D80BA985E2D0999EC448D8B5BB7">
@@ -1529,7 +1535,7 @@
                                 <div class="rv-title mb-30 mt-3">
                                     <span class="rv-feature-news">FEATURED NEWS</span>
 
-                                    <a href="/en/news-and-events/2019/12/the-red-sea-development" target="">
+                                    <a href="./news-and-events.html" target="">
                                         <h1 class="rv-h1-heading">
                                             Revonic wins contract to develop website for The Red Sea 
                                         </h1>
@@ -1541,8 +1547,7 @@
                                     about the ground-breaking new smart destination which will offer visitors a
                                     seamless, personalized and smart experience.</p>
 
-                                <a href="/en/news-and-events/2019/12/the-red-sea-development" target=""
-                                    class="btn-withline mb-10 rv-anchor-none">
+                                <a href="./news-and-events.html" target="" class="btn-withline mb-10 rv-anchor-none">
                                     Read more </a>
                             </div>
                         </div>
@@ -1555,8 +1560,7 @@
                                 <h1 class="rv-h1-heading"> Driving sales through strategic content
                                 </h1>
                             </div>
-                            <a href="/en/news-and-events/2020/06/driving-sales-through-strategic-content"
-                                class="btn-withline mb-10">
+                            <a href="./news-and-events.html" class="btn-withline mb-10">
                                 READ MORE
                             </a>
                         </div>
@@ -1566,8 +1570,7 @@
                                 <h1 class="rv-h1-heading"> Data touchpoints and the purchase journey
                                 </h1>
                             </div>
-                            <a href="/en/news-and-events/2020/06/data-touchpoints-and-the-purchase-journey"
-                                class="btn-withline mb-10">
+                            <a href="./news-and-events.html" class="btn-withline mb-10">
                                 READ MORE
                             </a>
                         </div>
@@ -1591,8 +1594,8 @@
                         <h3 class="rv-h3 rv-title d-md-flex d-none">We provide the most flexible platforms to scale
                             clients&#39; digital capability and support security protocols. </h3>
                         <div class="rv-readmore">
-                            <h4 href="/en/partners" class="rv-h6 rv-primary-link">
-                                <a href="/en/partners">Read More&#160;</a>
+                            <h4 href="./careers.html" class="rv-h6 rv-primary-link">
+                                <a href="./careers.html">Read More&#160;</a>
                             </h4>
                         </div>
                     </div>
@@ -1627,7 +1630,7 @@
     <footer class="rv-footer rv-component rv-theme-dark" data-comp-name="footer">
         <div class="container rv-container">
             <div class="row rv-fullWidth rv-footer-content">
-                <div class="rv-contact-message col-lg-5 col-md-12">
+                <div class="rv-contact-message col-lg-6 col-md-12">
 
                     <h3 class="rv-h6 rv-default-label rv-skewed-line">SAY HI</h3>
                     <h2 class="rv-h1 rv-title">GET IN TOUCH</h2>
@@ -1637,7 +1640,7 @@
                         <p />
                     </h4>
                 </div>
-                <address class="rv-address-block rv-quick-contacts col-lg-2 col-md-4">
+                <address class="rv-address-block rv-quick-contacts col-lg-3 col-md-4">
 
                     <h6 class='rv-h6 rv-default-label'>Contact</h6>
                     <ul class="rv-list-secondary">
@@ -1661,7 +1664,7 @@
 
 
                 </address>
-                <address class="rv-address-block rv-address col-lg-3 col-md-4">
+                <!-- <address class="rv-address-block rv-address col-lg-3 col-md-4">
 
                     <h6 class='rv-h6 rv-default-label'>Visit</h6>
                     <ul class="rv-list-secondary rv-regular">
@@ -1686,34 +1689,36 @@
 
 
 
-                </address>
-                <address class="rv-address-block rv-social-links col-lg-2 col-md-4">
+                </address> -->
+                <address class="rv-address-block rv-social-links col-lg-3 col-md-4">
 
                     <h6 class='rv-h6 rv-default-label'>Follow</h6>
-                    <ul class="rv-list-secondary">
-                        <li class="rv-list-item  ">
+                    <ul class="rv-list-secondary d-flex">
+                        <li style="padding-right: .5rem;" class="rv-list-item  ">
 
-                            <a class="rv-link rv-nav-link " href="https://www.facebook.com/indivirtualdubai/"
+                            <a class="rv-link rv-nav-link " href="https://www.facebook.com/brandartist.agentur"
                                 target="_blank" id="">
-                                Facebook </a>
+                                <i class="fab fa-facebook fa-2x"></i>
+                            </a>
+                        </li>
+                        <li style="padding-right: .5rem;" class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="https://www.instagram.com/Teambrandartist/"
+                                target="_blank" id="">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                        </li>
+                        <li style="padding-right: .5rem;" class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="#" target="_blank" id="">
+                                <i class="fab fa-linkedin fa-2x"></i>
+                            </a>
                         </li>
                         <li class="rv-list-item  ">
 
-                            <a class="rv-link rv-nav-link " href="https://www.instagram.com/wearerevonic/"
-                                target="_blank" id="">
-                                Instagram </a>
-                        </li>
-                        <li class="rv-list-item  ">
-
-                            <a class="rv-link rv-nav-link " href="https://www.linkedin.com/company/revonic/"
-                                target="_blank" id="">
-                                LinkedIn </a>
-                        </li>
-                        <li class="rv-list-item  ">
-
-                            <a class="rv-link rv-nav-link " href="https://twitter.com/wearerevonic" target="_blank"
-                                id="">
-                                Twitter </a>
+                            <a class="rv-link rv-nav-link " href="#" target="_blank" id="">
+                                <i class="fab fa-twitter fa-2x"></i>
+                            </a>
                         </li>
                     </ul>
 
