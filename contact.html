@@ -106,6 +106,11 @@
             border: none;
             caret-color: #e44a21
         }
+
+        /* Hide recaptche */
+        #rc-anchor-container {
+            display: none !important;
+        }
     </style>
     <script>window.onload = function () { document.querySelector('html').classList.remove('loading') }</script>
 
@@ -160,19 +165,19 @@
         content="https://www.revonic.com//-/media/revonic/media/ogimage/rsz_web_and_mobile.jpg">
     <meta property="og:url" content="https://www.revonic.com/en/Contact" />
     <meta property="og:type" content="website" />
-    <link rel="canonical" href="https://www.revonic.com/en/contact" /><!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
+    <!-- <link rel="canonical" href="https://www.revonic.com/en/contact" />Google Tag Manager -->
+    <!-- <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
                 'gtm.start':
                     new Date().getTime(), event: 'gtm.js'
             }); var f = d.getElementsByTagName(s)[0],
                 j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-5K9P7WQ');</script>
+        })(window, document, 'script', 'dataLayer', 'GTM-5K9P7WQ');</script> -->
     <!-- End Google Tag Manager -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156926072-1"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156926072-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -187,7 +192,7 @@
             navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(function (registration) { console.log('Service Worker Registered'); });
             navigator.serviceWorker.ready.then(function (registration) { console.log('Service Worker Ready'); });
         }
-    </script>
+    </script> -->
 
 </head>
 
@@ -357,8 +362,8 @@
         </div>
     </header>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5K9P7WQ" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5K9P7WQ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript> -->
     <!-- End Google Tag Manager (noscript) -->
     <section class="rv-sec-container rv-bg-dark">
 
@@ -378,12 +383,12 @@
             </div>
 
         </div>
-        ﻿<section class="rv-sec-container ">
+        <section class="rv-sec-container ">
             <div class="rv-contact rv-component">
                 <div class="rv-contact-section">
                     <div class="container">
                         <div class="row">
-                            <script
+                            <!-- <script
                                 src='https://www.google.com/recaptcha/api.js?render=6Lci6NIUAAAAAJh0pIjuidhPbbTjEpcAwQwnFqAh'></script>
                             <script>
                                 grecaptcha.ready(function () {
@@ -392,7 +397,7 @@
                                         document.getElementById("hiddentoken").value = token;
                                     });
                                 });
-                            </script>
+                            </script> -->
 
                             <div class="col-12 col-lg-7 rv-form-container rv-component" data-comp-name="inputfields">
                                 <div class="rv-line-image1 rv-component" data-comp-name="animatesvg">
@@ -584,7 +589,8 @@
                     <p>Our goal is to drive our clients&rsquo; business improvement and solve their complex challenges.
                         As part of that drive, we continuously look for high calibre individuals who want to work in a
                         fun and fast-paced environment.</p>
-                    <p>Please visit our <a href="/en/careers" class="rv-link">careers</a> page to view job vacancies in
+                    <p>Please visit our <a href="./careers.html" class="rv-link">careers</a> page to view job vacancies
+                        in
                         both our&nbsp;<strong>Dubai</strong> and <strong>Bangalore </strong>offices<strong>.</strong>
                     </p>
                 </div>
@@ -593,25 +599,25 @@
     </section>
 
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
+    <!-- <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
                 'gtm.start':
                     new Date().getTime(), event: 'gtm.js'
             }); var f = d.getElementsByTagName(s)[0],
                 j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-5K9P7WQ');</script>
+        })(window, document, 'script', 'dataLayer', 'GTM-5K9P7WQ');</script> -->
     <!-- End Google Tag Manager -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156926072-1"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156926072-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'UA-156926072-1');
-    </script>
+    </script> -->
     <footer class="rv-footer rv-component rv-theme-dark" data-comp-name="footer">
         <div class="container rv-container">
             <div class="row rv-fullWidth rv-footer-content">
