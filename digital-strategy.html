@@ -55,6 +55,10 @@
             transition: opacity 1s linear
         }
 
+        .fa-2x {
+            font-size: 1.5rem !important;
+        }
+
         .rv-casestudyfigures .rv-box .lozad {
             display: block;
             min-height: 260px
@@ -103,6 +107,16 @@
             border: none;
             caret-color: #e44a21
         }
+
+        @media(max-width:991px) {
+            .custom-media {
+                flex-direction: column;
+            }
+
+            .custom-media-h {
+                font-size: 20px !important;
+            }
+        }
     </style>
     <script>window.onload = function () { document.querySelector('html').classList.remove('loading') }</script>
 
@@ -150,7 +164,10 @@
 
 
     <link href="./assets/css/base.css?v=1.13" rel="stylesheet" />
-
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Digital Strategy | Revonic</title>
     <meta property="og:title" content="Digital Strategy | Revonic" />
     <meta name="keywords" content="Agency, Digital Agency, Experience Design, Revonic, Sitecore, UI, UX, Website" />
@@ -224,7 +241,7 @@
                     <div class="rv-secondary-link">
 
 
-                        <a href="./contact.html" id="test" class="rv-link">Contact Us</a>
+                        <a href="./contact.html" id="test" class="rv-link">Schreib uns</a>
 
 
 
@@ -239,7 +256,7 @@
                         <ul class="rv-list-main-nav">
                             <!-- <li class="rv-list-item  row has-sub-menu">
 
-                                <a class="rv-h1 rv-link rv-nav-link col-lg-8" href="/en/work" target="_self" id="">
+                                <a class="rv-h1 rv-link rv-nav-link col-lg-8" href="#" target="_self" id="">
                                     Work </a>
                                 <div class="rv-sub-menu col-lg-4 d-lg-block">
                                     <h6 class="rv-h6 rv-default">Case Studies</h6>
@@ -247,38 +264,38 @@
 
                                     <ul class="rv-list-primary">
                                         <li class="rv-list-item rv-secondary-link">
-                                            <a class="rv-h6 rv-link" href="/en/work/emirates-airline" target="_self"
+                                            <a class="rv-h6 rv-link" href="#" target="_self"
                                                 id="gtm-NavigationEmirates">
                                                 Emirates Airline </a>
                                         </li>
                                         <li class="rv-list-item rv-secondary-link">
-                                            <a class="rv-h6 rv-link" href="/en/work/meraas" target="_self"
+                                            <a class="rv-h6 rv-link" href="#" target="_self"
                                                 id="gtm-NavigationMeraas">
                                                 Meraas </a>
                                         </li>
                                         <li class="rv-list-item rv-secondary-link">
-                                            <a class="rv-h6 rv-link" href="/en/work/ubyemaar" target="_self" id="">
+                                            <a class="rv-h6 rv-link" href="#" target="_self" id="">
                                                 U by Emaar </a>
                                         </li>
                                         <li class="rv-list-item rv-secondary-link">
-                                            <a class="rv-h6 rv-link" href="/en/work/the-red-sea" target="_self" id="">
+                                            <a class="rv-h6 rv-link" href="#" target="_self" id="">
                                                 The Red Sea Project </a>
                                         </li>
                                         <li class="rv-list-item rv-secondary-link">
-                                            <a class="rv-h6 rv-link" href="/en/work/mercedes-benz" target="_self" id="">
+                                            <a class="rv-h6 rv-link" href="#" target="_self" id="">
                                                 Mercedes-Benz </a>
                                         </li>
                                         <li class="rv-list-item rv-secondary-link">
-                                            <a class="rv-h6 rv-link" href="/en/work/abu-dhabi-airport" target="_self"
+                                            <a class="rv-h6 rv-link" href="#" target="_self"
                                                 id="">
                                                 Abu Dhabi Airport </a>
                                         </li>
                                         <li class="rv-list-item rv-secondary-link">
-                                            <a class="rv-h6 rv-link" href="/en/work/noor-bank" target="_self" id="">
+                                            <a class="rv-h6 rv-link" href="#" target="_self" id="">
                                                 Noor Bank </a>
                                         </li>
                                         <li class="rv-list-item rv-secondary-link">
-                                            <a class="rv-h6 rv-link" href="/en/work/emirates-nbd" target="_self" id="">
+                                            <a class="rv-h6 rv-link" href="#" target="_self" id="">
                                                 Emirates NBD </a>
                                         </li>
                                     </ul>
@@ -288,7 +305,7 @@
 
                                 <a class="rv-h1 rv-link rv-nav-link col-lg-8" href="./services.html" target="_self"
                                     id="">
-                                    Services </a>
+                                    SERVICE </a>
                                 <div class="rv-sub-menu col-lg-4 d-lg-block">
                                     <h6 class="rv-h6 rv-default">Our Services</h6>
 
@@ -341,12 +358,12 @@
                             <li class="rv-list-item  ">
 
                                 <a class="rv-h1 rv-link rv-nav-link " href="./careers.html" target="_self" id="">
-                                    Careers </a>
+                                    Karriere </a>
                             </li>
                             <li class="rv-list-item  ">
 
                                 <a class="rv-h1 rv-link rv-nav-link " href="./contact.html" target="_self" id="">
-                                    Contact </a>
+                                    Kontakt </a>
                             </li>
                         </ul>
 
@@ -372,16 +389,17 @@
             your business goals.</h2>
         <div class="rv-content-page-header rv-theme-light rv-component">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-12 col-md-4 rv-m-mb-section ">
-                        <h1 class="rv-main-heading">DIGITAL</h1>
+                <div class="custom-media" style="display: flex; justify-content: space-between;">
+                    <div class=" rv-m-mb-section ">
+                        <h2 class="rv-sub-heading" style="">Strategieberatung</h2>
 
-                        <h2 class="rv-sub-heading">STRATEGY</h2>
+                        <!-- <h2 class="rv-sub-heading">STRATEGY</h2> -->
                     </div>
-                    <div class="col-12 offset-md-1 col-md-7">
-                        <p class="rv-paragraph">
-                            Defining a plan to maximise and deliver your digital product and service needs aligned with
-                            your business goals.
+                    <div class="">
+                        <p class="rv-paragraph" style="max-width: 31rem;">
+                            Wir erarbeiten eine Strategie bei der sich ihr
+                            Unternehmen mit Hilfe einer glasklaren
+                            Positionierung von ihrer Konkurrenz abhebt.
                         </p>
                     </div>
                 </div>
@@ -406,19 +424,36 @@
         <div class="rv-editorialicons rv-component rv-theme-light">
             <div class="container rv-container">
                 <div class="row">
+                    <!--                      <div class="richtext feature-richtext">
+                            <h2>Wir fokussieren uns auf ihr
+                                Unternehmenswachstum.</h2>
+                            <p>Gemeinsam erschaffen wir eine Strategie, die
+                                sicherstellt, dass ihre unternehmensinternen
+                                Umsatzziele erreicht werden. Diese
+                                ganzheitliche Strategie verfolgt das Ziel,
+                                Werbemaßnahmen und</p>
+                            <p><span style="background: white; color: #333333;"></span><span
+                                    style="background-color: white; color: #333333;">Prozessautomatisierung zu
+                                    implementieren,
+                                    die ihre Unternehmensleistung verbessern,
+                                    um ihnen dadurch einen Wettbewerbsvorteil
+                                    verschaffen.</span></p>
+                        </div> -->
                     <div class="col-md-12">
                         <div class="richtext feature-richtext">
-                            <h2>We focus on business immersion</h2>
-                            <p>We collaboratively create a digital strategy that ensures&nbsp;<span
-                                    style="background-color: white; color: #333333;">the business vision, user needs and
-                                    technical capabilities are aligned. Digital strategy is used to implement technology
-                                    solutions that improve business performance and create a competitive
-                                    advantage.</span></p>
+                            <h2 class="custom-media-h">Wir fokussieren uns auf ihr
+                                Unternehmenswachstum.</h2>
+                            <p>Gemeinsam erschaffen wir eine Strategie, die
+                                sicherstellt, dass ihre unternehmensinternen
+                                Umsatzziele erreicht werden. Diese
+                                ganzheitliche Strategie verfolgt das Ziel,
+                                Werbemaßnahmen und</p>
                             <p><span style="background: white; color: #333333;"></span><span
-                                    style="background-color: white; color: #333333;">We work together in workshops to
-                                    explore your business and ambitions while prioritising the problems we are solving
-                                    for your target users. We immerse ourselves into your business to understand
-                                    your:</span></p>
+                                    style="background-color: white; color: #333333;">Prozessautomatisierung zu
+                                    implementieren,
+                                    die ihre Unternehmensleistung verbessern,
+                                    um ihnen dadurch einen Wettbewerbsvorteil
+                                    verschaffen.</span></p>
                         </div>
                         <div class="row">
                             <div class="col-md-4">
@@ -487,9 +522,9 @@
                                                 </g>
                                             </svg>
                                         </span>
-                                        <h2 class="rv-title rv-textdot">Business Objectives</h2>
-                                        <p class="rv-description">Understanding where you are as a business and where
-                                            you want to go.</p>
+                                        <h2 class="rv-title rv-textdot">Unternehmensziele</h2>
+                                        <p class="rv-description">Wo stehen sie als Unternehmen und wo
+                                            wollen sie in Zukunft hin.</p>
                                     </div>
                                 </div>
                             </div>
@@ -541,9 +576,9 @@
                                                 </g>
                                             </svg>
                                         </span>
-                                        <h2 class="rv-title rv-textdot">Target Audience</h2>
-                                        <p class="rv-description">Understanding who your customers are and what drives
-                                            them.</p>
+                                        <h2 class="rv-title rv-textdot">Zielgruppe</h2>
+                                        <p class="rv-description">Wir definieren ihre Zielgruppe messerscharf,
+                                            um sie optimal ansprechen zu können.</p>
                                     </div>
                                 </div>
                             </div>
@@ -678,9 +713,9 @@
                                                 </g>
                                             </svg>
                                         </span>
-                                        <h2 class="rv-title rv-textdot">Product Roadmap</h2>
-                                        <p class="rv-description">Understanding and planning relevant features and
-                                            touchpoints for the long term.</p>
+                                        <h2 class="rv-title rv-textdot">Umsatzsteigerung</h2>
+                                        <p class="rv-description">Wir erarbeiten Marketingsmaßnahmen, die
+                                            ihren Umsatz signifikant zu steigern.</p>
                                     </div>
                                 </div>
                             </div>
@@ -732,9 +767,9 @@
                 <div class="rv-component" data-comp-name="animateline">
                     <div class="container">
                         <div class="row">
-                            <div class="col-sm-12 col-md-5">
+                            <div class="col-sm-12 col-md-6">
                                 <div class="rv-text-section1 rv-sticky js-contentChild">
-                                    <h4 class="rv-h1-heading">Our approach</h4>
+                                    <h4 class="rv-h1-heading">Unser Lösungsansatz</h4>
                                     <p class="rv-paragraph">
 
                                     </p>
@@ -744,28 +779,31 @@
                                             <li class="is--active">
                                                 <a href="javascript:;"
                                                     id="customtab-98561187-3996-452c-9cd6-d513b6e1ae63-1"
-                                                    class="btn-tab rv-textdot rv-btn-override js-tabit">Benchmarking</a>
+                                                    class="btn-tab rv-textdot rv-btn-override js-tabit">Analyse und
+                                                    Zielsetzung</a>
                                             </li>
                                             <li class="">
                                                 <a href="javascript:;"
                                                     id="customtab-98561187-3996-452c-9cd6-d513b6e1ae63-2"
-                                                    class="btn-tab rv-textdot rv-btn-override js-tabit">Customer journey
-                                                    mapping</a>
+                                                    class="btn-tab rv-textdot rv-btn-override js-tabit">Positionierung
+                                                    am Markt</a>
                                             </li>
                                             <li class="">
                                                 <a href="javascript:;"
                                                     id="customtab-98561187-3996-452c-9cd6-d513b6e1ae63-3"
-                                                    class="btn-tab rv-textdot rv-btn-override js-tabit">Ideation</a>
+                                                    class="btn-tab rv-textdot rv-btn-override js-tabit">Zielgruppendefinition</a>
                                             </li>
                                             <li class="">
                                                 <a href="javascript:;"
                                                     id="customtab-98561187-3996-452c-9cd6-d513b6e1ae63-4"
-                                                    class="btn-tab rv-textdot rv-btn-override js-tabit">KPI mapping</a>
+                                                    class="btn-tab rv-textdot rv-btn-override js-tabit">Marketingmaßnahmen
+                                                    entwickeln</a>
                                             </li>
                                             <li class="">
                                                 <a href="javascript:;"
                                                     id="customtab-98561187-3996-452c-9cd6-d513b6e1ae63-5"
-                                                    class="btn-tab rv-textdot rv-btn-override js-tabit">Workshops</a>
+                                                    class="btn-tab rv-textdot rv-btn-override js-tabit">Umsatz
+                                                    steigern</a>
                                             </li>
 
 
@@ -775,14 +813,17 @@
                                         <select class="js-select js-selecttabs" data-exclass="dropdown-style"
                                             name="tab-select2">
                                             <option value="customtab-98561187-3996-452c-9cd6-d513b6e1ae63-1">
-                                                Benchmarking</option>
-                                            <option value="customtab-98561187-3996-452c-9cd6-d513b6e1ae63-2">Customer
-                                                journey mapping</option>
-                                            <option value="customtab-98561187-3996-452c-9cd6-d513b6e1ae63-3">Ideation
+                                                Analyse und Zielsetzung</option>
+                                            <option value="customtab-98561187-3996-452c-9cd6-d513b6e1ae63-2">
+                                                Positionierung am Marktg</option>
+                                            <option value="customtab-98561187-3996-452c-9cd6-d513b6e1ae63-3">
+                                                Zielgruppendefinition
                                             </option>
-                                            <option value="customtab-98561187-3996-452c-9cd6-d513b6e1ae63-4">KPI mapping
+                                            <option value="customtab-98561187-3996-452c-9cd6-d513b6e1ae63-4">
+                                                Marketingmaßnahmen entwickeln
                                             </option>
-                                            <option value="customtab-98561187-3996-452c-9cd6-d513b6e1ae63-5">Workshops
+                                            <option value="customtab-98561187-3996-452c-9cd6-d513b6e1ae63-5">Umsatz
+                                                steigern
                                             </option>
 
                                         </select>
@@ -802,7 +843,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-7 rv-order-first rv-text-content">
+                            <div class="col-sm-12 col-md-6 rv-order-first rv-text-content">
                                 <div class="rv-img-section">
                                     <div class="rv-line-reveal rv-line-a js-animateline">
                                         <div class="rv-line"></div>
@@ -810,64 +851,58 @@
                                     <div class="d-flex casestudyimagecontainer">
                                         <div
                                             class="customtab-98561187-3996-452c-9cd6-d513b6e1ae63-1 is--active tab-animate benchmarking">
-                                            <h4 class="rv-h1-heading">Benchmarking</h4>
+                                            <h4 class="rv-h1-heading">Analyse und Zielsetzung</h4>
                                             <div class="rv-description">
                                                 <p><span
-                                                        style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">We
-                                                        conduct benchmarking studies to create a baseline for
-                                                        understanding the current user experience, to identify strengths
-                                                        and weakness with your product, and to reinforce competitive
-                                                        advantages. </span></p>
+                                                        style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">
+                                                        Durch gezielte Analysen können wir uns ein
+                                                        Bild vom aktuellen Stand ihres Unternehmens
+                                                        machen, um davon ausgehend klare
+                                                        Zielsetzungen zu definieren.</span></p>
                                             </div>
                                         </div>
                                         <div
                                             class="customtab-98561187-3996-452c-9cd6-d513b6e1ae63-2  customer journey mapping">
-                                            <h4 class="rv-h1-heading">Customer journey mapping</h4>
+                                            <h4 class="rv-h1-heading">Positionierung am Markt</h4>
                                             <div class="rv-description">
-                                                <p>Customer journeys are used to create a visual map of how your
-                                                    customers interact with your product or service. This helps you to
-                                                    consider the entire customer experience lifecycle, understanding the
-                                                    steps users take prior to, whilst and after interacting with your
-                                                    product or service.</p>
-                                                <p>Creating accurate user journeys is crucial to understanding your
-                                                    users&rsquo; behaviours and evaluating how easy or difficult it is
-                                                    for them to reach their goal. This visualisation and storytelling
-                                                    technique helps us identify opportunities to create new and improved
-                                                    experiences for users.</p>
+                                                <p>Wir positionieren ihr Unternehmen so am
+                                                    Markt, das ihre Konkurrenz keine Chance
+                                                    mehr gegen sie hat. Dies gelingt uns durch
+                                                    eine umfassende Marktanalyse.</p>
                                             </div>
                                         </div>
                                         <div class="customtab-98561187-3996-452c-9cd6-d513b6e1ae63-3  ideation">
-                                            <h4 class="rv-h1-heading">Ideation</h4>
+                                            <h4 class="rv-h1-heading">Zielgruppendefinition</h4>
                                             <div class="rv-description">
                                                 <p><span
-                                                        style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">We
-                                                        use findings from our strategy phase, and insights gathered from
-                                                        users, to formulate a broad set of ideas and innovative concepts
-                                                        that are unique to each project. We generate creative ideas and
-                                                        solutions through carefully designed exercises such as
-                                                        brainstorming and sketching. </span></p>
+                                                        style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">
+                                                        Durch die haargenaue Definition ihrer
+                                                        Zielgruppe können wir ihren Kunden besser
+                                                        verstehen und zielgerichteter ansprechen.
+                                                        Wir wissen wann und wieso der Kunde kauft
+                                                        und nutzen dies in unseren
+                                                        Werbemaßnahmen. </span></p>
                                             </div>
                                         </div>
                                         <div class="customtab-98561187-3996-452c-9cd6-d513b6e1ae63-4  kpi mapping">
-                                            <h4 class="rv-h1-heading">KPI mapping</h4>
+                                            <h4 class="rv-h1-heading">Marketingmaßnahmen entwickeln</h4>
                                             <div class="rv-description">
                                                 <span
-                                                    style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">During
-                                                    KPI mapping workshops, we identify your current business position
-                                                    and develop a strategy around what your business objectives are. We
-                                                    also define critical success factors that will set the benchmarks to
-                                                    measure the progress</span>
+                                                    style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">
+                                                    Mit Hilfe der Positionierung und
+                                                    Zielgruppendefinition entwickeln wir ein
+                                                    einzigartiges Konzept, welches ihnen einen
+                                                    entscheidenden Wettbewerbsvorteil bringt.</span>
                                             </div>
                                         </div>
                                         <div class="customtab-98561187-3996-452c-9cd6-d513b6e1ae63-5  workshops">
-                                            <h4 class="rv-h1-heading">Workshops</h4>
+                                            <h4 class="rv-h1-heading">Umsatz steigern</h4>
                                             <div class="rv-description">
                                                 <p><span
-                                                        style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">We
-                                                        conduct and facilitate various workshops like KPI mapping and
-                                                        requirements gatherings. This is an effective way for us to
-                                                        collect knowledge, ideate on design solutions and create
-                                                        concepts, collaboratively.</span></p>
+                                                        style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">
+                                                        Wir steigern durch zukunftsorientierte
+                                                        Marketingstrategien den Umsatz ihres
+                                                        Unternehmens langfristig.</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -1106,24 +1141,23 @@
     <footer class="rv-footer rv-component rv-theme-dark" data-comp-name="footer">
         <div class="container rv-container">
             <div class="row rv-fullWidth rv-footer-content">
-                <div class="rv-contact-message col-lg-5 col-md-12">
+                <div class="rv-contact-message col-lg-6 col-md-12">
 
-                    <h3 class="rv-h6 rv-default-label rv-skewed-line">SAY HI</h3>
-                    <h2 class="rv-h1 rv-title">GET IN TOUCH</h2>
+                    <h3 class="rv-h6 rv-default-label rv-skewed-line">Sag Hallo</h3>
+                    <h2 class="rv-h1 rv-title">Bock auf mehr?</h2>
                     <h4 class="rv-h6 rv-primary-link float-left"><a id="gtm-letstalkfooter"
-                            href="./contact.html">CONTACT
-                            US.</a>
-                        <p />
+                            href="./contact.html">Schreib uns.</a>
+                        <p>
                     </h4>
                 </div>
-                <address class="rv-address-block rv-quick-contacts col-lg-2 col-md-4">
+                <address class="rv-address-block rv-quick-contacts col-lg-3 col-md-4">
 
-                    <h6 class='rv-h6 rv-default-label'>Contact</h6>
+                    <h6 class='rv-h6 rv-default-label'>Kontakt</h6>
                     <ul class="rv-list-secondary">
                         <li class="rv-list-item  ">
 
                             <a class="rv-link rv-nav-link " href="./contact.html" target="_self" id="GTM001">
-                                Email us </a>
+                                Schreib uns eine Email </a>
                         </li>
                         <li class="rv-list-item  ">
 
@@ -1140,7 +1174,7 @@
 
 
                 </address>
-                <address class="rv-address-block rv-address col-lg-3 col-md-4">
+                <!-- <address class="rv-address-block rv-address col-lg-3 col-md-4">
 
                     <h6 class='rv-h6 rv-default-label'>Visit</h6>
                     <ul class="rv-list-secondary rv-regular">
@@ -1165,34 +1199,36 @@
 
 
 
-                </address>
-                <address class="rv-address-block rv-social-links col-lg-2 col-md-4">
+                </address> -->
+                <address class="rv-address-block rv-social-links col-lg-3 col-md-4">
 
-                    <h6 class='rv-h6 rv-default-label'>Follow</h6>
-                    <ul class="rv-list-secondary">
-                        <li class="rv-list-item  ">
+                    <h6 class='rv-h6 rv-default-label'>Folge uns </h6>
+                    <ul class="rv-list-secondary d-flex">
+                        <li style="padding-right: .5rem;" class="rv-list-item  ">
 
-                            <a class="rv-link rv-nav-link " href="https://www.facebook.com/indivirtualdubai/"
+                            <a class="rv-link rv-nav-link " href="https://www.facebook.com/brandartist.agentur"
                                 target="_blank" id="">
-                                Facebook </a>
+                                <i class="fab fa-facebook fa-2x"></i>
+                            </a>
+                        </li>
+                        <li style="padding-right: .5rem;" class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="https://www.instagram.com/Teambrandartist/"
+                                target="_blank" id="">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                        </li>
+                        <li style="padding-right: .5rem;" class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="#" target="_blank" id="">
+                                <i class="fab fa-linkedin fa-2x"></i>
+                            </a>
                         </li>
                         <li class="rv-list-item  ">
 
-                            <a class="rv-link rv-nav-link " href="https://www.instagram.com/wearerevonic/"
-                                target="_blank" id="">
-                                Instagram </a>
-                        </li>
-                        <li class="rv-list-item  ">
-
-                            <a class="rv-link rv-nav-link " href="https://www.linkedin.com/company/revonic/"
-                                target="_blank" id="">
-                                LinkedIn </a>
-                        </li>
-                        <li class="rv-list-item  ">
-
-                            <a class="rv-link rv-nav-link " href="https://twitter.com/wearerevonic" target="_blank"
-                                id="">
-                                Twitter </a>
+                            <a class="rv-link rv-nav-link " href="#" target="_blank" id="">
+                                <i class="fab fa-twitter fa-2x"></i>
+                            </a>
                         </li>
                     </ul>
 
@@ -1211,7 +1247,7 @@
 
                 </div>
 
-                <span class="rv-copyrights col-md-6 ">&copy; 2021 Valtech_ Revonic</span>
+                <span class="rv-copyrights col-md-6 ">&copy; 2021 Brandartist</span>
             </div>
         </div>
     </footer>
