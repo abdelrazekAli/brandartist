@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en" class="rv-html loading">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <style>
+        body,
+        html {
+            background: #121212
+        }
+
+        .loading .rv-header {
+            transform: translateX(-100%);
+            height: 50px;
+            overflow: hidden
+        }
+
+        .loading img,
+        .loading svg {
+            width: 0;
+            height: 0
+        }
+
+        .rv-sec-container {
+            position: relative;
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 0
+        }
+
+        .rv-hero-banner .lozad {
+            display: block;
+            min-height: 500px
+        }
+
+        .lozad {
+            display: block;
+            min-height: 1rem
+        }
+
+        img.lozad {
+            transition: opacity 1s linear
+        }
+
+        img.lozad:not([data-loaded]) {
+            position: relative;
+            max-width: 100%;
+            height: auto;
+            opacity: 0
+        }
+
+        img.lozad[data-loaded=true] {
+            transition: opacity 1s linear
+        }
+
+        .rv-casestudyfigures .rv-box .lozad {
+            display: block;
+            min-height: 260px
+        }
+
+        /* @media (max-width: 767px) {
+            max-height: 260px
+        } */
+
+        .rv-hero-banner .rv-banner-pictures .video-js {
+            height: 100vh;
+            width: 100%;
+            padding: 0;
+            z-index: 0;
+            min-height: 450px;
+            max-height: 1200px
+        }
+
+        .rv-roundbtn {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: transparent;
+            border: 0;
+            padding: 0;
+            cursor: pointer
+        }
+
+        .rv-forms .rv-input,
+        .rv-forms .rv-textarea {
+            font-family: Gilroy-Regular, sans-serif, Helvetica, Verdana, Arial;
+            font-weight: 500;
+            text-transform: none;
+            font-size: 18px;
+            font-size: 1.125rem;
+            line-height: 1.66667;
+            line-height: 30px;
+            padding: 10px 0;
+            position: relative;
+            background: 0 0;
+            color: #fff;
+            height: 45px;
+            width: 100%;
+            outline: 0;
+            border: none;
+            caret-color: #e44a21
+        }
+
+        @media (max-width:991px) {
+            .font-media {
+                font-size: 75%;
+            }
+        }
+    </style>
+    <script>window.onload = function () { document.querySelector('html').classList.remove('loading') }</script>
+
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/icons/favicon.ico">
+
+    <link rel="manifest" href="./assets/manifest.json">
+    <link rel="prefetch" href="./assets/img/sprite/svg-sprite.svg" as="image" crossorigin="anonymous">
+    <link rel="preload" name="Gilroy-Bold" href="./assets/fonts/Gilroy-Bold.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload" name="Gilroy-Regular" href="./assets/fonts/Gilroy-Regular.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <!-- Order is important -->
+    <link rel="prefetch" name="Gilroy-Thin" href="./assets/fonts/Gilroy-Thin.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="prefetch" name="Gilroy-SemiBold" href="./assets/fonts/Gilroy-SemiBold.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="prefetch" name="Gilroy-SemiBoldItalic" href="./assets/fonts/Gilroy-SemiBoldItalic.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+
+    <link rel="preload" href="./assets/css/vendors~main.css" as="style"
+        onload="this.rel='stylesheet'; this.onload = null;">
+    <link rel="preload" href="./assets/css/main.css" as="style" onload="this.rel='stylesheet'; this.onload = null;">
+    <link rel="preload" href="./assets/css/dark.css" as="style" onload="this.rel='stylesheet'; this.onload = null;">
+    <link rel="preload" href="./assets/css/light.css" as="style" onload="this.rel='stylesheet'; this.onload = null;">
+
+    <script>
+        window.rv = {};
+        window.rv.resourcePath = './assets/';
+    </script>
+
+    <script>
+        /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+        /* This file is meant as a standalone workflow for
+        - testing support for link[rel=preload]
+        - enabling async CSS loading in browsers that do not support rel=preload
+        - applying rel preload css once loaded, whether supported or not.
+        */
+        !function (t) { "use strict"; t.loadCSS || (t.loadCSS = function () { }); var e = loadCSS.relpreload = {}; if (e.support = function () { var e; try { e = t.document.createElement("link").relList.supports("preload") } catch (t) { e = !1 } return function () { return e } }(), e.bindMediaToggle = function (t) { var e = t.media || "all"; function a() { t.addEventListener ? t.removeEventListener("load", a) : t.attachEvent && t.detachEvent("onload", a), t.setAttribute("onload", null), t.media = e } t.addEventListener ? t.addEventListener("load", a) : t.attachEvent && t.attachEvent("onload", a), setTimeout(function () { t.rel = "stylesheet", t.media = "only x" }), setTimeout(a, 3e3) }, e.poly = function () { if (!e.support()) for (var a = t.document.getElementsByTagName("link"), n = 0; n < a.length; n++) { var o = a[n]; "preload" !== o.rel || "style" !== o.getAttribute("as") || o.getAttribute("data-loadcss") || (o.setAttribute("data-loadcss", !0), e.bindMediaToggle(o)) } }, !e.support()) { e.poly(); var a = t.setInterval(e.poly, 500); t.addEventListener ? t.addEventListener("load", function () { e.poly(), t.clearInterval(a) }) : t.attachEvent && t.attachEvent("onload", function () { e.poly(), t.clearInterval(a) }) } "undefined" != typeof exports ? exports.loadCSS = loadCSS : t.loadCSS = loadCSS }("undefined" != typeof global ? global : this);
+    </script>
+    <noscript>
+        <link rel="stylesheet" href="./assets/css/vendors~main.css" type="text/css">
+        <link rel="stylesheet" href="./assets/css/main.css">
+    </noscript>
+
+
+    <link href="./assets/css/base.css?v=1.13" rel="stylesheet" />
+
+    <title>professionelle Webseite</title>
+    <meta property="og:title" content="Sitecore Gold Partner | Revonic" />
+    <!-- <meta name="keywords" content="Agency, Digital Agency, Experience Design, Revonic, Sitecore, UI, UX, Website" /> -->
+    <meta name="description" content="10 Gründe für eine professionelle Webseite
+" />
+    <meta name="og:description" content="10 Gründe für eine professionelle Webseite.
+" />
+    <!-- <meta name="og:image" content="https://www.revonic.com//-/media/revonic/media/ogimage/rsz_web_and_mobile.jpg" />
+    <meta property="og:image:url"
+        content="https://www.revonic.com//-/media/revonic/media/ogimage/rsz_web_and_mobile.jpg">
+    <meta property="og:url" content="https://www.revonic.com/en/News and Events/2019/12/Sitecore Gold" />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.revonic.com./news-and-events.html/2019/12/sitecore-gold" /> -->
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5K9P7WQ');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156926072-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-156926072-1');
+    </script>
+
+    <script>
+        // register service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(function (registration) { console.log('Service Worker Registered'); });
+            navigator.serviceWorker.ready.then(function (registration) { console.log('Service Worker Ready'); });
+        }
+    </script>
+
+</head>
+
+<body class="rv-body ">
+    <header class="rv-header rv-component rv-theme-dark" data-comp-name="header">
+        <div class="rv-wrapper">
+            <div class="rv-container container">
+
+
+                <a class="rv-logo rv-sticky-logo rv-column" href="./index.html"><span class="sr-only">Revonic</span>
+                    <!-- <img
+                        src="./assets/img/svg/light.svg" class="rv-revonic-logo light-variant"
+                        alt="rv-revonic-logo" /> -->
+                    <div style="font-size: 1.9rem;"><span style="font-weight: bold;">Brand</span>Artist</div>
+                </a>
+
+                <div class="rv-navigation">
+                    <a class="rv-nav-trigger rv-link" href="javascript:;">
+                        <span class="rv-label d-lg-inline-block">Navigation</span>
+                        <div class="rv-nav-icon">
+                            <div class="rv-icon-content">
+                                <span class="sr-only">Show / Hide Navigation</span>
+                                <span class="rv-animated-icon rv-nav-iconbar-top d-block"></span>
+                                <span class="rv-animated-icon rv-nav-iconbar-bottom d-block"></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="rv-caption d-none d-lg-block">
+                    <div class="rv-secondary-link">
+
+
+                        <a href="./contact.html" id="test" class="rv-link">Schreib uns</a>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+            <nav class="rv-nav-menu is-hidden">
+                <div class="rv-container container rv-fullWidth">
+                    <div class="w-100">
+
+                        <ul class="rv-list-main-nav">
+                            <!-- <li class="rv-list-item  row has-sub-menu">
+
+                                <a class="rv-h1 rv-link rv-nav-link col-lg-8" href="#" target="_self" id="">
+                                    Work </a>
+                                <div class="rv-sub-menu col-lg-4 d-lg-block">
+                                    <h6 class="rv-h6 rv-default">Case Studies</h6>
+
+
+                                    <ul class="rv-list-primary">
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="#" target="_self"
+                                                id="gtm-NavigationEmirates">
+                                                Emirates Airline </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="#" target="_self"
+                                                id="gtm-NavigationMeraas">
+                                                Meraas </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="#" target="_self" id="">
+                                                U by Emaar </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="#" target="_self" id="">
+                                                The Red Sea Project </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="#" target="_self" id="">
+                                                Mercedes-Benz </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="#" target="_self"
+                                                id="">
+                                                Abu Dhabi Airport </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="#" target="_self" id="">
+                                                Noor Bank </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="#" target="_self" id="">
+                                                Emirates NBD </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li> -->
+                            <li class="rv-list-item  row has-sub-menu">
+
+                                <a class="rv-h1 rv-link rv-nav-link col-lg-8" href="./services.html" target="_self"
+                                    id="">
+                                    SERVICE </a>
+                                <div class="rv-sub-menu col-lg-4 d-lg-block">
+                                    <h6 class="rv-h6 rv-default">Our Services</h6>
+
+
+                                    <ul class="rv-list-primary">
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="./digital-strategy.html" target="_self"
+                                                id="">
+                                                Strategie </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="./ux-and-ui-design.html" target="_self"
+                                                id="">
+                                                Kundengewinnung </a>
+                                        </li>
+                                        <!-- <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/user-research" target="_self"
+                                                id="">
+                                                User Research </a>
+                                        </li> -->
+                                        <!-- <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="/en/services/user-testing" target="_self"
+                                                id="">
+                                                User Testing </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="./social-media.html"
+                                                target="_self" id="">
+                                                Data Analytics &amp; Insights </a>
+                                        </li> -->
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="./content-services.html" target="_self"
+                                                id="">
+                                                Mitarbeitergewinnung </a>
+                                        </li>
+                                        <li class="rv-list-item rv-secondary-link">
+                                            <a class="rv-h6 rv-link" href="./social-media.html" target="_self" id="">
+                                                Social Media Betreuung </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="rv-list-item  ">
+
+                                <a class="rv-h1 rv-link rv-nav-link " href="./news-and-events.html" target="_self"
+                                    id="">
+                                    News &amp; Events </a>
+                            </li>
+                            <li class="rv-list-item  ">
+
+                                <a class="rv-h1 rv-link rv-nav-link " href="./careers.html" target="_self" id="">
+                                    Karriere </a>
+                            </li>
+                            <li class="rv-list-item  ">
+
+                                <a class="rv-h1 rv-link rv-nav-link " href="./contact.html" target="_self" id="">
+                                    Kontakt </a>
+                            </li>
+                        </ul>
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5K9P7WQ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <section class="rv-sec-container headerpd rv-bg-light">
+
+        <h1 class="sr-only">10 Gründe für eine professionelle Webseite</h1>
+        <!-- <h2 class="sr-only">Proud to be a Sitecore Gold Implementation partner.</h2> -->
+        <div class="rv-hero-banner  rv-component rv-theme-light" data-comp-name="herobanner">
+            <div class="rv-banner-pictures">
+                <div class="rv-bgoverlay"></div>
+                <picture class="lozad" data-class="objectfit"
+                    data-iesrc="./-/media/revonic/banners/blog-images/sitecore.jpg?cx=0&amp;cy=0&amp;cw=1440&amp;ch=810&amp;hash=4127BA39FB613770C5E09979B0A7746D"
+                    data-alt="Sitecore">
+                    <source media="(max-width: 600px) and (orientation: portrait)"
+                        srcset="./-/media/revonic/banners/blog-images/sitecore.jpg?cx=0&amp;cy=0&amp;cw=750&amp;ch=1334&amp;hash=7F1AC14F20DB6B1623A9292A5BF6798B, ./-/media/revonic/banners/blog-images/sitecore.jpg?cx=0&amp;cy=0&amp;cw=1500&amp;ch=2668&amp;hash=2496867249E5B095C1FB65E423B6BA49 2x" />
+                    <source media="(min-width: 320px)"
+                        srcset="./-/media/revonic/banners/blog-images/sitecore.jpg?cx=0&amp;cy=0&amp;cw=1440&amp;ch=810&amp;hash=4127BA39FB613770C5E09979B0A7746D, ./-/media/revonic/banners/blog-images/sitecore.jpg?cx=0&amp;cy=0&amp;cw=2880&amp;ch=1620&amp;hash=B2E7BBED0972DEDA5339E4EFD5DDC1B1 2x" />
+                </picture>
+            </div>
+            <div class="container rv-container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h1 class="rv-hero-heading mb-2">
+                            <span class="rv-light-heading">10 Gründe für eine<strong class="rv-bold-heading font-media">
+                                    professionelle Webseite</strong></span>
+                        </h1>
+                    </div>
+                    <!-- <div class="col-lg-6 d-none d-lg-flex">
+                        <p class="rv-description">Proud to be a Sitecore Gold Implementation partner.</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <section class="rv-sec-content rv-bg-light">
+        <div class="container rv-container">
+            <div class="row">
+                <div class="col-12 col-lg-12 richtext">
+                    <section>
+                        <div>
+                            <!-- <ul>
+                                <li><strong>10+</strong>
+                                    <p>Sitecore certified professionals in Dubai</p>
+                                </li>
+                                <li><strong>20+</strong>
+                                    <p>Completed Sitecore projects</p>
+                                </li>
+                                <li><strong>40+</strong>
+                                    <p>Years of combined Sitecore knowledge</p>
+                                </li>
+                            </ul> -->
+
+                            <p>In Zeiten der Digitalisierung haben überraschenderweise immer noch viele Unternehmen
+                                keinen oder einen sehr unprofessionellen Internetauftritt. Du auch? Dann solltest du
+                                aktiv werden und dir folgende Vorteile sichern.
+                            </p>
+
+                        </div>
+                    </section>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <p>Lass uns doch einmal mit ein paar Zahlen und Fakten beginnen.
+                                    </p>
+                                    <p>Es gibt viele gute Gründe, warum ein Unternehmen eine eigene Website haben
+                                        sollte. Trotzdem sind immer noch mehr als 10% aller Unternehmen im Internet
+                                        nicht vertreten (Quelle: <a href="https://www.statistik.at">
+                                            www.statistik.at</a>). Aber
+                                        warum? Mehr als 5,7 Millionen
+                                        Menschen nutzen täglich alleine nur in Österreich das Internet (Quelle:<a
+                                            href="https://www.statistik.at"> www.statistik.at</a>). Und das wird schon
+                                        lange
+                                        nicht mehr nur für Online Shopping,
+                                        Bankgeschäfte und Social Media Netzwerke verwendet. Oft geht es auch darum,
+                                        einen passenden Dienstleister, Hersteller oder Lieferanten zu finden, sich zu
+                                        informieren, Produkte und Preise zu vergleichen oder Kontaktdaten und
+                                        Öffnungszeiten herauszufinden.
+                                    </p>
+                                    <p>Eine eigene Website ist heute somit genauso wichtig und selbstverständlich wie
+                                        ein Telefonanschluss oder eine E-Mail-Adresse. Denn für viele Menschen gilt: Wer
+                                        nicht im Netz gefunden wird – den gibt es nicht!</p>
+                                    <p>Aber was sind die Gründe für eine fehlende Website?
+                                    </p>
+                                    <p>Ich denke, dass diese von Unternehmen zu Unternehmen unterschiedlich sind. Einige
+                                        haben einfach keine Zeit oder möchten sich diese nicht nehmen, um sich mit der
+                                        Erstellung einer eigenen Website auseinander zu setzen. Speziell kleinere
+                                        Unternehmen und Neugründer wollen die Zeit und auch das Geld lieber sinnvoller
+                                        investieren (zumindest denken sie, dass sie das tun). Und wieder andere
+                                        unterschätzen einfach die Möglichkeiten, die ihnen dadurch eigentlich
+                                        verlorengehen.
+                                    </p>
+                                    <p>Doch was spricht denn nun dafür, in eine professionelle Website zu investieren?
+                                    </p>
+                                    <!-- <p><strong>About Revonic</strong></p>
+                                    <p>Revonic are a Dubai based Digital Agency. We are proud to work with some of the
+                                        largest and most prestigious companies in Dubai, Abu Dhabi, Saudi Arabia and
+                                        across the Middle East.</p>
+                                    <p>As a Sitecore Gold Implementation Partner, Revonic can help you to make sure you
+                                        get the best out of Sitecore CMS, and the Sitecore Experience Platform.</p>
+                                    <p>As a full service digital agency, Revonic offer Sitecore consultancy, strategic
+                                        planning, UX and creative design, maintenance, migration, support, training and
+                                        analytics analysis.</p> -->
+                                    <h4 style="color: #e44a21;">
+                                        Grund 1 – Sie macht Kunden auf dein Unternehmen aufmerksam
+                                    </h4>
+                                    <p>Das kennst du doch auch, oder? Du möchtest etwas kaufen oder benötigst einen
+                                        Dienstleister, so ist der erste Schritt meistens eine Suche im Internet. Laut
+                                        Statistik (Quelle:<a href="https://www.statistik.at"> www.statistik.at</a>)
+                                        machen das rund 80% der Menschen so.
+                                        Unternehmen, deren Website in Suchmaschinen wie Google, Bing und Co. gefunden
+                                        werden, haben somit bessere Karten, Kunden zu gewinnen.
+                                    </p>
+                                    <p>Egal, ob du ein regionales Unternehmen mit Handel betreibst oder beispielsweise
+                                        eine Dienstleistung vor Ort beim Kunden anbietest, wenn deine Kunden und
+                                        potentiellen Kunden dich im Internet nicht finden, dann existierst du
+                                        schlichtweg nicht. Klingt hart, ist aber so. Selbst als Friseur mit Stammkunden
+                                        profitierst du von einer Website.</p>
+                                    <p>Eine gute Website - oder umgangssprachlich „Homepage“ - ist somit dein
+                                        Aushängeschild bzw. deine digitale Visitenkarte und kann dein bester Verkäufer
+                                        sein. Zudem können zufriedene Kunden, Freunde und Bekannte einfach einen Link zu
+                                        deiner Website als Empfehlung verschicken oder weitergeben.
+                                    </p>
+                                    <p>Darum sollte dir auch bewusst sein, dass hier der erste Eindruck zählt. Eine gut
+                                        strukturierte und moderne Website lässt dein Unternehmen professioneller und
+                                        glaubwürdiger wirken.</p>
+                                    <h4 style="color: #e44a21;">
+                                        Grund 2 – Erreichbarkeit garantiert!
+                                    </h4>
+                                    <p>Deine eigene Website ist unabhängig von Öffnungszeiten 24 Stunden erreichbar. Und
+                                        das weltweit an 365 Tagen im Jahr. Potentielle Kunden können sich somit
+                                        jederzeit über deine Produkte und Dienstleistungen informieren. Außerdem ist es
+                                        ja viel bequemer und schneller eine Website anzusurfen, als sich in ein Auto zu
+                                        setzen und einige km weit zu fahren, um zu festgelegten Öffnungszeiten an
+                                        Informationen zu gelangen.</p>
+                                    <h4 style="color: #e44a21;">
+                                        Grund 3 – Viel Platz für umfassende Informationen
+
+                                    </h4>
+                                    <p>Du hast es mit deinem eigenen Internetauftritt selbst in der Hand, wie du dein
+                                        Unternehmen öffentlich präsentieren möchtest. Ich persönlich nenne die Website
+                                        auch gerne digitales Schaufenster, in dem du dein Unternehmen, deine Produkte
+                                        oder Dienstleistungen perfekt in Szene setzen kannst.</p>
+                                    <p>Somit kannst du deinen Besuchern unglaublich viele Informationen zur Verfügung
+                                        stellen. Je mehr Infos das sind, desto umfassender können sich deine Kunden und
+                                        potentiellen Kunden über dich informieren:
+                                    </p>
+                                    <ul>
+                                        <li>Welche Leistungen oder Produkte bietest du an? Achte dabei darauf, dass
+                                            diese detailliert und leicht verständlich beschrieben sind.
+                                        </li>
+                                        <li>Was für eine Geschichte steckt hinter deinem Unternehmen? Menschen lieben
+                                            Geschichten.
+                                        </li>
+                                        <li>Wer ist in deinem Team? Persönlich vorgestellte Ansprechpartner mit Foto
+                                            schaffen Vertrauen.
+                                        </li>
+                                        <li>Wo findet man dein Unternehmen und gibt es mehrere Standorte? Mache es
+                                            deinen potentiellen Kunden leicht, dich zu finden.
+                                        </li>
+                                        <li>Welche Kontaktmöglichkeiten bietest du an?
+                                        </li>
+                                        <li>Rezensionen: Was sagen deine Kunden über deine Firma, dein Kundenservice und
+                                            deine Produkte/Leistungen?
+                                        </li>
+                                    </ul>
+                                    <p>Zusammengefasst hat dein Unternehmen von der Firmengeschichte über
+                                        Serviceleistungen bis hin zu Referenzen viel zu erzählen. Bei Werbekampagnen,
+                                        Radio- oder Fernsehspots oder Flyern ist der Platz jedoch begrenzt. Auf deiner
+                                        Homepage hingegen kannst du alle Informationen zur Verfügung stellen.</p>
+                                    <h4 style="color: #e44a21;">
+                                        Grund 4 – Mehr Umsatz
+                                    </h4>
+                                    <p>Für jedes Unternehmen ist es wichtig, Geld zu verdienen, damit es dauerhaft
+                                        besteht, seine Fixkosten und Mitarbeiter bezahlen kann und um Produkte
+                                        erschaffen zu können. Darum ist es wichtig, Umsatz zu generieren. Und genau
+                                        diesen Umsatz kannst du, je nachdem in welcher Branche du tätig bist und welche
+                                        Produkte/Dienstleistungen du anbietest, durch eine eigene Website direkt oder
+                                        indirekt steigern:
+                                    </p>
+                                    <ul>
+                                        <li> Du erreichst potentielle neue Kunden online, die du offline so nie
+                                            erreichen würdest.
+                                        </li>
+                                        <li>Schaffe mit einem <a href="https://www.webschmiede.at/online-shop">
+                                                Online-Shop </a>einen zusätzlichen Absatzkanal für deine
+                                            Produkte.
+                                        </li>
+                                        <li>Generiere online neue Kunden für dein lokales Unternehmen vor Ort.
+                                        </li>
+                                    </ul>
+                                    <h4 style="color: #e44a21;">Grund 5 – Aktualität
+                                    </h4>
+                                    <p>Kein anderes Medium ist schneller mit aktuellen Informationen versorgt als deine
+                                        eigene Website. Ein gesundes Unternehmen verändert sich ständig. Neue Angebote,
+                                        aktuelle Informationen, geänderte Ansprechpartner oder geänderte Öffnungszeiten
+                                        - über die eigene Homepage kann man die Kunden über solche Neuerungen sofort
+                                        informieren. Ist diese mit einem Content-Management-System wie <a
+                                            href="https://wordpress.org/">WordPress</a> oder
+                                        <a href="https://typo3.org/">TYPO3</a> erstellt, kannst du einfache Änderungen
+                                        sogar selbst vornehmen. Das spart
+                                        Kosten für einen Dienstleister.
+                                    </p>
+                                    <p>Bei anderen Medien wie Tageszeitungen, Werbebroschüren, Flyern, Plakaten etc.
+                                        hast du diesen Vorteil nicht. Eine zusätzliche Einschaltung in der Zeitung oder
+                                        das erneute Drucken von Printmedien wäre zudem noch mit hohen zusätzlichen
+                                        Kosten verbunden.
+                                    </p>
+                                    <h4 style="color: #e44a21;">Grund 6 - Vielseitige Kontaktmöglichkeiten
+                                    </h4>
+                                    <p>Für einen potentiellen Kunden ist es nicht nur wichtig, sich über dein
+                                        Unternehmen informieren zu können, sondern auch mit diesem in Kontakt zu treten.
+                                        Das Telefon ist hier schon lange das klassische Instrument. Aber es gibt noch
+                                        weitere moderne Kommunikationsmöglichkeiten, die du über eine Website anbieten
+                                        kannst:
+                                    </p>
+                                    <ul>
+                                        <li>Per E-Mail können deine Kunden Tag und Nacht mit dir Kontakt aufnehmen. Es
+                                            erwartet im Normalfall niemand von dir, dass du auch Tag und Nacht
+                                            antwortest. Der Kunde freut sich aber meistens, wenn er nicht auf den
+                                            nächsten Werktag warten muss, um dir sein Anliegen oder seine Fragen
+                                            mitteilen zu können, sondern das nach Lust und Laune auch am Wochenende um 2
+                                            Uhr morgens tun zu können.</li>
+                                        <li>Mit einem Kontaktformular auf deiner eigenen Website bietest du denjenigen,
+                                            die kein Mail schreiben möchten, eine Möglichkeit trotzdem mit dir in
+                                            Kontakt zu treten.</li>
+                                        <li>Betreibst du eine Facebook-Seite oder benutzt du WhatsApp Business, so
+                                            lassen sich diese Messenger als Kontaktmöglichkeiten integrieren. Das
+                                            ermöglicht es dir, ein sehr modernes Erscheinungsbild für dein Unternehmen
+                                            aufzubauen.
+                                        </li>
+                                        <li>Ein Online Support-Forum bietet deinen Besuchern ebenfalls eine Möglichkeit,
+                                            mit dir oder anderen Anwendern zu kommunizieren.</li>
+                                        <li>Mit einem Verkaufs-Chat oder einem Support-Chat auf deiner Website können
+                                            deine Websitebesucher direkt mit dir oder deinen Mitarbeitern in Kontakt
+                                            treten.</li>
+                                    </ul>
+                                    <h4 style="color: #e44a21;">Grund 7 - Gleiche Chancen für jedes Unternehmen
+                                    </h4>
+                                    <p>Das World Wide Web unterscheidet nicht zwischen bekannten Marken und unbekannten
+                                        Neugründern oder zwischen großen und kleinen Firmen, sondern zwischen einer
+                                        professionellen Websites, auf der die Besucher gerne herumsurfen und Websites,
+                                        die weniger beliebt sind. Mit einer guten Homepage kann sich auch das noch so
+                                        kleine Unternehmen gegen die großen Unternehmen behaupten. Diese Tatsache sorgt
+                                        für Chancengleichheit zwischen den Unternehmen.</p>
+                                    <p>Jeder Unternehmer kann seinem Kunden einen großartigen Webauftritt präsentieren
+                                        und so einen Vorsprung erzielen. Auch du! Und das mit verhältnismäßig geringen
+                                        Mitteln. Denn im Internet brauchst du kein großes Büro oder viele Angestellte,
+                                        um von deinen Stärken überzeugen zu können.
+                                    </p>
+                                    <h4 style="color: #e44a21;">Grund 8 - Kostengünstiges und gezieltes Marketing
+                                    </h4>
+                                    <p>Interessenten über das Internet zu erreichen, ist viel günstiger und einfacher
+                                        als beispielsweise über altbewährte Printmedien. Der große Vorteil, der hier im
+                                        Vordergrund steht, ist, dass Werbung im Word Wide Web meistens nur Menschen
+                                        gezeigt wird, die sich auch tastsächlich für dein Produkt oder deine
+                                        Dienstleistung interessieren.</p>
+
+                                    <p>Um dir das zu veranschaulichen, lass uns doch mal die klassische Plakatwerbung
+                                        mit einer Google Ads Kampagne (bezahlte Werbung auf Google) vergleichen:</p>
+                                    <ul>
+                                        <li>Auf einer durchschnittlich befahrenen Bundesstraße kostet dir eine
+                                            Plakatwerbung hierzulande rund 10 bis 20 EUR pro Tag. Auch wenn sich das
+                                            jetzt nicht viel anhört, solltest du Folgendes in Betracht ziehen: Laut dem
+                                            „Fachverband für Außenwerbung e.V.“ sehen nur ca. die Hälfte der
+                                            vorbeifahrenden Menschen diese Werbung. Und nur für einen Bruchteil dieser
+                                            Menschen ist deine Werbung wirklich interessant - und ein noch kleinerer
+                                            Bruchteil wir dein Produkt daraufhin kaufen.</li>
+                                        <li>Google Ads bietet dir die Möglichkeit, auf Google mit Hilfe von dir
+                                            definierten Keywords/Begriffen gegen Bezahlung gefunden zu werden. Bezahlt
+                                            wird hier pro Klick auf deine Anzeige. Wenn ein Nutzer zum Beispiel „Fahrrad
+                                            kaufen“ sucht und du diesen Begriff bewirbst, dann wird deine Website in den
+                                            ersten Ergebnissen angezeigt. Der größte Vorteil liegt hier darin, dass
+                                            deine Website nur denjenigen angezeigt wird, die nach „Fahrrad kaufen“
+                                            suchen. Somit ist diese Form der Werbung sehr effektiv und kostengünstig,
+                                            denn kaum jemand sucht nach einem Begriff, der ihn nicht interessiert.</li>
+                                    </ul>
+                                    <h4 style="color: #e44a21;">Grund 9 - Langfristiger Wert für dein Unternehmen
+                                    </h4>
+                                    <p>Gehen wir davon aus, dass die Erstellung einer umfangreichen professionellen
+                                        Website einmalig rund 3.500 EUR kostet. Klar, das ist für den ein oder anderen
+                                        ganz schön viel Geld. Aber lass mich dir hierzu ein Beispiel bringen:
+                                    </p>
+                                    <p>Wie bereits oben im Text erwähnt, wird deine Website rund um die Uhr Verkäufe
+                                        generieren und das bei Bedarf auch über die Grenzen Österreichs hinaus. Das
+                                        allerdings nicht nur für kurze Zeit, sondern bei guter Wartung ein Leben lang.
+                                        Natürlich sollte deine Website auch weiterhin aktuell gehalten werden.
+                                    </p>
+                                    <p>Wenn du als Beispiel dein Unternehmen in der Kronen Zeitung inserieren möchtest,
+                                        kostet dir dort eine einzige A4 Seite österreichweit mindestens 33.000 EUR und
+                                        in der regionalen Ausgabe mindestens 22.000 EUR (Quelle: <a
+                                            href="https://www.kronenanzeige.at">www.kronenanzeige.at</a> , Stand: Tarife
+                                        2020). Und jetzt kommt es: Dieses Inserat ist gerade mal für einen einzigen Tag
+                                        aktuell. Dazu kommt noch, dass du keinerlei konkrete Daten darüber hast, wie
+                                        viele Menschen dein Inserat überhaupt gesehen bzw. gelesen haben - was sich
+                                        hingegen bei deiner eigenen Website mit einfachen Tools ganz schnell analysieren
+                                        lässt.</p>
+                                    <p>Ich denke alleine dieses Beispiel bringt es auf den Punkt, welchen „Wert“ eine
+                                        eigene Website für dein Unternehmen hat.
+                                    </p>
+                                    <h4 style="color: #e44a21;">Grund 10 – Dein Wettbewerb macht’s auch
+                                    </h4>
+                                    <p>Auch wenn dich all diese Gründe immer noch nicht davon überzeugt haben, wie
+                                        wichtig es ist, dein Unternehmen im Internet zu präsentieren, dann sollest du
+                                        zumindest daran denken: Deine Mitbewerber sind bereits im Internet aktiv! Google
+                                        doch einfach mal nach 5 deiner Konkurrenten und schau, was du über sie im
+                                        Internet findest.</p>
+                                    <ul>
+                                        <li>Findest du nur wenige oder unvorteilhafte Informationen? Dann ist das deine
+                                            Chance, es besser zu machen!</li>
+                                        <li>Findest du gar keine Informationen über deine Konkurrenten? Jackpot! Dann
+                                            haben sie noch gar nicht erkannt, welches Potential im Kommunikationskanal
+                                            Internet steckt. Sei schnell, starte jetzt und nutze diese Chance.</li>
+                                    </ul>
+                                    <p>Und Hand aufs Herz: Wenn du Kontakt zu einem neuen Lieferanten oder einem
+                                        größeren potentiellen Kunden hast, schaust du da nicht auch zuerst ins Internet
+                                        und informierst dich über diese Firma? Und genau so machen es Andere unzählige
+                                        Male mit deinem Unternehmen. Also nutze deine eigene Website, um dein
+                                        Unternehmen optimal zu präsentieren – Das Team von BrandArtist unterstützt dich
+                                        dabei sehr gerne.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="rv-sec-content rv-bg-light pt-0">
+        <div class="container rv-container">
+            <div>
+                <div>
+                    <div style="text-align:center;">
+                        <a class="rv-primary-link d-inline-flex" href="./news-and-events.html">gehen zurück</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="downloadformpop" class="rv-bg-dark contact-popup-gallery" style="display:none;">
+        <div class="cwarp">
+            <h3 class="rv-h2 rv-form-title m-0">Please fill in some details for us </h3>
+            <div class="rv-contact rv-component">
+                <div class="rv-contact-section">
+                    <div class="rv-form-container rv-component" data-comp-name="inputfields">
+
+                        <form class="rv-contact-form js-validate-download rv-component" data-comp-name="downloads"
+                            data-action="/api/downloads/download" id="downloadForm" name="download-form" method="post"
+                            autocomplete="off" data-link="" data-contact-email="" data-is-known-contact="False"
+                            data-download-key="">
+                            <input name="__RequestVerificationToken" type="hidden"
+                                value="_nCCIbW1PMunqgOMn2HtsIoE8juBb_sV4VDgUfpLEr5E6nBx7zotbmV03TUCUyzbTmSxVRnZzT3rPmFvOtxuUvYhs8u83eX1xsabWLNePT81" />
+                            <input type="hidden" value="FMI8jmP3opG0MRk+DjobAvk7rAktVrh++IJhlTu3nCEYQfYfWwH0EQ=="
+                                id="hdnGoalId" name="GoalId" />
+                            <input type="hidden" value="05RGubXoNYbPFhgXQ7o6vQ==" id="hdnGoalText" name="GoalText" />
+                            <input type="hidden" id="hdnDownloadPath" name="DownloadPath" />
+
+                            <div class="form-group rv-forms">
+                                <input type="text" id="firstName" name="FirstName"
+                                    class="form-control-plaintext rv-input js-input-focus" data-rule-fullname="true"
+                                    data-msg="Please enter your first name" autocomplete="off" required>
+                                <label for="firstname" class="rv-label">First name</label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+                            <div class="form-group rv-forms">
+                                <input type="text" id="lastName" name="LastName"
+                                    class="form-control-plaintext rv-input js-input-focus" data-rule-fullname="true"
+                                    data-msg="Please enter your last name" autocomplete="off" required>
+                                <label for="lastName" class="rv-label">Last name</label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+
+                            <div class="form-group rv-forms rv-email">
+                                <input id="email" name="Email" class="form-control-plaintext rv-input js-input-focus"
+                                    type="email" data-rule-validEmail="true"
+                                    data-msg-validEmail="Please enter a valid email address"
+                                    data-msg="Please enter your email" autocomplete="off" required>
+                                <label for="email" class="rv-label">Email</label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+
+                            <div class="form-group rv-forms">
+                                <input type="text" id="company-name" name="CompanyName"
+                                    class="form-control-plaintext rv-input js-input-focus" data-rule-fullname="true"
+                                    data-msg="Please enter company name" autocomplete="off" required>
+                                <label for="company-name" class="rv-label">Company name<span
+                                        class="text -danger"></label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+
+                            <div class="form-group rv-forms">
+                                <input id="job-title" name="JobTitle" data-rule-required="true"
+                                    class="form-control-plaintext rv-input js-input-focus" data-rule-jobtitle="true"
+                                    data-msg="Please enter job title" autocomplete="off" required>
+                                <label for="job-title" class="rv-label">Job Title<span class="text -danger"></label>
+                                <svg class="rv-error-icon rv-toSvg">
+                                    <use xlink:href="./assets/img/sprite/svg-sprite.svg#icon-warning"></use>
+                                </svg>
+                            </div>
+                            <div class="rv-message-btn rv-boldbutton rv-component">
+                                <button class="btn-bold rv-component" type="submit">
+                                    <span class="rv-text-fill" data-btn-label="Send message">Download</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="rv-footer rv-component rv-theme-dark" data-comp-name="footer">
+        <div class="container rv-container">
+            <div class="row rv-fullWidth rv-footer-content">
+                <div class="rv-contact-message col-lg-6 col-md-12">
+
+                    <h3 class="rv-h6 rv-default-label rv-skewed-line">Sag Hallo</h3>
+                    <h2 class="rv-h1 rv-title">Bock auf mehr?</h2>
+                    <h4 class="rv-h6 rv-primary-link float-left"><a id="gtm-letstalkfooter"
+                            href="./contact.html">Schreib uns.</a>
+                        <p>
+                    </h4>
+                </div>
+                <address class="rv-address-block rv-quick-contacts col-lg-3 col-md-4">
+
+                    <h6 class='rv-h6 rv-default-label'>Kontakt</h6>
+                    <ul class="rv-list-secondary">
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="./contact.html" target="_self" id="GTM001">
+                                Schreib uns eine Email </a>
+                        </li>
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="https://meetings-eu1.hubspot.com/florian-mueller"
+                                target="_self" id="">
+                                Termin vereinbaren </a>
+                        </li>
+                    </ul>
+
+
+
+
+
+
+
+
+                </address>
+                <!-- <address class="rv-address-block rv-address col-lg-3 col-md-4">
+
+                    <h6 class='rv-h6 rv-default-label'>Visit</h6>
+                    <ul class="rv-list-secondary rv-regular">
+                        <li class="rv-list-item">Level 46, Tower B</li>
+                        <li class="rv-list-item">Business Central Towers</li>
+                        <li class="rv-list-item">Media City, Dubai</li>
+                    </ul>
+                    <ul class="rv-list-secondary">
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link "
+                                href="https://www.google.com/maps/place/REVONIC/@25.1004538,55.1673033,17z/data=!3m1!4b1!4m5!3m4!1s0x3e5f6bc02f741831:0x3fd4128e657a3681!8m2!3d25.100449!4d55.169492"
+                                target="_blank" id="">
+                                Get directions </a>
+                        </li>
+                    </ul>
+
+
+
+
+
+
+
+
+                </address> -->
+                <address class="rv-address-block rv-social-links col-lg-3 col-md-4">
+
+                    <h6 class='rv-h6 rv-default-label'>Folge uns </h6>
+                    <ul class="rv-list-secondary d-flex">
+                        <li style="padding-right: .5rem;" class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="https://www.facebook.com/brandartist.agentur"
+                                target="_blank" id="">
+                                <i class="fab fa-facebook fa-2x"></i>
+                            </a>
+                        </li>
+                        <li style="padding-right: .5rem;" class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="https://www.instagram.com/Teambrandartist/"
+                                target="_blank" id="">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                        </li>
+                        <li style="padding-right: .5rem;" class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="#" target="_blank" id="">
+                                <i class="fab fa-linkedin fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="rv-list-item  ">
+
+                            <a class="rv-link rv-nav-link " href="#" target="_blank" id="">
+                                <i class="fab fa-twitter fa-2x"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+
+
+
+
+
+
+
+                </address>
+            </div>
+            <div class="rv-fullWidth rv-footer-links row">
+                <div class="rv-links col-md-6">
+
+
+                </div>
+
+                <span class="rv-copyrights col-md-6 ">&copy; 2021 Brandartist</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/vendors~main.js?v=1.13" defer></script>
+    <script src="./assets/js/main.js?v=1.13" defer></script>
+</body>
+
+</html>
