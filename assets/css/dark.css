@@ -1,1 +1,68 @@
-.dark{background:#000}.dark,.rv-default,.rv-h1,.rv-h2,.rv-h3,.rv-h4{color:#fff}.orange,.primary{color:#e44a21}.cyan,.label{color:#00b0b9}.default,.gray{color:#989898}.rv-bg-dark{background-color:#121212}.rv-bg-dark .richtext a,.rv-bg-dark .richtext h1,.rv-bg-dark .richtext h2,.rv-bg-dark .richtext h3,.rv-bg-dark .richtext h4,.rv-bg-dark .richtext h5,.rv-bg-dark .richtext h6,.rv-bg-dark .richtext li,.rv-bg-dark .richtext p,.rv-bg-dark .richtext span,.rv-bg-dark .richtext td,.rv-bg-dark .richtext th{color:#fff}.rv-bg-dark .richtext a:hover{color:#e44a21}.rv-bg-dark .richtext .rv-table>thead>tr.active>td,.rv-bg-dark .richtext .rv-table>thead>tr.active>th,.rv-bg-dark .richtext table>thead>tr.active>td,.rv-bg-dark .richtext table>thead>tr.active>th{background-color:#1c1c1c}.rv-bg-dark .richtext .rv-table>tbody>tr>td.active,.rv-bg-dark .richtext .rv-table>tbody>tr>th.active,.rv-bg-dark .richtext table>tbody>tr>td.active,.rv-bg-dark .richtext table>tbody>tr>th.active{background-color:#333}.rv-bg-dark .richtext .rv-table>tbody>tr.active>td,.rv-bg-dark .richtext .rv-table>tbody>tr.active>th,.rv-bg-dark .richtext .rv-table>tfoot>tr.active>td,.rv-bg-dark .richtext .rv-table>tfoot>tr.active>th,.rv-bg-dark .richtext table>tbody>tr.active>td,.rv-bg-dark .richtext table>tbody>tr.active>th,.rv-bg-dark .richtext table>tfoot>tr.active>td,.rv-bg-dark .richtext table>tfoot>tr.active>th{background-color:#1c1c1c}.rv-bg-dark .rv-pagination .arrow use{fill:#121212}
+.dark {
+  background: #000;
+}
+.dark,
+.rv-default,
+.rv-h1,
+.rv-h2,
+.rv-h3,
+.rv-h4 {
+  color: #fff;
+}
+.orange,
+.primary {
+  color: #7f38eb;
+}
+.cyan,
+.label {
+  color: #008cba;
+}
+.default,
+.gray {
+  color: #989898;
+}
+.rv-bg-dark {
+  background-color: #121212;
+}
+.rv-bg-dark .richtext a,
+.rv-bg-dark .richtext h1,
+.rv-bg-dark .richtext h2,
+.rv-bg-dark .richtext h3,
+.rv-bg-dark .richtext h4,
+.rv-bg-dark .richtext h5,
+.rv-bg-dark .richtext h6,
+.rv-bg-dark .richtext li,
+.rv-bg-dark .richtext p,
+.rv-bg-dark .richtext span,
+.rv-bg-dark .richtext td,
+.rv-bg-dark .richtext th {
+  color: #fff;
+}
+.rv-bg-dark .richtext a:hover {
+  color: #7f38eb;
+}
+.rv-bg-dark .richtext .rv-table > thead > tr.active > td,
+.rv-bg-dark .richtext .rv-table > thead > tr.active > th,
+.rv-bg-dark .richtext table > thead > tr.active > td,
+.rv-bg-dark .richtext table > thead > tr.active > th {
+  background-color: #1c1c1c;
+}
+.rv-bg-dark .richtext .rv-table > tbody > tr > td.active,
+.rv-bg-dark .richtext .rv-table > tbody > tr > th.active,
+.rv-bg-dark .richtext table > tbody > tr > td.active,
+.rv-bg-dark .richtext table > tbody > tr > th.active {
+  background-color: #333;
+}
+.rv-bg-dark .richtext .rv-table > tbody > tr.active > td,
+.rv-bg-dark .richtext .rv-table > tbody > tr.active > th,
+.rv-bg-dark .richtext .rv-table > tfoot > tr.active > td,
+.rv-bg-dark .richtext .rv-table > tfoot > tr.active > th,
+.rv-bg-dark .richtext table > tbody > tr.active > td,
+.rv-bg-dark .richtext table > tbody > tr.active > th,
+.rv-bg-dark .richtext table > tfoot > tr.active > td,
+.rv-bg-dark .richtext table > tfoot > tr.active > th {
+  background-color: #1c1c1c;
+}
+.rv-bg-dark .rv-pagination .arrow use {
+  fill: #121212;
+}
