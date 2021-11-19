@@ -11268,7 +11268,7 @@ video:focus {
   display: none;
 }
 .rv-card .rv-box {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #121212;
   position: relative;
   overflow: hidden;
 }

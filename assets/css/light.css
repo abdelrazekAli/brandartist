@@ -26,7 +26,7 @@
   color: #333;
 }
 .rv-bg-light .richtext a:hover {
-  color: #7f38eb;
+  color: #7f38eb !important;
 }
 .rv-bg-light .richtext .rv-table > tbody > tr.active > td,
 .rv-bg-light .richtext .rv-table > tbody > tr.active > th,
